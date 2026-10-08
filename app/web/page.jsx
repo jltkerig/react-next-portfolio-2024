@@ -7,6 +7,7 @@ import oneblade from "@/src/assets/web/oneblade-landing-screenshot.png";
 import palwebsite from "@/src/assets/web/pal-image.png";
 import widgetlanding from "@/src/assets/web/widget-landing-page.png";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
+import lifecoach from "@/src/assets/web/life-coach-head-block-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
 import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
@@ -62,6 +63,15 @@ const groups = [
 				tags: ["Bootstrap"],
 				text: "A site for my own wedding, focused on making event details easy for guests to find and share.",
 				image: wedding2018,
+			},
+			{
+				id: "lifecoach", size: "half", drop: true,
+				link: "/web/life-coach/index.html", /*live copy in public/, opens instead of the lightbox*/
+				title: "Christine Brome Life Coach",
+				type: "Responsive website",
+				tags: ["Figma", "HTML/CSS/JS"],
+				text: "Designed in Figma for desktop, tablet and phone, then hand-coded as a responsive single-page site with a mobile menu and testimonial slider.",
+				image: lifecoach,
 			},
 		],
 	},
