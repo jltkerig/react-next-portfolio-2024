@@ -67,7 +67,7 @@ const groups = [
 			{
 				id: "lifecoach", size: "half", drop: true,
 				link: "/web/life-coach/index.html", /*live copy in public/, opens instead of the lightbox*/
-				title: "Christine Brome Life Coach",
+				title: "Christine Smith Life Coach",
 				type: "Responsive website",
 				tags: ["Figma", "HTML/CSS/JS"],
 				text: "Designed in Figma for desktop, tablet and phone, then hand-coded as a responsive single-page site with a mobile menu and testimonial slider.",
