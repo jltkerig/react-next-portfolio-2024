@@ -13,5 +13,6 @@ export default function sitemap() {
 		{url: `${site}/graphic/`, lastModified, changeFrequency: "monthly", priority: 0.9},
 		{url: `${site}/contact/`, lastModified, changeFrequency: "yearly", priority: 0.7},
 		{url: `${site}/privacypolicy.html`, lastModified, changeFrequency: "yearly", priority: 0.3},
+		{url: `${site}/site-map/`, lastModified, changeFrequency: "yearly", priority: 0.3},
 	];
 }

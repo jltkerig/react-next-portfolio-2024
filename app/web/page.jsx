@@ -1,4 +1,7 @@
 import ImageLightbox from "@/src/components/ImageLightbox";
+import PageHeader from "@/src/components/PageHeader";
+import gallery from "../graphic/graphic.module.css"; /*shared editorial gallery layout*/
+import styles from "./web.module.css";
 import investingoutlook from "@/src/assets/web/investingoutlook.png";
 import oneblade from "@/src/assets/web/oneblade-landing-screenshot.png";
 import palwebsite from "@/src/assets/web/pal-image.png";
@@ -29,110 +32,136 @@ export const metadata = {
 	},
 };
 
+/*projects grouped by type, each group renders as its own section*/
+const groups = [
+	{
+		word: "Websites", label: "Sites & microsites",
+		blurb: "Standalone sites built to inform, convert and carry a campaign on their own.",
+		projects: [
+			{
+				id: "pal", size: "wide",
+				title: "Stansberry Alliance",
+				type: "Standalone website",
+				tags: ["HTML/CSS/JS", "Amazon S3"],
+				text: "Built for the direct mail team. Customers received mail leading them to this site, which explained the product and offered signup.",
+				image: palwebsite,
+			},
+			{
+				id: "investing", size: "narrow", drop: true,
+				title: "Investing Outlook",
+				type: "WordPress microsite",
+				tags: ["WordPress", "Salesforce"],
+				text: "Built and deployed a four to five page WordPress site. Visitors arrived from ads, and the microsite fed leads into active campaigns housed in Salesforce.",
+				image: investingoutlook,
+			},
+			{
+				id: "wedding", size: "half",
+				link: "/web/weddinginthewoods-2018/www/index.html", /*live copy in public/, opens instead of the lightbox*/
+				title: "Jamie & Michael's Wedding",
+				type: "Personal microsite",
+				tags: ["Bootstrap"],
+				text: "A site for my own wedding, focused on making event details easy for guests to find and share.",
+				image: wedding2018,
+			},
+		],
+	},
+	{
+		word: "Landing", label: "Landing pages",
+		blurb: "Focused, single-purpose pages designed to capture leads and move readers to the next step.",
+		projects: [
+			{
+				id: "oneblade", size: "narrow",
+				title: "Oneblade",
+				type: "Microsite landing page",
+				tags: ["Lead gen", "Brand match"],
+				text: "A single page styled to match its WordPress sister site. Readers engaged with the article, then clicked through to a purchase page.",
+				image: oneblade,
+			},
+			{
+				id: "widget", size: "wide", drop: true,
+				title: "Favorite Stocks",
+				type: "Lead gen landing page",
+				tags: ["Email capture", "Two-step"],
+				text: "A two page email capture flow for a marketing campaign: visitors enter their e-mail and land on a thank-you page.",
+				image: widgetlanding,
+			},
+			{
+				id: "faux", size: "half",
+				title: "Faux Report",
+				type: "Lead gen webpage",
+				tags: ["Long-form", "Funnel"],
+				text: "Designed to read like a PDF article. Calls to action throughout funneled readers into a sales page.",
+				image: fauxreport,
+			},
+		],
+	},
+	{
+		word: "E-mail", label: "E-mail templates",
+		blurb: "Templates built to render reliably across mobile and a wide range of e-mail clients.",
+		projects: [
+			{
+				id: "blackfriday", size: "wide",
+				title: "Black Friday",
+				type: "Promotional e-mail",
+				tags: ["Cross-client"],
+				text: "A Black Friday campaign template, designed for mobile and tested across several e-mail applications.",
+				image: blackfriday,
+			},
+			{
+				id: "investinghour", size: "narrow", drop: true,
+				title: "Investing Hour",
+				type: "Podcast newsletter",
+				tags: ["Long-form", "Modular"],
+				text: "A long-format template for the Investing Hour podcast, with distinct sections for each part of the show.",
+				image: investinghour,
+			},
+		],
+	},
+];
+
 export default function Web() {
 	return (
 		<div>
-			<div className="row">
-				<div className="main-column main-column-p90">
-					<section className="top-section top-column-padding">
-						<div className="column-split center column-padding">
-							<h1>
-								<span className="divider-2">Web Projects</span>
-							</h1>
-							<h2>A Showcase of Web Creations</h2>
-							<h3>Browse past projects.</h3>
-							<p>This collection highlights a range of web projects, showcasing a dedication to design, development, and creating seamless user experiences.</p>
+			<PageHeader title="Web Projects" label="A Showcase of Web Creations" sub="Browse past projects.">
+				<p>This collection highlights a range of web projects, showcasing a dedication to design, development, and creating seamless user experiences.</p>
+			</PageHeader>
+
+			<div className={gallery.page}>
+				{groups.map((group) => (
+					<section key={group.word} className={gallery.section}>
+						<header className={gallery.head}>
+							<h2 className={gallery.word}>{group.word}</h2>
+							<div className={gallery.intro}>
+								<p className={gallery.label}>{group.label}</p>
+								<p className={gallery.blurb}>{group.blurb}</p>
+							</div>
+						</header>
+
+						<div className={gallery.grid}>
+							{group.projects.map((p) => (
+								<figure key={p.id} className={`${gallery.piece} ${gallery[p.size]} ${p.drop ? gallery.drop : ""}`}>
+									{p.link ? (
+										<a href={p.link} target="_blank" rel="noopener noreferrer" title={`Open the ${p.title} site in a new tab`}>
+											<img className={`${styles.shot} ${styles.live}`} src={p.image.src} alt={`${p.title} ${p.type.toLowerCase()} screenshot`} />
+										</a>
+									) : (
+										<ImageLightbox id={`web-${p.id}`} className={styles.shot} imageUrl={p.image} scroll alt={`${p.title} ${p.type.toLowerCase()} screenshot`} />
+									)}
+									<figcaption className={gallery.caption}>
+										<span className={gallery.capTitle}>{p.title}</span>
+										<span className={gallery.capType}>{p.type}</span>
+									</figcaption>
+									<p className={styles.text}>{p.text}</p>
+									<ul className={styles.tags}>
+										{[...p.tags, "Responsive"].map((t) => (
+											<li key={t}>{t}</li>
+										))}
+									</ul>
+								</figure>
+							))}
 						</div>
 					</section>
-				</div>
-			</div>
-
-			{/*<div className="blue-container">*/}
-			<div className="row">
-				<div className="main-column bottom-padding-90">
-					<div className="project-container" /*project container*/>
-						<div className="project-tab project-tab-yellow" /*project 1*/>
-							<div className="project-title">Stansberry Alliance</div>
-							<div className="project-sub-title">Standalone website on Amazon s3</div>
-							<div className="project-tab-divider-cyan">&nbsp;</div>
-							<div className="project-briefing">Website was built for the direct mail team. Customers would recieve mail leading them to this site which would explain the product and offer signup.</div>
-
-							<ImageLightbox id="pal" className="galleryThumbnail" imageUrl={palwebsite} alt="Stansberry Alliance standalone website screenshot" />
-						</div>
-						<div className="project-tab project-tab-yellow" /*project 2*/>
-							<div className="project-title">Investing Outlook</div>
-							<div className="project-sub-title">Micro Wordpress Website</div>
-							<div className="project-tab-divider-cyan">&nbsp;</div>
-							<div className="project-briefing">
-								Deployed and built a standalone wordpress site that consisted of 4 or 5 pages. Customers were directed to it via ads and the microsite worked as a lead generator to active campaigns housed in Salesforce.
-							</div>
-							<ImageLightbox id="investing" className="galleryThumbnail" imageUrl={investingoutlook} alt="Investing Outlook WordPress microsite screenshot" />
-						</div>
-						<div className="project-tab project-tab-yellow" /*project 3*/>
-							<div className="project-title">Oneblade</div>
-							<div className="project-sub-title">Landing Page for Microsite</div>
-							<div className="project-tab-divider-cyan">&nbsp;</div>
-							<div className="project-briefing">
-								Single page built to look like the wordpress sister site. This page acted as a lead generator and customers would land here, engage with the article and land on a purchase page after clicking through.
-							</div>
-							<ImageLightbox id="oneblade" className="galleryThumbnail" imageUrl={oneblade} alt="Oneblade microsite landing page screenshot" />
-						</div>
-					</div>
-
-					<div className="project-container" /*project container*/>
-						<div className="project-tab project-tab-yellow" /*project 4*/>
-							<div className="project-title">Favorite Stocks</div>
-							<div className="project-sub-title">Landing Page for Lead Gen</div>
-							<div className="project-tab-divider">&nbsp;</div>
-							<div className="project-briefing">Two page email capture landing page for a marketing campaign. Audience lands on page and are asked to input e-mail which leads to a thank you page.</div>
-							<ImageLightbox id="widget" className="galleryThumbnail" imageUrl={widgetlanding} alt="Favorite Stocks lead generation landing page screenshot" />
-						</div>
-						<div className="project-tab project-tab-yellow" /*project 5*/>
-							<div className="project-title">Jamie & Michael's Wedding</div>
-							<div className="project-sub-title">Microsite for my own wedding</div>
-							<div className="project-tab-divider">&nbsp;</div>
-							<div className="project-briefing">Website built for my own wedding with focus on easy access and sharing of information with attendees about the event itself.</div>
-							<ImageLightbox id="wedding" className="galleryThumbnail" imageUrl={wedding2018} alt="Jamie and Michael's wedding microsite screenshot" />
-						</div>
-
-						<div className="project-tab project-tab-yellow" /*project 7*/>
-							<div className="project-title">Faux Report</div>
-							<div className="project-sub-title">Leadgen webpage</div>
-							<div className="project-tab-divider">&nbsp;</div>
-							<div className="project-briefing">This page was built to look like an article in a PDF. Customers would read through, click the call to action links and be funneled into a sales page.</div>
-							<ImageLightbox id="faux" className="galleryThumbnail" imageUrl={fauxreport} alt="Faux report lead generation webpage screenshot" />
-						</div>
-					</div>
-
-					<div className="project-container" /*project container*/>
-						<div className="project-tab project-tab-yellow" /*project 1*/>
-							<div className="project-title">Black Friday E-mail</div>
-							<div className="project-sub-title">E-mail Template</div>
-							<div className="project-tab-divider-cyan">&nbsp;</div>
-							<div className="project-briefing">An e-mail template constructed for a Black Friday event, designed for mobile and several different e-mail applications.</div>
-
-							<ImageLightbox id="blackfriday" className="galleryThumbnail" imageUrl={blackfriday} alt="Black Friday e-mail template screenshot" />
-						</div>
-						<div className="project-tab project-tab-yellow" /*project 2*/>
-							<div className="project-title">Investing Hour E-mail</div>
-							<div className="project-sub-title">E-mail</div>
-							<div className="project-tab-divider-cyan">&nbsp;</div>
-							<div className="project-briefing">A long format e-mail template built for the Investing Hour Podcast. The e-mail contained many different sections for different purposes.</div>
-							<ImageLightbox id="investinghour" className="galleryThumbnail" imageUrl={investinghour} alt="Investing Hour podcast e-mail screenshot" />
-						</div>
-						{/*
-							<div className="project-tab project-tab-yellow" >
-								{/*<div className="project-title">Oneblade</div>
-								<div className="project-sub-title">Landing Page for Microsite</div>
-								<div className="project-tab-divider-cyan">&nbsp;</div>
-								<div className="project-briefing">
-									Single page built to look like the wordpress sister site. This page acted as a lead generator and customers would land here, engage with the article and land on a purchase page after clicking through.
-								</div>
-								<ImageLightbox id="oneblade" className="galleryThumbnail" imageUrl={oneblade} alt="Oneblade microsite landing page screenshot" />
-							</div>
-								*/}
-					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);

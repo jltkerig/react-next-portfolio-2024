@@ -1,4 +1,5 @@
 import Contactform from "@/src/components/form.jsx";
+import PageHeader from "@/src/components/PageHeader";
 
 export const metadata = {
 	title: "Contact",
@@ -24,24 +25,11 @@ export const metadata = {
 export default function Contact() {
 	return (
 		<div>
-			<div className="row">
-				<div className="main-column main-column-p90">
-					<section className="top-section top-column-padding">
-						<div className="column-split center column-padding">
-							<h1>
-								<span className="divider-2">Contact</span>
-							</h1>
-
-							<h2>Have a question?</h2>
-							<h3>Feel free to reach out.</h3>
-							<p>
-								Got questions about web or design? I’m here to help! Whether you need advice, have a project idea, or just want to chat about creative solutions, feel free to reach out. Simply drop me a message, and I’ll get back to you as soon as I
-								can!
-							</p>
-						</div>
-					</section>
-				</div>
-			</div>
+			<PageHeader title="Contact" label="Have a question?" sub="Feel free to reach out.">
+				<p>
+					Got questions about web or design? I’m here to help! Whether you need advice, have a project idea, or just want to chat about creative solutions, feel free to reach out. Simply drop me a message, and I’ll get back to you as soon as I can!
+				</p>
+			</PageHeader>
 			<div className="row">
 				<div className="main-column">
 					<div className="contact-fix-height">

@@ -1,10 +1,15 @@
 "use client";
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {createPortal} from "react-dom";
 import {motion, AnimatePresence} from "motion/react";
 
-export default function ImageLightbox({imageUrl, id, className, alt = ""}) {
+/*scroll: open tall images at full width and let the overlay scroll, instead of shrinking them to fit*/
+/*fit: scale the image up to fill the screen, for small source files that would otherwise open smaller than the thumbnail*/
+export default function ImageLightbox({imageUrl, id, className, alt = "", scroll = false, fit = false}) {
 	const [isOpen, setIsOpen] = useState(false);
+	const [mounted, setMounted] = useState(false); /*document.body only exists on the client*/
+	useEffect(() => setMounted(true), []);
 	const src = imageUrl.src ?? imageUrl; /*next image imports are objects*/
 
 	return (
@@ -20,7 +25,9 @@ export default function ImageLightbox({imageUrl, id, className, alt = ""}) {
 				/>
 			)}
 
-			{/* Expanded Modal Overlay */}
+			{/* Expanded Modal Overlay, portaled to body so transformed/overflow-hidden parents can't trap it */}
+			{mounted &&
+				createPortal(
 			<AnimatePresence>
 				{isOpen && (
 					<motion.div
@@ -37,7 +44,9 @@ export default function ImageLightbox({imageUrl, id, className, alt = ""}) {
 							backgroundColor: "rgba(0, 0, 0, 0.8)",
 							display: "flex",
 							justifyContent: "center",
-							alignItems: "center",
+							alignItems: scroll ? "flex-start" : "center",
+							overflowY: scroll ? "auto" : "visible",
+							padding: scroll ? "40px 0" : 0,
 							zIndex: 999,
 							cursor: "zoom-out",
 						}}
@@ -46,11 +55,19 @@ export default function ImageLightbox({imageUrl, id, className, alt = ""}) {
 							layoutId={`shared-image-${id}`} // Automatically animates the transition from thumbnail size to this size
 							src={src}
 							alt={alt}
-							style={{maxWidth: "80%", maxHeight: "80%", borderRadius: "16px"}}
+							style={
+								scroll
+									? {width: "min(1100px, 92vw)", height: "auto", borderRadius: "12px"}
+									: fit
+										? {width: "92vw", height: "90vh", objectFit: "contain"}
+										: {maxWidth: "80%", maxHeight: "80%", borderRadius: "16px"}
+							}
 						/>
 					</motion.div>
 				)}
-			</AnimatePresence>
+			</AnimatePresence>,
+					document.body,
+				)}
 		</div>
 	);
 }

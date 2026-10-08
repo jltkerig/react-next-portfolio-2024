@@ -1,0 +1,46 @@
+/*web-only extras on top of the shared graphic gallery layout*/
+
+/*screenshots are very tall, so crop to the top of the page; the lightbox shows the whole thing*/
+.shot {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	object-position: top;
+	border: 1px solid #e3e7eb;
+	cursor: zoom-in;
+	transition: opacity 0.3s ease;
+}
+.shot:hover {
+	opacity: 0.88;
+}
+.live {
+	cursor: pointer; /*opens the real site, not the lightbox*/
+}
+
+.text {
+	margin: 14px 0 14px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--grey);
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tags li {
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: rgba(8, 95, 113, 0.1); /*faint --cyan-dark*/
+	color: var(--cyan-med);
+	font-family: var(--font-fira-sans), sans-serif;
+	font-size: 0.85rem;
+	font-weight: 500;
+}

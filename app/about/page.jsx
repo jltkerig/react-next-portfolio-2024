@@ -1,4 +1,5 @@
 import headshot from "@/src/assets/jamie-headshot-sq.png";
+import PageHeader from "@/src/components/PageHeader";
 
 export const metadata = {
 	title: "About",
@@ -23,22 +24,18 @@ export const metadata = {
 
 export default function About() {
 	return (
-		<div>
+		<div id="about">
+			<PageHeader title="About myself" label="Versatile Visual Communicator" sub="Creative. Ambitious. Resourceful.">
+				<p>
+					<img className="headshot" src={headshot.src} alt="headshot" />
+					I'm a dedicated graphic designer who thrives on transforming ideas into visually compelling stories. With a keen eye for detail and a passion for effective communication through design, I specialize in creating memorable brand identities and
+					user-friendly interfaces. I enjoy blending creativity with strategy to deliver designs that resonate and inspire. Let's collaborate and bring your vision to life!
+				</p>
+			</PageHeader>
 			<div className="row">
-				<div className="main-column main-column-p90">
-					<section className="top-section top-column-padding" id="about">
+				<div className="main-column bottom-padding-90">
+					<section>
 						<div className="column-split center column-padding">
-							<h1>
-								<span className="divider-2">About myself</span>
-							</h1>
-
-							<h2>Versatile Visual Communicator</h2>
-							<h3>Creative. Ambitious. Resourceful. </h3>
-							<p>
-								<img className="headshot" src={headshot.src} alt="headshot" />
-								I'm a dedicated graphic designer who thrives on transforming ideas into visually compelling stories. With a keen eye for detail and a passion for effective communication through design, I specialize in creating memorable brand
-								identities and user-friendly interfaces. I enjoy blending creativity with strategy to deliver designs that resonate and inspire. Let's collaborate and bring your vision to life!
-							</p>
 							<h2>History</h2>
 							<h3>Where I've been and what I've learned. </h3>
 							<ul className="custom-list">

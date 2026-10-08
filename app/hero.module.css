@@ -1,0 +1,116 @@
+/*hero card: white box on top of the .landingpage background image (and its wave). buttons stay the site's button.blue / button.white*/
+.card {
+	max-width: 820px; /*wide enough for the bigger two-line h1*/
+	padding: 44px 48px 48px;
+	background: rgba(255, 255, 255, 0.96);
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 30px 60px -30px rgba(8, 40, 50, 0.45);
+}
+
+/*small spaced label above the h1. .card prefix beats .main-column p in index.css*/
+.card .eyebrow {
+	margin: 0 0 10px;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 0.95rem;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+	color: var(--cyan-dark);
+}
+
+/*h1 held to two lines in the card: each span is one line*/
+.title {
+	margin: 0;
+	font-family: var(--font-unna), serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: clamp(2.2rem, 4.6vw, 4.2rem); /*up to ~67px; longest line ~700px fits the 820px card*/
+	line-height: 1.04;
+	letter-spacing: -0.02em;
+	color: var(--black);
+}
+.title em {
+	font-style: italic;
+	background-image: linear-gradient(var(--yellow) 0 0);
+	background-size: 100% 0.16em;
+	background-position: 0 86%;
+	background-repeat: no-repeat;
+}
+@media (min-width: 701px) {
+	.title span {
+		display: block;
+		white-space: nowrap;
+	}
+}
+
+.card .sub {
+	margin: 14px 0 0;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.2rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+.card .intro {
+	margin: 4px 0 0;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.1rem;
+	line-height: 1.55;
+	color: var(--grey);
+}
+
+.buttons {
+	margin-top: 28px;
+}
+
+/*section under the hero: option 7 type (regular-weight Unna italic heading, smaller blue line).
+keeps the site's h2.alt / h2 spacing; only the type changes*/
+.sectionHeading.sectionHeading {
+	font-weight: 400;
+	font-size: 3rem;
+	line-height: 1;
+	margin-bottom: 6px;
+}
+.sectionBlue.sectionBlue {
+	font-size: 1.35rem;
+}
+
+/*service boxes band (page-type option H): desk photo under a dark blue overlay, white waves top and bottom*/
+.servicesBand {
+	position: relative;
+	padding: 60px 0;
+	background:
+		linear-gradient(rgba(8, 63, 75, 0.82), rgba(8, 63, 75, 0.82)),
+		url("/header2.webp") center / cover no-repeat;
+}
+.servicesBand::before,
+.servicesBand::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 60px;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,0 L0,40 C300,90 640,100 980,62 C1200,40 1340,30 1440,40 L1440,0 Z'/%3E%3C/svg%3E")
+		no-repeat top / 100% 100%;
+}
+.servicesBand::before {
+	top: -1px;
+}
+.servicesBand::after {
+	bottom: -1px;
+	transform: rotate(180deg);
+}
+.servicesBand > * {
+	position: relative;
+	z-index: 1;
+}
+
+@media (max-width: 600px) {
+	.card {
+		padding: 28px 22px 32px;
+	}
+}

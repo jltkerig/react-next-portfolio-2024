@@ -1,0 +1,190 @@
+/*homepage sections below the service cards: credentials + service area (from page-type ideas 4 and 3)*/
+
+/* side image: portfolio site in a browser frame (links to /web/) */
+.sideCol {
+	align-items: center;
+	justify-content: center;
+}
+.browser,
+.browser:visited {
+	display: block;
+	width: 100%;
+	max-width: 480px;
+	overflow: hidden;
+	border: 1px solid #d5d9dd;
+	border-radius: 10px;
+	background: var(--white);
+	box-shadow: 0 24px 50px -24px rgba(8, 40, 50, 0.45);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.browser:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 30px 60px -26px rgba(8, 40, 50, 0.55);
+}
+.browserBar {
+	display: flex;
+	gap: 6px;
+	padding: 10px 12px;
+	background: #eef1f3;
+	border-bottom: 1px solid #d5d9dd;
+}
+.browserBar span {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #c5ccd2;
+}
+.browser img {
+	display: block;
+	width: 100%;
+	height: 380px;
+	object-fit: cover;
+	object-position: top;
+}
+
+/* credentials */
+.statsBand {
+	padding: 80px 40px;
+	background: var(--white);
+	border-bottom: 1px solid #e3e7eb;
+}
+.stats {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.stat {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding-top: 18px;
+	border-top: 4px solid var(--darkyellow);
+}
+.statNum {
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 3.4rem;
+	line-height: 1;
+	color: var(--cyan-dark);
+}
+.statLabel {
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.1rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+/* contact: dark band + overlapping form card (page-type flow option 4) */
+.contactBand {
+	padding: 80px 40px 200px;
+	background: var(--cyan-dark);
+}
+.contactText {
+	max-width: 760px;
+	margin: 0 auto;
+	text-align: center;
+}
+.contactText .kicker.kicker {
+	color: var(--yellow);
+}
+.contactTitle.contactTitle {
+	margin: 0 0 12px;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: clamp(2rem, 3.6vw, 3rem);
+	line-height: 1.05;
+	color: var(--white);
+}
+.contactCopy.contactCopy {
+	margin: 0;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.15rem;
+	line-height: 1.6;
+	color: var(--white);
+}
+.contactCard {
+	position: relative;
+	max-width: 660px;
+	margin: -150px auto 0;
+	padding: 34px 36px 38px;
+	background: var(--white);
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 30px 60px -30px rgba(8, 40, 50, 0.55);
+}
+/*the real form wraps itself in a 46%-wide bordered fieldset (index.css); let the card do that job here*/
+.contactCard fieldset {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* service area */
+.areaBand {
+	margin-top: 90px;
+	padding: 90px 40px;
+	background: #eef4f5;
+	border-top: 6px solid var(--darkyellow);
+}
+.areaInner {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+}
+.kicker.kicker {
+	margin: 0 0 10px;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 0.95rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--cyan-dark);
+}
+.areaTitle.areaTitle {
+	margin: 0 0 14px;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: clamp(2rem, 3.6vw, 3rem);
+	line-height: 1.05;
+	color: var(--black);
+}
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+	margin: 18px 0 0;
+	padding: 0;
+	list-style: none;
+}
+.chips li {
+	padding: 8px 18px;
+	border: 1.5px solid var(--cyan-dark);
+	border-radius: 999px;
+	background: var(--white);
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.1rem;
+	letter-spacing: 0.06em;
+	color: var(--cyan-dark);
+}
+
+@media (max-width: 900px) {
+	.stats {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (max-width: 500px) {
+	.stats {
+		grid-template-columns: 1fr;
+	}
+}

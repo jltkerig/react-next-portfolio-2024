@@ -1,4 +1,6 @@
 import ImageLightbox from "@/src/components/ImageLightbox";
+import PageHeader from "@/src/components/PageHeader";
+import styles from "./graphic.module.css";
 import fabriclogo from "@/src/assets/graphic/fabric_sm.jpg";
 import norselogo from "@/src/assets/graphic/norsehorse_sm.jpg";
 import cubelogo from "@/src/assets/graphic/cubelogo_sm.jpg";
@@ -33,123 +35,80 @@ export const metadata = {
 	},
 };
 
+/*editorial layout: each piece picks a size (wide/half/narrow) and an optional drop to stagger the columns*/
+const sections = [
+	{
+		word: "Identity",
+		label: "Logos & marks",
+		blurb: "Marks and logotypes designed for small businesses and events.",
+		pieces: [
+			{id: "fabric", title: "A Fabric Place", type: "Logo", image: fabriclogo, size: "wide"},
+			{id: "norselogo", title: "Norse Horse", type: "Logo", image: norselogo, size: "narrow", drop: true},
+			{id: "cubelogo", title: "Outside the Cube", type: "Logo", image: cubelogo, size: "half"},
+			{id: "heatwavelogo", title: "Heat Wave", type: "Logo", image: heatwavelogo, size: "half", drop: true},
+		],
+	},
+	{
+		word: "Books",
+		label: "Covers & interiors",
+		blurb: "Covers and interior layouts, including studies based on the work of other designers.",
+		pieces: [
+			{id: "bookcover", title: "Lucian Bernhard", type: "Book cover", image: bookcover, size: "narrow"},
+			{id: "bookpages", title: "Lucian Bernhard", type: "Interior pages", image: bookpages, size: "wide", drop: true},
+			{id: "messcover", title: "Keri Smith", type: "Cover redesign, side", image: messcover, size: "half", drop: true},
+			{id: "messstack", title: "Keri Smith", type: "Cover redesign, front", image: messstack, size: "half"},
+		],
+	},
+	{
+		word: "Print",
+		label: "Menus, posters & invites",
+		blurb: "Menus, posters, newspapers and invitations made for print.",
+		pieces: [
+			{id: "wotsposter", title: "Word on the Street", type: "Promotional poster", image: wotsposter, size: "narrow"},
+			{id: "wotspaper", title: "Word on the Street", type: "Newspaper", image: wotspaper, size: "wide", drop: true},
+			{id: "cubemenu", title: "Outside the Cube", type: "Café menu", image: cubemenu, size: "wide"},
+			{id: "rvspcard", title: "RSVP Card", type: "Event invite", image: rvspcard, size: "narrow", drop: true},
+		],
+	},
+];
+
 export default function Graphic() {
 	return (
 		<div>
-			<div className="row">
-				<div className="main-column main-column-p90">
-					<section className="top-column-padding">
-						<div className="column-split center column-padding">
-							<h1>
-								<span className="divider-2">Graphic Projects</span>
-							</h1>
+			<PageHeader title="Graphic Projects" label="A Showcase of Graphic Works" sub="Browse past projects.">
+				<p>
+					I originally started college with being an illustrator as my goal but changed mid-way to finish in graphic design. I still love to do illustrations as a hobby and post them regularly on{" "}
+					<a href="https://www.instagram.com/pumpkinphantompaintings/" target="_blank" rel="noopener noreferrer">
+						instagram
+					</a>
+					. On this page you'll find my past graphic design projects.
+				</p>
+			</PageHeader>
 
-							<h2>A Showcase of Graphic Works</h2>
-							<h3>Browse past projects.</h3>
-							<p>
-								I originally started college with being an illustrator as my goal but changed mid-way to finsh in graphic design. I still love to do illustrations as a hobby and post them regularly on{" "}
-								<a href="https://www.instagram.com/pumpkinphantompaintings/" target="_blank" rel="noopener noreferrer">
-									instagram
-								</a>
-								. On this page you'll find my past graphic design projects.
-							</p>
+			<div className={styles.page}>
+				{sections.map((s) => (
+					<section key={s.word} className={styles.section}>
+						<header className={styles.head}>
+							<h2 className={styles.word}>{s.word}</h2>
+							<div className={styles.intro}>
+								<p className={styles.label}>{s.label}</p>
+								<p className={styles.blurb}>{s.blurb}</p>
+							</div>
+						</header>
+
+						<div className={styles.grid}>
+							{s.pieces.map((p) => (
+								<figure key={p.id} className={`${styles.piece} ${styles[p.size]} ${p.drop ? styles.drop : ""}`}>
+									<ImageLightbox id={`graphic-${p.id}`} className={styles.art} imageUrl={p.image} fit alt={`${p.title} ${p.type.toLowerCase()}`} />
+									<figcaption className={styles.caption}>
+										<span className={styles.capTitle}>{p.title}</span>
+										<span className={styles.capType}>{p.type}</span>
+									</figcaption>
+								</figure>
+							))}
 						</div>
 					</section>
-				</div>
-			</div>
-			<div className="row">
-				<div className="main-column">
-					<div className="project-container-hor" /*project container*/>
-						<div className="project-tab-hor" /*project 1*/>
-							<div className="project-title">
-								<em>A Fabric Place</em>
-							</div>
-							<div className="project-sub-title">Logo</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="fabric" className="galleryThumbnail-logo thumbnail-center" imageUrl={fabriclogo} alt="A Fabric Place logo design" />
-						</div>
-						<div className="project-tab-hor" /*project 2*/>
-							<div className="project-title">
-								<em>Norse Horse</em>
-							</div>
-							<div className="project-sub-title">Logo</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="norselogo" className="galleryThumbnail-logo thumbnail-center" imageUrl={norselogo} alt="Norse Horse logo design" />
-						</div>
-						<div className="project-tab-hor" /*project 3*/>
-							<div className="project-title">Outside the Cube</div>
-							<div className="project-sub-title">Logo</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="cubelogo" className="galleryThumbnail-logo thumbnail-center" imageUrl={cubelogo} alt="Outside the Cube logo design" />
-						</div>
-						<div className="project-tab-hor" /*project 4*/>
-							<div className="project-title">Outside the Cube</div>
-							<div className="project-sub-title">Café Menu</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="cubemenu" className="galleryThumbnail galleryThumbnail-hor thumbnail-center" imageUrl={cubemenu} alt="Outside the Cube café menu design" />
-						</div>
-						<div className="project-tab-hor" /*project 5*/>
-							<div className="project-title">Lucian Bernhard - Cover</div>
-							<div className="project-sub-title">Book design based on Lucian Bernhard</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="bookcover" className="galleryThumbnail-logo thumbnail-center" imageUrl={bookcover} alt="Book cover design inspired by Lucian Bernhard" />
-						</div>
-						<div className="project-tab-hor" /*project 6*/>
-							<div className="project-title">Lucian Bernhard - Inside</div>
-							<div className="project-sub-title">Book design based on Lucian Bernhard</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="bookpages" className="galleryThumbnail-logo thumbnail-center" imageUrl={bookpages} alt="Inside pages of a book design inspired by Lucian Bernhard" />
-						</div>
-						<div className="project-tab-hor" /*project 7*/>
-							<div className="project-title">Keri Smith - Side</div>
-							<div className="project-sub-title">Book covers redesigns</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="messcover" className="galleryThumbnail-logo thumbnail-center" imageUrl={messcover} alt="Keri Smith book cover redesign, side view" />
-						</div>
-						<div className="project-tab-hor" /*project 8*/>
-							<div className="project-title">Keri Smith - Front</div>
-							<div className="project-sub-title">Book covers redesigns</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="messstack" className="galleryThumbnail-logo thumbnail-center" imageUrl={messstack} alt="Keri Smith book cover redesign, front view" />
-						</div>
-						<div className="project-tab-hor" /*project 9*/>
-							<div className="project-title">RSVP Card</div>
-							<div className="project-sub-title">Event invite</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="rvspcard" className="galleryThumbnail-logo thumbnail-center" imageUrl={rvspcard} alt="RSVP card event invite design" />
-						</div>
-						<div className="project-tab-hor" /*project 10*/>
-							<div className="project-title">Heat Wave</div>
-							<div className="project-sub-title">Logo</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="heatwavelogo" className="galleryThumbnail-logo thumbnail-center" imageUrl={heatwavelogo} alt="Heat Wave logo design" />
-						</div>
-						<div className="project-tab-hor" /*project 10*/>
-							<div className="project-title">Word on the Street</div>
-							<div className="project-sub-title">Promotional Poster</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="wotsposter" className="galleryThumbnail-logo thumbnail-center" imageUrl={wotsposter} alt="Word on the Street promotional poster design" />
-						</div>
-						<div className="project-tab-hor" /*project 10*/>
-							<div className="project-title">Word on the Street</div>
-							<div className="project-sub-title">Newspaper</div>
-							<div className="project-tab-divider">&nbsp;</div>
-
-							<ImageLightbox id="wotspaper" className="galleryThumbnail-logo thumbnail-center" imageUrl={wotspaper} alt="Word on the Street newspaper design" />
-						</div>
-					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);

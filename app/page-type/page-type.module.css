@@ -1,0 +1,335 @@
+/*layout for the typography reference page; the samples themselves use site styles*/
+.wrap {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+.group {
+	margin-bottom: 72px;
+}
+.groupTitle.groupTitle {
+	margin: 0 0 8px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid var(--black);
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--cyan-med);
+}
+
+.spec {
+	display: grid;
+	grid-template-columns: 260px minmax(0, 1fr);
+	gap: 32px;
+	padding: 28px 0;
+	border-bottom: 1px solid #e3e7eb;
+}
+.specMeta {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding-top: 6px;
+}
+.specMeta code {
+	font-family: ui-monospace, Consolas, monospace;
+	font-size: 0.95rem;
+	color: var(--black);
+	word-break: break-word;
+}
+.specMeta span {
+	font-family: var(--font-fira-sans), sans-serif;
+	font-size: 0.95rem;
+	color: var(--light-grey);
+}
+.specSample {
+	min-width: 0;
+}
+
+.fontRow.fontRow {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 1.3;
+	color: var(--black);
+}
+
+/*homepage old vs current*/
+.heroOptions {
+	margin-top: 86px; /*clears the fixed nav*/
+	padding-bottom: 40px;
+}
+/*same image + positioning as .landingpage, shorter so several fit on the page*/
+.heroBg {
+	background-image: url("/header2.webp");
+	background-size: cover;
+	background-position: center bottom; /*shorter than .landingpage, so anchor to the bottom to keep the wave*/
+	background-repeat: no-repeat;
+	padding: 70px 30px 140px;
+}
+.heroBg > div {
+	margin: 0 auto 0 max(0px, calc((100% - 1240px) / 2));
+}
+
+/*collapsible preview blocks (native details/summary, no js)*/
+.fold {
+	margin-top: 24px;
+	border-top: 2px solid var(--black);
+}
+.foldTitle.foldTitle {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 16px 24px;
+	cursor: pointer;
+	list-style: none;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.2rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--black);
+}
+.foldTitle::-webkit-details-marker {
+	display: none;
+}
+.foldTitle::before {
+	content: "+";
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border: 2px solid var(--darkyellow);
+	border-radius: 50%;
+	font-size: 1.1rem;
+	line-height: 1;
+	color: var(--cyan-dark);
+}
+.fold[open] > .foldTitle::before {
+	content: "\2212"; /*minus*/
+}
+.foldTitle:hover {
+	color: var(--cyan-med);
+}
+
+/*replaces the site's 90px top/bottom section padding so the options sit closer together*/
+.lowerInner {
+	padding: 24px 0 32px;
+}
+
+/* ---------- service box options ---------- */
+/*explicit border-box: inside <details> the site-wide box-sizing inherit chain breaks, so padding was adding to the 100% width*/
+.fold * {
+	box-sizing: border-box;
+}
+.boxesInner {
+	padding: 70px 40px;
+}
+/*align-self stretch + width auto: fills the column without overflowing its padding*/
+.boxGrid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 30px;
+	align-self: stretch;
+	width: auto;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.boxIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto 24px;
+	color: var(--cyan-dark);
+}
+/*the icon itself: svg used as a mask, coloured by currentColor*/
+.boxGlyph {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: currentColor;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+}
+.box .boxTitle {
+	margin: 0;
+}
+.boxLine {
+	display: block;
+	width: 30%;
+	margin: 10px auto 16px;
+	border-bottom: 4px solid var(--yellow);
+}
+/*.box prefix beats .main-column p*/
+.box .boxCopy {
+	margin: 14px 0 0;
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+
+/* old look */
+.boxOld .box {
+	padding: 30px 20px;
+	background: var(--white);
+	border: 1px solid var(--light-brown);
+	border-radius: 8px;
+	box-shadow:
+		rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+/* current look: gold top bar, pale blue icon circle */
+.boxNew .box {
+	padding: 40px 28px 36px;
+	background: var(--white);
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 24px 48px -28px rgba(8, 40, 50, 0.55);
+}
+.boxNew .boxIcon {
+	width: 88px;
+	height: 88px;
+	border-radius: 50%;
+	background: rgba(8, 95, 113, 0.08); /*faint dark blue instead of the gold fill*/
+	color: var(--cyan-dark);
+}
+
+@media (max-width: 900px) {
+	.boxGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/*side image column (section under the hero)*/
+.sideCol {
+	align-items: center;
+	justify-content: center;
+}
+/*mockups only: match the homepage, where the buttons sit at their natural width with the 30px gap
+(inside these mock cards button.blue/.white's width:100% made them overlap)*/
+.headerButtons > a {
+	flex: 0 0 auto;
+}
+.headerButtons button {
+	width: auto;
+	min-width: 190px;
+}
+
+/*mockups only: keep text + photo side by side like the homepage (long headings were forcing the columns to wrap)*/
+.lowerInner :global(.row) {
+	flex-wrap: nowrap;
+}
+.lowerInner :global(.column-split) {
+	min-width: 0;
+}
+@media (max-width: 900px) {
+	.lowerInner :global(.row) {
+		flex-wrap: wrap;
+	}
+	.lowerInner :global(.column-split) {
+		width: 100%;
+	}
+}
+
+.headerButtons {
+	margin-top: 28px;
+}
+.previewNote.previewNote {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 14px 24px;
+	border-top: 2px dashed var(--darkyellow);
+	border-bottom: 2px dashed var(--darkyellow);
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 0.95rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--light-grey);
+}
+/*second header on the page: no extra nav clearance*/
+.noTop > header {
+	margin-top: 0;
+}
+
+/*PageHeader has its own top margin for the fixed nav; cancel it inside the sample*/
+.inset > header {
+	margin-top: 0;
+	padding: 0 0 8px;
+}
+
+/*svg quote marks around a short quote*/
+/*marks sit in their own rows (top-left, bottom-right) so they never overlap the text*/
+.quote {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 640px;
+}
+.quote p {
+	margin: 0;
+	padding: 0 8px;
+}
+.quoteOpen,
+.quoteClose {
+	display: block;
+	width: 52px;
+	height: auto;
+	flex: none;
+	color: var(--yellow);
+}
+.quoteOpen {
+	align-self: flex-start;
+}
+.quoteClose {
+	align-self: flex-end;
+}
+
+.autoHeight.autoHeight {
+	height: auto;
+}
+
+/*global fieldset is 46% wide and centred; show it full width here*/
+.formReset.formReset {
+	width: 100%;
+	margin: 0;
+}
+
+/*global footer is full-width flex; keep the sample compact*/
+.footerSample.footerSample {
+	padding: 24px;
+	border-radius: 6px;
+}
+/*the sample sits inside .main-column, whose p/li rules would otherwise win over footer p/li*/
+.footerSample p,
+.footerSample li {
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--white);
+}
+
+@media (max-width: 760px) {
+	.spec {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+}
+

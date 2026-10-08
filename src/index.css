@@ -9,11 +9,8 @@
 	--yellow: #f7d136;
 	--lightyellow: #faecb4;
 	--darkyellow: #d6ab00;
-	--cyan-light: #cbe1e5;
-	--cyan-med: #0c7489;
-	--cyan-dark: #085f71;
-	--midnightgreen: #085f71;
-	--cerulean: #0c7489;
+	--cyan-med: #0c7489; /*bright blue: text*/
+	--cyan-dark: #085f71; /*dark blue: everything else*/
 	--orange: #cc834a;
 	--violet: #9d4674;
 	--green: #79a349;
@@ -46,16 +43,13 @@ body::after {
 }
 
 .cerulean {
-	color: var(--cerulean);
+	color: var(--cyan-med);
 }
 
 .midnightgreen {
-	color: var(--midnightgreen);
+	color: var(--cyan-dark);
 }
 
-.bg-cyan-light {
-	background-color: var(--cyan-light);
-}
 
 .bg-cyan-med {
 	background-color: var(--cyan-med);
@@ -133,15 +127,16 @@ body {
 
 .navbar li {
 	font:
-		normal 500 25px "Roboto Condensed",
-		sans-serif;
+		normal 500 25px var(--font-roboto-condensed),
+		sans-serif; /*the loaded next/font, not the plain name (which only works if installed locally)*/
 	list-style: none;
 	display: list-item;
 	padding: 5px;
 	line-height: 1.5em;
 }
 
-.navbar a {
+.navbar a,
+.navbar a:visited {
 	font-weight: 500;
 	color: var(--black);
 	text-decoration: inherit;
@@ -223,9 +218,24 @@ body {
 	animation: 1.5s fadeInUp;
 }
 
-a,
-a:visited {
-	color: var(--midnight);
+/*default link colour. :where() gives it zero specificity, so any colour set on nav, footer,
+buttons or components always wins, visited or not*/
+:where(a, a:visited) {
+	color: var(--cyan-med);
+}
+
+/*links inside body text: coloured, underline only on hover*/
+.main-column p a,
+.main-column li a {
+	color: var(--cyan-med);
+	text-decoration: none;
+	text-underline-offset: 3px;
+}
+.main-column p a:hover,
+.main-column p a:focus-visible,
+.main-column li a:hover,
+.main-column li a:focus-visible {
+	text-decoration: underline;
 }
 
 .open {
@@ -248,7 +258,7 @@ fieldset {
 	padding: 1.5em 1.5em;
 	display: block;
 	width: 46%;
-	border: 1px solid var(--midnightgreen);
+	border: 1px solid var(--cyan-dark);
 	border-radius: 5px;
 }
 
@@ -268,7 +278,7 @@ legend {
 	font-family: var(--font-fira-sans), sans-serif;
 	font-weight: 300;
 	font-size: 20px;
-	color: var(--cerulean);
+	color: var(--cyan-med);
 }
 
 label {
@@ -276,7 +286,7 @@ label {
 	font-family: var(--font-roboto-condensed), sans-serif;
 	font-weight: 500;
 	font-size: 24px;
-	color: var(--cerulean);
+	color: var(--cyan-med);
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
@@ -321,14 +331,14 @@ button.contact {
 }
 
 button.contact:hover {
-	background-color: var(--cerulean);
+	background-color: var(--cyan-med);
 }
 
 /*footer*/
 footer {
 	background-image: url("./assets/blue-background.svg");
 	background-size: cover;
-	/*background-color: var(--midnightgreen);*/
+	/*background-color: var(--cyan-dark);*/
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -378,6 +388,12 @@ footer a:visited {
 footer a:hover,
 footer a:focus {
 	color: var(--black);
+}
+
+/*icon links (linkedin) sit on the same line as the text links*/
+.footer-social {
+	display: inline-flex;
+	vertical-align: middle;
 }
 
 .sitemap {
@@ -502,7 +518,7 @@ footer a:focus {
 
 .background-image-01 {
 	height: 700px;
-	background-image: url("/src/assets/background-01.jpg");
+	background-image: url("./assets/background-01.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	border-bottom: 6px solid var(--yellow);
@@ -528,7 +544,7 @@ footer a:focus {
 }
 
 .yellow-container {
-	background-image: url("/src/assets/dot-grid.svg");
+	background-image: url("./assets/dot-grid.svg");
 	background-size: contain;
 }
 
@@ -537,6 +553,7 @@ footer a:focus {
 	flex-direction: column;
 	flex: 1 1 32%;
 	border: 1px solid var(--light-brown);
+	border-top: 6px solid var(--darkyellow); /*gold bar*/
 	background-color: var(--white);
 	padding: 30px 20px;
 	border-radius: 8px;
@@ -551,11 +568,11 @@ footer a:focus {
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	background-color: var(--cyan-light);
 	border-radius: 50%;
 	height: 100px;
 	width: 100px;
 	margin: 20px auto 30px auto;
+	background: rgba(8, 95, 113, 0.08); /*faint --cyan-dark behind the icon*/
 }
 
 .blue-icons {
@@ -613,7 +630,8 @@ h2.alt {
 	height: fit-content;
 }
 
-svg {
+/*only the old tag-line wave svg; a bare svg rule here was pulling every icon/illustration to the top-left*/
+.tag-line-wave svg {
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -695,7 +713,7 @@ h4 {
 
 button.blue {
 	width: 100%;
-	background-color: var(--midnightgreen);
+	background-color: var(--cyan-dark);
 	color: var(--white);
 	border: 0;
 	font-family: var(--font-roboto-condensed), sans-serif;
@@ -724,7 +742,7 @@ button.white {
 }
 
 button.blue:hover {
-	background-color: var(--cerulean);
+	background-color: var(--cyan-med);
 }
 
 button.white:hover {
@@ -774,12 +792,12 @@ hr.style-soft {
 }
 
 .list-style-image {
-	list-style-image: url("/src/assets/google-icons/check_circle_yellow.svg");
+	list-style-image: url("./assets/google-icons/check_circle_yellow.svg");
 	list-style-position: inside;
 }
 
 .bullet.check {
-	background: transparent url(/src/assets/google-icons/check_circle_yellow.svg) no-repeat scroll 4px -2px / 1.7em;
+	background: transparent url("./assets/google-icons/check_circle_yellow.svg") no-repeat scroll 4px -2px / 1.7em;
 	color: var(--black);
 	list-style-type: none;
 	margin: 0 auto 1em;
@@ -788,7 +806,7 @@ hr.style-soft {
 }
 
 .bullet.grad {
-	background: transparent url(/src/assets/google-icons/school_yellow.svg) no-repeat scroll -3px -5px / 2em;
+	background: transparent url("./assets/google-icons/school_yellow.svg") no-repeat scroll -3px -5px / 2em;
 	color: var(--black);
 	list-style-type: none;
 	margin: 0 auto 1em;
@@ -797,7 +815,7 @@ hr.style-soft {
 }
 
 .bullet.intern {
-	background: transparent url("/src/assets/google-icons/supervised_yellow.svg") no-repeat scroll -2px -2px / 2em;
+	background: transparent url("./assets/google-icons/supervised_yellow.svg") no-repeat scroll -2px -2px / 2em;
 	color: var(--black);
 	list-style-type: none;
 	margin: 0 auto 1em;
@@ -806,7 +824,7 @@ hr.style-soft {
 }
 
 .bullet.work {
-	background: transparent url("/src/assets/google-icons/history_edu_yellow.svg") no-repeat scroll -3px -3px / 2em;
+	background: transparent url("./assets/google-icons/history_edu_yellow.svg") no-repeat scroll -3px -3px / 2em;
 	color: var(--black);
 	list-style-type: none;
 	margin: 0 auto 1em;
@@ -822,7 +840,7 @@ hr.style-soft {
 }
 
 .testimonial {
-	background: transparent url(/src/assets/paintstroke1-60.png) no-repeat scroll 0 22px / 95% 66%;
+	background: transparent url("./assets/paintstroke1-60.png") no-repeat scroll 0 22px / 95% 66%;
 	position: relative;
 	padding: 2em 0 2em 0;
 }
@@ -850,26 +868,21 @@ p.testimonial {
 	margin: 0 2.5em 0 0;
 }
 
+/*quote marks are svgs now (src/components/QuoteMark.jsx), no quote font is loaded*/
 .tastefulQuote {
 	position: absolute;
-	font-family: var(--font-vollkorn), serif;
-	font-optical-sizing: auto;
-	font-weight: 800;
-	font-size: 120px;
 	top: 60px;
 	left: -60px;
-	color: #f7d136;
+	width: 60px;
+	color: var(--yellow);
 }
 
 .tastefulQuote2 {
 	position: absolute;
-	font-family: var(--font-vollkorn), serif;
-	font-optical-sizing: auto;
-	font-weight: 800;
-	font-size: 120px;
 	bottom: -5px;
 	right: -20px;
-	color: #f7d136;
+	width: 60px;
+	color: var(--yellow);
 }
 
 blockquote {
@@ -881,13 +894,13 @@ blockquote {
 }
 
 cite {
-	background-color: #353535;
-	color: #fff;
+	background-color: var(--yellow);
+	color: var(--black);
+	padding: 0 0.3em;
 	font-family: var(--font-roboto-condensed), sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-	color: var(--black);
 }
 
 button {
@@ -903,7 +916,7 @@ button {
 }
 
 button:hover {
-	border-color: #646cff;
+	border-color: var(--cyan-dark);
 }
 
 button:focus,
@@ -918,21 +931,6 @@ button:focus-visible {
 	max-width: 200px;
 	border: 3px solid #f7d136;
 	margin-left: 10px;
-}
-
-/*hello!*/
-
-.courier-prime-regular {
-	font-family: var(--font-courier-prime), monospace;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.caveat-hello {
-	font-family: var(--font-caveat), cursive;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
 }
 
 .roboto-condensed-home {

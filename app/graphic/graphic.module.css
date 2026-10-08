@@ -1,0 +1,143 @@
+/*editorial gallery: oversized section words, asymmetric 12-column grid, no cards, swiss-style captions*/
+.page {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 24px 120px;
+}
+
+/*each section: narrow label column on the left, artwork on the right*/
+.section {
+	display: grid;
+	grid-template-columns: minmax(180px, 3fr) 9fr;
+	column-gap: 48px;
+	align-items: start;
+	padding-top: 40px;
+}
+.section + .section {
+	padding-top: 120px;
+}
+
+/* side label, stays in view while the artwork scrolls past */
+.head {
+	position: sticky;
+	top: 120px;
+	padding-top: 14px;
+	border-top: 1px solid var(--black);
+}
+.word {
+	margin: 0 0 14px;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 1;
+	color: var(--black);
+}
+.word::after {
+	content: ".";
+	color: var(--yellow);
+}
+.label {
+	margin: 0 0 8px;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.4rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cyan-med);
+}
+.blurb {
+	margin: 0;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--grey);
+}
+
+/* asymmetric grid */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	column-gap: 24px;
+	row-gap: 64px;
+	align-items: start;
+}
+.piece {
+	margin: 0;
+}
+.wide {
+	grid-column: span 7;
+}
+.half {
+	grid-column: span 6;
+}
+.narrow {
+	grid-column: span 5;
+}
+.drop {
+	margin-top: 96px;
+}
+
+.art {
+	display: block;
+	width: 100%;
+	height: auto;
+	cursor: zoom-in;
+	transition: opacity 0.3s ease;
+}
+.piece:hover .art {
+	opacity: 0.88;
+}
+
+/* swiss captions */
+.caption {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: 12px;
+	padding-top: 10px;
+	border-top: 1px solid var(--black);
+	font-family: var(--font-fira-sans), sans-serif;
+	font-size: 0.78rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+.capTitle {
+	font-weight: 500;
+	color: var(--black);
+}
+.capType {
+	font-weight: 300;
+	color: var(--light-grey);
+	text-align: right;
+}
+
+@media (max-width: 860px) {
+	.section {
+		display: block;
+	}
+	.head {
+		position: static;
+		margin-bottom: 32px;
+	}
+	.grid {
+		row-gap: 48px;
+	}
+	.wide,
+	.half,
+	.narrow {
+		grid-column: 1 / -1;
+	}
+	.drop {
+		margin-top: 0;
+	}
+}
+@media (max-width: 600px) {
+	.page {
+		padding: 0 16px 80px;
+	}
+	.section + .section {
+		padding-top: 80px;
+	}
+}

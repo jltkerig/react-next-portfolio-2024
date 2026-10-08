@@ -1,0 +1,66 @@
+.wrap {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 24px 110px;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 48px;
+}
+
+.title.title {
+	margin: 0 0 16px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--black);
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 2rem;
+	color: var(--black);
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list li {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 12px 0;
+	border-bottom: 1px solid #e3e7eb;
+}
+
+/*listing :visited too so the global a:visited colour in index.css can't override*/
+.link,
+.link:visited {
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.4rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--cyan-med);
+}
+.link:hover,
+.link:visited:hover {
+	color: var(--cyan-dark);
+	text-decoration: underline;
+	text-decoration-color: var(--yellow);
+	text-underline-offset: 4px;
+}
+
+.note {
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--grey);
+}
+
+@media (max-width: 860px) {
+	.wrap {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+}

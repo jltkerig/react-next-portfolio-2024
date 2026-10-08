@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {areaLinks} from "./_seo/content";
 import "../src/index.css";
 import {fontVariables} from "./fonts";
 
@@ -64,13 +65,10 @@ export default function RootLayout({children}) {
 				<script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify([personJsonLd, websiteJsonLd])}} />
 				<div>
 					<nav className="navbar">
-						<img className="navbar-logo" src={Logo.src} alt="Logo" />
+						<Link href="/" className="navbar-logo" aria-label="Jamie Kerig, home">
+							<img src={Logo.src} alt="Jamie Kerig" style={{display: "block", width: "100%"}} />
+						</Link>
 						<ul>
-							<li>
-								<Link href="/" className="u-link">
-									Home
-								</Link>
-							</li>
 							<li>
 								<Link href="/about/" className="u-link">
 									About
@@ -109,6 +107,21 @@ function Footer() {
 					<li>
 						<a href="/privacypolicy.html" target="_blank" rel="noopener noreferrer">
 							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<Link href="/site-map/">Sitemap</Link>
+					</li>
+					{areaLinks.map((a) => (
+						<li key={a.href}>
+							<Link href={a.href}>{a.label}</Link>
+						</li>
+					))}
+					<li>
+						<a className="footer-social" href="https://www.linkedin.com/in/jamieleedesign/" target="_blank" rel="noopener noreferrer" aria-label="Jamie Kerig on LinkedIn">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true" focusable="false">
+								<path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+							</svg>
 						</a>
 					</li>
 				</ul>

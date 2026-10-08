@@ -1,0 +1,242 @@
+/*credentials -> contact flow options*/
+.h2.h2 {
+	margin: 0 0 12px;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: clamp(2rem, 3.6vw, 3rem);
+	line-height: 1.05;
+	color: var(--black);
+}
+.copy.copy {
+	max-width: 52ch;
+	margin: 0 0 28px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.15rem;
+	line-height: 1.6;
+	color: var(--grey);
+}
+.textCenter {
+	text-align: center;
+}
+.textCenter .copy {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*static form look-alike, using the site's global label/input/textarea/button.contact styles*/
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+.form label {
+	margin-top: 8px;
+}
+.form textarea {
+	min-height: 120px;
+}
+
+/*1 - current*/
+.plain {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 70px 40px 90px;
+}
+.formNarrow {
+	max-width: 620px;
+	margin: 30px auto 0;
+}
+
+/*2 - one tinted panel*/
+.panel {
+	padding: 80px 40px 90px;
+	background: #eef4f5;
+}
+.rule {
+	max-width: 1200px;
+	margin: 60px auto;
+	border: 0;
+	border-top: 2px solid var(--darkyellow);
+}
+.split {
+	display: grid;
+	grid-template-columns: 5fr 6fr;
+	gap: 60px;
+	align-items: start;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.card {
+	padding: 34px 36px 38px;
+	background: var(--white);
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 24px 48px -28px rgba(8, 40, 50, 0.45);
+}
+
+/*3 - side by side*/
+.sideBySide {
+	display: grid;
+	grid-template-columns: 5fr 6fr;
+	gap: 64px;
+	align-items: start;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 90px 40px;
+}
+.statsStack {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	margin-top: 6px;
+}
+.statRow {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	align-items: center;
+	gap: 18px;
+	padding-left: 16px;
+	border-left: 4px solid var(--darkyellow);
+}
+
+/*4 - dark band, overlapping card*/
+.darkBand {
+	padding: 80px 40px 200px;
+	background: var(--cyan-dark);
+}
+.darkBand :global(*) {
+	color: var(--white);
+}
+.darkBand [class*="statNum"] {
+	color: var(--yellow);
+}
+.darkText {
+	margin-top: 60px;
+}
+.darkText .h2.h2,
+.darkText .copy.copy {
+	color: var(--white);
+}
+.overlapCard {
+	position: relative;
+	max-width: 660px;
+	margin: -150px auto 90px;
+	padding: 34px 36px 38px;
+	background: var(--white);
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 30px 60px -30px rgba(8, 40, 50, 0.55);
+}
+
+/*5 - statement heading*/
+.statement {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 90px 40px;
+	text-align: center;
+}
+.bigH2.bigH2 {
+	max-width: 18ch;
+	margin: 0 auto 50px;
+	font-family: var(--font-unna), serif;
+	font-weight: 700;
+	font-size: clamp(2.4rem, 4.6vw, 4rem);
+	line-height: 1.04;
+	letter-spacing: -0.02em;
+	color: var(--black);
+}
+.statement [class*="stat_"] {
+	text-align: left;
+}
+.statement .formNarrow {
+	margin-top: 60px;
+	text-align: left;
+}
+
+/*1 (retry) - credentials in one bordered bar with dividers*/
+.barWrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 80px 40px 90px;
+}
+.statBar {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	margin-bottom: 80px;
+	border: 1px solid #d5d9dd;
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 20px 44px -30px rgba(8, 40, 50, 0.5);
+}
+.statBarItem {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 28px 26px;
+}
+.statBarItem + .statBarItem {
+	border-left: 1px solid #e3e7eb;
+}
+
+/*2 (retry) - gold band*/
+.goldBand {
+	padding: 70px 40px;
+	background: var(--darkyellow);
+}
+.statOnGold.statOnGold {
+	border-top-color: var(--black);
+}
+.goldBand [class*="statNum"] {
+	color: var(--black);
+}
+.splitPad {
+	padding: 90px 40px;
+}
+
+/*3 (retry) - compact 2x2 credentials under the contact text*/
+.statsGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 26px 30px;
+	margin-top: 8px;
+}
+.statSmall {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding-top: 14px;
+	border-top: 3px solid var(--darkyellow);
+}
+.statSmall [class*="statNum"] {
+	font-size: 2.4rem;
+}
+.statSmall [class*="statLabel"] {
+	font-size: 0.95rem;
+}
+
+/*4 (retry) - dark band only behind the contact heading*/
+.darkBandShort {
+	padding: 70px 40px 190px;
+	background: var(--cyan-dark);
+}
+.darkBandShort .darkText {
+	margin-top: 0;
+}
+.darkText [class*="kicker"] {
+	color: var(--yellow);
+}
+
+@media (max-width: 900px) {
+	.split,
+	.sideBySide {
+		grid-template-columns: 1fr;
+	}
+	.statBar {
+		grid-template-columns: 1fr 1fr;
+	}
+	.statBarItem + .statBarItem {
+		border-left: 0;
+	}
+}

@@ -1,0 +1,85 @@
+.header {
+	max-width: 1240px;
+	margin: 86px auto 0; /*clears the fixed nav, same as top-column-padding*/
+	padding: 40px 24px 72px;
+}
+
+.title {
+	margin: 0;
+	padding-bottom: 0.08em;
+	border-bottom: 1px solid var(--black);
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: clamp(3.5rem, 11vw, 9.5rem);
+	line-height: 0.9;
+	letter-spacing: -0.03em;
+	color: var(--black);
+}
+.title::after {
+	content: ".";
+	color: var(--yellow);
+}
+
+.below {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	column-gap: 24px;
+	padding-top: 24px;
+}
+.lead {
+	grid-column: 1 / span 4;
+}
+.intro {
+	grid-column: 6 / span 7;
+}
+
+.label {
+	margin: 0 0 8px;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.4rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: var(--cyan-med);
+}
+.sub {
+	margin: 0;
+}
+.intro p {
+	margin: 0 0 1em;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 400; /*matches .main-column p in index.css*/
+	font-size: 1.3em;
+	line-height: 1.5em;
+	color: var(--grey);
+}
+/*same as body-text links in index.css: coloured, underline on hover*/
+.intro a,
+.intro a:visited {
+	color: var(--cyan-med);
+	text-decoration: none;
+	text-underline-offset: 3px;
+}
+.intro a:hover,
+.intro a:focus-visible {
+	text-decoration: underline;
+}
+.intro p:last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 860px) {
+	.below {
+		display: block;
+	}
+	.intro {
+		margin-top: 20px;
+	}
+}
+@media (max-width: 600px) {
+	.header {
+		padding: 24px 16px 48px;
+	}
+}

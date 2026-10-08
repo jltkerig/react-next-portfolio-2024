@@ -1,5 +1,6 @@
 import {Carousel} from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import QuoteMark from "../QuoteMark";
 function Testimonial() {
 	return (
 		<>
@@ -10,13 +11,13 @@ function Testimonial() {
 				<Carousel showArrows={false} infiniteLoop={true} autoPlay={true} showThumbs={false} showStatus={false} showIndicators={false} interval={6100}>
 					<div>
 						<p className="testimonial">
-							<span className="tastefulQuote">&ldquo;</span>A really cool word from a client. The project went great and she was wonderful to work with! <span className="tastefulQuote2">&rdquo;</span>
+							<QuoteMark className="tastefulQuote" />A really cool word from a client. The project went great and she was wonderful to work with! <QuoteMark close className="tastefulQuote2" />
 							<div class="testimonial-sig">&ndash; John Doe</div>
 						</p>
 					</div>
 					<div>
 						<p className="testimonial">
-							<span className="tastefulQuote">&ldquo;</span>Amazing! <span className="tastefulQuote2">&rdquo;</span>
+							<QuoteMark className="tastefulQuote" />Amazing! <QuoteMark close className="tastefulQuote2" />
 							<br />
 							<br />
 							<div className="testimonial-sig">&ndash; Jane Doe</div>

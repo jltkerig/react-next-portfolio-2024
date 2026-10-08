@@ -1,0 +1,192 @@
+/*local seo page templates. type: Unna headings, Fira labels, Merriweather body; site blues + gold*/
+.section {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 70px 40px;
+}
+.kicker.kicker {
+	margin: 0 0 10px;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 0.95rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--cyan-dark);
+}
+.h1.h1 {
+	margin: 0 0 20px;
+	font-family: var(--font-unna), serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: clamp(2.6rem, 5vw, 4.2rem);
+	line-height: 1.04;
+	letter-spacing: -0.02em;
+	color: var(--black);
+}
+.h1 em {
+	font-style: italic;
+	background: linear-gradient(var(--yellow) 0 0) no-repeat 0 88% / 100% 0.16em;
+}
+.h2.h2 {
+	margin: 0 0 24px;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: clamp(2rem, 3.4vw, 2.8rem);
+	line-height: 1.08;
+	color: var(--black);
+}
+.copy.copy {
+	margin: 0 0 24px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.15rem;
+	line-height: 1.7;
+	color: var(--grey);
+}
+
+/* service cards (same look as the homepage cards: gold bar, white card) */
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 30px;
+}
+.card,
+.card:visited {
+	display: flex;
+	flex-direction: column;
+	padding: 32px 28px;
+	background: var(--white);
+	border: 1px solid #e3e7eb;
+	border-top: 6px solid var(--darkyellow);
+	border-radius: 4px;
+	box-shadow: 0 20px 44px -30px rgba(8, 40, 50, 0.5);
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.2s ease;
+}
+.card:hover {
+	transform: translateY(-4px);
+}
+.cardTitle.cardTitle {
+	margin: 0 0 10px;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.35rem;
+	text-transform: uppercase;
+	color: var(--black);
+}
+.cardText.cardText {
+	margin: 0 0 18px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--grey);
+}
+.cardLink {
+	margin-top: auto;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cyan-med);
+}
+
+/* faq */
+.faq {
+	border-top: 2px solid var(--black);
+}
+.faqItem {
+	border-bottom: 1px solid #d5d9dd;
+}
+.faqItem summary {
+	padding: 18px 4px;
+	cursor: pointer;
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-size: 1.4rem;
+	color: var(--black);
+}
+.faqItem summary::marker {
+	color: var(--darkyellow);
+}
+.faqItem p {
+	margin: 0 4px 20px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: var(--grey);
+}
+.nearby.nearby {
+	margin: 24px 0 0;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--light-grey);
+}
+
+/* template B: split hero + tinted band */
+.splitHero {
+	display: grid;
+	grid-template-columns: 6fr 5fr;
+	gap: 60px;
+	align-items: center;
+	max-width: 1200px;
+	margin: 86px auto 0; /*clears the fixed nav*/
+	padding: 80px 40px;
+}
+.tintBand {
+	background: #eef4f5;
+}
+
+/* local context, service area */
+.twoCol {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 60px;
+	align-items: start;
+}
+.forWho {
+	padding: 32px 28px;
+	border-left: 6px solid var(--darkyellow);
+	background: #eef4f5;
+}
+.forWho ul {
+	margin: 0;
+	padding-left: 20px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 1.05rem;
+	line-height: 1.9;
+	color: var(--grey);
+}
+.map {
+	aspect-ratio: 4 / 3;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 20px 44px -30px rgba(8, 40, 50, 0.5);
+}
+.map iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.nearby a {
+	color: var(--cyan-med);
+}
+
+/*breathing room between the overlapping form card and the footer*/
+.afterContact {
+	height: 90px;
+}
+
+@media (max-width: 900px) {
+	.cards,
+	.splitHero,
+	.twoCol {
+		grid-template-columns: 1fr;
+	}
+}
