@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <!-- Put CSS Calls here -->
+    <link href="https://static.cloudsna.com/store/PROD/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://s3.amazonaws.com/assets.stansberryresearch.com/content/reports/number-one-stock/styles.css" rel="stylesheet">
+	<link href="https://secure-prod-assets.s3.amazonaws.com/common/css/elements.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Roboto:400,400i,700,700i|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+	
+    <!-- Put Javascript Calls here -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://use.fontawesome.com/31d4ac2df8.js"></script>
+
+	<script src="https://cmp.osano.com/AzydZ7TEJc3cu8mk6/1b9b41f1-52cc-404b-b173-d657a5b62ad3/osano.js"></script>
+    <script>
+        //In-Line JS goes here
+var urlParams;
+				(window.onpopstate = function () {
+					 var match,
+							 pl     = /\+/g,  // Regex for replacing addition symbol with a space
+							 search = /([^&=]+)=?([^&]*)/g,
+							 decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+							 query  = window.location.search.substring(1);
+					 urlParams = {};
+					 while (match = search.exec(query))
+							urlParams[decode(match[1])] = decode(match[2]);
+				})();
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+    </script>
+
+    <style>
+        /*In-Line CSS goes here*/
+		h1 {
+			font-size: 50px;
+			line-height: 1.2;
+		}
+			.main-report>img{
+			max-width: 890px;
+			margin:auto;
+			margin-bottom: 20px;
+			-webkit-box-shadow: 1px 2px 6px 3px #222; 
+			box-shadow: 1px 2px 6px 3px #222;
+			width:100%;
+		}
+		
+		.navbar{display: none;}
+		
+		
+		.imgCenter {
+			display: block;
+			margin: 20px auto;
+			width: 80%;
+		}
+		
+		header {
+			background-color: #D22329;
+		}
+		.dark-blue {
+    border: 3px solid #D22329;
+}
+.quote-tab {
+    background-color: #D22329;
+		}
+		
+		.quoteblock-orange p{
+			    font-size: 16pt;
+		}
+		
+		@media (max-width: 736px){
+			
+			.navbar{display: inherit;}
+			
+			.top-header{
+				height: 50px !important;
+			}
+			
+			.left-section{
+				font-family: 'Robot', sans-serif;
+				font-weight: 700;
+				font-size: 11px;
+				line-height: 16px;
+				color: #fff;
+				text-align: left;
+				padding: 12px 10px 14px 20px;
+				float: left;
+			}
+			
+			.navbar, .navbar-inverse {
+				border-radius: 0;
+				border: none;
+				margin-bottom: 0;
+				min-height: auto;
+			}
+
+			.nav li {
+				display: inline;
+				color: white;
+			}
+
+			.navbar-inverse{
+				background-color: inherit;
+			}
+
+			.navbar-inverse .navbar-nav > li > a {
+				color: #ffffff;
+				font-family: Lato;
+				font-size: 16px;
+				text-decoration: none;
+				font-weight: 300;
+				padding: 0px 15px 0px 15px;
+			}
+
+			.navbar-inverse .navbar-nav li a:hover {
+				background-color: #444444;
+				transition: 0.7s all linear;
+				height: 100%;
+			}
+
+
+			.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse{
+				margin-left:0px !important;
+				background-color: #323639;
+			}
+			
+		}
+			.modal-content {border-radius:0px;
+			}
+			
+			.modal-content p {margin:0 0 18px;}
+			  .modal-backdrop.fade {
+				opacity: 0.7;
+				filter: alpha(opacity=0.7);
+			}
+			
+			#modalDismiss {
+				color: #333;
+				font-weight: bold;
+				background-color:rgba(255,0,0,0);
+				padding: 8px;
+				margin: auto;
+				border-radius: 4px;
+				border:1px solid #333;
+				border-bottom:2px solid #333;
+			}
+			.modal-body {
+			  padding: 3vw;
+			
+			}
+    </style>
+</head>
+
+<body>
+<section class="top-header">
+	<div class="left-section">Special Research Presentation:<span> 3 Stocks to Plug into the Power Gauge Right Now</span></div>
+	<!-- <div class="right-section"><div class="logo"><img src="https://static.cloudsna.com/store/PROD/images/Naspers/report%20promo-stansberry%20logo%20header%402x.png" alt="StansberryResearch"></div></div>	 -->
+</section>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 col-sm-2 col-xs-12 side-column"></div>
+		<div class="col-md-8 col-sm-8 col-xs-12 main-column">
+			<article>
+				<section>
+					<div class="main-report"><img src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/events/Chaikin2021/3+Stocks+to+Plug+into+the+Power+Gauge+Right+Now.jpg" /></div>
+				</section>
+				<section class="main-body-top">
+					<header>Special Research Presentation</header>
+					<h1>3 Stocks to Plug into the Power Gauge Right Now</h1>
+					<h2>Special Report</br>By Marc Chaikin</h2>
+					<div class="executive-summary">
+						<hr class="dark-blue" />
+							<p>Welcome to the Power Gauge.</p>
+							<p><a href="https://prediction2021event.com/power-gauge.html" target="_blank">You can access it here</a>, if you haven’t already.</p>
+							<p>Simply type in any of 4,000 different tickers and see exactly where the stock is most likely to go next. A chance to predict TOMORROW’s stock ratings on Wall Street... in any type of market.</p>
+							<p>In a nutshell, here’s how it works:</p>
+							<ul>
+								<li>If the Power Gauge rates the stock “<strong>BULLISH</strong>,” then the stock has a strong chance of shooting up in the coming weeks and months.</li>
+								<li>If the Power Gauge rates the stock “<strong>NEUTRAL</strong>,” then the stock has a strong chance of drifting sideways in the coming weeks and months.</li>
+								<li>If the Power Gauge rates the stock “<strong>BEARISH</strong>,” then the stock has a strong chance of plummeting in the coming weeks and months.</li>
+							</ul>
+							<p>The Power Gauge is the culmination of my 50 years on Wall Street. It has pointed to a variety of winners… using a secret of the investment world I cover in <a href="https://prediction2021event.com/video.html" target="_blank">our special video series here.</a></p>
+							<p>Take a look…</p>
+							<p>Here’s just a snapshot of the gains our system has pointed to…</p>
+							<ul>
+								<li><strong>10,090% in 11 months</strong> on RIOT</li>
+								<li><strong>3,060% in 9 months</strong> on VXRT</li>
+								<li><strong>3,000% in 3 months</strong> on GME</li>
+								<li><strong>1,900% in 18 months</strong> on RAD</li>
+								<li><strong>1,050% in 4 months</strong> on OSTK</li>
+								<li><strong>900%</strong> on AAPL</li>
+								<li><strong>884% in 8+ months</strong> on NIO</li>
+								<li><strong>799% in 9+ months</strong> on FLGT</li>
+								<li><strong>789% in 8 months</strong> on APPS</li>
+								<li><strong>788% max gain in 24 hours</strong> on PCLN</li>
+								<li><strong>697%</strong> on LAM</li>
+								<li><strong>530%</strong> on CROX</li>
+								<li><strong>410%</strong> on ENTG</li>
+								<li><strong>399%</strong> on PEGA</li>
+								<li><strong>383% in 10 months</strong> on VIAC</li>
+								<li><strong>335% in 2 months</strong> on NVAX</li>
+								<li><strong>277%</strong> on NOVT</li>
+								<li><strong>258% in 6 months</strong> on CPRI</li>
+								<li><strong>256%</strong> on KBH</li>
+								<li><strong>244% in 2 months</strong> on CGIX</li>
+								<li><strong>238% in 6 months</strong> on DISC</li>
+								<li><strong>227%</strong> on CMG</li>
+								<li><strong>136% gain in 8 months</strong> on YY</li>
+							</ul>
+							<p>In short, I’m best known as the creator of one of Wall Street’s most popular indicators… a system that appears in every Bloomberg and Reuters terminal in the world, and is now used by hundreds of banks, hedge funds, and every major brokerage site.</p>
+							<p>For decades, I used it to help banks grow wealthier.</p>
+							<p>But then the Crash of 2008 came along…</p>
+							<p>And something happened that rubbed me the wrong way.</p>
+							<p>My wife lost around 50% of her 401(k)… all because of a bad money manager.</p>
+							<p>I thought… “Gee, I’ve spent my whole life helping Wall Street get richer… when ordinary folks like my wife Sandy are getting fleeced.”</p>
+							<p>And that’s when I made a radical decision that yanked me out of retirement and has kept me working 24/7 for the last decade now… creating what I consider the ultimate “secret power” for everyday people.</p>
+							<p>A way to see which stocks could soon double your money, by taking the same information I gave Wall Street for 50 years… and using it to give yourself a <em>HUGE and “unfair” advantage.</em></p>
+							<p>Until May 25, I’m giving you a “lite” version of the Power Gauge to try this yourself on as many stocks as you like.</p>
+							<p>Here are 3 stocks to get you started…</p>
+					</div>
+				</section>
+				<section class="main-body" id="stockOne">
+					<h4>STOCK #1: Tecnoglass (TGLS)</h4>
+				<p>Type this stock into the Power Gauge right now…</p>
+				<p>And you’ll see the rating is listed as <strong>BULLISH.</strong></p>
+				<p><strong>Tecnoglass</strong> is a little-known architectural glass maker that has been benefitting from the ongoing housing boom.</p>
+				<p>The stock recently shot up 30% after reporting strong 1<sup>st</sup> quarter earnings.</p>
+				<p>But I think that’s only the beginning.</p>
+				<p>According to the Power Gauge, this stock could soon be rated a “Buy” at every major bank and hedge fund… which means this company is likely to shoot up in the coming weeks and months.</p>
+					<p class="indent">Because the fact is, nothing makes a stock go UP or DOWN – faster – than the actions of institutional investors.</p>
+				<p>When a bank starts pouring in hundreds of millions of dollars into a stock, it can shoot up overnight and go on to rise hundreds… or even thousands of percent… all because of the sheer quantity of institutional money flowing in.</p>
+				<p>On May 25<sup>th</sup>, I’ll explain exactly how the Power Gauge works to predict these huge stock moves in our special event, <em>Prediction 2021</em>.</p>
+				</section>
+				<section class="main-body" id="stockTwo">
+					<h4>STOCK #2: Expedia Group (EXPE)</h4>
+					<p>Type this stock into the Power Gauge right now…</p>
+					<p>And you’ll see the rating is listed as <strong>NEUTRAL.</strong></p>
+					<p><strong>Expedia Group</strong> is an online travel company. To some people, it seems like a fantastic stock idea right now… a play on America’s “reopening.”</p>
+					<p>After all, people are beginning to eat out in restaurants again, visit with family and take vacations.</p>
+					<p>But according to the Power Gauge, this stock is headed nowhere.</p>
+					<p>In fact, the Power Gauge is threatening to turn Bearish on the stock any day now.</p>
+					<p>Expedia is a good example of how the Power Gauge can identify “popular” stock ideas… and expose them as money traps.</p>
+					<p>That’s how I once warned the public to avoid the beloved fast-food firm Chipotle before it fell as much as 41%.</p>
+				</section>
+				<section class="main-body" id="stockThree">
+					<h4>STOCK #3: Peloton Interactive (PTON)</h4>
+					<p>Type this stock into the Power Gauge right now…</p>
+					<p>And you’ll see the rating is listed as <strong>BEARISH.</strong></p>
+					<p><strong>Peloton</strong> is an exercise-bike company.</p>
+					<p>Last year, it was a classic “pandemic play.” Gyms were closed and people were buying expensive exercise bikes for home use.</p>
+					<p>But the Power Gauge turned bearish on Peloton back in mid-February and the stock has been falling ever since.</p>
+					<p>And I think that’s only the beginning.</p>
+					<p>According to the Power Gauge, this stock could soon be rated a “Sell” at every major bank and hedge fund… which means this company is likely to become one of the biggest losers of 2021.</p>
+					<p>In fact, the company just got hit with a huge recall of their treadmills.</p>
+					<p>This – coupled with the fact that investors are now pivoting from “pandemic plays” to “reopening plays” – means that you should AVOID Peloton right now. If you own it, get out immediately.</p>
+					<p>Finding bearish stocks is how I once appeared on CNBC <em>Mad Money</em> back in 2014 and warned the public about Priceline.com, just before the stock plummeted. A friend of mine reported seeing a <em>733% overnight gain</em> on a single play he came across, by using my prediction.</p>
+				</section>
+				<section class="main-body" id="specialEvent">
+					<h4>Our special event on May 25</h4>
+					<p>In our <em>Prediction 2021</em> event on Tuesday, May 25 at 8pm ET, I’ll walk you through how the Power Gauge works.</p>
+					<p>I’ll give away my #1 little stock to buy now, for 500% potential upside…</p>
+					<p>And most important of all, I’ll make the biggest prediction of my 50-year career.</p>
+					<p>I’ll name a new type of company I predict will soon <em>create a paradigm shift in U.S. business</em> that could make you 5 to 10 times your money.</p>
+					<p>It’ll change the way you eat, shop, work, talk, and more. A once-in-a-generation investment opportunity.</p>
+					<p>I’ll show you exactly how to play my prediction using the Power Gauge.</p>
+					<p>Last year alone, it pointed to Riot Blockchain before it shot up 10,090% in less than 12 months… Digital Turbine, before it shot up 789% in 8 months… Overstock.com, before it shot up 1,050% in 4 months… and more.</p>
+					<p>See you on May 25<sup>th</sup>.</p>
+					<p>Regards,</p>
+					<p>Marc Chaikin<br/>Founder, Chaikin Analytics<br/>
+					Creator of <em>The Power Gauge</em></p>
+				</section>
+				<section class="main-body" id="about">
+					<h4>About Marc Chaikin</h4>
+					<p><a href="https://prediction2021event.com/about.html" target="_blank">Click here for a “behind-the-scenes” look at how Marc Chaikin has become a legend of the U.S. finance world</a>, and why Stansberry Research says his system “represents our core mission over the past 22 years.”</p>
+					<p>Marc Chaikin has spent 50 years on Wall Street, where he survived and thrived in 9 bear markets… helped create three new indices for the Nasdaq, where he once rang the opening bell… has built what Stansberry considers the “golden standard” for determining where a stock is going next (based on his worldwide indicator which appears on every Bloomberg terminal)… and has appeared many times on <em>Fox Business</em> and CNBC’s <em>Mad Money.</em></p>
+					<p>As CNBC’s <em>Mad Money</em> host, Jim Cramer, once said:</p>
+						<div class="quoteblock-orange">
+						<div class="quote-tab">
+							<div class="quote"></div>
+						</div>
+							<p><strong>“I learned a long time ago not to be on the other side of a Chaikin trade. </strong></p>
+							<p><strong>I want to explain why I love Marc’s stuff. It’s simple, it’s understandable, it’s rational, it’s not emotional, and I use it constantly and I almost never want to go against it.”</strong></p>
+						</div>				
+					<p><a href="https://prediction2021event.com/power-gauge.html" target="_blank">Click here to access the Power Gauge now.</a></p>												
+
+				</section>
+			</article>
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-12 side-column">
+			<section class="static-side-bar">
+				<hr class="static-side-bar-hr" />
+				<h1>Table of Contents</h1>
+				<p><a href="#stockOne">STOCK #1: Tecnoglass (TGLS)</a></p>
+				<hr class="static-side-bar-hr-light" />
+				<p><a href="#stockTwo">STOCK #2: Expedia Group (EXPE)</a></p>
+				<hr class="static-side-bar-hr-light" />
+				<p><a href="#stockThree">STOCK #3: Peloton Interactive (PTON)</a></p>
+				<hr class="static-side-bar-hr-light" />
+				<p><a href="#specialEvent">Our special event on May 25</a></p>
+				<hr class="static-side-bar-hr-light" />
+				<p><a href="#about">About Marc Chaikin</a></p>
+				<div class="bottom-logo"><img src="https://s3.amazonaws.com/assets.stansberryresearch.com/mkt/events/Chaikin2021/chaikin_logo.png" /></div>
+			</section>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

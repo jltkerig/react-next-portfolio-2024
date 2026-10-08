@@ -1,0 +1,18 @@
+////November 5th, 2015 - Jamie Thomas////
+__________________________________________
+
+
+Notes for HTML:
+
+The JS file included is to resize the checkboxes for the forms. (custom-form-elements.js) 
+The file also includes the information to the original author and how to change the variables.
+
+To activate it, just add class="style" to the <input type="checkbox"> tag.
+However at the moment, it doesn't work correctly and will not show the second image on click. 
+
+All related CSS is under /* Custom checkboxes */ in the style.css file.
+
+All images are already uploaded under 
+static.cloudsna.com/store/PROD/images/email-subscriber/img
+
+There is a copy of the HTML files on the server and in dropbox in the Marketing Technology folder just in case! 

@@ -1,0 +1,37 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-turq {
+    background: #24a18f;
+}
+
+.bg-offwhite {
+    background: #f6f6f6;
+}
+
+bg-offwhite {
+}
+
+.lead-list {
+    font-weight: bold;
+}
+
+input[required] + label:after {
+    content: '*';
+    color: text-primary;
+}
+
+a:hover,
+a:focus {
+    color: text-primary;
+}
+
+h4,
+.h4 {
+    font-family: 'proxima-nova', sans-serif !important;
+    font-weight: lighter !important;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}

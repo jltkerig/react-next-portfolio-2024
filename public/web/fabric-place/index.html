@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Fabric Place- Baltimore, MD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+      html,
+      body {
+        height: 100%;
+        font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+      }
+
+      header {
+        background-color: #484b4f;
+      }
+
+      /*.site-wrap {}*/
+      .siteinfo {
+        font-family: 'Open Sans', sans-serif;
+        color: #FFF;
+        margin-top: 35px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+      }
+
+      .footerlink {
+        font-family: 'Open Sans', sans-serif;
+        color: #FFF;
+        margin-top: 35px;
+      }
+
+      .footerlink li {
+        list-style: none;
+      }
+
+      .footerlink a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .footerlink a:hover,
+      .footerlink a:active,
+      .footerlink a:visited {
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      .sitehours {
+        font-family: 'Open Sans', sans-serif;
+        color: #FFF;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .footerinfo {
+        font-family: 'Open Sans', sans-serif;
+        color: #FFF;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .well-head {
+        margin: 0 auto 20px auto;
+        box-shadow:
+          0 1px 1px hsl(0deg 0% 0% / 0.075),
+          0 2px 2px hsl(0deg 0% 0% / 0.075),
+          0 4px 4px hsl(0deg 0% 0% / 0.075),
+          0 8px 8px hsl(0deg 0% 0% / 0.075),
+          0 16px 16px hsl(0deg 0% 0% / 0.075);
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+
+      h2 {
+        font-size: 60px;
+      }
+
+      h3 {
+        font-family: 'Open Sans', Arial, sans-serif;
+        display: block;
+        margin: 0;
+        line-height: 1.4;
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: -.03em;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.4em;
+      }
+
+      .center {
+        margin: 0 auto;
+      }
+
+      .center-row {
+        margin-bottom: 20px;
+      }
+
+      .menubar {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      footer {
+        margin-top: 20px;
+        background-color: #838588;
+        ;
+      }
+
+      header .logo {
+        padding-left: 50px
+      }
+
+      .carousel-inner {
+        font-size: 3em;
+      }
+
+      #carousel-a-fabric-place {
+        margin-bottom: 20px;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+
+      .item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+      }
+
+      .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: darken;
+        font-size: 1.7em;
+        font-weight: 700;
+        line-height: 1em;
+        top: 10%;
+        bottom: revert;
+        padding: 10px 10px 26px 10px;
+        margin: 10px;
+        border-radius: 20px;
+      }
+
+      /*form*/
+      label {
+        display: block;
+        font: 18px Open Sans, serif;
+        color: #888;
+        margin-bottom: 15px;
+      }
+
+      input[type="button"],
+      input[type="submit"] {
+        background: #0f3053;
+        padding: 8px 40px 8px 40px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+        font: 700 30px Open Sans, serif;
+        border: 1px solid #257C9E;
+        font-size: 18px;
+      }
+
+      input[type="button"]:hover,
+      input[type="submit"]:hover {
+        background: #2A6881;
+      }
+
+      input[type="email"],
+      select {
+        font-family: Open Sans, serif;
+        font-size: 18px;
+        display: block;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        padding: 8px 8px 6px 8px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border: 2px solid #fff;
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+        -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+        -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+      }
+
+      /* Extra small devices (phones, less than 768px) */
+      /* No media query since this is the default in Bootstrap */
+      /* Small devices (tablets, 768px and up) 
+@media (min-width: @screen-sm-min) { ... }*/
+      /* Medium devices (desktops, 992px and up) 
+@media (min-width: @screen-md-min) { ... }*/
+      /* Large devices (large desktops, 1200px and up) 
+@media (min-width: @screen-lg-min) { ... }*/
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse hidden-lg hidden-md">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img alt="Brand" src="images/logo.png" width="40">
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- desktop menu-->
+      <div class="row">
+        <div class=" col-md-2 hidden-sm hidden-xs">
+          <img src="images/logo.png" class="logo" />
+        </div>
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <!-- center buffer div -->
+        </div>
+        <div class="siteinfo col-sm-2 col-md-2 col-lg-2"> Telephone: 410-828-6777<br><br> Location: 6324 Falls Road<br>
+          Baltimore, MD, 21209 </div>
+        <div class="sitehours col-sm-2 col-md-2 col-lg-2"> Hours of Operation: <br> M 10AM-9PM<br> T 10AM-5PM<br> W
+          10AM-5PM<br> T 10AM-9PM<br> F 10AM-5PM<br> S 10AM-5PM<br> S Closed </div>
+        <div class="sitehours col-sm-2 col-md-2 col-lg-2"> Hours: <br> M 10AM-9PM<br> T 10AM-5PM<br> W 10AM-5PM<br> T
+          10AM-9PM<br> F 10AM-5PM<br> S 10AM-5PM<br> S Closed</div>
+      </div>
+      <div class="row-fluid menubar">
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">2</div>
+        <div class="col-lg-1">3</div>
+        <div class="col-lg-1">4</div>
+        <div class="col-lg-1">6</div>
+        <div class="col-lg-1">7</div>
+        <div class="col-lg-1">8</div>
+        <div class="col-lg-1">9</div>
+        <div class="col-lg-1">10</div>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carousel-a-fabric-place" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-a-fabric-place" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-a-fabric-place" data-slide-to="1"></li>
+            <li data-target="#carousel-a-fabric-place" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="images/suit-not-so-long-long.png" alt="Sample First Image">
+              <div class="carousel-caption"> We carry a wide selection of suitings, coatings, and fine menswear fabrics.
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/wedding-dress.png" alt="...">
+              <div class="carousel-caption"> Check out our collection of bridal fabrics. </div>
+            </div>
+            <div class="item">
+              <img src="images/lace-selection.png" alt="...">
+              <div class="carousel-caption"> French lace, designer silk prints, designer trims and more! </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-a-fabric-place" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-a-fabric-place" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="row center-row">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+            <!-- center buffer div -->
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <h2>Our Products</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+            <!-- center buffer div -->
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <img src="images/button-square.png" class="well-head img-responsive" />
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta sapien in accumsan dictum. Nunc
+              iaculis ex in sem ornare, commodo vulputate urna laoreet. Nam rutrum volutpat eleifend. In consequat lacus
+              quam, eleifend interdum justo dictum ut. Aliquam quis arcu risus. Integer aliquet nunc nec luctus congue.
+              Duis porta finibus nulla, sagittis eleifend ex porta eget. Aliquam pretium ultrices ipsum quis commodo.
+              Sed rhoncus sollicitudin vehicula. </p>
+          </div>
+          <div class="col-md-3">
+            <img src="images/silk-250.png" class="well-head img-responsive" />
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta sapien in accumsan dictum. Nunc
+              iaculis ex in sem ornare, commodo vulputate urna laoreet. Nam rutrum volutpat eleifend. In consequat lacus
+              quam, eleifend interdum justo dictum ut. Aliquam quis arcu risus. Integer aliquet nunc nec luctus congue.
+              Duis porta finibus nulla, sagittis eleifend ex porta eget. Aliquam pretium ultrices ipsum quis commodo.
+              Sed rhoncus sollicitudin vehicula. </p>
+          </div>
+          <div class="col-md-3">
+            <img src="images/silk-250.png" class="well-head img-responsive" />
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta sapien in accumsan dictum. Nunc
+              iaculis ex in sem ornare, commodo vulputate urna laoreet. Nam rutrum volutpat eleifend. In consequat lacus
+              quam, eleifend interdum justo dictum ut. Aliquam quis arcu risus. Integer aliquet nunc nec luctus congue.
+              Duis porta finibus nulla, sagittis eleifend ex porta eget. Aliquam pretium ultrices ipsum quis commodo.
+              Sed rhoncus sollicitudin vehicula. </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+            <!-- center buffer div -->
+          </div>
+          <div class="col-lg-10 col-md-10">
+            <h2 style="text-align: center;">A Fabric Place</h2>
+            <p>Our retail store has been open since 1969 and is located in Baltimore, Maryland. Please drop in and see
+              us when you're in the area. We have an incredible selection of fabrics for clothing. We look forward to
+              seeing you in the store. </p>
+            <img class="img-responsive center" src="images/map.JPG">
+            <img class="img-responsive center mt-2" src="images/streetview.webp">
+          </div>
+          <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+            <!-- center buffer div -->
+          </div>
+        </div>
+        <!---end main container-->
+      </div>
+      <div class="row">
+        <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+          <!-- center buffer div -->
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h3>Subscribe to our email list:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+          <!-- center buffer div -->
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8"
+            class="contact-form">
+            <input type="email" value="" placeholder="Email Address" aria-label="Email Address">
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <input type="submit" value="Sign Up" name="Sign Up" />
+        </div>
+        </form>
+      </div>
+    </div><!--end main container-->
+    <footer class="footer">
+      <!-- if page is short add navbar-fixed-bottom to class-->
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="col-md-2 hidden-sm hidden-xs footerlink">
+            <ul>
+              <li>
+                <a class="footerlink" href="#">Privacy Policy</a>
+              </li>
+              <li><a class="footerlink" href="#">Terms & Conditions</a></li>
+              <li><a class="footerlink" href="#">FAQ</a></li>
+              <li><a class="footerlink" href="#">Contact</a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <!-- center buffer div -->
+          </div>
+          <div class="siteinfo col-sm-2 col-md-2 col-lg-2"> Telephone: 410-828-6777<br><br> Location: 6324 Falls
+            Road<br> Baltimore, MD, 21209 </div>
+          <div class="sitehours col-sm-2 col-md-2 col-lg-2"> Hours of Operation: <br> M 10AM-9PM<br> T 10AM-5PM<br> W
+            10AM-5PM<br> T 10AM-9PM<br> F 10AM-5PM<br> S 10AM-5PM<br> S Closed </div>
+          <div class="sitehours col-sm-2 col-md-2 col-lg-2"> Hours: <br> M 10AM-9PM<br> T 10AM-5PM<br> W 10AM-5PM<br> T
+            10AM-9PM<br> F 10AM-5PM<br> S 10AM-5PM<br> S Closed</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 footerinfo"> Site and Logo designed by <a class="footerlink"
+            href="https://www.jkerig.com/" target="_blank">Jamie Lee Thomas Kerig</a> for educational purposes. </div>
+      </div>
+      </div>
+      </div>
+    </footer>
+  </body>
+
+</html>

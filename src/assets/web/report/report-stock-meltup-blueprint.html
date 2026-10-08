@@ -1,0 +1,1831 @@
+<!doctype html>
+<!-- https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/index.html -->
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>The 2024 Stock Melt Up: A Blueprint</title>
+    <link href="https://assets.1729research.com/common/css/bootstrap/bootstrap.min.4.3.1.css" rel="stylesheet" type="text/css" />
+    <link href="https://assets.stansberryresearch.com/content/reports/number-one-stock/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="https://stansberryresearch.com/assets/img/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/31d4ac2df8.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Roboto:400,400i,700,700i|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
+    <script type="text/javascript" src="https://players.brightcove.net/5298920694001/rkj9vsdUM_default/index.min.js">
+    </script>
+    <script src="https://cmp.osano.com/AzydZ7TEJc3cu8mk6/a116d877-a7d0-4b0d-8c96-9dc439a1834a/osano.js"></script>
+    <script type="text/javascript" src="https://secure-prod-assets.s3.amazonaws.com/common/js/videoManager.js"></script>
+    <script type="text/javascript" src="https://assets.stansberryresearch.com/mkt/templates/js/videoManager-lightbox.js"></script>
+    <script>
+      let buttonTime = 3480000; //3480000
+      //DO NOT DELETE ME OR YOU WILL BREAK THE BUTTON THANK YOU
+      setInterval(function ()
+      {
+        if ($('.btn-hidden').css("display") == "inline")
+        {
+          $('.btn-hidden').css("display", "block");
+        }
+      }, 1000);
+
+      $(function ()
+      {
+        WaitForFunction();
+      });
+      function WaitForFunction()
+      {
+        try
+        {
+          if (!videojs)
+          {
+            setTimeout(WaitForFunction, 100);
+            console.log("Waiting for videojs"); a
+            return;
+          }
+          ButtonReveal();
+        }
+        catch (error)
+        {
+          setTimeout(WaitForFunction, 100);
+          return;
+        }
+      }
+
+      function ButtonReveal()
+      {
+        //console.log("ButtonReveal active. Set for " + (buttonTime/1000)/60);
+        var myPlayer = videojs("myPlayerId");
+        myPlayer.ready(function ()
+        {
+          setInterval(function ()
+          {
+            if (myPlayer.currentTime() > (buttonTime / 1000))
+            {
+              $('.btn-hidden').css("display", "inherit");
+              $('.btn-hidden').css("display", "block !important");
+              $('.textPop').css("display", "block");
+              //console.log('button popped');
+              //jtag.send({ saw_button_pop: "true" });
+            }
+          }, 1000);
+        });
+      }
+    </script>
+    <style>
+      h1 {
+        font-size: 40px;
+        line-height: 1.2;
+      }
+
+      h4 {
+        font-size: 30px;
+        line-height: 1.2;
+        padding: 70px 0 30px
+      }
+
+      p.cta-page-footer {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        color: #24588d;
+        margin-top: 35px;
+      }
+
+      .main-body {
+        padding-bottom: 50px;
+      }
+
+      .main-report>img {
+        max-width: 890px;
+        margin: auto;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 1px 2px 6px 3px #222;
+        box-shadow: 1px 2px 6px 3px #222;
+        width: 100%;
+      }
+
+      .navbar {
+        display: none;
+      }
+
+      .imgCenter {
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+      }
+
+      .author-wrap {
+        max-width: 425px;
+        margin: 20px auto 30px;
+      }
+
+      .author-img {
+        max-width: 125px;
+        border-radius: 50%;
+      }
+
+      @media (max-width: 736px) {
+        .navbar {
+          display: inherit;
+        }
+
+        .top-header {
+          height: 50px !important;
+        }
+
+        .left-section {
+          font-family: 'Robot', sans-serif;
+          font-weight: 700;
+          font-size: 11px;
+          line-height: 16px;
+          color: #fff;
+          text-align: left;
+          padding: 12px 10px 14px 20px;
+          float: left;
+        }
+
+        .navbar,
+        .navbar-inverse {
+          border-radius: 0;
+          border: none;
+          margin-bottom: 0;
+          min-height: auto;
+        }
+
+        .nav li {
+          display: inline;
+          color: white;
+        }
+
+        .navbar-inverse {
+          background-color: inherit;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+          color: #ffffff;
+          font-family: Lato;
+          font-size: 16px;
+          text-decoration: none;
+          font-weight: 300;
+          padding: 0px 15px 0px 15px;
+        }
+
+        .navbar-inverse .navbar-nav li a:hover {
+          background-color: #444444;
+          transition: 0.7s all linear;
+          height: 100%;
+        }
+
+        .container>.navbar-header,
+        .container-fluid>.navbar-header,
+        .container>.navbar-collapse,
+        .container-fluid>.navbar-collapse {
+          margin-left: 0px !important;
+          background-color: #323639;
+        }
+      }
+
+      /*
+<ul class="custom-list">
+ 	<li class="bullets">Bullet example - Standard bullet. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets green">Bullet example. Green. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets red">Bullet example. Red. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets orange">Bullet example. Orange. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets blue">Bullet example. Blue. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets purple">Bullet example. Purple. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets darkgreen">Bullet example. Dark green. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets darkred">Bullet example. Dark red. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets teal">Bullet example. Teal. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets darkteal">Bullet example. Dark teal. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets forestgreen">Bullet example. Forest green. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets gray">Bullet example. Gray. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets white" style="background-color: black; color: white;">Bullet example. White. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets target">Bullet example - Target bullet. <strong>Same color options as above.</strong> Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets target-green">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets target-red">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets target-orange">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets target-blue">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets check">Bullet example – Bullet check. <strong>Same color options as above.</strong> Lorem ipsum dolor sit amet.</li>
+
+ 	<li class="bullets check-green">Bullet example – Bullet check. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets check-red">Bullet example – Bullet check. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets check-orange">Bullet example – Bullet check. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets check-blue">Bullet example – Bullet check. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets check-gold">Bullet example – Bullet check. Lorem ipsum dolor sit amet.</li>
+
+ 	<li class="bullets warning">Bullet example - Warning icon. <strong>Same color options as above.</strong> Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets warning-green">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets warning-red">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets warning-orange">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets warning-blue">Bullet example. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets warning-gold">Bullet example. Lorem ipsum dolor sit amet.</li>
+
+ 	<li class="bullets alert">Bullet example - Alert icon. <strong>Same color options as above.</strong> Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets alert-green">Bullet example. Alert icon. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets alert-red">Bullet example. Alert icon. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets alert-orange">Bullet example. Alert icon. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets alert-blue">Bullet example. Alert icon. Lorem ipsum dolor sit amet.</li>
+ 	<li class="bullets alert-gold">Bullet example. Alert icon. Lorem ipsum dolor sit amet.</li>
+
+</ul>
+NOTE: Additional classes can be added to the <ul> and <li> based on the bullets and overall styling. */
+      ul.custom-list {
+        list-style: none;
+        padding-left: 40px;
+      }
+
+      .col-content.centered>ul>li {
+        width: 100%;
+        max-width: 710px;
+      }
+
+      ul.long-list>li {
+        margin-bottom: 0.75em;
+      }
+
+      .bullets {
+        background: transparent url("https://assets.1729research.com/common/icons/bullet-angle-black.png") no-repeat scroll 0 0 / 1em;
+        margin: 0 auto 1em;
+        padding-left: 1.5em;
+        padding-top: 0;
+      }
+
+      .bullets.green {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-green.png");
+      }
+
+      .bullets.lightgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-lightgreen.png");
+      }
+
+      .bullets.red {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-red.png");
+      }
+
+      .bullets.orange {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-orange.png");
+      }
+
+      .bullets.blue {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-blue.png");
+      }
+
+      .bullets.purple {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-purple.png");
+      }
+
+      .bullets.darkgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-darkgreen.png");
+      }
+
+      .bullets.darkred {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-darkred.png");
+      }
+
+      .bullets.gray {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-gray.png");
+      }
+
+      .bullets.white {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-white.png");
+      }
+
+      .bullets.teal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-teal.png");
+      }
+
+      .bullets.darkteal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-darkteal.png");
+      }
+
+      .bullets.forestgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-forestgreen.png");
+      }
+
+      .bullets.gold {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-angle-gold.png");
+      }
+
+      .bullets.target {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-black.png");
+      }
+
+      .bullets.target-green {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-green.png");
+      }
+
+      .bullets.target-lightgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-lightgreen.png");
+      }
+
+      .bullets.target-red {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-red.png");
+      }
+
+      .bullets.target-orange {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-orange.png");
+      }
+
+      .bullets.target-blue {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-blue.png");
+      }
+
+      .bullets.target-purple {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-purple.png");
+      }
+
+      .bullets.target-darkgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-darkgreen.png");
+      }
+
+      .bullets.target-darkred {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-darkred.png");
+      }
+
+      .bullets.target-gray {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-gray.png");
+      }
+
+      .bullets.target-white {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-white.png");
+      }
+
+      .bullets.target-teal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-teal.png");
+      }
+
+      .bullets.target-darkteal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-darkteal.png");
+      }
+
+      .bullets.target-forestgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-target-forestgreen.png");
+      }
+
+      .bullets.check {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-black.png");
+      }
+
+      .bullets.check-green {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-green.png");
+      }
+
+      .bullets.check-lightgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-lightgreen.png");
+      }
+
+      .bullets.check-red {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-red.png");
+      }
+
+      .bullets.check-orange {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-orange.png");
+      }
+
+      .bullets.check-blue {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-blue.png");
+      }
+
+      .bullets.check-purple {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-purple.png");
+      }
+
+      .bullets.check-darkgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-darkgreen.png");
+      }
+
+      .bullets.check-darkred {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-darkred.png");
+      }
+
+      .bullets.check-gray {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-gray.png");
+      }
+
+      .bullets.check-white {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-white.png");
+      }
+
+      .bullets.check-teal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-teal.png");
+      }
+
+      .bullets.check-darkteal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-darkteal.png");
+      }
+
+      .bullets.check-forestgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-check-forestgreen.png");
+      }
+
+      .bullets.warning {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-black.png");
+      }
+
+      .bullets.warning-green {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-green.png");
+      }
+
+      .bullets.warning-lightgreen {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-lightgreen.png");
+      }
+
+      .bullets.warning-red {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-red.png");
+      }
+
+      .bullets.warning-orange {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-orange.png");
+      }
+
+      .bullets.warning-blue {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-blue.png");
+      }
+
+      .bullets.warning-purple {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-purple.png");
+      }
+
+      .bullets.warning-darkgreen {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-darkgreen.png");
+      }
+
+      .bullets.warning-darkred {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-darkred.png");
+      }
+
+      .bullets.warning-gray {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-gray.png");
+      }
+
+      .bullets.warning-white {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-white.png");
+      }
+
+      .bullets.warning-teal {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-teal.png");
+      }
+
+      .bullets.warning-darkteal {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-darkteal.png");
+      }
+
+      .bullets.warning-forestgreen {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-forestgreen.png");
+      }
+
+      .bullets.warning-gold {
+        background-image: url("https://assets.1729research.com/common/icons/icon-warning-gold.png");
+      }
+
+      .bullets.alert {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-black.png");
+      }
+
+      .bullets.alert-green {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-green.png");
+      }
+
+      .bullets.alert-lightgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-lightgreen.png");
+      }
+
+      .bullets.alert-red {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-red.png");
+      }
+
+      .bullets.alert-orange {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-orange.png");
+      }
+
+      .bullets.alert-blue {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-blue.png");
+      }
+
+      .bullets.alert-purple {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-purple.png");
+      }
+
+      .bullets.alert-darkgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-darkgreen.png");
+      }
+
+      .bullets.alert-darkred {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-darkred.png");
+      }
+
+      .bullets.alert-gray {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-gray.png");
+      }
+
+      .bullets.alert-white {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-white.png");
+      }
+
+      .bullets.alert-teal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-teal.png");
+      }
+
+      .bullets.alert-darkteal {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-darkteal.png");
+      }
+
+      .bullets.alert-forestgreen {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-forestgreen.png");
+      }
+
+      .bullets.alert-gold {
+        background-image: url("https://assets.1729research.com/common/icons/bullet-alert-gold.png");
+      }
+
+      .bullets.doubleangle {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle.png");
+      }
+
+      .bullets.doubleangle-green {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-green.png");
+      }
+
+      .bullets.doubleangle-lightgreen {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-lightgreen.png");
+      }
+
+      .bullets.doubleangle-red {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-red.png");
+      }
+
+      .bullets.doubleangle-orange {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-orange.png");
+      }
+
+      .bullets.doubleangle-blue {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-blue.png");
+      }
+
+      .bullets.doubleangle-purple {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-purple.png");
+      }
+
+      .bullets.doubleangle-darkgreen {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-darkgreen.png");
+      }
+
+      .bullets.doubleangle-darkred {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-darkred.png");
+      }
+
+      .bullets.doubleangle-gray {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-gray.png");
+      }
+
+      .bullets.doubleangle-white {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-white.png");
+      }
+
+      .bullets.doubleangle-teal {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-teal.png");
+      }
+
+      .bullets.doubleangle-darkteal {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-darkteal.png");
+      }
+
+      .bullets.doubleangle-forestgreen {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-forestgreen.png");
+      }
+
+      .bullets.doubleangle-gold {
+        background-image: url("https://s3.amazonaws.com/secure-prod-assets/common/icons/bullet-doubleangle-gold.png");
+      }
+
+      ol.custom-number {
+        list-style: none;
+        counter-reset: counter;
+        padding-left: 1.5em;
+      }
+
+      .numbered {
+        margin: 0 0 1em 0.5em;
+        padding-left: 1em;
+        padding-top: 0.2em;
+        position: relative;
+        counter-increment: counter;
+      }
+
+      .numbered::before {
+        color: #fff;
+        content: counter(counter);
+        font-family: "Gibson", sans-serif;
+        font-size: 80%;
+        font-weight: bold;
+        left: -0.85em;
+        background-color: #308034;
+        line-height: 1.1;
+        border-radius: 50%;
+        padding: 5px 8px;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        text-align: center;
+        top: 3px;
+      }
+
+      .big-number {
+        margin: 0 0 1em 0;
+        padding-left: 1.5em;
+        padding-top: 0.2em;
+        position: relative;
+        counter-increment: counter;
+      }
+
+      .big-number::before {
+        color: #1c6623;
+        content: counter(counter) ". ";
+        font-family: "ProximaNova", "Gibson", sans-serif;
+        font-size: 125%;
+        font-weight: bold;
+        font-weight: 800;
+        left: -0.65em;
+        width: 1.5em;
+        position: absolute;
+        text-align: right;
+        top: -0.07em;
+      }
+
+      .main-middle li:last-of-type {
+        margin-bottom: 1.5em;
+      }
+
+      @media screen and (max-width: 600px) {
+        ul.custom-list {
+          padding-left: 8px;
+        }
+
+        ol.custom-number {
+          padding-left: 1em;
+        }
+
+        .numbered::before {
+          font-size: 100%;
+          width: 30px;
+          height: 30px;
+          padding: 4px 8px;
+          left: -1.05em;
+          top: -2px;
+        }
+
+        .big-number::before {
+          top: 0.1em;
+        }
+      }
+
+      /*
+LIST STYLING ends here 
+*/
+      /*OSANO FOOTER START*/
+      .osano-cm-widget {
+        display: none;
+      }
+
+      .footerRow {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        justify-content: center;
+        margin: 10px auto;
+      }
+
+      .footerItem {
+        font-family: verdana, sans-serif;
+        font-size: 12px;
+        color: #fff;
+        line-height: 20px;
+        padding: 0 15px;
+        border-right: 2px solid #bbb;
+        text-decoration: none;
+      }
+
+      .footerItem:last-child {
+        border-right: none;
+      }
+
+      .footerItem:hover {
+        text-decoration: none;
+        color: #454242;
+      }
+
+      @media (max-width: 960px) {
+        .footerRow {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      #osano-cm-drawer-toggle--category_MARKETING--description {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        line-height: 1.375;
+      }
+
+      .osano-cm-description p,
+      .osano-cm-view--type_consent p {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 1.375;
+      }
+
+      .osano-cm-disclosure__toggle,
+      .osano-cm-header {
+        font-family: Verdana, sans-serif;
+        font-size: 17.65px;
+      }
+
+      .osano-cm-header {
+        font-family: "Gibson-SemiBold", arial, sans-serif;
+        font-size: 17.65px;
+        line-height: 1.375em;
+        margin: 0 auto 0 0;
+      }
+
+      /*OSANO FOOTER END*/
+    </style>
+    </style>
+    <!-- Paste this right before your closing </head> tag -->
+    <script type="text/javascript">
+      (function (f, b)
+      {
+        if (!b.__SV)
+        {
+          var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c)
+          {
+            function g(a, d) { var b = d.split("."); 2 == b.length && (a = a[b[0]], d = b[1]); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))) } } var a = b; "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel"; a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d }; a.people.toString = function () { return a.toString(1) + ".people (stub)" }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+            for (h = 0; h < i.length; h++)g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]) } } for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++)b(j[c]); return d }; b._i.push([e, f, c])
+          }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+            MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g)
+        }
+      })(document, window.mixpanel || []);
+      mixpanel.init('285ec6de65689b5bf5160fc38d13e1ae', { debug: true });
+      mixpanel.track('Read Report', { 'CID': 'MKT811402', 'Report Title': 'Melt Up Branded Report', 'Version': 'PDF-Alike', 'Source': 'Lead Gen' });
+    </script>
+  </head>
+  <script>
+    $(document).ready(function ()
+    {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event)
+      {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "")
+        {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function ()
+          {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+
+  <body>
+    <section class="top-header">
+      <div class="left-section"> Special Research Presentation:<span> The 2024 Stock Melt Up: A Blueprint</span></div>
+      <!-- <div class="right-section"><div class="logo"><img src="https://static.cloudsna.com/store/PROD/images/Naspers/report%20promo-stansberry%20logo%20header%402x.png" alt="StansberryResearch"></div></div>	 -->
+    </section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-12 side-column"> </div>
+        <div class="col-md-8 col-sm-8 col-xs-12 main-column">
+          <article>
+            <section>
+              <div class="main-report"> <img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/report-the-2024-stock-melt-up-a-blueprint-flat.png" alt="Report Cover"> </div>
+            </section>
+            <section class="main-body" id="intro">
+              <header>Special Research Presentation</header>
+              <h1>The 2024 Stock Melt Up: <br>A Blueprint </h1>
+              <!-- <div class="row author-wrap">
+     <div class="col-sm-4"><img src="https://assets.stansberryresearch.com/uploads/sites/2/2021/12/headshot-Dan_Ferris-500-square_61c35e7e1e08d.png" alt="Dan Ferris" class="author-img"></div>
+     <div class="col-sm-8">
+      <h2>Special Report<br>
+       By Dan Ferris</h2>
+     </div>
+    </div>-->
+              <!--<h2>By Joel Litman</h2>-->
+              <hr class="intro">
+              <p>&quot;I'm still waiting for the collapse,&quot; a friend told me earlier this month.</p>
+              <p>&quot;The stock market... the housing market... it all feels like a house of cards,&quot; he continued. &quot;Prices are just too high. I'm waiting for them to fall before I buy anything.&quot;</p>
+              <p>Patience isn't a bad trait for an investor. When assets are soaring, biding your time until you can buy the next pullback is a fine strategy.</p>
+              <p><em>But that's not what my friend is thinking...</em></p>
+              <p>He's expecting a major meltdown... something like the 2022 bear market or the pandemic-induced bust in 2020. He thinks prices are <em>artificially</em> elevated. And he doesn't want to buy until prices fall 20%... 30%... or even 40% from today's levels.</p>
+              <p>I understand if you'd like to do the same. But I've got bad news for you...</p>
+              <p><strong>You're not going to get that chance</strong>.</p>
+              <p>I don't mean that stocks will only go up from here. Heck, history suggests that we'll likely see a 10% correction sometime this year. That's normal.</p>
+              <p>But if you're waiting on a major market collapse... one that will let you buy at prices similar to the bottom in 2020, or even 2022... it's not going to happen.</p>
+              <p>We're nearly two years into the current bull market. And we're a little more than halfway through the long-term, secular bull market I've written about over the past year.</p>
+              <p>In this kind of environment, stocks don't revisit their prior lows. They don't give you a second chance to buy at the price you <em>wish</em> you'd taken advantage of years ago. It just doesn't happen...</p>
+              <p>During the secular bull market of the 1980s and 1990s, the stock market never – <em>not once!</em> – rallied off a low and then retested that low again. Once those prices were gone, they were gone for good.</p>
+              <p>As the old saying goes, &quot;The best time to plant a tree was 20 years ago. The second-best time is today.&quot;</p>
+              <p>Similarly, the best time to invest was about any time in the past... And the second-best time is today.</p>
+              <p>My friend hasn't caught up to this reality. And many investors are in the same camp. They expect – or even feel they deserve – another shot to buy at the low prices of past years. But they're going to end up sorely disappointed.</p>
+              <p>We're smack-dab in the middle of a secular bull market. History shows that it will propel stocks higher through the end of the decade. And stocks could soar by as much as 4 times in value along the way.</p>
+              <p>When I first shared this idea more than a year ago, the catalyst for these returns wasn't yet clear. But that has changed...</p>
+              <p>The artificial-intelligence (&quot;AI&quot;) boom has swept the investment world. And now, it's driving this secular bull market's gains. It accounted for roughly $90 billion worth of last year's corporate spending... And analysts expect data-center spending alone to top $1 trillion by 2027.</p>
+              <p>This is exactly what happened with the Internet in the 1990s. It's a sweeping trend that will change the world as we know it – and fuel a financial mania along the way.</p>
+              <p>With major companies spending tens of billions of dollars, this bull market will soar to unimaginable heights.</p>
+              <p>At Stansberry Research, we call this a &quot;Melt Up.&quot;</p>
+              <p>Every major bull market ends the same way... with a furious Melt Up.</p>
+              <p>This is the final stage of a boom... where investors throw caution to the wind, and prices rise higher and faster than anyone believes possible.</p>
+              <p>We've seen this happen again and again throughout history. There was the incredible rise in Japanese stocks in the late 1980s... the final furious push in the Nasdaq during the dot-com boom... and the spike in &quot;meme stocks,&quot; bitcoin, and other risky assets in 2021.</p>
+              <p>Everyone doubts a Melt Up can happen in the moment. It doesn't seem like it should be possible... condensing years of market returns into a few short months. But it has always happened. And it always will.</p>
+              <p>As investors, we can quibble over the &quot;why&quot;... or we can position ourselves to profit from the inevitable. In this report, we're doing the latter.</p>
+              <p>My name, by the way, is Brett Eversole. After studying applied mathematics, I've spent 14 years as an analyst at Stansberry Research, where I've tracked this Melt Up phenomenon since 2015.</p>
+              <p>I've put together this report with my colleague Whitney Tilson to share some of our latest research on what's happening in the market right now. Whitney is a former hedge-fund manager and Wall Street veteran who has spent the past 25-plus years studying the markets.</p>
+              <p>We hope you enjoy our work.</p>
+              <p>Good investing,</p>
+              <img src="https://s3.amazonaws.com/assets.1729research.com/signatures/whitney-tilson-signature.png" class="signature" style="max-width:200px;">
+              <img src="https://assets.1729research.com/signatures/brett-eversole-signature.png" class="signature" style="max-width:200px;">
+              <p>Whitney Tilson and Brett Eversole</p>
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="what-melt-up">
+              <!--begin section-->
+              <h4><strong>What Is a Melt Up?</strong></h4>
+              <p>In March 2000, John Chambers was on top of the world...</p>
+              <p>It was the height of the dot-com craze. And his company was leading the &quot;Internet Revolution.&quot;</p>
+              <p>Chambers' results as CEO were remarkable... He even appeared on the cover of <em>BusinessWeek</em> in 1999:</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/cisco-magazine.jpg" alt="chart" class=" imgCenter" style="max-width:300px;"></p>
+              <p>In just five short years, the firm's revenue grew from $2 billion to $12 billion. That's annual growth of more than 40%.</p>
+              <p>Chambers had a real business at a time when most folks were chasing garbage business models wrapped in gimmicky Internet lingo.</p>
+              <p>Investors loved its consistent and unbelievably strong growth trend. So the company's stock soared, like every other Internet stock at the time. But this one was different...</p>
+              <p>It didn't rise simply because of the irrational boom that dominated that era. It was fueled by strong fundamentals. The company earned more than $12 billion in revenue and surpassed $2 billion in profit in 1999.</p>
+              <p>And of course, investors made a mint along the way... The stock skyrocketed 131% in 1999. And by March 2000 – when shares peaked – it was up roughly 50% more.</p>
+              <p>That's almost a 250% rise in just 15 months. And it made Chambers' company the world's largest, with a market value of roughly $500 billion.</p>
+              <p>If you haven't already figured it out, we're talking about <strong>Cisco Systems (Nasdaq: CSCO)</strong>, the giant Internet-infrastructure business.</p>
+              <p>The company's routers, switches, and network equipment still power the Internet as we know it. And clearly, the &quot;Internet Revolution&quot; that Cisco promised investors came to fruition. Here's an excerpt from the company's 2000 annual report...</p>
+              <p class="indent">Over the next two decades, the Internet economy will bring about more dramatic changes in the way we work, live, play, and learn than we witnessed during the last 200 years of the Industrial Revolution. Cisco is well-positioned to help our customers survive the Internet Revolution by turning these changes into [a] competitive advantage.</p>
+              <p>Cisco hit the nail on the head. You can't say the same thing about most businesses from that period. But even still, it has been a rough ride for Cisco investors...</p>
+              <p>You see, Cisco was part of a phenomenon called a &quot;Melt Up&quot; – the explosive, euphoric surge of a bull market – right before everything collapses in a &quot;Melt Down.&quot; </p>
+              <p>I (Whitney Tilson) have been through Melt Ups and Melt Downs in my investing career. I launched my first hedge fund in 1999, right in the heart of Cisco's Melt Up. </p>
+              <p>These days, I'm part of a community of investment experts that work for Stansberry Research, one of the largest publishers of independent investment research in the world. </p>
+              <p>In putting together this Melt Up guide, I tapped into the knowledge of my friend and colleague Brett Eversole. Brett's mentor Steve Sjuggerud coined the term Melt Up... And Brett and Steve have researched it extensively. </p>
+              <p>What they've found is that when a Melt Up forms, it provides some of the greatest, quickest gains of a bull market... if you time your investments correctly. </p>
+              <p>Look at what happened with Cisco... </p>
+              <p>As we showed you, shares exploded higher in the Melt Up of the dot-com bubble. Then the stock crashed by roughly 90% when the bubble burst. And even today, nearly 25 years later, it's <em>still</em> down from its 2000 peak:</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/cisco-chart.png" alt="chart" class=" imgCenter"></p>
+              <p>Don't chalk that investment failure up to a <em>business</em> failure, though...</p>
+              <p>Chambers kept growing the company through his retirement in 2015. In fact, Cisco brought in $49 billion in revenue that year. That's a 9% annual growth rate from 1999 to 2015.</p>
+              <p>Not bad, for a massive business operating in an ever-changing and highly competitive technology landscape. But overall, the company hasn't been able to entice investors the same way it did in 2000. As a result, it fell from the No. 1 spot to No. 30 on the list of top U.S. companies.</p>
+              <p>Historically, the largest stocks have struggled to maintain their dominance. It doesn't matter if the underlying business keeps chugging along... Eventually, the biggest stocks almost always fall from the top of the heap.</p>
+              <p>In this report, we'll examine this economic pattern in detail and explain why it happens. And to be clear: <strong>You must understand this phenomenon to successfully navigate today's stock market boom</strong>.</p>
+              <p>It all boils down to this point: You need to focus on the &quot;right&quot; stocks. If you make the wrong investment decisions, you could end up with mediocre returns even as the market soars.</p>
+              <p>We'll explain how that's possible in this report. And importantly, we'll look at the areas of the market where we'll likely find the biggest stocks of the next market peak.</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="changing-guard">
+              <!--begin section-->
+              <h4><strong>The Inevitable 'Changing of the Guard'</strong></h4>
+              <p>The long-term bull market of the 2010s never really ended.</p>
+              <p>At first glance, that seems to contradict reality. But once you understand the idea, it can help guide your investment decisions.</p>
+              <p>Here's what we mean...</p>
+              <p>What we think of as bull and bear markets happen all the time. They're typically short-term events, lasting roughly a year or so (with some exceptions).</p>
+              <p>However, if you step back and think long term, you can see that massive 10- to 20-year cycles are what really drive stock returns.</p>
+              <p>The long-term trend is key to knowing how to position yourself as an investor. But most folks have no idea these cycles even exist.</p>
+              <p>Here's how you can think of these short- and long-term bull and bear markets...</p>
+              <ul class="custom-list">
+                <li class="bullets"><strong>Cyclical</strong>: This is what happens over 12 to 18 <em>months</em>.</li>
+                <li class="bullets"><strong>Secular</strong>: This is what happens over 12 to 18 <em>years</em>.</li>
+              </ul>
+              <p>Secular trends tell us whether the market will be higher or lower in the longer term...</p>
+              <p><strong>And despite the pain of 2022, we're still in the middle of a secular boom... one that should push stocks higher through the end of this decade</strong>.</p>
+              <p>Once you understand this story, the next question is clear...</p>
+              <p><em>What should I buy to take advantage of the continuing bull market?</em></p>
+              <p>If you believe stocks are about to soar hundreds of percent, then you probably realize that <em>the right stocks</em> could soar much higher.</p>
+              <p>Any investor would want to pinpoint those right stocks. But if you make the most obvious investment – the one that seems, at first, to make sense – it could cost you.</p>
+              <p>So what's that obvious, dangerous investment? Easy. It's buying the biggest stocks... the ones that led the market over the past decade.</p>
+              <p>However, if you study history, you'll see why this is a mistake. That's because a key feature of American capitalism is that there's a consistent &quot;changing of the guard&quot; among our largest companies.</p>
+              <p>The story of Cisco illustrates this phenomenon perfectly. Cisco fell from No. 1 to No. 30 on the list of U.S. companies, despite having a healthy and vibrant business.</p>
+              <p>Most folks would think that happened because the stock was too expensive back then. It was the dot-com boom, after all. And valuations were crazy across the board. So maybe you think Cisco was an individual case... just another stock that couldn't compete in the market.</p>
+              <p>You'd be wrong.</p>
+              <p>Instead, history shows us that from market peak to market peak, we always see a changing of the guard at the top. We can look back at the last two major stock market peaks to see it.</p>
+              <p>The first was the dot-com peak in 2000...</p>
+              <p>Back then, technology was king... And the five largest stocks were dominant tech leaders.</p>
+              <p>But only one of those five companies has managed to maintain dominance over the past two decades. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/table-01.png" alt="chart" class=" imgCenter"></p>
+              <p>The table above shows the returns for each stock since the dot-com peak.</p>
+              <p>We already know what happened to Cisco. But as you can see in the table, it's not alone. <strong>Intel (Nasdaq: INTC) </strong>has also managed to lose money since 2000.</p>
+              <p>That may be hard to believe, but it's true. If you'd bought shares of either company at the dot-com peak, you'd still be underwater more than two decades later.</p>
+              <p><strong>Oracle (NYSE: ORCL)</strong> and <strong>IBM (NYSE: IBM)</strong>, on the other hand, have fared better. But they've still underperformed the overall market. Only tech giant <strong>Microsoft (Nasdaq: MSFT)</strong> has been a big winner, holding on to a spot in today's top five U.S. companies.</p>
+              <p>This wasn't an isolated incident, either. The 2007 market peak told a similar story. Take a look...</p>
+              <p><img src="https://s3.amazonaws.com/assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/table-02.png" alt="chart" class=" imgCenter"></p>
+              <p>Tech stocks didn't dominate the 2007 market peak. Instead, the leaders were &quot;old guard&quot; giants in oil, manufacturing, banking, and telecommunications. Microsoft was the only tech stock of the bunch... And it was also the only one that generated big gains.</p>
+              <p><strong>ExxonMobil (NYSE: XOM)</strong>, <strong>AT&amp;T (NYSE: T)</strong>, and General Electric have done OK since their days at the top of the market. But you'd have performed dramatically better by just buying an index fund.</p>
+              <p>Then there's <strong>Citigroup (NYSE: C)</strong>...</p>
+              <p>If you held on to this stock thinking that it was a big, safe play, boy was that a mistake. More than 15 years later, you'd <em>still</em> be sitting on catastrophic losses... And it's hard to know if the company will ever recapture its 2007 highs again.</p>
+              <p>This is a recurring theme in U.S. market history. It's how American capitalism works...</p>
+              <p>New companies come out of nowhere and create new markets or find ways to dominate old ones. And the established businesses – the ones many once thought would last forever – suffer a slow death.</p>
+              <p>These declines can happen for plenty of reasons. For instance, Cisco <em>was</em> crazy expensive at its peak... trading for more than <em>200 times</em> earnings. And it was never able to grow into that valuation.</p>
+              <p>The company did keep growing over time, but at a slower rate than it did during the dot-com boom. That's why the market punished the stock. And given Cisco's high point back in 2000 (remember its $500 billion market cap?), that led to dead money for decades while new companies took over the tech space.</p>
+              <p>General Electric, on the other hand, achieved dominance through &quot;creative&quot; financial engineering. But that also led to its downfall. Now, it's a boring industrial stock that's nowhere near begin ranked among the top 20 U.S. companies.</p>
+              <p>One way or another, it's clear that the biggest stocks rarely stay on top. That principle will also apply in today's bull market. That's why piling into the largest stocks in the attempt to profit from a secular boom isn't the wisest idea.</p>
+              <p>The problem is, 99% of investors will make this mistake in the years to come. They'll buy the big stocks solely because they've worked in the past... even though history says they'll likely do poorly from here.</p>
+              <p>Sure, one or two of those companies <em>could</em> hold a top-five ranking when we hit the next market top. But a couple of them will likely <em>lose</em> money between now and then.</p>
+              <p>Instead, you want to pinpoint companies poised to enter the top five when this secular bull market hits its peak and certain stocks &quot;melt up&quot; to monumental heights. That's no easy task, but it's worth trying. After all, getting just one stock right could mean quadruple-digit upside.</p>
+              <p>Importantly, two critical areas of innovation are about to kick into high gear, which we believe will help spark the next &quot;changing of the guard.&quot;</p>
+              <p>Let's take a look at each of these driving forces now...</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="artificial">
+              <!--begin section-->
+              <h4><strong>Melt Up Driver No. 1: Artificial Intelligence</strong></h4>
+              <p>Countries and businesses alike are racing to master AI...</p>
+              <p>The starting gun fired in November 2022 when Silicon Valley research company OpenAI debuted a new chatbot, ChatGPT.</p>
+              <p>At its core, ChatGPT is a large language model (&quot;LLM&quot;). It has a vast amount of text data at its disposal.</p>
+              <p>Programmers give the data a system of &quot;weights&quot; – parameters that connect words to each other within the model. By tweaking these weights, programmers can get the model to &quot;associate&quot; words more strongly or weakly.</p>
+              <p>When you ask an LLM questions, it uses its weighted data to predict the word that is most likely to be correct. Then, it predicts a second word, and so on... until its response is complete.</p>
+              <p>This might sound like a clunky process when you break it down. But LLMs are capable of extremely human-like writing. They can analyze data quickly, and they can answer tricky questions like magic.</p>
+              <p>There's a good chance you already know what I'm talking about. ChatGPT reached 100 million active users in just two months. Today, it has more than 180 million users, with 600 million visits to its website each month.</p>
+              <p>The bull case for AI is obvious. It's a revolutionary product with proven, durable demand. And the market loves it...</p>
+              <p>Major computer-learning players like <strong>Alphabet (Nasdaq: GOOGL)</strong>, Microsoft, and <strong>Meta Platforms (Nasdaq: META)</strong> are up between 65% and 200% over the past two years. And early AI adopter <strong>Palantir Technologies (NYSE: PLTR)</strong> is up almost 200%.</p>
+              <p>However, one of the &quot;pure&quot; AI plays is in the computer chips that can run LLMs. To see it, you only need to look at the company that has made big waves in this space...</p>
+              <p>Chipmaker <strong>Nvidia (Nasdaq: NVDA)</strong> has been the undisputed darling of the U.S. stock market, rising more than 700% over the same period. In June 2024, Nvidia became the second-largest publicly traded company in the U.S. with a market cap of more than $3 trillion.</p>
+              <p>These first AI movers are drawing a lot of attention, thanks to this rapid surge higher. But buying them today could be risky...</p>
+              <p>Although we don't agree with the narrative that AI is a &quot;bubble,&quot; it's still very early in the life of the technology. So you don't want to buy in today with an expensive company like Nvidia.</p>
+              <p>To maximize your upside (and hedge against your downside), you want to find the &quot;second level&quot; AI plays... the companies that the market <em>isn't</em> in love with just yet.</p>
+              <p>As things stand now, a few promising second-level AI strategies are emerging...</p>
+              <p>The first play is to buy companies that will challenge the current &quot;AI winners,&quot; but that the market isn't betting on yet.</p>
+              <p>The second play is to identify the companies in other industries that are revolutionizing their workflows with AI, particularly data-driven companies. With huge caches of information to feed into LLMs, they'll have the best shot to harness this technology's potential.</p>
+              <p>The last play is to buy companies that are helping to drive the AI boom in the background. These &quot;picks and shovels&quot; businesses are making the revolution possible... even if investors don't realize it yet.</p>
+              <p>AI-optimized companies are already the face of the emerging bull market... and we expect them to keep outperforming. That's why they're the first sector you should focus on during the coming Melt Up.</p>
+              <p>It's not just AI, though. We'll see another sector win big in the years to come...</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="biotechnology">
+              <!--begin section-->
+              <h4><strong>Melt Up Driver No. 2: Biotechnology</strong></h4>
+              <p>Whenever the overall stock market soars, biotech stocks usually soar even higher...</p>
+              <p>You see, the last Melt Up played out from 1998 to 2000. This was known as the &quot;tech bubble.&quot; But tech stocks weren't the biggest gainers...</p>
+              <p>Most folks don't realize this, but biotech stocks more than doubled the return of the tech-heavy Nasdaq Composite Index.</p>
+              <p>When biotech booms, it <em>really</em> booms. And that's exactly what happened during the last bull market peak...</p>
+              <p>Again, biotech was the biggest winner at the end of the tech bubble. And the final score wasn't even close. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/biotech-vs-nasdaw-vs-sp-500-.png" alt="chart" class=" imgCenter"></p>
+              <p>The Nasdaq soared 215% in the final 18 months of the tech-stock boom, greatly outperforming the S&amp;P 500 Index. But it was nothing compared with the boom in biotech...</p>
+              <p><em>The Nasdaq Biotechnology Index soared an astounding 500% in the same 18-month period</em>.</p>
+              <p>We're not talking about one lucky microcap winner, either. We're talking about the entire biotech sector. That's 500% in an entire index of stocks.</p>
+              <p>At its peak, biotech returned more than double the Nasdaq... and roughly 10 times more than the overall market.</p>
+              <p>It's crazy, but true. And once you think about it, it's not all that surprising...</p>
+              <p>The biotech sector contains major drug developers and research companies. They're the ones that work on the next big medical breakthroughs. That means they carry a lot of uncertainty... but offer a lot of promise.</p>
+              <p>That's why these stocks go through such dramatic booms and busts. And right now, two strong tailwinds could cause another massive boom...</p>
+              <p>First, biotech companies will be major beneficiaries of AI. We're already seeing a significant acceleration in drug discovery thanks to predictive modeling...</p>
+              <p>This is just one of the applications of AI in biotech. By predicting how certain compounds might behave in the human body and rejecting failures up front, machine-learning models can help researchers spend their time on the treatments that are most likely to work effectively.</p>
+              <p>Right now, dozens of drugs with AI-assisted designs are in or entering clinical trials.</p>
+              <p>In short, AI is going to change the way we find new drugs. It should make the process dramatically more efficient. And that's a recipe for much higher stock prices.</p>
+              <p>If this weren't enough, we're in the early days of a historic biotech breakthrough, separate from AI...</p>
+              <p>The first safe, effective drug treatments for obesity have recently hit the market. Obesity is a risk factor for a number of illnesses. And with obesity rates rising worldwide, these treatments could make a significant difference in a lot of people's lives.</p>
+              <p>According to analysts at Market Research Future, the market size for obesity cures was about $13 billion in 2023. That figure is expected to grow to $32 billion by 2030.</p>
+              <p>This new drug category is in major demand. Biotech stocks will take advantage of this new pharmaceutical megatrend.</p>
+              <p><span style="background-color: #ffee00;"><strong>In our paid member site, the <em>Stansberry Investor Suite</em>, we're showing our subscribers exactly how to profit from the coming Melt Up. Learn more about becoming a member later in this report. </strong></span></p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="big-profits">
+              <!--begin section-->
+              <h4><strong>How to Mine Big Profits From the Next 10-Year Trends</strong></h4>
+              <p>A &quot;changing of the guard&quot; is underway in the U.S. stock market. And it might be the most important trend that no one sees coming.</p>
+              <p>That's because it could end up costing most investors in the coming years... even if the overall market experiences the Melt Up we're expecting.</p>
+              <p>The biggest stocks rarely stay that way forever. But most investors fail to realize this inevitable fact of the American economy.</p>
+              <p>These folks will buy the biggest stocks today, assuming they'll stay on top for years to come... and that everything will work out.</p>
+              <p>It won't.</p>
+              <p>Instead of buying the biggest stocks, look for stocks that are either helping the AI boom take place or are using it to improve their businesses. This gives them a chance to soar in value in the coming years.</p>
+              <p>Next, we'll look at one of the largest companies in the market today. It has managed to stay at the top much longer than most businesses... And the reason why gives us a blueprint for our first opportunity.</p>
+              <p>Let's begin...</p>
+              <h4 style="padding-top:10px;" id="exception"><strong>How Microsoft Became the Exception to the Rule</strong></h4>
+              <p>Staying on top requires constant work and innovation.</p>
+              <p>It's especially true in the U.S., where our largest companies undergo a consistent &quot;changing of the guard.&quot; The strength to stay in the lead is rare. But there's always an exception to the rule...</p>
+              <p>Microsoft has defied history in the recent decades. It was a top-five stock in 2000... in 2007... at the market peak in 2022... and it's still a top-five stock today.</p>
+              <p>Now, the company has changed a lot along the way. That's typical, even for a dominant business... And of course, a dying company will also recalibrate and adjust its business model to try to save itself.</p>
+              <p>Still, unless you've followed Microsoft closely, you might not realize just how different it is today versus even a decade ago. And recently, it has flown somewhat under the radar for those lacking a keen investment eye.</p>
+              <p>Ask almost anyone what Microsoft does, and he'll probably give you one of two answers... &quot;Windows&quot; or &quot;Office,&quot; or maybe both.</p>
+              <p>The reason is simple: These two products fueled the computer revolution. The Windows operating system dominated the market beginning in the 1980s, allowing personal computing to reach the masses. The Office suite helped users easily complete word-processing tasks and create spreadsheets, presentations, and a lot more.</p>
+              <p>Now everyone associates Microsoft with those two products. But importantly, Windows and Office <em>do not</em> explain why the company is the exception to the rule.</p>
+              <p>In fact, if these were Microsoft's only products, the company would look a lot more like a fallen giant than the World Dominator it has become. Instead, Microsoft has expanded its product offerings in a strategic way...</p>
+              <p>You see, Microsoft launched into the world of cloud computing about 15 years ago. The company first reported revenue for that business segment in 2009. It brought in $11 billion that fiscal year – only 19% of the company's total revenue.</p>
+              <p>Back then, cloud computing was a small slice of the larger pie. But now, it's the main reason why Microsoft has avoided falling from the top five U.S. companies for more than two decades.</p>
+              <p>The company's cloud business now makes up more than 40% of its revenue. And since 2015, that segment has grown more than 270%, while the overall business has grown just 78%.</p>
+              <p>This shift into cloud computing generated nearly $88 billion in revenue over the past year. That massive, fast-growing revenue maintained the company's leading status.</p>
+              <p>That growth also changed how investors value the company. We can see that reflected in the company's price-to-earnings (P/E) ratio – the most common valuation measure we look at – over the past 15 years...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/MSFT-ratio.png" alt="chart" class=" imgCenter"></p>
+              <p>Microsoft was consistently dirt-cheap in the years following the global financial crisis. The stock traded between 10 times and 15 times earnings from 2008 through 2014.</p>
+              <p>Then, the company's valuation took off...</p>
+              <p>Its P/E ratio roughly doubled from 2014 through 2018. That's partially because the overall market became more expensive in that period. But that wasn't the driving force for Microsoft...</p>
+              <p>You see, in that time, the stock made a clear shift. It went from begin cheaper than the overall market to begin more expensive. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/MSFT-pe-vs-spx-pe.png" alt="chart" class=" imgCenter"></p>
+              <p>Microsoft was trading at around 10 times earnings at the start of 2013. The overall market was closer to a P/E of 15. But by the end of 2015, those numbers had flipped... Microsoft was trading at a P/E of around 22 compared with the overall market's P/E of 18. And that difference has only gotten more extreme.</p>
+              <p>The interesting thing is that 2015 was the year Microsoft's cloud-computing business became a growth engine for its overall business... Cloud computing accounted for 25% of the company's revenue that year. By 2019, the segment's revenue grew to more than 30% of the business. And it's more than 40% today.</p>
+              <p>The cloud-computing division injected this stodgy old company with new life. And that fast-growing segment came to dominate its activities.</p>
+              <p>In simple terms, Microsoft successfully reinvented itself.</p>
+              <p>Most big companies can't do that. And that's why Microsoft has been an exception to the changing of the guard.</p>
+              <p>Microsoft broke the mold... It maintained and grew its legacy businesses while also creating a brand-new cloud-computing business. That segment now accounts for most of its growth and much of its valuation. Without that kind of product innovation, Microsoft arguably wouldn't be the market leader it is today.</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="before-ai">
+              <!--begin section-->
+              <h4><strong>A Boom-and-Bust Sector Even Before AI</strong></h4>
+              <p>As an investor, you want to get on board with a new trend that captures everyone's attention...</p>
+              <p>That's exactly what AI has become. The introduction of ChatGPT woke the entire world up to the incredible advancements in the field.</p>
+              <p>In the past few years, it has kicked off an investment boom. And Nvidia became its poster child...</p>
+              <p>Nvidia's chips dominate the AI market, as we explained earlier. That pushed its stock to incredible highs. It jumped triple digits in less than a year... surging past $3 trillion in market cap along the way. And it has become one of the most loved stocks on Wall Street as a result.</p>
+              <p>Nvidia deserves every bit of its recognition and success. But other companies are vying to bite into its market share... And it's almost certain that someone will succeed.</p>
+              <p>Semiconductors are one of the market's most impressive boom-and-bust sectors. And you can make massive returns when it's in an upswing.</p>
+              <p>Let's take a look at history to see what I mean, starting with the last Melt Up...</p>
+              <p>The late 1990s were a time of incredible optimism. We were nearing the end of a second decade with a strong economy. And the Internet and computer revolutions were changing the world in ways no one would have thought possible just a few years earlier.</p>
+              <p>Investors, as we all remember, went wild as a result. Just about every Internet-related asset surged higher. And the semiconductor companies were no exception.</p>
+              <p>They were the ones creating the chips that made all of these advances possible... so, of course, they boomed as well.</p>
+              <p>You might be surprised by just how much semiconductors soared, though. In just less than 18 months, <em>the entire sector skyrocketed more than 600%</em>. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/phlx-semiconductor-Index-vs-Nasdaq-vs-SP-500-1998-2000.png" alt="chart" class=" imgCenter"></p>
+              <p>We think of the dot-com era as the &quot;tech boom.&quot; But even within tech, there were winners and losers...</p>
+              <p>Overall, the tech-heavy Nasdaq Composite Index soared 257% over this period. That's an incredible return... more than 5 times better than the S&amp;P 500. But it was nothing compared with the massive boom in semiconductor stocks.</p>
+              <p>A 600% rally is what you'd expect from a single risky stock. But it wasn't just one chip stock rising... <em>It was all of them</em>.</p>
+              <p>Semiconductors have boomed other times as well. The most recent example happened as the market was rising off its pandemic bottom...</p>
+              <p>That was a crazy time. Investors had just suffered an &quot;everything crash.&quot; The onset of COVID-19 threw the economy – and our daily lives – into chaos, all in a matter of weeks. But then, stocks bottomed in March 2020. And the next year and a half was one for the record books...</p>
+              <p>That stretch was the most euphoric period in the markets since the dot-com boom. Everything soared. &quot;Stay at home&quot; tech stocks accelerated the mania... And under the hood, the semiconductor sector drove huge gains once again. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/uploads/sites/2/2024/01/011924-TRW-phlx-Semiconductor-Index-vs.-Nasdaq-vs.-SP-500-2020-2021.png" alt="chart" class=" imgCenter"></p>
+              <p>Semiconductor stocks jumped 222% in less than two years. That was more than double the 105% rise in the S&amp;P 500. It even crushed the 130% gain in the growth-focused Nasdaq.</p>
+              <p>Our takeaway, once again, is simple: When a boom gets underway – especially one fueled by new technology – semiconductor stocks soar.</p>
+              <p>We saw this in 2023. The sector rallied 73% last year. The rise of AI has fueled those incredible gains. But based on what we've seen throughout history, these booms can last longer than anyone believes possible.</p>
+              <p>Every semiconductor company out there is working to knock Nvidia down from the top of the pack. These companies will benefit from future developments in the high-stakes AI arms race.</p>
+              <p>This is an exciting time to be an investor. We have a convergence of massive trends. The result will be a major changing of the guard among the leaders of the U.S. stock market.</p>
+              <p>And we have more reasons to believe another Melt Up is just around the corner...</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="dead-yet">
+              <!--begin section-->
+              <h4><strong>This Melt Up Ain't Dead Yet</strong></h4>
+              <p>Bull markets die when excitement reaches a fever pitch. When everyone is fully invested in stocks... and there's nobody left to buy... that's when the market hits its peak.</p>
+              <p>Most investors haven't been pouring money into the stock rally. They've been buying bonds and hoarding cash this year.</p>
+              <p>Eventually, folks will <em>really</em> get bullish. The fear of missing out (&quot;FOMO&quot;) will kick in, and people will start flooding back into the stock market. That's when we'll see explosive returns.</p>
+              <p>We're simply not there today. And that means one thing... <em>This boom ain't dead yet</em>.</p>
+              <p>&quot;Cash on the sidelines&quot; is a bit of an inside joke in investment circles...</p>
+              <p>If you're looking for an excuse to buy in, you can always say there's cash on the sidelines. Once that cash pours into the market, prices will have to rise.</p>
+              <p>Of course, the basic reasoning makes sense. It's just that it's only part of the story.</p>
+              <p>The truth is, folks are always holding some amount of cash. There's <em>always</em> &quot;cash on the sidelines.&quot; And the fact that it exists doesn't mean it will inevitably pour into the market.</p>
+              <p>You have to go one step further. It's not just about cash on the sidelines... It's about when there's <em>too much</em> cash.</p>
+              <p>That's rarely the case. But when it happens, that's when you can expect all that pent-up cash to eventually move into the markets.</p>
+              <p>We're in this situation right now. The easiest way to see this is by looking at the cash in money market accounts...</p>
+              <p>Money market assets have soared over the past couple of years. The surge has made headlines, and for good reason... Nearly $7 trillion is now sitting in money market funds, more than double the roughly $3 trillion we saw a few years ago.</p>
+              <p>However, the better way to see how much cash could leave the sidelines is by looking at <em>retail</em> money market accounts. That's money market cash held by individuals, not companies or institutions.</p>
+              <p>These folks tend to be less experienced. And that leads them to raise cash in tough times only to pump it back into stocks after a rebound is underway.</p>
+              <p>It's important to note that this figure trends higher over time. However, every time it has spiked over the past three decades, a good chunk of that excess cash ended up leaving money market funds... likely heading back into stocks.</p>
+              <p>You can see it in the chart below...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/retail-money-market-funds.png" alt="chart" class=" imgCenter"></p>
+              <p>It's no secret why retail investors have poured cash into money market funds. Yields have skyrocketed with rising interest rates. That has turned these funds into a no-risk way to earn a 5%-plus yield – something that wasn't possible at any other point in the past 15 years.</p>
+              <p>Still, history shows all this cash won't stay on the sidelines forever. We've seen this story play out multiple times in the past three decades...</p>
+              <p>The first time was in the 1990s. Retail money market assets soared from $500 billion to nearly $1 trillion from the end of 1996 to mid-2001. Not all of that money went back into stocks... But more than $300 billion ultimately flowed out of retail money markets over the next few years.</p>
+              <p>Then, nearly $400 billion flowed back into these safe accounts from 2005 to 2008. A new pile of excess cash built up. That time, every dime ended up flowing back out, plus extra... Retail money market assets lost a total of $460 billion, much of it likely into stocks.</p>
+              <p>We saw another spike in the years leading up to the pandemic. Around $400 billion moved into retail money markets from late 2017 to mid-2020... Then, nearly $200 billion of it flowed back out over the next 18 months.</p>
+              <p>We're in the middle of the cycle again today. Retail money market accounts have taken in more than $500 billion in the past two years. This tells us two things...</p>
+              <p>First, there's <em>too much</em> cash on the sidelines. According to history, a lot of that cash will flow back into stocks over the next few years. Even if only half of it gets reinvested, that would mean a few hundred billion dollars pouring into the stock market.</p>
+              <p>Second, regular folks don't own a lot of stocks today. Instead, they're hoarding safe assets. That means cash-like money markets... And it means bonds.</p>
+              <p>We can see this by looking at overall fund flows, too...</p>
+              <p>This data comes from the Investment Company Institute (&quot;ICI&quot;). The ICI is a trade group that collects data on mutual funds and exchange-traded funds (&quot;ETFs&quot;). As part of that goal, it tracks the net fund flows of mutual funds and ETFs for both stocks and bonds... So its data tells us what folks are really doing with their money.</p>
+              <p>U.S. stock fund flows turned negative in mid-2022. They mostly stayed negative in 2023. In fact, one of the biggest outflows in recent years happened in May of last year.</p>
+              <p>Flows have since turned positive. But it's not like folks are pouring money into stocks at a record pace. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/stock-fund-flows.png" alt="chart" class=" imgCenter"></p>
+              <p>Stocks have been soaring, but optimism is still fleeting today. Investors are looking for any reason to sell stocks. They aren't buying hand over fist.</p>
+              <p>Meanwhile, they're buying bonds like crazy. Here's what ICI's data says about bond flows over the same period...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/bond-fund-flows.png" alt="chart" class=" imgCenter"></p>
+              <p>The story here is the same as money market assets. The bear market of 2022 spooked investors. Then, they realized how much they could earn in fixed-income investments... So they started piling into bonds.</p>
+              <p>We've seen positive fund flows into bonds every month in 2024. Folks pushed more than $200 billion into these funds in the first five months of the year.</p>
+              <p>These folks signed up for less risk and a guaranteed return. It sounded good. But that choice had one downside... <em>These folks missed out on the boom we've seen in stocks since the start of 2023</em>.</p>
+              <p>This situation won't last forever. Eventually, FOMO will kick in, just like we saw in the wake of the pandemic. It always does. And it'll drive cash out of safe bonds and money markets... and send a wave of investment dollars into stocks.</p>
+              <p>We can't know for sure if it'll happen tomorrow, next month, or next year. But this setup – with sentiment on shaky ground and too much cash on the sidelines – is incredibly bullish for the stock market.</p>
+              <p>But that's not the only bullish sign we're seeing in the markets today...</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="vital-sign">
+              <!--begin section-->
+              <h4>This 'Vital Sign' Shows the <br>Current Rally Is Healthy</h4>
+              <p>Stocks are breaking out – the S&amp;P 500 hit two dozen all-time highs in the first half of 2024 alone – and so is a key metric that tracks the underlying health of the market.</p>
+              <p>This is an important signal. You see, even an ailing bull market can keep climbing – at least for a while. But that's also an omen of more pain to come.</p>
+              <p>Fortunately, this market is thriving. As we'll explain, one sign shows us the rally is healthy. More important, we can expect it to continue...</p>
+              <p>We'd never expect a doctor to diagnose us with a cursory glance.</p>
+              <p>Sure, they might be able to figure out a few potential ailments that way. But a once-over can't diagnose major illnesses like cancer and heart disease.</p>
+              <p>We expect a thorough examination before we get a clean bill of health. And it's no different with the stock market.</p>
+              <p>The market might <em>appear</em> healthy when it's hitting new highs... But we can only be certain by taking a deeper look at its &quot;vital signs.&quot; We want to see what's going on under the surface.</p>
+              <p>One way to do that is to see what <em>most stocks</em> are doing. Specifically, are more of them going up than going down?</p>
+              <p>We can use the advance/decline line to answer that question. This cumulative measure of market breadth tracks the number of stocks that went up minus the number that went down on a daily basis.</p>
+              <p>So if 300 stocks moved higher and 200 fell, then the advance/decline line would increase by 100 that day. Over the long term, we get a cumulative measure that shows us when most stocks are rising or falling.</p>
+              <p>That's important... because throughout history, the advance/decline line has turned lower <em>before</em> the market started to fall. Here's how it looked during the last Melt Up...</p>
+              <p><img src="https://assets.stansberryresearch.com/uploads/sites/2/2024/02/022224-DW-sp-500-index-vs-advance-decline-line.png" alt="chart" class=" imgCenter"></p>
+              <p>The advance/decline line peaked in early 1998. That was more than two years before the overall market topped out. And the advance/decline line collapsed during those two years... So despite the boom, the maj`ority of stocks were falling.</p>
+              <p>It was a clear sign that the rally wouldn't last long.</p>
+              <p>This is how we can tell whether the current bull market is healthy. We can only trust new highs if the advance/decline line is rising, too.</p>
+              <p>And that's what's happening right now. Take a look...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/advance-decline.png" alt="chart" class=" imgCenter"></p>
+              <p>The advance/decline line broke out to new highs in early 2024. That means most stocks are rising right now.</p>
+              <p>Our &quot;patient&quot; – the market – is doing just fine.</p>
+              <p>That could change, of course. But for now, stocks are hitting highs in a healthy way. And that's more reason to be bullish.</p>
+              <p>Still, the Melt Up will eventually run out of steam. And when it does, you'll want to make sure to protect your profits. That brings us to our next topic...</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="exactly-sell">
+              <!--begin section-->
+              <h4>How to Know Exactly When to Sell</h4>
+              <p>Let's face it – most people don't know when to sell a falling stock.</p>
+              <p>They're frozen into inactivity, saying, &quot;Should I just keep holding and hoping, or should I cut my losses now?&quot; This state of indecision is usually permanent and often continues until you hear this: &quot;Well, it's too late to sell now.&quot;</p>
+              <p>But if you follow the advice below, your constant state of indecision will be gone. You'll never lose another night's sleep worrying about which way your investments will go tomorrow. Unlike most investors, you'll have a plan – knowing when to get out and when to stay in for the biggest possible profits.</p>
+              <p>Buying stocks is easy. There are thousands of theories out there on why and when to buy. But buying is only the first half of the equation when it comes to making money.</p>
+              <p>Nobody ever talks about the hard part – knowing when to sell.</p>
+              <p>We've all made expensive mistakes – either missing the full upside by selling too soon or taking a huge loss by holding a falling stock too long. But it's time to make big losses a thing of the past.</p>
+              <p>To invest successfully, you need to put as much thought into planning your exit strategy as you put into the research that motivates you to buy the investment in the first place. So please read closely here, and think about each point...</p>
+              <ul class="custom-list">
+                <li class="bullets"><strong>Cut your losses and let your winners ride</strong>.</li>
+              </ul>
+              <p>In investing, you must have and use an exit strategy – one that makes you methodically cut your losses and let your winners ride. If you follow this rule, you have the best chance of outperforming the markets. If you don't, your retirement is in trouble.</p>
+              <p>Ride your stocks as high as you can. But if they head for a crash, have your exit strategy in place to protect your portfolio from damage.</p>
+              <p>Though you might have many levels of defense and many reasons to sell a stock, if your reasons don't appear before the crash, a trailing stop is the best last-ditch measure to save your hard-earned dollars. And it works.</p>
+              <p>One simple form of the trailing-stop strategy is a 25% rule. Sell any and all positions at 25% off their highs. For example, if you buy a stock at $50, and it rises to $100, when do you sell it? If it closes below $75 – no matter what.</p>
+              <ul class="custom-list">
+                <li class="bullets"><strong>Don't let your losers become big losers</strong>.</li>
+              </ul>
+              <p>What's so magical about the 25% number? Nothing in particular – it's the discipline that matters. Many professional traders actually use much tighter stops.</p>
+              <p>Ultimately, the point is, you never want to be in the position where a stock has fallen by 50% or more. This means that stock has to rise by 100% or more just to get you back to where it was when you bought it...</p>
+              <table class="table">
+                <tr>
+                  <th colspan="4" style="width:100%;">
+                    <h3 style="padding:0;margin:0;color:#fff;"><strong>You'll Never Recover</strong></h3>
+                  </th>
+                </tr>
+                <tr>
+                  <td colspan="2" style="width:50%;text-align: left;">
+                    <div><strong>Percent Fall <strong>in Share Price</strong></div>
+                  </td>
+                  <td colspan="2" style="text-align: left;">
+                    <strong>Percent Gain Required to Get Back to Even</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">10%</td>
+                  <td colspan="2" style="text-align: left;">20%</td>
+                </tr>
+                <tr>
+                  <td colspan="2">11%</td>
+                  <td colspan="2" style="text-align: left;">25%</td>
+                </tr>
+                <tr>
+                  <td colspan="2">25% </td>
+                  <td colspan="2" style="text-align: left;">33% </td>
+                </tr>
+                <tr>
+                  <td colspan="2">50% </td>
+                  <td colspan="2" style="text-align: left;">100% </td>
+                </tr>
+                <tr>
+                  <td colspan="2">75% </td>
+                  <td colspan="2" style="text-align: left;">300% </td>
+                </tr>
+                <tr>
+                  <td colspan="2">90% </td>
+                  <td colspan="2" style="text-align: left;">900% </td>
+                </tr>
+              </table>
+              <p>By using an exit strategy and sticking to it, you'll never be in this position again.</p>
+              <p><strong>The thing is, placing actual stop orders is a bad idea</strong>.</p>
+              <p>We do not recommend placing stop orders at all. The dirty professional traders will pile up all the stop orders and then execute them all at a horrible price. Interestingly, stocks often close higher the very same day, after the pros make a mint executing stop orders. DON'T put a stop order in the market.</p>
+              <p>Simply sell the day after you hit your stop.</p>
+              <p>Once you get into the habit and commit to doing it, it's easy.</p>
+              <p>Nobody – not even the most astute analyst or investment adviser – can know enough about a particular company, industry, or the nuances of the market to anticipate future prices with 100% certainty.</p>
+              <p>But common sense dictates two fundamentals: Taking small losses is much better than taking big losses, and letting your profits run is much better than cutting them off prematurely.</p>
+              <p>By following this simple plan, your investment results will start to improve immediately and dramatically.</p>
+              <!--end section-->
+              <!-- <div style="text-align: center;">
+            <video-js id="myPlayerId" data-account="5298920694001" data-player="rkj9vsdUM" data-embed="default" controls="controls" data-video-id="6333147424112" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+            <script type="text/javascript" src="https://players.brightcove.net/5298920694001/rkj9vsdUM_default/index.min.js"></script>
+            <p> </p>
+            <a id="sna_NextLink" class="submit-btn vsl next orderNow store-next-page btn btn-hidden" href="https://orders.stansberryresearch.com/?cid=MKT751931&eid=MKT759670&assetId=AST316287&page=3" target="_top">Get Started</a></div>-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="spot-avoid">
+              <!--begin section-->
+              <h4>How to Spot – and Avoid – Investment Bubbles</h4>
+              <p>Turn on CNBC.</p>
+              <p>Whatever stocks and sectors the talking heads are excited about... avoid them!</p>
+              <p>That's not a slight to CNBC specifically. My advice applies to popular investing websites as well: Avoid whatever is trendy because that's where bubbles are forming... and where the least-sophisticated individual investors are trying to get rich quick.</p>
+              <p>I've always said the surest way to get poor quickly is to try and get rich quickly.</p>
+              <p><strong>Countless studies show that almost all human begins are hardwired to be irrational about money</strong>.</p>
+              <p>One of the biggest ways people do so is by chasing performance. Think back to the Dutch tulip mania of the 17th century and more recent bubbles in Japanese real estate, dot-com companies, U.S. housing, and many others. It's just what human begins do.</p>
+              <p>And now that everybody is interconnected via the Internet... and a huge number of Americans are feeling financial stress... and a whole generation of investors didn't experience the stock market collapse a decade ago... and pump-and-dump mechanisms via websites and television programs are more abundant than ever before... and governments around the world are opening spigots of liquidity... all of these factors have created a golden age for bubble formation. It's more important than ever before to be extremely careful.</p>
+              <p>When these bubbles inevitably pop, people see their hard-earned savings quickly wiped out. Worse yet, it's not institutional money getting incinerated... It's individual investors who get sucked in at or near the top of these bubbles.</p>
+              <p><strong>So, how can you avoid bubbles like these?</strong></p>
+              <p>First and foremost, avoid whatever is hot. Don't go on financial message boards or get your stock ideas from CNBC and the like. Stick to things that aren't begin talked about at cocktail parties – &quot;unsexy&quot; stocks like <strong>Berkshire Hathaway (NYSE: BRK-B)</strong> that steadily compound in value year after year.</p>
+              <p>I don't waste a single minute looking at hot, overhyped stocks – though I have a pretty good track record of identifying the peaks of various bubbles. It comes from having seen a lot of them after more than 20 years in the business.</p>
+              <p>As the old proverb goes, when the shoeshine guy is pitching a stock to you, you know it's the peak. There's some real-world truth to that...</p>
+              <p>In the case of <strong>bitcoin (BTC)</strong>, I had been skeptical of the popular cryptocurrency all the way up. In some ways, it's like a Rembrandt painting: It has value because somebody else is willing to pay something for it... But it doesn't produce any cash flow. Therefore, it's impossible to value and is, by definition, a speculation.</p>
+              <p>But what led me to stick my neck out and make a big call in mid-December 2017, the very hour that bitcoin peaked at $20,000, was a series of three conversations I had...</p>
+              <p>One of my friends who runs a nonprofit and knows nothing about investing asked me, &quot;Hey, Whitney, should I buy some bitcoin?&quot; A day or so later, my tennis pro friend – who also knows nothing about investing – asked me the same thing.</p>
+              <p>The clincher was when my friend, a former Navy SEAL, berated me, saying...</p>
+              <p class="indent">My buddies – active duty guys coming back from deployment – are taking their year-end hardship bonuses and buying bitcoin. They're making a lot of money, but you keep telling me to avoid it!</p>
+              <p>When Navy SEALs who have been living in Iraq, Afghanistan, and Somalia are coming home and buying bitcoin with their hardship pay... well, I just couldn't imagine that there were any remaining incremental buyers of bitcoin.</p>
+              <p>So on December 16, 2017, I made my big call, telling my readers...</p>
+              <div class="indent">
+                <p>In the past week, I've been asked about bitcoin by a parade of the least-knowledgeable investors imaginable – and the only times such foolishness has happened before in my 18-year career were at the peak of the Internet and housing bubbles, so <strong>I'm calling a top right now</strong>.</p>
+                <p>Blockchain technology is real in the same way that the Internet was real back in 1999 and housing prices tended to go up in the mid-2000s – in other words, a good idea taken to absurd extremes is NOT a good idea!</p>
+                <p>That said, the greed and speculative nature of humans is inherently unpredictable, so for all I know bitcoin could go to $1 million.</p>
+                <p>But I do know the ultimate outcome: smoldering rubble, a lot of finger-pointing (where were the regulators?!), and a lot of tears and empty bank accounts, especially among those who can least afford it.</p>
+              </div>
+              <p>At the time, bitcoin had a market cap of more than $320 billion. That was just bitcoin, not the other cryptos, like Ethereum and EOS. As you can see in this chart, over the next year, it fell all the way to nearly $3,000.</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/bitcoin.png" alt="chart" class=" imgCenter"></p>
+              <p>Despite the strong rally in 2019, untold billions of investors' dollars were incinerated.</p>
+              <p>Something similar happened in the case of popular pot stock <strong>Tilray (Nasdaq: TLRY)</strong>. The marijuana sector was red-hot, and Tilray was the hottest stock in it. It had gone absolutely parabolic.</p>
+              <p>My cousin, a fireman out in eastern Washington near Yakima – who had almost no investing experience – confessed to me that he owned Tilray.</p>
+              <p>I slapped my forehead.</p>
+              <p>&quot;What are you doing?!&quot; I asked.</p>
+              <p>&quot;But Whitney, I've made a lot of money,&quot; he said. &quot;I bought it last month at $50, and now it's at $150.&quot;</p>
+              <p>At the time, I had never even heard of the company. But I did some research on it and saw that it was trading at 500 times revenues.</p>
+              <p>It was clearly a ridiculous bubble, and I said so in one of my daily e-letters.</p>
+              <p>A producer at Yahoo Finance saw it and invited me to come in for a TV interview. That very afternoon, as I was going down to Yahoo's studios, Tilray shares spiked to $300. <strong>It was trading at 1,000 times revenues and had a nearly $30 billion market cap!</strong></p>
+              <p>And again, there was a clincher... As I was walking from the subway into the studios, my 19-year-old daughter, a sophomore in college, called me.</p>
+              <p>Despite years of attempts, I had never been able to interest her in the stock market. At one point, I even set up a $5,000 account for her so she could learn about investing by buying a few stocks of stores that she shopped in or services that she used. It was all to no avail.</p>
+              <p>So I had to chuckle when she said, &quot;Daddy, I'm taking an investing class. We have a model portfolio, and I have $25,000 of [fortunately fake] money to invest. My friend told me to buy Tilray, so I did. And now it's up a bunch. What should I do?&quot;</p>
+              <p>At that point, I knew with certainty that the stock had peaked. &quot;Emily, sell it immediately!&quot; I said. And she did, banking a solid profit (on paper).</p>
+              <p>I went on television minutes later, right as the stock peaked at $300, and shared this story. I said, &quot;Folks, if the first stock that my daughter – truly the world's most clueless investor – bought was Tilray, based on one of her friend's stock tips, we're at a peak.&quot;</p>
+              <p>I predicted that the stock would fall to less than $100 within a month and would be down 90% within a year. Sure enough, that's exactly what it did, as you can see in this chart...</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/tilray.png" alt="chart" class=" imgCenter"></p>
+              <p>Given my success identifying the tops of certain bubbles, you might think that my advice is to buy these stocks or sectors, ride them up, and then sell at the top... or to short them at the top.</p>
+              <p>Not at all. I've gotten lucky a few times, but it's just too hard to do this consistently.</p>
+              <p><strong>Rather, my advice is to simply to avoid hot sectors and stocks altogether</strong>.</p>
+              <p>Look outside of what's popular. Do your own research, think independently, and look for an area of the market where you might have an edge – in the industry you work in, a company you know well, a store or restaurant that you frequent, etc. – and where you might be able to see something the rest of Wall Street is missing.</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="emotions">
+              <!--begin section-->
+              <h4><strong>Take the Emotions Out of Investing</strong></h4>
+              <p>When you buy a stock, one of two things will inevitably happen...</p>
+              <p>It will go up. Or it will go down.</p>
+              <p>In the beginning, it's really that simple. You buy a stock with just two possible outcomes.</p>
+              <p>But the truth is, things can get complicated really fast. And as that happens, it often leads to one of the biggest mistakes an investor can make: letting your emotions get in the way.</p>
+              <p>When you let your emotions take over, you often rush into decisions that you'll regret later... That's the case no matter which way a stock is moving.</p>
+              <p>One common and costly mistake is selling a big winner too early.</p>
+              <p>That happened to me with <strong>Netflix (Nasdaq: NFLX)</strong>. When I owned it in my hedge fund, the stock rose sevenfold as Netflix's streaming business grew. But as the stock kept moving higher, I made a terrible mistake... I started to let my emotions take over.</p>
+              <p>After the stock doubled, I sold half of my shares. And when it doubled again, I sold some more. As the stock was doubling a third time, I exited the position altogether.</p>
+              <p>My analysis revealed that Netflix was trading at a 90% discount to its intrinsic value – in other words, a &quot;10-cent dollar.&quot; So as the story played out even better than I could have hoped for, why was I selling it after it doubled? It was still a &quot;20-cent dollar.&quot;</p>
+              <p>I thought I was conservatively managing risk and didn't want to be greedy. But I had it backward... <strong>To build a successful long-term track record, you must be greedy when the opportunity arises</strong>.</p>
+              <p>Finding a monster stock like Netflix only happens maybe once a decade – or even once in a lifetime. So it's critical that you make the maximum amount of money on such moonshots.</p>
+              <p>I should've made more than $100 million on Netflix for myself and my investors. Instead, I made less than $10 million. Of course, that's not terrible... But it was a costly mistake.</p>
+              <p>It's equally important to harness your emotions when a stock is running against you...</p>
+              <p>Take SodaStream, for example. Its machines help you turn regular tap water into sparkling water with the touch of a button.</p>
+              <p>I knew SodaStream had a great business model. The company sells something that people use over and over. And the carbon-dioxide bottles in its machines need to be replaced regularly. So SodaStream made something like an 80% profit margin doing so.</p>
+              <p>But the company had botched its marketing in the U.S. and was also relocating its main factory in Israel, so its sales and earnings were down. I patiently waited until the stock had been cut in half and bought a small position in 2014.</p>
+              <p>It turns out that I was much too early. The company continued to struggle, and the stock kept drifting lower and lower... for nearly two years!</p>
+              <p>Making the right decision in these situations is critical. Had I stumbled into a &quot;value trap&quot; that would never turn around – in which case I needed to sell? Or was the company still strong, with fixable problems – in which case I should buy more?</p>
+              <p>It was very painful losing so much money for so long. Emotionally, I wanted to sell and never think about this terrible investment again.</p>
+              <p>But I was able to set aside my emotions and focus my analysis on the fundamentals, which remained strong. I added to my position all the way to the bottom – and was well rewarded.</p>
+              <p>In early 2016, SodaStream's stock took off as I expected...</p>
+              <p>By the time I closed my funds in late 2017, it was up 5 times. And then <strong>PepsiCo (Nasdaq: PEP)</strong> bought the company a year later for 12 times the price from only two years earlier.</p>
+              <p>It can be challenging to figure out whether a stock is just hitting a few speed bumps, like SodaStream, or if it's doomed for good, like old-school film company <strong>Eastman Kodak (NYSE: KODK)</strong>. But by following a simple three-step process, I realized that I should hold on to SodaStream...</p>
+              <p class="indent"><strong>1. First, assume the market is right and you're wrong</strong>.</p>
+              <p>You must begin with this mindset because it helps overcome the natural bias we all have to not want to admit a mistake.</p>
+              <p>You must respect the market. The hard truth is that most of the time it's right... and you're wrong. My experience with SodaStream is the exception, not the rule.</p>
+              <p class="indent"><strong>2. Then, you must figure out what you've missed and actively seek out disconfirming information</strong>.</p>
+              <p>Redo your work... But don't just rehash what you already did. That won't lead to any new conclusions. Instead, you must ask – and honestly and correctly answer – a series of key questions.</p>
+              <p>Have you made a research error? Are you possibly missing anything? Have you openly and carefully considered contrary arguments? Have you invented new reasons to own the stock (so-called &quot;thesis drift&quot;)?</p>
+              <p>Many smart investors lost a lot of money owning Kodak's stock in the decade before it filed for bankruptcy in January 2012. It wasn't an unreasonable investment initially... The company had one of the strongest brands in the world, it generated robust cash flows, and its stock traded at a low multiple of earnings.</p>
+              <p>Sure, digital photography was a threat to Kodak's film business, but it seemed far off – and the company was making investments to compete in this space.</p>
+              <p>For most investors who lost money with Kodak, the mistake wasn't so much the initial purchase. Rather, it was failing to recognize that the film industry was rapidly begin obliterated and that Kodak was getting no traction in the digital arena. So its profits were destined to disappear.</p>
+              <p>The key is to tune out the noise and think clearly and rationally. Focus on the fundamentals... If the company's earnings rebound, its stock will as well.</p>
+              <p class="indent"><strong>3. Lastly, to make the right decision, you must pretend like you don't already own the stock</strong>.</li>
+              </p>
+              <p>It's so hard to make the right decision about a stock you've lost money on. The emotions are so powerful!</p>
+              <p>On one hand, you're probably telling yourself that if you liked it at the price you bought it, you should like it more now that it's cheaper. That may be true – but it could also be a value trap. No matter what, you must resist the temptation to double down again and again to try to make back your losses. Remember the old saying... &quot;You don't have to make it back the same way you lost it.&quot;</p>
+              <p>On the other hand, your emotions are likely telling you to sell so that you don't have to suffer any more pain and never have to think about this terrible stock ever again.</p>
+              <p>There's also a powerful feeling of wanting to wait until it gets back to the price you bought it before selling.</p>
+              <p>You must resist all of these feelings! Emotions are deadly when it comes to investing...</p>
+              <p>I've found that it helps my thinking to pretend like I don't own the stock. I ask myself, &quot;If I were 100% in cash today and building a portfolio from scratch, would I own this stock? And if so, what size of a position would I have?&quot;</p>
+              <p>Doing nothing may be the best option, but you also must have the courage to admit a mistake and get out – or know that you haven't made a mistake and buy more.</p>
+              <p>If a stock is going against you, follow this simple three-step process. And if you wouldn't buy the stock if you were starting a portfolio from scratch, then you should sell it immediately.</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="watchlist">
+              <!--begin section-->
+              <!--HEADER-->
+              <h4><strong>The Melt Up Watch List:</strong><br> 25 Companies Poised to Soar During the Coming Melt Up</h4>
+              <p>If stocks follow a similar pattern as they did during the last Melt Up, we're likely to see an investor frenzy in AI stocks, biotech stocks, semiconductor stocks, and tech stocks in general.</p>
+              <p>The following is a list of 25 large-cap companies that could outperform the broad market if the coming Melt Up follows the same script as last time.</p>
+              <p>Note that these are not official recommendations, nor will we be providing follow-up advice on them. They're simply the 25 largest components of the tech-heavy Nasdaq Composite Index.</p>
+              <table class="table" style="width:70%;">
+                <tr>
+                  <td colspan="1" style="width:50%;">
+                    <h3 style="padding:0;margin:0;"><strong>Company</strong></h3>
+                  </td>
+                  <td colspan="1" style="width:50%;">
+                    <h3 style="padding:0;margin:0;text-align: left"><strong>Ticker</strong></h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Microsoft </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">MSFT </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Nvidia </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">NVDA </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Apple </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">AAPL </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Amazon </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">AMZN </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Meta Platforms </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">META </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Broadcom </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">AVGO </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Alphabet </p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">GOOGL </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Costco Wholesale</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">COST</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Tesla</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">TSLA</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Netflix</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">NFLX</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Advanced Micro Devices</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">AMD</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">PepsiCo</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">PEP</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Qualcomm</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">QCOM</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">T-Mobile U.S.</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">TMUS</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Linde</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">LIN</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Adobe</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">ADBE</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Cisco Systems</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">CSCO</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Applied Materials</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">AMAT</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Texas Instruments</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">TXN</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Amgen</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">AMGN</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Intuit</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">INTU</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Comcast</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">CMCSA</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Micron Technology</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">MU</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Intuitive Surgical</p>
+                  </td>
+                  <td>
+                    <p style="padding:0;margin:0;">ISRG</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p style="padding:0;margin:0;">Honeywell International</p>
+                  </td>
+                  <td style="border-top: 1px solid #dee2e6;">
+                    <p style="padding:0;margin:0;">HON</p>
+                  </td>
+                </tr>
+              </table>
+              <p>In this report, you've heard us cover historical examples of Melt Ups... advice on how to navigate a Melt Up market... and how to take advantage of monumental gains in a bull market without losing your shirt when the music stops. </p>
+              <p>To see exactly what we're recommending you do with your money – and to learn more about our firm – please read the below message from our publisher Brett Aitken. </p>
+              <p>Good investing, </p>
+              <p>Whitney Tilson with Brett Eversole </p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="experts">
+              <!--begin section-->
+              <!--HEADER-->
+              <h4><strong>Here's How to Get Even More from Our Experts</strong></h4>
+              <p>Hi, my name is Brett Aitken. </p>
+              <p>I'm the publisher at Stansberry Research, which produced this report. </p>
+              <p>Working with brilliant financial minds like Brett Eversole and Whitney Tilson is one of the best parts of my job.</p>
+              <p>But now you might be wondering what to do next.</p>
+              <p>How should you actually invest in a Melt Up?</p>
+              <p>So let me make you a promise: <em>Keep reading, and I'll tell you </em><em>everything about how to make money during the Melt Up and the inevitable Melt Down.</em></p>
+              <p><em>To take it one step further: Keep reading, and I can change your entire outlook on money.</em></p>
+              <p>As a man who hates bombast and exaggeration, I know this is a bold claim. So let me prove to you why this is true...</p>
+              <p><strong>We are Stansberry Research</strong>.</p>
+              <p>And over the past 25 years, we've built one of the largest online financial libraries in the world and attracted millions of people to our work.</p>
+              <p>We publish intelligent, independent, and insightful investment research...</p>
+              <p>Research <em>we'd </em>want to read if our roles were reversed.</p>
+              <p>We show our members how to navigate every step of their financial journey, whether they're brand-new to investing or are seasoned professionals.</p>
+              <p>Of course, I realize you've likely never heard of us. And perhaps you aren't quite sure what we do or what you may be signing up for.</p>
+              <p>That's why I'd like to lay everything out for you right here on this page.</p>
+              <p><strong>Because you have a big decision to make... and you deserve all the details</strong><strong>.</strong></p>
+              <p>And before I dive in, let me just say...</p>
+              <p>Should you have any questions about what you're reading or what to do next, please call our friendly, knowledgeable team at (800) 778-4913 (Monday through Friday 9 a.m. to 4 p.m. Eastern time).</p>
+              <p>This is a private line created solely for you and people like you, who've reached this web page. Your call will likely be answered right away by one of the most senior members of our team. If it's after hours, leave a message and we'll call you the next business day.</p>
+              <p><strong>Frankly, I'm not surprised you found our report</strong><strong>.</strong></p>
+              <p>Because the world of finance, let alone the world in general, is changing quickly.</p>
+              <ul class="custom-list">
+                <li class="bullets">Nearly 1 in 3 investors are now &quot;self-directed,&quot; meaning they want to make their own decisions about their money.</li>
+                <li class="bullets">99% of Americans don't use a financial adviser. And this is easy to understand when you consider only 1 in 10 financial advisers last even three years in the industry. That's not an encouraging stat.</li>
+                <li class="bullets">What's more, as a result of free and discounted online investing platforms (such as Fidelity, Charles Schwab, and Robinhood), there has been a rapid surge of interest in the stock market.</li>
+              </ul>
+              <p>Investors are buying individual stocks at a record pace, according to <em>Fortune</em> magazine, instead of parking all their money in mutual funds or a savings account, as they did in days gone by.</p>
+              <p><strong>And in this new investing era, we believe most people can successfully manage their own money... once they have the right tools and information</strong>.</p>
+              <p>What's more, we feel it's a total failure of the U.S. education system that 43% of Americans are considered &quot;financially illiterate.&quot;</p>
+              <p>Which is why, for the past 25 years, we've been working to bridge this gap.</p>
+              <p>The reality is: There is a dearth of reliable and high-quality financial information, tools, and analytics available today.</p>
+              <p>And even though you can now access more and more channels of information... more and more ways to get your news...</p>
+              <p><strong>Trust and credibility have never been harder to find.</strong></p>
+              <p>Most people looking for financial information end up spending tens of thousands of dollars in the wrong places or grow so frustrated or confused they agree to give up control of their money.</p>
+              <p><strong>We've developed a better way.</strong></p>
+              <p>Sure, there is plenty of free content available for people who don't want to think too much about anything. And, invariably, they get what they pay for.</p>
+              <p>But in the investment markets, thinking differently is a huge advantage. We're convinced there's no better way to make money than by working hard to buy things most other people don't want to own. That's where all the value lies.</p>
+              <p>And it's probably why we're consistently ahead of the mainstream press on the topics that matter most to investors.</p>
+              <p>Here's just a quick look of some of the topics our firm has covered in the past 25 years:</p>
+              <ul class="custom-list">
+                <li class="bullets">In 1999, we predicted companies like Kodak, Sears, J.C. Penney, America Online, and AT&amp;T were outdated and would eventually become obsolete...</li>
+                <li class="bullets">In April 2000, we wrote, &quot;There is a serious problem with the Internet&quot; and predicted the market would crash. Here's what happened next... <img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/nasdaq-1-index.jpg" class="imgCenter" style="width:100%;  margin-left: -20px;">
+                </li>
+                <li class="bullets">In 2001, we predicted the rise of <em>&quot;</em><em>regenerative</em> <em>medicine</em><em>&quot;</em>... predicting scientists would eventually be able to use our own cells to cure us. This is now a thriving $35 billion market.</li>
+                <li class="bullets">In 2003, we said Disney (DIS) would have a &quot;<em>lasting place in America's living room.</em>&quot; You would have more than tripled your money since.</li>
+                <li class="bullets">In 2008, our experts recommended selling short shares of Lehman Brothers five months before it shocked the world, declaring bankruptcy.</li>
+                <li class="bullets">In 2009, another expert argued that the best way to play the recovery was buying shares of Berkshire Hathaway at $56. The stock recently hit a new high of $447.</li>
+                <li class="bullets">In 2010, our experts said, &quot;<em>Whether you love Microsoft or hate it, you'll be using its Office, Windows, Bing, or Xbox 360 products (or some descendant of them) 10 years from now... I guarantee it</em><em>.&quot;</em>That recommendation could have returned 10 times your money.</li>
+                <li class="bullets">We started tracking Nvidia as early as 2016, writing, &quot;<em>When machines begin learning for themselves, it will be a watershed moment in human history. And these 'artificial brains' will bring huge profits to early investors.</em>&quot; You can only imagine what that recommendation has done for members who followed our advice.</li>
+                <li class="bullets">In 2017, we started covering blockchain technology, writing, <em>&quot;The blockchain today could be like the Industrial Revolution, railroads, computers, or the Internet before they changed the way the world works. If you understand the blockchain and its implications, it can be remarkably profitable.&quot;</em></li>
+                <li class="bullets">On March 24, 2020, one of our experts called the exact day the market would bottom after the COVID crash... Another expert put together a basket of 25 stocks – 23 of which were winners, and seven now have gains higher than 100%.</li>
+                <li class="bullets">In April 2021, another expert called inflation &quot;the biggest threat to the markets today&quot;... right before a worldwide surge in inflation.</li>
+              </ul>
+              <p>There are likely thousands more predictions and specific recommendations we could add to that list.</p>
+              <p>In fact, over the last 25 years, our experts have written up an astounding 75 million words worth of insightful market research like this...</p>
+              <p>That's the equivalent of writing the King James Bible 96 times.</p>
+              <p>Over the years, we've also heard amazing stories from members across our services who have acted on our recommendations...</p>
+              <ul class="custom-list">
+                <li class="bullets">Eddie K. wrote, &quot;My wife and I opened our brokerage accounts about six months ago with $300,000 and became Stansberry Research members at the same time. <strong>Our accounts are now worth over $600,000</strong>.&quot;</li>
+                <li class="bullets">Terry D. said, &quot;Not sure what my portfolio would look like right now without your market analysis. <strong>Your analysis is more important to successfully trading and investing than anything else I have seen</strong>. All of my friends and family wouldn't listen to me when I shared your thoughts but have since told me they should have.&quot;</li>
+                <li class="bullets">And Don C. said, &quot;I am a businessman willing to take low level risk. I have no stock market education but can learn quickly. I decided to put $6,000 in an account that I would let my son use to invest following Stansberry's writings. <strong>In 10 months, we now have $89,000 in the account</strong>.&quot;</li>
+              </ul>
+              <p>The investment results described in these testimonials are not typical. Investing in securities carries a high degree of risk. You may lose some or all of the investment.</p>
+              <p>I could show you dozens and dozens of notes like this.</p>
+              <p>And, sure, all investing comes with risk. Everyone is starting with different amounts to invest, and we'll never deny that we haven't had losing recommendations along the way.</p>
+              <p>My point is, we know how to talk to and help REAL PEOPLE far better than anyone on Wall Street. Because we ARE real people, with one key difference: <strong>We just happen to employ some of the most respected financial experts in America</strong>.</p>
+              <ul class="custom-list">
+                <li class="bullets">21 of our experts have advanced master's degrees</li>
+                <li class="bullets">11 have a Master of Business Administration degree (&quot;MBA&quot;)</li>
+                <li class="bullets">We have three Chartered Financial Analysts (&quot;CFAs&quot;) and two Chartered Market Technicians (&quot;CMTs&quot;) on staff... two of the most competitive degrees in finance</li>
+                <li class="bullets">We also have a Certified Financial Planner (&quot;CFP&quot;)... two Certified Public Accountants (&quot;CPAs&quot;)... a medical doctor... and two Juris Doctors (&quot;JDs&quot;)</li>
+              </ul>
+              <p>We have people who spent decades on Wall Street... ran their own hedge funds... worked at multibillion-dollar pension funds... and sat shoulder to shoulder with some of the most legendary investors in the world.</p>
+              <p>Just one of our experts, for example, graduated cum laude from Yale University in 1997. He worked for several investment firms, like Leon Cooperman's Omega Advisors, Pequot Capital, Steve Cohen's SAC Capital, and David Einhorn's Greenlight Capital. He has been responsible for managing billions of dollars in capital and generating more than $1 billion of profits for his firms' investors.</p>
+              <p><strong>These are the people working around the clock to bring you the best financial research in the world. This is who you're getting actionable recommendations from. Not just hot air and recycled opinions.Not just an adviser your neighbor uses.</strong></p>
+              <p>And our track records speak for themselves.</p>
+              <p>As a point of reference, since inception, the average gain of our flagship letter is 19.6%...</p>
+              <p>That means our recommendations would have DOUBLED the returns of the S&amp;P 500 Index over the past 25 years.</p>
+              <p>I don't know about you, but I think most Americans could use 100% MORE MONEY over the long term – today more than ever.</p>
+              <p>While the typical Stansberry Research member is between 50 and 70 years old with enough money to invest, that's certainly not everyone.</p>
+              <p>We have members from more than 180 countries, representing every experience level.</p>
+              <p>And although we don't give individual advice and no two members will ever have the same financial situation, here are some traits nearly every Stansberry Research member possesses:</p>
+              <ul class="custom-list">
+                <li class="bullets">Our members value lifelong learning.</li>
+                <li class="bullets">Our members tend to be voracious readers. They're relentlessly curious and have interesting hobbies and passions.</li>
+                <li class="bullets">Our readers are independent and want the final say when it comes to their money.</li>
+                <li class="bullets">Our members are often fed up with Wall Street and Washington. They realize that these groups have stacked the deck against the public... making it virtually impossible for the average investor to understand the financial markets, let alone complex opportunities like biotech, gold mining, bonds, or blockchain.</li>
+              </ul>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body">
+              <!--begin section-->
+              <h4></h4>
+              <p>Since you are reading this page, I suspect this all sounds familiar to you.</p>
+              <p>But until we opened our doors in 1999, very few options existed for people who looked at the world like this.</p>
+              <p>Our founder, Porter Stansberry, discovered that if we simply did the hard work that all investors should do before they invest their capital, plenty of members would find their way to us.</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/porter-speaking.jpg" alt="chart" class=" imgCenter" style="max-width:60%;"></p>
+              <p>Stansberry Research started with a borrowed laptop and a big idea... to serve readers honestly and well.</p>
+              <p><strong>We believed that if we worked hard to serve you honestly and well, our hard work would translate into excellent results for you and all our members.</strong></p>
+              <p>That's why, within about five years of launching Stansberry Research, we built one of the biggest and most successful independent advisory businesses in the world. It continues to grow... and we recently went public with our parent company in 2021.</p>
+              <p>Don't worry. It hasn't gone to our heads. We haven't let up. We all still work long hours. And our entire staff of 200-plus feels a massive sense of obligation to our members, a group that even includes our parents, closest friends, business partners, and most of our employees.</p>
+              <p><strong>By now, you might be wondering, what – specifically – do we do at Stansberry Research?</strong></p>
+              <p>We produce investment research in the form of daily, weekly, and monthly publications.</p>
+              <p>Currently, we publish more than 20 unique services, covering everything from commodities to cryptocurrencies. We have services that show you how to trade options... explore the bond markets... or leverage our multimillion-dollar algorithm-powered quant system.</p>
+              <p>And remember, standing at the helm of each of these services is a highly vetted and qualified financial expert. We have a team of two dozen of them, each as qualified as the next.</p>
+              <ul class="custom-list">
+                <li class="bullets">In the case of our health care investment research service... it's written by a medical doctor. He invested in a biomedical startup that developed an early predecessor to critical parts of the COVID vaccine, before this company was sold for $125 million. He was also a vice president at Goldman Sachs. That's who you'd want telling you which health care stocks to buy, right?</li>
+                <li class="bullets">Leading one of our technology letters is one of the first people ever to make $1 million by selling the rights to the domain name WallStreet.com. He has been mentioned in the <em>Wall Street Journal, PC Magazine,</em>and the<em> Washington Post... </em>was a pioneer in the technology behind Skype and FaceTime... and spent years at Merrill Lynch. He also was one of the earliest miners of bitcoin and has shown thousands of people how to get started with cryptos.</li>
+                <li class="bullets">And our technical trading expert became a trader on Wall Street at 22 years old, holds a Chartered Market Technician certification, and was the head trader for a $65 billion pension fund, where he averaged $155,000 in profits per day.</li>
+              </ul>
+              <p>Following each of these experts typically costs $5,000 per year.</p>
+              <p>We think that's a perfectly justifiable price knowing that it's not uncommon for Wall Street firms to pay thousands – if not tens of thousands – of dollars for a single report on a company or industry.</p>
+              <p><strong>Our research services provide regular analysis and recommendations you could act on any day the market is open.</strong></p>
+              <p>You receive monthly market analysis from your expert, a new vetted trade recommendation, an entire model portfolio of actionable ideas, and updates on all previous recommendations.</p>
+              <p>Even better, services are written in plain English. They're meant to educate and entertain you... not put you to sleep with patronizing jargon and wishy-washy opinions.</p>
+              <p>If you've ever suspected the talking heads in the mainstream financial media make things sound way more complicated than they need to be, we'd agree. It's a secret club, and they're not taking new members.</p>
+              <p>Meanwhile, we are. And we take the most complex financial ideas in the world and explain them to you in friendly, straightforward language.</p>
+              <p><strong>But earning your trust doesn't end there...</strong></p>
+              <p>Our founder demanded we publish completely transparent, vetted (and public) track records. We've done this for more than a decade now. Every research service is measured against a benchmark and receives an assessment that we publish at the end of each year.</p>
+              <p>If your service is underperforming, mismanaging risk in anyway, or if it's no longer a responsible investing strategy for the market environment, we will shut it down and find a way to make it up to you.</p>
+              <p>This may be in the form of a refund, or another service of equal value (where we believe you could see better upside potential).</p>
+              <p>Yes, I realize this is a lot of &quot;inside baseball,&quot; but I tell you all this to underscore that everybody at Stansberry Research follows a strict code of ethics. These rules are plastered around our headquarters in Baltimore, Maryland and reinforced in everything we do.</p>
+              <p>Here are just a few:</p>
+              <ul class="custom-list">
+                <li class="bullets">We do not recommend investment strategies that we wouldn't want our closest friends and family members to follow, too.</li>
+                <li class="bullets">We don't write about or recommend investments where we have a conflict of interest.</li>
+                <li class="bullets">We are always happy to part as friends. If we can't satisfy our members, we return their money.</li>
+                <li class="bullets">And again, our goal is to give our members the information we'd most want if our roles were reversed.</li>
+              </ul>
+              <p>Think of this as your &quot;Bill of Rights&quot; when you become a Stansberry Research member.</p>
+              <p>You should know that anytime you pick up our content, you're going to learn something new. You're going to read a good story. You're going to find a slew of interesting and understandable facts.</p>
+              <p>We give you something new to think about. And we never – ever – want to waste your time.</p>
+              <p>Now, that doesn't mean you'll always agree with what we're writing about and recommending, of course.</p>
+              <p>Our work is generally contrarian. We often express opinions that are out of the mainstream... and that are liable to upset people. For folks who only like to watch the evening news or never read anything except the <em>New York Times</em> on Sundays, our approach to economics, politics, finance, and health probably isn't appealing.</p>
+              <p><strong>Still, our brand promise is that whether you agree with us or not, we will present compelling, honest, and thorough reasons for our views.</strong></p>
+              <img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/alliance-conference.jpg" class="imgCenter" style="max-width:60%;">
+              <p>Some of the biggest names in finance speak at our annual conference for Alliance Members.</p>
+              <p>And to me, there's no greater measure of our business than the fact that nearly 20,000 of our members have liked our services so much, they upgraded to receive everything we publish. They happily pay $30,000 for what we called <em>The Alliance Membership.</em></p>
+              <p>But we recognize that you're just getting to know us and our work.</p>
+              <p>You need to see for yourself what this all means, and whether it can work for you and your family.</p>
+              <p>That's why I'd like to extend to you an invitation to our most generous, comprehensive, and risk-free introductory membership program.</p>
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <section class="main-body" id="suite">
+              <!--begin section-->
+              <!--HEADER-->
+              <h4>Introducing <em>The Stansberry Investor Suite</em></h4>
+              <p>This membership allows you to sample many of our best products and can be customized to your investing needs.</p>
+              <p>Let me break down everything you'll get when you join <em>The Suite.</em></p>
+              <p>Every Friday, you'll receive our latest research...</p>
+              <!--first-->
+              <p><strong>On the first Friday of each month, you'll receive our flagship product...</strong></p>
+              <p>This is where you're going to learn the most about the world around you, and how it could impact the markets and your money. If you're looking for an investing education, start here.</p>
+              <p>This is where we've published some of the most important work in the financial-research business since 1999. Through the Internet boom and bust... September 11, 2001... the real estate boom... China's economic surge... the credit crisis... and the &quot;End of America,&quot; we've helped show our members how to see substantial gains, year after year.</p>
+              <p>No matter what is going on globally, we'll break it down for you and find a way for you to potentially profit. Right now we're tracking themes such as &quot;The Next Boom&quot;... &quot;The World's Best Businesses&quot;... &quot;Gatekeepers of the Financial Markets&quot;... &quot;Software as a Service ('SaaS')&quot; ... and &quot;Inflation Protection.&quot; As soon as you sign up, you'll get to see the full list of the 20-plus companies we're tracking and which ones we recommend you buy now.</p>
+              <!--second-->
+              <p><strong>On the second Friday of the month, you'll receive our best data-driven research...</strong></p>
+              <p>You'll likely find this the most fun of your four new products. That's because this breakthrough financial tool allows you to type in any ticker and see how we evaluate the company on a number of metrics.</p>
+              <p>We've spent millions of dollars building a system that would analyze any stock &quot;the Stansberry Way&quot;... and the results have been astounding. Put simply, the highest-scoring stocks have pointed to multiple triple-digit winners...</p>
+              <p>For example, when backtesting the system, we found it would've scored e.l.f. Beauty as a &quot;Buy&quot; before it rose 715%.</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/beauty-elf.jpg" alt="chart" class=" imgCenter"></p>
+              <p>And the worst-scoring stocks tend to plummet. For example, the software company Inpixon would've received a lowly score of just 3 before it crashed nearly 100%. And dental-care company SmileDirectClub got a score of just 17 before the company went bankrupt.</p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/inpixion-inpx.jpg" alt="chart" class=" imgCenter"></p>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/smiledirectclub.jpg" alt="chart" class=" imgCenter"></p>
+              <!--third-->
+              <p><strong>On the third Friday of the month, you'll receive our market-beating technology research...</strong></p>
+              <p>Of the four new services you'll receive, this is where you're likely to see the highest gains. That's because this service is going to tell you about the biggest breakthrough technologies in the world. Here, you're going to get more than just a simple stock recommendation each month. You'll get a full education about the most important innovative and disruptive technologies around the world, including AI, gene therapy, 5G, cryptocurrencies, cybersecurity, and so much more.</p>
+              <p>The experts behind this service have decades of experience working in technology, biotechnology, and new developments in the cryptocurrency and blockchain sectors. These analysts have taken readers across the U.S. and to dozens of countries around the globe... and their results have been incredible. They currently have the following open gains in their portfolio:</p>
+              <p>650%... 570%... 370%... 347%... 214%... 187%... 130%... 124%... and a dozen other big winners. You'll get the names of these tickers as soon as you sign up.</p>
+              <!--fourth-->
+              <p><strong>On the fourth Friday of the month, you'll receive our brand-new quantitative research...</strong></p>
+              <p>Known as our &quot;Monitors&quot;... this is where you get to see how our experts analyze and track all the different pieces of the market. If you like data, this will be your favorite of the four products.</p>
+              <p>Here, our experts will delve into six of the least risky and potentially most lucrative investment themes in the market... before digging deep to find the best buys within those themes. This is very different and much more detailed work than what you'd typically see anywhere else online. It features data and analysis that would be impossible for you to do on your own and, as far as we know, isn't available anywhere else, at any price. You can use these to spot often hard-to-find opportunities, such as the best oil and gas stocks to own... the top insurance plays... and more.</p>
+              <!--end fourth-->
+              <p>Remember, <strong>you get access to all four of these products</strong> when you sign up for <em>The Stansberry Investor Suite.</em></p>
+              <p>I know this may feel like a lot of information... so to make it as easy as possible, we bundled it all together for you in a weekly e-mail we call <em>This Week on Wall Street.</em></p>
+              <p><strong>We suspect this will be your favorite e-mail to open each week.</strong></p>
+              <p>That's because not only will it include your newest research, but it will also feature highlights and commentary about the biggest market and economic events of the week.</p>
+              <p>It's your one-stop shop to navigating the markets.</p>
+              <p>It will also include some of the most interesting articles that our experts discussed and shared each week. This gives you a &quot;look behind the curtains&quot; at how we source ideas and stay on top of the trends that are moving the markets.</p>
+              <p>Also starting immediately, you're going to get access to our daily service called the<em> Stansberry Digest. </em>Anyone who signs up for any membership with us receives the<em> Digest</em> every day after the market closes.</p>
+              <p>In just the past few weeks, the<em> Digest </em>covered topics such as:</p>
+              <ul class="custom-list">
+                <li class="bullets">Whether it's time to bail on the bull market...</li>
+                <li class="bullets">What to do when markets hit all-time highs...</li>
+                <li class="bullets">A warning sign to watch from the banks...</li>
+                <li class="bullets">And the No. 1 investing strategy we would recommend to our friends.</li>
+              </ul>
+              <p>Remember, <em>The Stansberry Investor Suite </em>gives you access to several of our best and most popular services, all in one easy-to-navigate interface. You can read as much or as little as you want.</p>
+              <p>Just know that you're soon going to have instant access to at least two dozen actionable investing recommendations... as well as an entire library of special reports.</p>
+              <p>These reports include titles such as:</p>
+              <ul class="custom-list">
+                <li class="bullets check"><em>America's No. 1 Legacy Stock</em></li>
+                <li class="bullets check"><em>How to Get Out Before the Crash</em></li>
+                <li class="bullets check"><em>The Future of Money and Equity in America</em></li>
+                <li class="bullets check"><em>How the U.S. Congress Will Hand Us Our Next 5X Trade</em></li>
+                <li class="bullets check"><em>How to Make 500% in the Coming Years with America's New Money</em></li>
+              </ul>
+              <p><img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/report-bundles.png" alt="chart" class=" imgCenter"></p>
+              <p>You'll also receive all the new special reports we publish in the future for these products.</p>
+              <p>To subscribe to each of these four products individually would cost more than $7,000.</p>
+              <p>But as part of this introductory membership, you can get started today for just $995.</p>
+              <p>Our goal with this offer is to show you some of our best work at the lowest possible price.</p>
+              <p>As mentioned above, if you're unhappy with your purchase for any reason, simply call us any time in the next 30 days and we'll issue you a 100% cash refund.</p>
+              <p>As soon as you fill out the fields below, I'll send you an email with your unique username and password, along with instructions on how you can access your new suite of financial research.</p>
+              <p>Then, over the next few days, I'll be in touch to make sure you're comfortable with your purchase and know how to get the most out of everything.</p>
+              <p>My hope is that you'll soon be our latest happy members...</p>
+              <ul class="custom-list">
+                <li class="bullets">Like Pete C., who said, &quot;I can't express my gratitude any more than looking at the returns I have generated this year by begin an avid member. These returns speak for themselves.&quot;</li>
+                <li class="bullets">Frank K., who said, &quot;Because of your guidance, my wife and I have reached millionaire status! We are so happy.&quot;</li>
+                <li class="bullets">And Greg R., who said, &quot;I feel like I have a tool in my financial toolbox now that will work in any market. So far this year I am averaging $4,000 a month.&quot;</li>
+              </ul>
+              <p>The investment results described in these testimonials are not typical. Investing in securities carries a high degree of risk. You may lose some or all of the investment.</p>
+              <p>To get started with our risk-free introductory offer, <span style="background-color: #ffee00;">please visit <a href="https://orders.stansberryresearch.com/?cid=MKT810506&eid=MKT811402" target="_blank">here</a> or call us at <a target="_blank" rel="noopener">(800) 778-4913</a></span>.</p>
+              <img src="https://assets.stansberryresearch.com/mkt/2024/leadgen/branding/DIT/example-bundle.webp" alt="Example Bundle" class="imgCenter">
+              <p>I look forward to welcoming you to <em>The Stansberry Investor Suite</em>.</p>
+              <p>Regards,</p>
+              <img src="https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/brett-signature.jpg" class="signature" style="max-width:150px;">
+              <img src="https://s3.amazonaws.com/assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/brett-avatar.jpg" style="max-width:130px;">
+              <p>Brett Aitken<br> Publisher, Stansberry Research</p>
+              <p>P.S. <em>Stansberry Investor Suite </em>Members will also get access to the names and ticker symbols of stocks Whitney Tilson is recommending you buy right now to take advantage of the Melt Up. Visit <a href="https://orders.stansberryresearch.com/?cid=MKT810506&eid=MKT811402" target="_blank">here</a> or call <a target="_blank" rel="noopener">(800) 778-4913</a> to learn more.</p>
+              <!--end paste-->
+              <!--end section-->
+              <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p>
+            </section>
+            <!-- <section class="main-body" id="warning">
+             
+            <p class="cta-page-footer" id="investor-suite"><a href="https://orders.stansberryresearch.com/?cid=MKT810506&amp;eid=MKT811403" target="_blank">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 778-4913</p></section>-->
+          </article>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12 side-column">
+          <section class="static-side-bar">
+            <hr class="static-side-bar-hr">
+            <h1>Table of Contents</h1>
+            <p><a href="#intro">The 2024 Stock Melt Up: A Blueprint</a> </p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#what-melt-up">What Is a Melt Up?</a> </p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#changing-guard">The Inevitable 'Changing of the Guard'</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#biotechnology">Melt Up Driver No. 1: Artificial Intelligence</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#big-profits">How to Mine Big Profits From the Next 10-Year Trends</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#exception">How Microsoft Became the Exception to the Rule</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#before-ai">A Boom-and-Bust Sector Even Before AI</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#dead-yet">This Melt Up Ain't Dead Yet</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#vital-sign">This 'Vital Sign' Shows the Current Rally Is Healthy</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#exactly-sell">How to Know Exactly When to Sell</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#spot-avoid">How to Spot – and Avoid – Investment Bubbles</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#emotions">Take the Emotions Out of Investing</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#watchlist">The Melt Up Watch List: 25 Companies Poised to Soar During the Coming Melt Up</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#experts">Here's How to Get Even More from Our Experts</a></p>
+            <hr class="static-side-bar-hr-light">
+            <p><a href="#suite">Introducing The Stansberry Investor Suite</a></p>
+            <hr class="static-side-bar-hr-light">
+            <div class="bottom-logo"><img src="https://static.cloudsna.com/store/PROD/images/Naspers/report%20promo-stansberry%20logo%20sidebar%20footer%402x.png" alt="logo"></div>
+          </section>
+        </div>
+      </div>
+      <div class="footerRow"> <a class="footerItem" href="https://stansberryresearch.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> <a class="footerItem" href="https://stansberryresearch.com/legal-notices" target="_blank" rel="noopener">Legal Notices</a> <a class="footerItem" href="https://stansberryresearch.com/terms-of-use" target="_blank" rel="noopener">Terms of Use</a> <a class="footerItem" href="https://stansberryresearch.com/dmca" target="_blank" rel="noopener">DMCA Policy</a> <a class="footerItem" href="https://stansberryresearch.com/do-not-sell" target="_blank" rel="noopener">Do Not Sell My Personal Information</a> <a class="footerItem" href="https://stansberryresearch.com/privacy-policy/#adchoice" target="_blank" rel="noopener">Ad Choice</a> <a class="footerItem" href="#a" onclick="window.Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')" data-ol-has-click-handler="">Cookie Preferences</a></div>
+    </div>
+  </body>
+
+</html>

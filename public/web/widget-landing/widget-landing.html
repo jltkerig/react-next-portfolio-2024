@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Widget Landing Page</title>
+    <link href="https://assets.1729research.com/common/css/bootstrap/bootstrap.min.4.3.1.css" rel="stylesheet">
+    <style type="text/css">
+      /*In-Line CSS goes here*/
+      /*----- PROXIMA NOVA REGULAR -----*/
+      @font-face {
+        font-family: 'ProximaNova';
+        src: url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-regular-webfont.eot');
+        src: local('Proxima Nova'), local('Proxima Nova Regular'), local('ProximaNova-Regular'), url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-regular-webfont.woff') format('woff'), url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-regular-webfont.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      /*----- PROXIMA NOVA BOLD -----*/
+      @font-face {
+        font-family: 'ProximaNova';
+        src: url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-bold-webfont.eot');
+        src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-bold-webfont.woff') format('woff'), url('https://assets.stansberryresearch.com/fonts/proximanova/proximanova-bold-webfont.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      /*----- Montserrat BOLD -----*/
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+      /*HEADER STYLING*/
+      .top-header {
+        background-color: #FFFFFF;
+        color: #FFFFFF;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .header-phone {
+        vertical-align: bottom;
+        margin: 0 10px -70px 0;
+        max-height: 350px;
+        max-width: 350px;
+        width: 100%;
+      }
+
+      .top-header h1 {
+        font-size: 40px;
+        text-align: left;
+        font-weight: 500;
+        margin-top: 45px;
+      }
+
+      @media screen and (max-width: 1050px) {
+        .top-header h1 {
+          font-size: 3vw;
+          padding-left: 40px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .top-header h1 {
+          font-size: 27px;
+          padding: 0 0 30px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .top-header .wrapper {
+          padding: 10px;
+        }
+
+        .header-phone {
+          margin: 0 auto;
+          display: block;
+          position: inherit;
+          max-width: 300px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .order-1 {
+          order: 2;
+        }
+
+        .order-2 {
+          order: 1;
+        }
+      }
+
+      /*HEADER STYLING ends*/
+      /*BODY STYLING*/
+      .btn-default {
+        text-shadow: none;
+      }
+
+      html {
+        /*needed to override injected SF css*/
+        font-size: inherit;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        padding: 5px 0px;
+        font-family: 'ProximaNova';
+      }
+
+      .wrapper-navy h1 {
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 1;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+
+      .wrapper-navy h1,
+      .wrapper-navy h2,
+      .wrapper-navy h3,
+      .wrapper-navy p,
+      .wrapper-navy li {
+        color: #FFF;
+      }
+
+      .wrapper-navy h3 {
+        font-family: 'ProximaNova';
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: left;
+      }
+
+      .wrapper-green h5 {
+        font-family: 'ProximaNova';
+        max-width: 550px;
+        font-size: 24px;
+        color: #FFF;
+        line-height: 1.1em;
+        padding-bottom: 6px;
+        text-align: left;
+      }
+
+      .wrapper-green p {
+        font-family: 'ProximaNova';
+        max-width: 500px;
+        font-size: 22px;
+        color: #FFF;
+        line-height: 1em;
+        padding-left: 30px;
+        background-image: url(https://assets.1729research.com/common/icons/bullet-angle-white.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position-y: 5px;
+      }
+
+      .wrapper-green p:last-child {
+        margin-bottom: 0;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .wrapper-white h2 {
+        color: #233871;
+        font-size: 50px;
+      }
+
+      .bg-navy h2 {
+        padding-bottom: 25px;
+      }
+
+      h3 {
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .wrapper-white h3 {
+        max-width: 800px;
+        display: block;
+        margin: 0 auto 40px;
+      }
+
+      p {
+        font-family: 'ProximaNova';
+        font-size: 24px;
+        padding: 5px 0 5px;
+        line-height: 1.4;
+        text-align: left;
+      }
+
+      /* .bg-white { background-color: #F2F0F0; padding-top: 20px; box-shadow: inset 0px 0px 30px 4px #00000038; }*/
+      .bg-navy {
+        position: relative;
+        background-color: #344055;
+      }
+
+      .chaikin {
+        max-width: 250px;
+        margin: -150px auto 0;
+        display: block;
+        filter: drop-shadow(0px 0px 4px #00000038);
+      }
+
+      .wrapper {
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      .wrapper-white {
+        max-width: 850px;
+        padding: 30px 40px;
+      }
+
+      .wrapper-green {
+        background-color: #4EAE35;
+        border-radius: 10px;
+        max-width: 900px;
+        position: relative;
+        margin-top: -30px;
+        padding: 30px 40px;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+
+      .wrapper-navy {
+        background-color: #344055;
+        border-radius: 10px;
+      }
+
+      .break-blue {
+        width: 50px;
+        height: 10px;
+        background-color: #3C61C7;
+        margin: 30px auto;
+      }
+
+      .logo {
+        max-width: 175px;
+        text-align: left;
+        display: block;
+      }
+
+      .pg-logo {
+        max-width: 450px;
+        width: 100%;
+        padding-bottom: 15px;
+      }
+
+      .imgCenter {
+        margin: 0 auto;
+        display: block;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .fake-word-wrap {
+        margin-right: 300px;
+      }
+
+      p.testimonial {
+        text-align: center;
+        padding: 10px;
+        font-size: 26px;
+        line-height: 1.2;
+      }
+
+      .testimonial-name {
+        font-size: 28px;
+        line-height: 1;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      hr {
+        max-width: 300px;
+        border: solid .5px #7B7B7B;
+        widows: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .bg-navy hr {
+        border-color: #FFFFFF;
+      }
+
+      footer {
+        margin-top: 20px;
+      }
+
+      footer p {
+        font-family: 'ProximaNova';
+        color: #131D36;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      @media screen and (max-width: 767px) {
+        .chaikin {
+          display: none;
+        }
+
+        .pg-logo {
+          max-width: 350px;
+          margin: 0 auto;
+          display: block;
+        }
+
+        /* .bg-white { background-color: #FFFFFF; filter: none; box-shadow: none; }*/
+        .top-header {
+          box-shadow: none;
+        }
+
+        .wrapper {
+          padding: 20px;
+        }
+
+        h3 {
+          font-size: 30px;
+        }
+
+        .wrapper-white h2 {
+          font-size: 40px;
+        }
+
+        .bg-navy h2 {
+          font-size: 30px;
+        }
+
+        .wrapper-white h3 {
+          font-size: 24px;
+          padding: 5px 0 5px;
+          line-height: 1.4;
+          text-align: left;
+          font-weight: normal;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        hr {
+          display: none;
+        }
+
+        .break-blue {
+          display: none
+        }
+      }
+
+      /*BODY STYLING ends*/
+      /*PHONE MEDIA QUERIES*/
+      .phone-img {
+        position: absolute;
+        max-width: 440px;
+        max-height: 800px;
+        top: 130px;
+        right: 6%;
+        z-index: 3;
+        margin-bottom: -800px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .phone-img {
+          right: 5%;
+        }
+      }
+
+      @media screen and (max-width: 1150px) {
+        .phone-img {
+          right: 3%;
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        .phone-img {
+          right: -1%;
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        .phone-img {
+          right: 0%;
+          max-width: 350px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .phone-img {
+          position: absolute;
+          max-width: 200px;
+          top: 260px;
+          right: 38%;
+          z-index: 3;
+          margin-bottom: -80px;
+        }
+      }
+
+      @media screen and (max-width: 689px) {
+        .phone-img {
+          top: 270px;
+          right: 36%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .phone-img {
+          position: absolute;
+          max-width: 200px;
+          top: 320px;
+          right: 28%;
+          z-index: 3;
+          margin-bottom: -80px;
+        }
+      }
+
+      @media screen and (max-width: 440px) {
+        .phone-img {
+          top: 452px;
+          right: 25%;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .phone-img {
+          top: 466px;
+          right: 23%;
+        }
+      }
+
+      @media only screen and (max-width: 376px) {
+        .phone-img {
+          top: 475px;
+          right: 23%;
+        }
+      }
+
+      /*END PHONE MEDIA QUERIES*/
+      /*LEADGEN FORM STYLING*/
+      .form-control {
+        border-radius: 10px;
+        height: 40px;
+        margin-bottom: 0;
+        font-size: 18px;
+      }
+
+      input {
+        font-family: 'ProximaNova';
+        font-size: 18px;
+        font-weight: 500;
+        color: #adacac;
+        text-align: left;
+      }
+
+      .top-form {
+        margin: 0 0 0 170px;
+        max-width: 500px;
+      }
+
+      button.btn {
+        color: #FFFFFF;
+        background-color: #4EAE35;
+        border-radius: 10px;
+        font-family: 'ProximaNova';
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: none;
+        font-size: 18px;
+        max-width: 175px;
+      }
+
+      button.btn:hover {
+        background-color: #5BD03D;
+        color: #FFFFFF;
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+
+      .btn:hover {
+        background-color: #eba535;
+      }
+
+      .form-input-bottom {
+        max-width: 615px;
+        margin: 0 auto;
+      }
+
+      .bottom-button-container {
+        padding: 0 5px;
+      }
+
+      .bottom-input-container {
+        padding: 0 5px;
+      }
+
+      .top-d {
+        padding-bottom: 40px;
+      }
+
+      p.disclaimer {
+        font-family: 'ProximaNova';
+        color: #FFFFFF;
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 1.1em;
+      }
+
+      .disclaimer a {
+        color: #848484;
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 767px) {
+        .bottom-button-container {
+          display: block;
+          max-width: 100%;
+          flex: none;
+        }
+
+        .bottom-input-container {
+          display: block;
+          max-width: 100%;
+          flex: none;
+        }
+
+        .bg-navy {
+          background-color: white;
+          padding: 5px;
+        }
+      }
+
+      /*LEADGEN FORM STYLING ends*/
+      /*OSANO FOOTER START*/
+      .osano-cm-widget {
+        display: none;
+      }
+
+      .footerRow {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        justify-content: center;
+        margin: 10px auto;
+      }
+
+      .footerItem {
+        font-family: verdana, sans-serif;
+        font-size: 12px;
+        color: #454242;
+        line-height: 20px;
+        padding: 0 15px;
+        border-right: 2px solid #bbb;
+        text-decoration: none;
+      }
+
+      .footerItem:last-child {
+        border-right: none;
+      }
+
+      .footerItem:hover {
+        text-decoration: none;
+        color: #454242;
+      }
+
+      @media (max-width: 960px) {
+        .footerRow {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      #osano-cm-drawer-toggle--category_MARKETING--description {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        line-height: 1.375;
+      }
+
+      .osano-cm-description p,
+      .osano-cm-view--type_consent p {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 1.375;
+      }
+
+      .osano-cm-disclosure__toggle,
+      .osano-cm-header {
+        font-family: Verdana, sans-serif;
+        font-size: 17.65px;
+      }
+
+      .osano-cm-header {
+        font-family: "Gibson-SemiBold", arial, sans-serif;
+        font-size: 17.65px;
+        line-height: 1.375em;
+        margin: 0 auto 0 0;
+      }
+
+      /*OSANO FOOTER END*/
+      @media screen and (max-width: 767px) {
+        .bg-white {
+          padding: 0 10px 10px 10px;
+        }
+
+        .fake-word-wrap {
+          margin-right: 0;
+        }
+
+        .wrapper-navy {
+          z-index: 3;
+          overflow: hidden;
+        }
+
+        .wrapper-navy h1 {
+          font-size: 34px;
+          text-align: center;
+          margin: 0 auto;
+          text-align: center;
+          padding-bottom: 0;
+        }
+
+        .wrapper-navy h3 {
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 1.1;
+          text-align: center;
+          margin: 10px auto;
+        }
+
+        .top-h3 {
+          max-width: 75%
+        }
+
+        .wrapper-navy-bottom {
+          padding-bottom: 200px;
+        }
+
+        .wrapper-green {
+          z-index: 1;
+          max-width: 90%;
+          padding-top: 35px;
+        }
+
+        .top-form {
+          margin: 0 auto;
+          max-width: 90%;
+        }
+
+        button.btn {
+          max-width: 100%;
+        }
+
+        p.disclaimer {
+          margin: 0 auto;
+          max-width: 96%;
+        }
+
+        .form-control {
+          margin-bottom: 10px;
+        }
+
+        .logo {
+          margin: 0 auto;
+          display: block;
+        }
+
+        input {
+          font-size: 16px;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .wrapper-navy h1 {
+          font-size: 34px;
+          max-width: 350px;
+          text-align: center;
+          margin: 0 auto;
+          text-align: center;
+          padding-bottom: 0;
+        }
+
+        .wrapper-navy h3 {
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 1.1;
+          text-align: center;
+          margin: 10px auto;
+        }
+      }
+    </style>
+    <!--mockup: https://xd.adobe.com/view/9d2f44e6-e3b1-4388-b308-4b3753b1d44d-c87c/grid/ https://xd.adobe.com/view/1dbb6acf-662f-42e7-9b1e-c64150e9237a-48e8/specs/ FIRST PAGE: https://assets.1729research.com/common/css/bootstrap/bootstrap.min.4.3.1.css https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap / https://cdn.1729research.com/js/common.min.js // let buttonTime = ; // let hideExitPop = true; // both below are needed - show timer is the start timer time, countdowntime is the ending time // let showTimer = '2024/06/30 00:00:00'; // let countdownTime ='2024/06/28 00:00:00'; 
+-->
+
+  <body>
+    <section class="top-header">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-md-12"><img src="https://assets.stansberryresearch.com/mkt/leadgen/stansberry-widget/SR-logo-grey.svg" alt="widget" class="logo" /></div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-navy">
+      <div class="wrapper wrapper-navy wrapper-navy-bottom" style="position: relative;">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="text-align: center;">What would the smartest people in finance say about your favorite stocks?</h1>
+          </div>
+          <form class="top-form">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="top-h3">Enter Your E-mail Below to See This Powerful Stock Rating System in Action, 100% Free</h3>
+              </div>
+            </div>
+            <div class="row sna-page-form">
+              <div class="col-md-8 col-sm-8 col-xs-12"><input style="width: 100%;" class="form-control input-lg sna-email" placeholder="Enter Your Email Here" type="email" /></div>
+              <div class="col-md-4 col-sm-4 col-xs-12"><button class="form-control btn btn-default sna-single-optin" type="button">Submit</button></div>
+              <div class="col-12">
+                <p class="disclaimer top-d">By submitting your email address, you are agreeing to receive <em>This Week on Wall Street </em>and the <em>Stansberry Digest</em>, as well as occasional marketing messages. You can unsubscribe from each at any time. <a href="https://stansberryresearch.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
+              </div>
+            </div>
+          </form><img src="https://assets.stansberryresearch.com/mkt/leadgen/stansberry-widget/SRS-phone-mockup.png" class="phone-img" />
+        </div>
+      </div>
+    </section>
+    <section class="bg-white">
+      <div class="wrapper wrapper-green">
+        <h5><strong>Try the Stansberry Score now to...</strong></h5>
+        <p class="bullets white">See an exact score, from 0-100, for 3 of Wall Street's favorite stocks.</p>
+        <p class="bullets white">Know at a glance whether they’re an “A+” (or maybe an “F”)</p>
+        <p class="bullets white">Uncover whether a stock is likely to compound your wealth compounder… or destroy it.</p>
+      </div>
+      <div class="wrapper wrapper-white">
+        <p class="fake-word-wrap">There’s so much noise in the investing world. But what if you could tune it all out and see an exact score for any stock you may own or want to buy?</p>
+        <p class="fake-word-wrap">Are the stocks in a 401(k) account any good?</p>
+        <p class="fake-word-wrap">Should folks still hold Nvidia (NVDA)?</p>
+        <p>The Stansberry Score can provide this much needed simplicity, by ranking nearly 5,000 stocks with the press of a button.</p>
+        <p>The Stansberry Score powers one of the largest investment-research firms in the world… a firm that hundreds of thousands of stock market enthusiasts and professionals trust.</p>
+        <p>And now, you can try it for free.</p>
+        <p>In seconds, you can see which stocks have the highest chance of rising or falling in the months and years ahead.</p>
+        <p>Based on deep fundamental research – including a company’s financials, capital efficiency, valuation, and momentum – this score shows you where your favorite stocks stand in the pecking order when you are determining what to buy or sell.</p>
+        <p>Ask yourself:</p>
+        <p>Would your favorite stock still be your favorite… if you knew its score?</p>
+        <p>Try this extraordinary system for yourself, free for a limited time.</p>
+      </div>
+    </section>
+    <section class="bg-navy">
+      <div class="wrapper wrapper-navy">
+        <form style="width: 100%;">
+          <div class="col-12">
+            <h3 style="text-align: center;"><strong>Enter Your E-mail Below to See This Powerful Stock Rating System in Action, 100% Free</strong></h3>
+          </div>
+          <div class="form-input-bottom sna-page-form">
+            <div class="row">
+              <div class="col-8"><input style="width: 100%;" class="form-control input-lg sna-email" placeholder="Enter Your Email Here" id="emailField" type="email" /></div>
+              <div class="col-4" style="padding: 0;"><button class="form-control btn btn-default sna-single-optin" type="button">Submit</button></div>
+              <div class="col-12">
+                <p class="disclaimer" style="margin-bottom: 0;">By submitting your email address, you are agreeing to receive <em>This Week on Wall Street </em>and the <em>Stansberry Digest</em>, as well as occasional marketing messages. You can unsubscribe from each at any time. <a href="https://stansberryresearch.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>© 2024 Stansberry Research. All rights reserved.</p>
+    </footer>
+    <div class="footerRow"><a class="footerItem" href="https://stansberryresearch.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> <a class="footerItem" href="https://stansberryresearch.com/legal-notices" target="_blank" rel="noopener">Legal Notices</a>
+      <a class="footerItem" href="https://stansberryresearch.com/terms-of-use" target="_blank" rel="noopener">Terms of Use</a> <a class="footerItem" href="https://stansberryresearch.com/dmca" target="_blank" rel="noopener">DMCA Policy</a> <a class="footerItem" href="https://stansberryresearch.com/do-not-sell" target="_blank" rel="noopener">Do Not Sell My Personal Information</a> <a class="footerItem" href="https://stansberryresearch.com/privacy-policy/#adchoice" target="_blank" rel="noopener">Ad Choice</a> <a class="footerItem" href="#a" onclick="window.Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')" data-ol-has-click-handler="">Cookie Preferences</a>
+    </div>
+  </body>
+
+</html>

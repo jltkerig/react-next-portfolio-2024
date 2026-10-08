@@ -1,0 +1,29 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-turq {
+    background: #24a18f;
+}
+
+.bg-offwhite {
+    background: #f6f6f6;
+}
+
+bg-offwhite {
+}
+
+.lead-list {
+    font-weight: bold;
+}
+
+input[required] + label:after {
+    content: '*';
+    color: text-primary;
+}
+
+a:hover,
+a:focus {
+    color: text-primary;
+}

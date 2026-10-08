@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Hello, world! */
+
+/* Font family declaration */
+/* for easy grab: 
+font-family: "Montserrat", sans-serif;
+font-family: "Noto Serif", serif; 
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Serif:400,400italic,700,700italic);
+
+body{ }
+	
+h1 {font-family: "Montserrat", sans-serif; color:#FFFFFF; font-size: 54px; font-weight:600;text-align:center;
+}
+
+h2 {font-family: "Montserrat", sans-serif; color:#FFFFFF; font-size:30px;}
+
+h3 {font-family: "Montserrat", sans-serif; color:#222222; font-size:18px; font-weight:600;margin-bottom:20px;}
+
+h4 {font-family: "Montserrat", sans-serif; color:#222222;font-size:30px; font-weight:600;margin-bottom:50px;margin-top:30px;}
+
+h5 {font-family: "Montserrat", sans-serif; color:#222222;font-size:18px; font-weight:600;    margin-top: 0px;}
+
+h6 {}
+
+/* All font sizing/Color is done in the following section */ 
+.grey-background-reg{font-family: "Montserrat", sans-serif; font-size:14px; text-transform:capitalize; color:#222222;  }
+.grey-background-blue{font-family: "Montserrat", sans-serif; font-size:18px; color:#00559f;}
+.top-text-container p{font-family: "Noto Serif", serif; font-size:17px; line-height:27px;margin-bottom:30px; color:#222222;}
+.text-container p{font-family: "Noto Serif", serif; font-size:15px; line-height:23px;margin-bottom:20px;  }
+.blue-box-background-head {font-family: "Montserrat", sans-serif; color:#FFFFFF; font-size:30px;font-weight:600;margin-right:10px;}
+.blue-box-background-reg {font-family: "Montserrat", sans-serif; color:#FFFFFF; font-size:12px; font-weight:400;}
+.small-text {font-family: "Montserrat", sans-serif;font-size:12px;font-weight:600;color:#222222;}
+.white-bg-quote-box-head {font-family: "Montserrat", sans-serif; font-size:14px; color:#222222; margin-bottom:10px;}
+.white-bg-quote-box p{font-family: "Montserrat", sans-serif; font-size:13px; line-height:20px; color:#222222; margin-bottom:10px;}
+.subscribed-currently {font-family: "Noto Serif", serif; font-size:15px; color:#222222; }
+.not-subscribed-currently { font-family: "Noto Serif", serif; font-size:15px; color:#6d6e70;}
+.published-txt-head {font-family: "Montserrat", sans-serif; font-size:14px; color:#222222;margin-top:20px;margin-bottom:20px;} 
+.published-txt-reg{font-family: "Montserrat", sans-serif; font-size:13px; line-height:20px; color:#222222; }
+.pub-box-reg{font-family: "Noto Serif", serif; font-size:15px; color:#222222; line-height:23px;padding-right:30px;    padding-bottom: 20px;}
+.btn-space{ font-family: "Montserrat", sans-serif; font-size:12px; color:#222222;}
+.btn-space-greyed{font-family: "Montserrat", sans-serif; font-size:12px;color:#929497;}
+.footer-unsubscribe-all-box{ font-family: "Montserrat", sans-serif; font-size:15px; line-height:23px; color:#929497; font-weight:400 !important;}
+.pre-footer-area p{font-family: "Montserrat", sans-serif; font-size:12px; line-height:18px;color:#222222; }
+footer p{font-family: "Montserrat", sans-serif; font-size:10px; line-height:18px; color:#222222; font-weight:400 !important;}
+footer li{list-style:none; font-family: "Montserrat", sans-serif; font-size:12px; color:#58595b;}
+footer li strong{font-family: "Montserrat", sans-serif; font-size:12px; color:#222222;}
+/* link styling */
+a {
+    color: #58595b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004480;
+    text-decoration: underline;
+}
+
+.btn-default {
+font-family: "Montserrat", sans-serif;
+font-weight:400;
+color:#fff;
+background-color:#00a8a3;
+text-align:center;
+font-size:24px;
+margin:0 auto; 
+width:60%;
+    max-width: 450px;
+height:65px;
+border:none;
+border-bottom:4px solid #008e8a;
+}
+
+.btn-default:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	color:#ffffff;
+    background: #008e8a;
+	border-bottom:4px solid #007f7b;
+}
+
+/* social media button hover effect */
+
+.twitter {
+width: 30px;
+ height:20px;
+ display:block;
+ background:transparent url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/footer/Social_Icons_Twitter-20.png") center top no-repeat;
+}
+
+.twitter:hover {
+   background-image: url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/footer/Social_Icons_Twitter_Hover-20.png");
+}
+
+
+.facebook {
+ width: 30px;
+ height:20px;
+ display:block;
+ background:transparent url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/footer/Social_Icons_Facebook-20.png") center top no-repeat;
+}
+
+.facebook:hover {
+   background-image: url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/footer/Social_Icons_Facebook_Hover-20.png");
+}
+
+
+.linkedin{
+
+ width: 40px;
+ height:20px;
+ display:block;
+ background:transparent url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/footer/Social_Icons_Linked_In-20.png") center top no-repeat;
+}
+
+.linkedin:hover {
+   background-image: url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/footer/Social_Icons_Linked_In_Hover-20.png");
+}
+
+/* structure */
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+hr { 
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #929497;
+    margin: 3em 0 1em 0;
+    padding: 0;
+	}
+	
+header {margin: 10px 0 10px 0;}
+
+.stansberrylogo {
+text-align:center;
+margin:0 auto;
+
+display: block;
+}
+
+.text-container{
+	border-left: 1px solid #00559f;
+    border-right: 1px solid #00559f;
+    border-bottom: 1px solid #00559f;
+    background-color: #FFFFFF;
+	
+    padding-left: 38px;
+	padding-right: 38px;
+    padding-top: 20px;
+	}
+	
+.top-text-container{margin-top:40px; margin-left:38px;
+width:90%;}
+	
+.grey-background {
+	width:100%;
+	margin:20px 0 20px 0;
+	padding: 20px 40px 20px 40px;
+	background-color:#eff2f2;
+	/*border: 1px solid #d9dcdd;*/}
+	
+.blue-background {
+background-image: url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/H1_Banner.jpg");
+	background-size: 100% 100%;
+	padding-bottom:100px;
+    padding-top: 70px;
+    height: 250px; }
+	
+.blue-box-background {
+	background-color:#00559f;
+	width:100%;
+	margin:60px 0 0px 0;
+	padding: 30px 40px 10px 40px;
+	}
+	
+.white-bg-quote-box{border: 1px solid #bbbdbf;
+   padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+	padding-right:10px;
+	}
+	
+.subscribed-currently{
+
+	background-color:#eff2f2;
+	margin-top:20px;
+	margin-bottom:30px;
+	margin-left:20px;
+	padding: 20px 0 20px 15px;
+	border-left: 5px solid #00a8a3;
+}
+.not-subscribed-currently{
+	background-color:#eff2f2;
+	margin-top:20px;
+	margin-bottom:30px;
+	margin-left:20px;
+	padding: 20px 0 20px 15px;
+	border-left: 5px solid #a12f22;
+	
+}
+.pub-box{ 
+			border-top:8px solid #bbbdbf;
+			border-left: 1px solid #bbbdbf;
+			border-right: 1px solid #bbbdbf;
+			border-bottom: 1px solid #bbbdbf; 
+			margin-top:30px;
+			margin-bottom:60px;  
+			padding-left:50px;
+			padding-right:50px;
+			}
+			
+
+			
+.pub-img{margin-bottom:20px;}
+
+.pub-box .row{
+margin-bottom:30px;
+}
+
+.pub-box-outline{ border: 1px solid #bbbdbf;
+padding-left:7%;
+padding-right:7%;
+padding-bottom:10px;
+}
+.daily-weekly {padding-right:30px;}
+
+.btn-space{margin-right:5px;}
+
+.btn-space-greyed{margin-right:5px;}
+
+.lets-trans-form {text-align:center;margin-bottom:70px;}
+
+.pre-footer-area{ background-color:#f4f5f6;
+padding-top:50px;
+padding-bottom:70px;
+border-bottom:1px solid #929497;}
+
+.footer-unsubscribe-all-box{ display:block; width:80%; margin-top:20px;padding-bottom:50px; margin:0 auto;}
+
+.footer-unsubscribe-all-box label {font-weight:400;}
+
+/* Custom checkboxes */
+.checkbox, .radio {
+	width: 35px;
+	height: 35px;
+	padding: 0 5px 0 0;
+	margin-right:10px;
+	background: url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/checkbox-3.png") no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+.radio {
+	background: url(radio.png) no-repeat;
+}
+.select {
+	position: absolute;
+	width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+	height: 30px;
+	padding: 0 24px 0 8px;
+	color: #fff;
+	font: 12px/21px arial,sans-serif;
+	background: url("https://static.cloudsna.com/store/PROD/images/email-subscriber/img/checkbox-checked.png") no-repeat;
+	overflow: hidden;
+}
+footer {margin-top:40px;margin-bottom:60px;}
+footer li{margin-bottom:10px;}
+.social-media{margin-top:50px;}
+footer .social-media li{display:block; float:left; margin: 0 auto;}
+footer .social-media img{max-width:30px;max-height:20px;padding-left:10px;}
+footer .follow {width:90px;text-align:left;}
+.stansberrylogofooter {max-width:250px;margin-bottom:30px; }
+.margin-left{margin-left:40px;}
+input[type=checkbox] {
+    margin: 4px 5px 0;}
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    } 
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+
+/*Super Large Devices */
+@media only screen and (max-width : 1400px){
+	h1{font-size:48px;}	
+.btn-default {
+	font-size:20px !important;
+    }
+}
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+	h1{font-size:45px;}		
+		
+	.btn-default {
+	font-size:20px !important;
+    }
+	
+.pub-box-outline{    margin-left: 20px;}
+	
+
+	
+	}
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+	h1{font-size:45px;}	
+	.free-pub-box{padding-top:10px;}
+	.company-box{padding-top:10px;}
+	.customer-care-box{padding-top:10px;}
+	.btn-default {
+	font-size:20px !important;
+    }
+	
+	.white-bg-quote-box{margin-left:0px;}
+	}
+	
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+		
+	h1{font-size:30px;padding-left:10px;padding-right:10px;}	
+	
+	.btn-default {
+	font-size:16px !important;
+	margin:0 auto; 
+	width:60%;
+	height:65px;
+	}
+
+	.company-box{margin-top:30px;
+	}
+	
+	.margin-left {margin-left:20px;padding-right:20px;}
+	
+	.free-pub-box{margin-top:30px;
+	}
+	.customer-care-box{margin-top:30px;
+	}
+	.white-bg-quote-box{margin-left:0px;}
+	.daily-weekly{margin-top:15px;margin-left:5px;}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+		.daily-weekly{margin-top:15px;}
+	h1{font-size:25px;padding-left:10px;padding-right:10px;}
+	.btn-default {
+	font-size:12px !important;
+	margin:0 auto; 
+	width:60%;
+	height:65px;
+	}
+	.pre-footer-area{padding-left:10px;padding-right:10px;}
+	.footer-unsubscribe-all-box label {margin-top:20px;
+    }
+	}
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }
