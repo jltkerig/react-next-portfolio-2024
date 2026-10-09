@@ -4,6 +4,7 @@ import "../src/index.css";
 import {fontVariables} from "./fonts";
 
 import Logo from "../src/assets/name.png";
+import ImagePreloader from "../src/components/ImagePreloader";
 
 export const metadata = {
 	metadataBase: new URL("https://jamiekerig.com"),
@@ -92,6 +93,7 @@ export default function RootLayout({children}) {
 						</ul>
 					</nav>
 					{children}
+					<ImagePreloader />
 					<Footer />
 				</div>
 			</body>
