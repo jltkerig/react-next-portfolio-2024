@@ -8,16 +8,16 @@
 	<meta name="description" content="Portfolio sample designed and built by Jamie Kerig. Not an official company page.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Allura&family=Great+Vibes&family=Parisienne&family=Pinyon+Script&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
 	<a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
 
-	<!-- Header -->
 	<header class="site-header">
 		<div class="topbar">
 			<div class="container d-flex flex-wrap justify-content-center justify-content-md-between gap-2">
@@ -29,7 +29,7 @@
 		<div class="brand-bar">
 			<div class="container brand-grid">
 				<a class="brand" href="#top">
-					<img src="images/logo.png" alt="A Fabric Place" width="249" height="169">
+					<img src="images/a-fabric-place-logo.png" alt="A Fabric Place" width="249" height="169">
 				</a>
 				<p class="tagline">Fine fabrics for every occasion, since 1969</p>
 				<div class="header-hours">
@@ -59,6 +59,7 @@
 						<li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
 						<li class="nav-item"><a class="nav-link" href="#visit">Visit Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -66,17 +67,18 @@
 	</header>
 
 	<main id="main">
+		<h1 class="visually-hidden">A Fabric Place: Fine Fabrics in Baltimore, Maryland</h1>
 
-		<!-- Slider -->
-		<div id="carousel-a-fabric-place" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+		<div id="carousel-a-fabric-place" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000" aria-roledescription="carousel" aria-label="Featured fabrics">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carousel-a-fabric-place" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#carousel-a-fabric-place" data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#carousel-a-fabric-place" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
+			<button class="carousel-toggle" type="button" aria-label="Pause slideshow"><i class="bi bi-pause-fill" aria-hidden="true"></i></button>
 			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="images/suit-not-so-long-long.png" class="d-block w-100" alt="Close-up of a pinstripe suit jacket button">
+				<div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+					<img src="images/pinstripe-suit-jacket-button-fabric.webp" class="d-block w-100" alt="Close-up of a pinstripe suit jacket button">
 					<div class="carousel-caption">
 						<p class="script">Menswear</p>
 						<h2>Suitings &amp; Coatings</h2>
@@ -84,8 +86,8 @@
 						<a class="btn btn-gold" href="#shop-by-fabric">Shop Fabrics</a>
 					</div>
 				</div>
-				<div class="carousel-item">
-					<img src="images/wedding-dress.png" class="d-block w-100" alt="Bride in a ruffled white gown holding a bouquet">
+				<div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 of 3">
+					<img src="images/bridal-gown-with-bouquet.webp" class="d-block w-100" alt="Bride in a ruffled white gown holding a bouquet">
 					<div class="carousel-caption">
 						<p class="script">Bridal</p>
 						<h2>Bridal Collection</h2>
@@ -93,8 +95,8 @@
 						<a class="btn btn-gold" href="#shop-by-fabric">See Bridal Fabrics</a>
 					</div>
 				</div>
-				<div class="carousel-item">
-					<img src="images/lace-selection.png" class="d-block w-100" alt="White lace with covered buttons">
+				<div class="carousel-item" role="group" aria-roledescription="slide" aria-label="3 of 3">
+					<img src="images/white-lace-with-covered-buttons.webp" class="d-block w-100" alt="White lace with covered buttons">
 					<div class="carousel-caption">
 						<p class="script">Designer</p>
 						<h2>Lace, Silks &amp; Trims</h2>
@@ -115,7 +117,6 @@
 
 		<div class="container">
 
-			<!-- Our Products -->
 			<section class="section" id="products">
 				<div class="section-head">
 					<p class="script">Our Products</p>
@@ -125,21 +126,21 @@
 				<div class="row g-4 justify-content-center">
 					<div class="col-md-6 col-lg-4">
 						<article class="product-card h-100">
-							<img src="images/button-square.png" class="product-img" alt="Assorted buttons" width="250" height="250">
+							<img src="images/assorted-buttons-and-notions.png" class="product-img" alt="Assorted buttons" width="250" height="250">
 							<h3>Buttons &amp; Notions</h3>
 							<p>Buttons, zippers, interfacing and thread to finish every garment. Bring your fabric along and we’ll help you find the perfect match.</p>
 						</article>
 					</div>
 					<div class="col-md-6 col-lg-4">
 						<article class="product-card h-100">
-							<img src="images/silk-250.png" class="product-img" alt="Draped silk fabric" width="250" height="250">
+							<img src="images/designer-silk-fabric.png" class="product-img" alt="Draped silk fabric" width="250" height="250">
 							<h3>Designer Silks</h3>
 							<p>Luxurious silks in rich solids, from lightweight chiffon to elegant charmeuse. Ideal for bridal gowns, evening wear and special occasions.</p>
 						</article>
 					</div>
 					<div class="col-md-6 col-lg-4">
 						<article class="product-card h-100">
-							<img src="images/silk-250.png" class="product-img" alt="Draped silk fabric" width="250" height="250">
+							<img src="images/designer-silk-fabric.png" class="product-img" alt="Draped silk fabric" width="250" height="250">
 							<h3>Silk Prints</h3>
 							<p>Designer silk prints in florals, geometrics and classic patterns. Perfect for blouses, dresses and scarves that stand out.</p>
 						</article>
@@ -147,43 +148,91 @@
 				</div>
 			</section>
 
-			<!-- A Fabric Place (location) -->
+			<div class="divider side-double" role="presentation">
+				<svg viewBox="0 0 120 32" width="120" height="32" aria-hidden="true" focusable="false">
+					<path d="M60 3 L66 16 L60 29 L54 16 Z" class="d-fill"/>
+					<circle cx="40" cy="16" r="3" class="d-fill"/>
+					<circle cx="80" cy="16" r="3" class="d-fill"/>
+					<circle cx="24" cy="16" r="1.6" class="d-fill"/>
+					<circle cx="96" cy="16" r="1.6" class="d-fill"/>
+				</svg>
+			</div>
+
 			<section class="section" id="visit">
 				<div class="section-head">
 					<p class="script">Visit Us</p>
 					<h2>A Fabric Place</h2>
+					<p class="lead">Open since 1969 in Baltimore, Maryland. Drop in and see our incredible selection of fabrics for clothing.</p>
 				</div>
-				<div class="row g-4 align-items-start">
-					<div class="col-lg-5">
-						<p>Our retail store has been open since 1969 and is located in Baltimore, Maryland. Please drop in and see us when you're in the area. We have an incredible selection of fabrics for clothing. We look forward to seeing you in the store.</p>
-						<div class="visit-card">
-							<h3>Find Us</h3>
-							<address>
-								6324 Falls Road<br>
-								Baltimore, MD 21209<br>
-								<a href="tel:+14108286777">410-828-6777</a>
-							</address>
-							<dl class="hours">
-								<dt>Mon</dt><dd>10am – 9pm</dd>
-								<dt>Tue – Wed</dt><dd>10am – 5pm</dd>
-								<dt>Thu</dt><dd>10am – 9pm</dd>
-								<dt>Fri – Sat</dt><dd>10am – 5pm</dd>
-								<dt>Sun</dt><dd>Closed</dd>
-							</dl>
-							<a class="btn btn-plum" href="https://www.google.com/maps/search/?api=1&amp;query=6324+Falls+Road+Baltimore+MD+21209" target="_blank" rel="noopener">Get Directions</a>
+
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="info-stack">
+							<div class="info-card">
+								<div class="info-head">
+									<span class="info-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
+									<h3>Address</h3>
+								</div>
+								<address class="info-big">6324 Falls Road<br>Baltimore, MD 21209</address>
+								<a class="btn btn-plum btn-xl" href="https://www.google.com/maps/search/?api=1&amp;query=6324+Falls+Road+Baltimore+MD+21209" target="_blank" rel="noopener">Get Directions<span class="visually-hidden"> (opens in a new tab)</span></a>
+							</div>
+							<div class="info-card">
+								<div class="info-head">
+									<span class="info-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></span>
+									<h3>Call Us</h3>
+								</div>
+								<p class="info-big">Questions about fabric, classes or hours?</p>
+								<a class="btn btn-plum btn-xl" href="tel:+14108286777"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 410-828-6777</a>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-7">
-						<img class="img-fluid rounded-3 shadow-sm mb-3" src="images/map.JPG" alt="Map of the store location on Falls Road" width="824" height="424">
-						<img class="img-fluid rounded-3 shadow-sm" src="images/streetview.webp" alt="Street view of the storefront" width="3247" height="1356">
+					<div class="col-md-6">
+						<div class="info-card">
+							<div class="info-head">
+								<span class="info-icon"><i class="bi bi-clock-fill" aria-hidden="true"></i></span>
+								<h3>Store Hours</h3>
+							</div>
+							<p class="open-status" id="open-status" role="status">Check the hours below</p>
+							<table class="hours-table">
+								<caption class="visually-hidden">Store hours</caption>
+								<tbody>
+									<tr><th scope="row">Monday</th><td>10am – 9pm</td></tr>
+									<tr><th scope="row">Tuesday</th><td>10am – 5pm</td></tr>
+									<tr><th scope="row">Wednesday</th><td>10am – 5pm</td></tr>
+									<tr><th scope="row">Thursday</th><td>10am – 9pm</td></tr>
+									<tr><th scope="row">Friday</th><td>10am – 5pm</td></tr>
+									<tr><th scope="row">Saturday</th><td>10am – 5pm</td></tr>
+									<tr><th scope="row">Sunday</th><td>Closed</td></tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
+				</div>
+
+				<div class="visit-photos">
+					<figure class="visit-photo visit-map">
+						<iframe title="Map showing A Fabric Place at 6324 Falls Road, Baltimore" src="https://maps.google.com/maps?q=6324+Falls+Road,+Baltimore,+MD+21209&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+						<figcaption>We are on Falls Road in Baltimore. <a href="https://www.google.com/maps/search/?api=1&amp;query=6324+Falls+Road+Baltimore+MD+21209" target="_blank" rel="noopener">Open the full map<span class="visually-hidden"> (opens in a new tab)</span></a></figcaption>
+					</figure>
+					<figure class="visit-photo">
+						<img src="images/a-fabric-place-storefront-falls-road-baltimore.webp" alt="Street view of the storefront" width="3247" height="1356" loading="lazy">
+						<figcaption>Look for our storefront</figcaption>
+					</figure>
 				</div>
 			</section>
 
-			<!-- Suggested sections -->
+			<div class="divider side-double" role="presentation">
+				<svg viewBox="0 0 120 32" width="120" height="32" aria-hidden="true" focusable="false">
+					<path d="M60 3 L66 16 L60 29 L54 16 Z" class="d-fill"/>
+					<circle cx="40" cy="16" r="3" class="d-fill"/>
+					<circle cx="80" cy="16" r="3" class="d-fill"/>
+					<circle cx="24" cy="16" r="1.6" class="d-fill"/>
+					<circle cx="96" cy="16" r="1.6" class="d-fill"/>
+				</svg>
+			</div>
+
 			<section class="section" id="shop-by-fabric">
 				<div class="section-head">
-					<span class="badge-suggested">Suggested section</span>
 					<p class="script">Shop by Fabric</p>
 					<h2>Find the Right Fabric</h2>
 					<p class="lead">Browse by type, then come see the full selection in the store.</p>
@@ -191,35 +240,44 @@
 				<div class="row g-4">
 					<div class="col-6 col-lg-3">
 						<a class="category" href="#visit">
-							<img src="images/pixabay-dwilliams.jpg" alt="Colorful lace fabrics" loading="lazy">
+							<img src="images/colorful-lace-fabrics.jpg" alt="Colorful lace fabrics" loading="lazy">
 							<span>Bridal &amp; Lace</span>
 						</a>
 					</div>
 					<div class="col-6 col-lg-3">
 						<a class="category" href="#visit">
-							<img src="images/pixabay-kaboompics.jpg" alt="Draped velvet and wool fabrics" loading="lazy">
+							<img src="images/draped-velvet-and-wool-fabrics.jpg" alt="Draped velvet and wool fabrics" loading="lazy">
 							<span>Suitings &amp; Wools</span>
 						</a>
 					</div>
 					<div class="col-6 col-lg-3">
 						<a class="category" href="#visit">
-							<img src="images/pixabay-dwilliams-2.jpg" alt="Bright solid silk fabrics" loading="lazy">
+							<img src="images/bright-solid-silk-fabrics.jpg" alt="Bright solid silk fabrics" loading="lazy">
 							<span>Silks &amp; Solids</span>
 						</a>
 					</div>
 					<div class="col-6 col-lg-3">
 						<a class="category" href="#visit">
-							<img src="images/pixabay-counselling.jpg" alt="Folded tulle in bright colors" loading="lazy">
+							<img src="images/folded-colorful-tulle-netting.jpg" alt="Folded tulle in bright colors" loading="lazy">
 							<span>Tulle &amp; Netting</span>
 						</a>
 					</div>
 				</div>
 			</section>
 
+			<div class="divider side-double" role="presentation">
+				<svg viewBox="0 0 120 32" width="120" height="32" aria-hidden="true" focusable="false">
+					<path d="M60 3 L66 16 L60 29 L54 16 Z" class="d-fill"/>
+					<circle cx="40" cy="16" r="3" class="d-fill"/>
+					<circle cx="80" cy="16" r="3" class="d-fill"/>
+					<circle cx="24" cy="16" r="1.6" class="d-fill"/>
+					<circle cx="96" cy="16" r="1.6" class="d-fill"/>
+				</svg>
+			</div>
+
 			<section class="section" id="notions">
 				<div class="row g-4 align-items-center">
 					<div class="col-lg-6">
-						<span class="badge-suggested">Suggested section</span>
 						<p class="script">Notions &amp; Trims</p>
 						<h2>The Finishing Touches</h2>
 						<p>Buttons, threads, ribbons and designer trims to finish every project. Bring your fabric in and we’ll help you match it.</p>
@@ -231,21 +289,23 @@
 					</div>
 					<div class="col-lg-6">
 						<div class="row g-3">
-							<div class="col-6"><img class="img-fluid rounded-3 notion-img" src="images/pixabay-publicdomainpictures.jpg" alt="Shelves of button boxes" loading="lazy"></div>
-							<div class="col-6"><img class="img-fluid rounded-3 notion-img" src="images/pixabay-publicdomainpictures2.jpg" alt="Rack of embroidery thread" loading="lazy"></div>
+							<div class="col-6"><img class="img-fluid rounded-3 notion-img" src="images/shelves-of-sewing-buttons.jpg" alt="Shelves of button boxes" loading="lazy"></div>
+							<div class="col-6"><img class="img-fluid rounded-3 notion-img" src="images/rack-of-embroidery-thread.jpg" alt="Rack of embroidery thread" loading="lazy"></div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section" id="classes">
-				<div class="classes-panel">
-					<div class="row g-0 align-items-stretch">
-						<div class="col-lg-5">
-							<img class="classes-img" src="images/pixabay-yummymoon.jpg" alt="Spools of thread" loading="lazy">
-						</div>
-						<div class="col-lg-7 classes-text">
-							<span class="badge-suggested">Suggested section</span>
+		</div>
+
+		<section class="section classes-section" id="classes">
+			<div class="classes-panel">
+				<div class="row g-0 align-items-stretch">
+					<div class="col-xl-6">
+						<img class="classes-img" src="images/orange-purple-and-blue-thread-spools.jpg" alt="Spools of orange, purple and blue thread" width="1280" height="924" loading="lazy">
+					</div>
+					<div class="col-xl-6 classes-text">
+						<div class="classes-text-inner">
 							<p class="script">Learn With Us</p>
 							<h2>Sewing Classes &amp; Workshops</h2>
 							<p>Small classes for every level, from threading your first machine to tailoring a jacket.</p>
@@ -258,11 +318,13 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
+
+		<div class="container">
 
 			<section class="section" id="services">
 				<div class="section-head">
-					<span class="badge-suggested">Suggested section</span>
 					<p class="script">How We Help</p>
 					<h2>In-Store Services</h2>
 				</div>
@@ -282,32 +344,60 @@
 				</div>
 			</section>
 
-		</div><!-- end main container -->
+		</div>
 
-		<!-- Email signup (demo only) -->
 		<section class="newsletter" id="newsletter">
 			<div class="container">
-				<div class="row align-items-center g-4">
-					<div class="col-lg-6">
+				<div class="row align-items-center g-4 gx-lg-5">
+					<div class="col-lg-6 newsletter-copy">
 						<p class="script">Stay in Touch</p>
 						<h2>Subscribe to Our Email List</h2>
-						<p>New arrivals, class dates and in-store sales, sent to your inbox.</p>
+						<p class="lead">Be the first to know what is new at A Fabric Place.</p>
+						<ul class="perks">
+							<li>
+								<i class="bi bi-stars" aria-hidden="true"></i>
+								<div><strong>New arrivals</strong><span>See new fabrics, laces and trims as they come in.</span></div>
+							</li>
+							<li>
+								<i class="bi bi-calendar-event" aria-hidden="true"></i>
+								<div><strong>Class dates</strong><span>Sewing classes and workshops, announced with plenty of notice.</span></div>
+							</li>
+							<li>
+								<i class="bi bi-tag" aria-hidden="true"></i>
+								<div><strong>In-store sales</strong><span>Special offers for our email friends.</span></div>
+							</li>
+						</ul>
 					</div>
 					<div class="col-lg-6">
-						<form class="newsletter-form" novalidate>
-							<label class="visually-hidden" for="newsletter-email">Email Address</label>
-							<div class="input-group input-group-lg">
-								<input type="email" class="form-control" id="newsletter-email" placeholder="Email Address" autocomplete="email" required>
-								<button class="btn btn-gold" type="submit">Sign Up</button>
+						<form class="newsletter-form signup-card" data-message="Thank you! This is a demo site, so you were not subscribed.">
+							<h3>Join the List</h3>
+							<div class="mb-3">
+								<label for="newsletter-name">First name</label>
+								<input type="text" class="form-control" id="newsletter-name" placeholder="Your first name" autocomplete="given-name">
 							</div>
-							<p class="form-note" role="status" hidden>Thank you! This is a demo site, so you were not subscribed.</p>
+							<div class="mb-3">
+								<label for="newsletter-email">Email address <span class="req">(required)</span></label>
+								<input type="email" class="form-control" id="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
+							</div>
+							<fieldset class="mb-4">
+								<legend>I am interested in</legend>
+								<div class="interest-grid">
+									<div class="form-check"><input class="form-check-input" type="checkbox" id="int-bridal"><label class="form-check-label" for="int-bridal">Bridal &amp; lace</label></div>
+									<div class="form-check"><input class="form-check-input" type="checkbox" id="int-menswear"><label class="form-check-label" for="int-menswear">Menswear &amp; suitings</label></div>
+									<div class="form-check"><input class="form-check-input" type="checkbox" id="int-silks"><label class="form-check-label" for="int-silks">Silks &amp; prints</label></div>
+									<div class="form-check"><input class="form-check-input" type="checkbox" id="int-notions"><label class="form-check-label" for="int-notions">Buttons &amp; notions</label></div>
+									<div class="form-check"><input class="form-check-input" type="checkbox" id="int-classes"><label class="form-check-label" for="int-classes">Sewing classes</label></div>
+								</div>
+							</fieldset>
+							<button class="btn btn-gold w-100" type="submit">Sign Me Up</button>
+							<p class="fineprint">We email a few times a month. No spam, and you can unsubscribe at any time.</p>
+							<p class="form-note" role="status"></p>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Style guide -->
 		<section class="style-guide" id="style-guide">
 			<div class="container">
 				<div class="section-head">
@@ -328,41 +418,9 @@
 
 				<h3 class="guide-label">Typefaces</h3>
 				<div class="row g-4 mb-5">
-					<div class="col-md-6 col-lg-4"><div class="font-card"><p class="script mb-2">Pinyon Script</p><p class="small mb-0">Accent labels. Echoes the calligraphy in the logo.</p></div></div>
+					<div class="col-md-6 col-lg-4"><div class="font-card"><p class="script mb-2">Great Vibes</p><p class="small mb-0">Accent labels. Echoes the calligraphy in the logo.</p></div></div>
 					<div class="col-md-6 col-lg-4"><div class="font-card"><p class="display-heading mb-2">Cormorant Garamond</p><p class="small mb-0">Headings. A classic high-contrast serif that pairs with the script.</p></div></div>
 					<div class="col-md-6 col-lg-4"><div class="font-card"><p class="body-sample mb-2">Source Sans 3</p><p class="small mb-0">Body text, navigation and buttons. Clean and easy to read.</p></div></div>
-				</div>
-
-				<h3 class="guide-label">Script Font Options</h3>
-				<p class="mb-3">Same words, same size and color as the accents on the page. The page currently uses Pinyon Script.</p>
-				<ul class="script-compare mb-5">
-					<li>
-						<span class="script-name">Pinyon Script <em>(current)</em></span>
-						<span class="script" style="font-family: 'Pinyon Script', cursive;">Our Products · Bridal · Visit Us</span>
-					</li>
-					<li>
-						<span class="script-name">Parisienne</span>
-						<span class="script" style="font-family: 'Parisienne', cursive;">Our Products · Bridal · Visit Us</span>
-					</li>
-					<li>
-						<span class="script-name">Great Vibes</span>
-						<span class="script" style="font-family: 'Great Vibes', cursive;">Our Products · Bridal · Visit Us</span>
-					</li>
-					<li>
-						<span class="script-name">Allura</span>
-						<span class="script" style="font-family: 'Allura', cursive;">Our Products · Bridal · Visit Us</span>
-					</li>
-				</ul>
-
-				<h3 class="guide-label">Type Scale</h3>
-				<div class="type-scale mb-5">
-					<h1>Heading 1 — Fine Fabrics</h1>
-					<h2>Heading 2 — Bridal Collection</h2>
-					<h3>Heading 3 — Designer Silks</h3>
-					<h4>Heading 4 — Notions &amp; Trims</h4>
-					<p class="lead">Lead text — Come in, touch the fabric, and talk with people who know it.</p>
-					<p>Body text — Our retail store has been open since 1969 and is located in Baltimore, Maryland. We have an incredible selection of fabrics for clothing. <a href="#style-guide">This is a link.</a></p>
-					<p class="small">Small text — Hours and fine print.</p>
 				</div>
 
 				<h3 class="guide-label">Buttons</h3>
@@ -376,12 +434,11 @@
 
 	</main>
 
-	<!-- Footer -->
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row g-4">
 				<div class="col-md-6 col-lg-3">
-					<img src="images/logo.png" alt="A Fabric Place" width="160" height="109" class="footer-logo">
+					<img src="images/a-fabric-place-logo.png" alt="A Fabric Place" width="160" height="109" class="footer-logo">
 					<p>Fine fabrics for every occasion, in Baltimore since 1969.</p>
 				</div>
 				<div class="col-md-6 col-lg-3">
@@ -405,10 +462,11 @@
 				<div class="col-md-6 col-lg-3">
 					<h2 class="footer-title">Information</h2>
 					<ul class="footer-links">
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms &amp; Conditions</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#visit">Contact</a></li>
+						<li><a href="privacy.html">Privacy Policy</a></li>
+						<li><a href="terms.html">Terms &amp; Conditions</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="accessibility.html">Accessibility</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -416,28 +474,12 @@
 		<div class="footer-bottom">
 			<div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
 				<span>© A Fabric Place</span>
-				<span>Site and logo designed by <a href="https://jamiekerig.com/" target="_blank" rel="noopener">Jamie Kerig</a> for educational purposes.</span>
+				<span>Site and logo designed by <a href="https://jamiekerig.com/" target="_blank" rel="noopener">Jamie Kerig<span class="visually-hidden"> (opens in a new tab)</span></a> for educational purposes.</span>
 			</div>
 		</div>
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-		// Email signup is a demo, nothing is sent
-		const form = document.querySelector(".newsletter-form");
-		form.addEventListener("submit", (e) => {
-			e.preventDefault();
-			form.querySelector(".form-note").hidden = false;
-			form.reset();
-		});
-
-		// Close the mobile menu after picking a link
-		document.querySelectorAll("#main-menu .nav-link").forEach((link) => {
-			link.addEventListener("click", () => {
-				const menu = bootstrap.Collapse.getInstance("#main-menu");
-				if (menu) menu.hide();
-			});
-		});
-	</script>
+	<script src="js/site.js"></script>
 </body>
 </html>
