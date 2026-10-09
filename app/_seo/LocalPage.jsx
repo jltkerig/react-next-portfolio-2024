@@ -30,7 +30,7 @@ export default function LocalPage({t}) {
 						</Link>
 					</div>
 				</div>
-				<Featured />
+				<Featured t={t} />
 			</section>
 
 			<section className={seo.section}>

@@ -3,7 +3,7 @@ each town gets its own copy (not just the name swapped): local context, who the 
 export const towns = {
 	belair: {
 		town: "Bel Air",
-		slug: "seo-1",
+		slug: "web-design-bel-air-md",
 		description: "Websites, logos and print design for Bel Air shops, practices and Main Street businesses, from Maryland web and graphic designer Jamie Kerig.",
 		h1: ["Web design and branding for ", "Bel Air", " businesses"],
 		servicesTitle: "How I help Bel Air businesses",
@@ -41,7 +41,7 @@ export const towns = {
 	},
 	abingdon: {
 		town: "Abingdon",
-		slug: "seo-2",
+		slug: "web-design-abingdon-md",
 		description: "Lead-focused websites, landing pages and branding for Abingdon, MD businesses along the Route 24 corridor, by designer Jamie Kerig.",
 		h1: ["", "Abingdon", " websites built to win new customers"],
 		servicesTitle: "What I build for Abingdon businesses",
@@ -79,7 +79,7 @@ export const towns = {
 	},
 	fallston: {
 		town: "Fallston",
-		slug: "seo-3",
+		slug: "web-design-fallston-md",
 		description: "Simple websites, logos and print for Fallston’s owner-run and small businesses, designed by Maryland web and graphic designer Jamie Kerig.",
 		h1: ["Simple, polished design for ", "Fallston", "’s small businesses"],
 		servicesTitle: "Where I can help in Fallston",
@@ -115,13 +115,61 @@ export const towns = {
 		],
 		nearby: ["Bel Air", "Kingsville", "Jarrettsville", "Abingdon"],
 	},
+	whitehall: {
+		town: "White Hall",
+		slug: "wedding-websites-white-hall-md",
+		featured: "wedding",
+		title: "Wedding Websites & Invitations in White Hall, MD",
+		crumb: "Wedding Websites in White Hall, MD",
+		note: "Wedding websites, invitations and signs",
+		serviceType: ["Wedding website design", "Invitation design", "Print design", "Signage design"],
+		description: "Wedding websites, invitations and signs for couples marrying in White Hall, MD, from designer Jamie Kerig, who designed the website for a wedding at Camp Hidden Valley.",
+		h1: ["Wedding websites and invitations in ", "White Hall", ", Maryland"],
+		servicesTitle: "What I design for White Hall weddings",
+		services: [
+			{title: "A wedding website", text: "One clear page for the date, directions, places to stay and what to wear. This is the site I built for my own wedding at Camp Hidden Valley.", href: "/web/weddinginthewoods-2018/www/index.html", cta: "Visit the wedding website →"},
+			{title: "Invitations & RSVP cards", text: "Save-the-dates, invitations and reply cards that match your website, set up properly for the printer.", href: "/graphic/"},
+			{title: "Signs, programs & small details", text: "Welcome signs, direction signs and programs in the same style, so the whole day feels designed.", href: "/graphic/"},
+		],
+		forWhoTitle: "Who this is for",
+		examplesTitle: "What a White Hall wedding project could look like",
+		areaTitle: "Working with White Hall couples",
+		areaCopy: "I’m based in Maryland and can work with you anywhere in northern Baltimore County. Most of a project happens by e-mail and video, and I’m glad to look at your venue together if that helps.",
+		contactTitle: "Planning a wedding near White Hall?",
+		contactCopy: "Tell me a little about your day, your venue and what you need, whether that’s a website, invitations or signs, and I’ll get back to you soon.",
+		mapQuery: "Camp Hidden Valley, 4722 Mellow Rd, White Hall, MD 21161",
+		intro: "White Hall is farm country: rolling hills, winding roads and wide open fields, and a beautiful place to get married. I designed the website for my own wedding at Camp Hidden Valley here, and I can do the same for you, from the website and invitations to the small details that help guests find you and feel at home.",
+		localTitle: "Why a White Hall wedding needs clear design",
+		local: [
+			"White Hall is a quiet, rural community in northern Baltimore County. The roads out here are narrow, hilly and winding, with blind corners and the occasional tractor, so guests who have never been need clear directions before they set out. A good wedding website tells them where to turn, where to park and how to take the drive slowly.",
+			"Camp Hidden Valley was the setting for my own wedding: an outdoor ceremony, a reception hall a short walk away, barrack-style cabins and room to pitch a tent for guests who wanted to stay overnight, and a hotel block about thirty minutes away for those who didn’t. Putting all of that in one place took a lot of stress off us, and it’s the kind of planning a website can handle for you.",
+		],
+		forWho: ["Couples planning a wedding at a White Hall or rural Baltimore County venue", "Couples whose guests are driving out to the country", "Camps, farms and venues that host events", "Wedding vendors who need a clean, mobile-friendly site"],
+		examples: [
+			{t: "Directions for a remote venue", d: "My own wedding site explained the winding roads, the farm equipment, where the road forks and where to park, with a map right on the page."},
+			{t: "Places to stay in one place", d: "Camping and cabins on site, plus a hotel block about thirty minutes away, with the details and the reservation deadline."},
+			{t: "What to wear and what to expect", d: "An outdoor ceremony on grass, a short walk to the reception hall, and a note about shoes, so guests know before they arrive."},
+		],
+		faq: [
+			{q: "Did you really design a wedding website for a White Hall venue?", a: "Yes. I designed and built the website for my own wedding at Camp Hidden Valley in White Hall. You can see it in my web projects."},
+			{q: "Can you include directions and a map for a remote venue?", a: "Yes. I can add clear step-by-step directions, a map and notes about the roads, so guests arrive without stress."},
+			{q: "Can you design invitations and RSVP cards to match the website?", a: "Yes. Save-the-dates, invitations, reply cards and signs can all be designed to match, so everything looks like one set."},
+			{q: "Can the website include places to stay?", a: "Yes. A wedding site can cover camping or cabins, a hotel block with its booking deadline, and anything else guests need to plan their trip."},
+		],
+		nearby: ["Monkton", "Parkton", "Hereford", "Jarrettsville"],
+	},
 };
 
 /*town slug lookup, so "nearby" names that have their own page become links*/
 export const townPages = Object.values(towns).reduce((m, t) => ({...m, [t.town]: `/${t.slug}/`}), {});
 
 /*every town page, for the footer, sitemap page and "other areas" links*/
-export const areaLinks = Object.values(towns).map((t) => ({href: `/${t.slug}/`, label: t.town}));
+export const areaLinks = Object.values(towns).map((t) => ({
+	href: `/${t.slug}/`,
+	label: t.town,
+	title: t.crumb || `Web design in ${t.town}, MD`,
+	note: t.note || "Websites, logos and print for local businesses",
+}));
 
 /*google maps embed for the service-area map (no api key needed)*/
 export const mapEmbed = (t) => `https://maps.google.com/maps?q=${encodeURIComponent(t.mapQuery)}&z=11&output=embed`;
@@ -129,13 +177,13 @@ export const mapLink = (t) => `https://www.google.com/maps/search/?api=1&query=$
 
 /*page metadata shared by every town*/
 export function seoMeta(t) {
-	const title = `Web Design & Branding in ${t.town}, MD`;
+	const title = t.title || `Web Design & Branding in ${t.town}, MD`;
 	const description = t.description;
 	return {
 		title,
 		description,
 		alternates: {canonical: `/${t.slug}/`},
-		robots: {index: false}, /*draft: switch to indexable once the page and its final url are approved*/
+		robots: {index: true, follow: true},
 		openGraph: {title: `${title} | Jamie Kerig`, description, url: `/${t.slug}/`, siteName: "Jamie Kerig", locale: "en_US", type: "website", images: ["/og-image.png"]},
 	};
 }
@@ -155,15 +203,15 @@ export function jsonLd(t) {
 			address: {"@type": "PostalAddress", addressRegion: "MD", addressCountry: "US"},
 			hasMap: mapLink(t),
 			founder: {"@type": "Person", name: "Jamie Kerig"},
-			serviceType: ["Website design", "Logo design", "Branding", "Print design"],
-			sameAs: ["https://www.linkedin.com/in/jamieleedesign/"],
+			serviceType: t.serviceType || ["Website design", "Logo design", "Branding", "Print design"],
+			sameAs: ["https://www.linkedin.com/in/jamieleedesign/", "https://www.figma.com/@jamieleedesign"],
 		},
 		{
 			"@context": "https://schema.org",
 			"@type": "BreadcrumbList",
 			itemListElement: [
 				{"@type": "ListItem", position: 1, name: "Home", item: "https://jamiekerig.com/"},
-				{"@type": "ListItem", position: 2, name: `Web Design in ${t.town}, MD`, item: `https://jamiekerig.com/${t.slug}/`},
+				{"@type": "ListItem", position: 2, name: t.crumb || `Web Design in ${t.town}, MD`, item: `https://jamiekerig.com/${t.slug}/`},
 			],
 		},
 		{

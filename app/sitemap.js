@@ -1,3 +1,5 @@
+import {towns} from "./_seo/content";
+
 export const dynamic = "force-static";
 
 const site = "https://jamiekerig.com";
@@ -14,5 +16,6 @@ export default function sitemap() {
 		{url: `${site}/contact/`, lastModified, changeFrequency: "yearly", priority: 0.7},
 		{url: `${site}/privacypolicy.html`, lastModified, changeFrequency: "yearly", priority: 0.3},
 		{url: `${site}/site-map/`, lastModified, changeFrequency: "yearly", priority: 0.3},
+		...Object.values(towns).map((t) => ({url: `${site}/${t.slug}/`, lastModified, changeFrequency: "yearly", priority: 0.6})),
 	];
 }

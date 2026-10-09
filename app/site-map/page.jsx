@@ -28,13 +28,14 @@ const sections = [
 	},
 	{
 		title: "Areas served",
-		links: areaLinks.map((a) => ({href: a.href, label: `Web design in ${a.label}, MD`, note: "Websites, logos and print for local businesses"})),
+		links: areaLinks.map((a) => ({href: a.href, label: a.title, note: a.note})),
 	},
 	{
 		title: "Other",
 		links: [
 			{href: "/privacypolicy.html", label: "Privacy Policy", note: "How the contact form handles your data", external: true},
 			{href: "https://www.linkedin.com/in/jamieleedesign/", label: "LinkedIn", note: "Professional profile", external: true},
+			{href: "https://www.figma.com/@jamieleedesign", label: "Figma", note: "Design files and website layouts", external: true},
 			{href: "https://www.instagram.com/pumpkinphantompaintings/", label: "Instagram", note: "Illustrations", external: true},
 		],
 	},

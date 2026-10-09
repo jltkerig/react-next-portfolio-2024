@@ -3,6 +3,7 @@ import Contactform from "@/src/components/form.jsx";
 import home from "../home.module.css";
 import seo from "./seo.module.css";
 import palwebsite from "@/src/assets/web/pal-image.png";
+import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import {jsonLd, townPages, areaLinks, mapEmbed, mapLink} from "./content";
 
 /*building blocks shared by the local seo templates*/
@@ -34,15 +35,25 @@ export function ContactBand({t}) {
 export function ServiceCards({t}) {
 	return (
 		<div className={seo.cards}>
-			{t.services.map((s) => (
-				<Link key={s.title} href={s.href} className={seo.card}>
-					<h3 className={seo.cardTitle}>
-						{s.title}
-					</h3>
-					<p className={seo.cardText}>{s.text}</p>
-					<span className={seo.cardLink}>See examples →</span>
-				</Link>
-			))}
+			{t.services.map((s) => {
+				const body = (
+					<>
+						<h3 className={seo.cardTitle}>{s.title}</h3>
+						<p className={seo.cardText}>{s.text}</p>
+						<span className={seo.cardLink}>{s.cta || "See examples →"}</span>
+					</>
+				);
+				/*a finished site under /web is a plain html file, so it opens in a new tab instead of through the next router*/
+				return s.href.endsWith(".html") ? (
+					<a key={s.title} href={s.href} target="_blank" rel="noopener noreferrer" className={seo.card}>
+						{body}
+					</a>
+				) : (
+					<Link key={s.title} href={s.href} className={seo.card}>
+						{body}
+					</Link>
+				);
+			})}
 		</div>
 	);
 }
@@ -61,7 +72,19 @@ export function Faq({t}) {
 }
 
 /*portfolio piece in the homepage's browser frame*/
-export function Featured() {
+export function Featured({t}) {
+	if (t && t.featured === "wedding") {
+		return (
+			<a href="/web/weddinginthewoods-2018/www/index.html" target="_blank" rel="noopener noreferrer" className={home.browser} aria-label="Visit the wedding website designed for a wedding at Camp Hidden Valley in White Hall, opens in a new tab">
+				<span className={home.browserBar} aria-hidden="true">
+					<span />
+					<span />
+					<span />
+				</span>
+				<img src={wedding2018.src} alt="Wedding website designed and built by Jamie Kerig for a wedding at Camp Hidden Valley in White Hall, Maryland" />
+			</a>
+		);
+	}
 	return (
 		<a href="/web/" className={home.browser} aria-label="See web projects, including the Stansberry Alliance website">
 			<span className={home.browserBar} aria-hidden="true">

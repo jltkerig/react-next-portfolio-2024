@@ -4,6 +4,6 @@ import LocalPage from "../_seo/LocalPage";
 const t = towns.belair;
 export const metadata = seoMeta(t);
 
-export default function Seo1() {
+export default function BelAirPage() {
 	return <LocalPage t={t} />;
 }
