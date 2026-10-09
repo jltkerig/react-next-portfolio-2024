@@ -9,6 +9,7 @@ import widgetlanding from "@/src/assets/web/widget-landing-page.png";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import lifecoach from "@/src/assets/web/life-coach-head-block-ss.png";
 import fabricplace from "@/src/assets/web/fabric-place-head-block-ss.png";
+import fabriccontact from "@/src/assets/web/fabric-place-contact-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
 import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
@@ -82,6 +83,14 @@ const groups = [
 				tags: ["Bootstrap 5", "Accessibility"],
 				text: "A Baltimore fabric store site designed for older shoppers, with large type, high-contrast cards, a live open-now status, a real street map and a motion-rich slider.",
 				image: fabricplace,
+			},
+			{
+				id: "fabriccontact", size: "half", drop: true,
+				title: "A Fabric Place: Contact Page",
+				type: "Page design",
+				tags: ["Accessibility", "Live map"],
+				text: "A showpiece contact page: a photo hero, tiles for address, phone and open-now status, a split message form and a live street map.",
+				image: fabriccontact,
 			},
 		],
 	},
