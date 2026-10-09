@@ -8,6 +8,7 @@ import palwebsite from "@/src/assets/web/pal-image.png";
 import widgetlanding from "@/src/assets/web/widget-landing-page.png";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import lifecoach from "@/src/assets/web/life-coach-head-block-ss.png";
+import fabricplace from "@/src/assets/web/fabric-place-head-block-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
 import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
@@ -72,6 +73,15 @@ const groups = [
 				tags: ["Figma", "HTML/CSS/JS"],
 				text: "Designed in Figma for desktop, tablet and phone, then hand-coded as a responsive single-page site with a mobile menu and testimonial slider.",
 				image: lifecoach,
+			},
+			{
+				id: "fabricplace", size: "half",
+				link: "/web/fabric-place/index.html",
+				title: "A Fabric Place",
+				type: "Retail store website",
+				tags: ["Bootstrap 5", "Accessibility"],
+				text: "A Baltimore fabric store site designed for older shoppers, with large type, high-contrast cards, a live open-now status, a real street map and a motion-rich slider.",
+				image: fabricplace,
 			},
 		],
 	},
