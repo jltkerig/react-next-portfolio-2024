@@ -24,6 +24,16 @@ function Contactform() {
 	}, [status]);
 
 	const onSubmit = () => {
+		/*hidden trap field: people never see it, spam programs fill it in, so pretend it worked and send nothing*/
+		if (form.current?.elements.website?.value) {
+			reset();
+			setStatus("sent");
+			return;
+		}
+		if (!refCaptcha.current?.getValue()) {
+			setStatus("captcha");
+			return;
+		}
 		setStatus("sending");
 
 		emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY).then(
@@ -70,16 +80,25 @@ function Contactform() {
 								<label htmlFor="message">Comments/Questions</label>
 								<textarea id="message" placeholder="Send me an email" type="text" {...register("message")} />
 							</div>
+							<div className="hp-field" aria-hidden="true">
+								<label htmlFor="website">Leave this field empty</label>
+								<input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+							</div>
 							{status === "error" && (
 								<p className="form-error" role="alert">
 									Something went wrong and your message was not sent. Please try again.
+								</p>
+							)}
+							{status === "captcha" && (
+								<p className="form-error" role="alert">
+									Please tick the "I'm not a robot" box below, then press Submit again.
 								</p>
 							)}
 							<button className="contact" type="submit" value="Submit" disabled={status === "sending"}>
 								{status === "sending" ? "Sending…" : "Submit"}
 							</button>
 							<div className="captcha-center">
-								<ReCAPTCHA ref={refCaptcha} sitekey={process.env.NEXT_PUBLIC_SITE_KEY} />
+								<ReCAPTCHA ref={refCaptcha} sitekey={process.env.NEXT_PUBLIC_SITE_KEY} onChange={() => status === "captcha" && setStatus("")} />
 							</div>
 						</form>
 					)}

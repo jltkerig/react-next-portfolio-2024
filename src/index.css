@@ -334,6 +334,15 @@ button.contact:hover {
 	background-color: var(--cyan-med);
 }
 
+/*off-screen rather than display:none, so spam programs still see and fill it*/
+.hp-field {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 button.contact:disabled {
 	opacity: 0.65;
 	cursor: wait;
