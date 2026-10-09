@@ -4,6 +4,7 @@ import styles from "./graphic.module.css";
 import fabriclogo from "@/src/assets/graphic/fabric_sm.jpg";
 import norselogo from "@/src/assets/graphic/norsehorse_sm.jpg";
 import cubelogo from "@/src/assets/graphic/cubelogo_sm.jpg";
+import clayworkslogo from "@/src/assets/graphic/baltimoreclayworks_lg.webp";
 import bookcover from "@/src/assets/graphic/book_sm.jpg";
 import bookpages from "@/src/assets/graphic/book3.jpg";
 import messcover from "@/src/assets/graphic/bookcovers1_sm.jpg";
@@ -46,6 +47,7 @@ const sections = [
 			{id: "norselogo", title: "Norse Horse", type: "Logo", image: norselogo, size: "narrow", drop: true},
 			{id: "cubelogo", title: "Outside the Cube", type: "Logo", image: cubelogo, size: "half"},
 			{id: "heatwavelogo", title: "Heat Wave", type: "Logo", image: heatwavelogo, size: "half", drop: true},
+			{id: "clayworks", title: "Baltimore Clayworks", type: "Logo", image: clayworkslogo, size: "wide"},
 		],
 	},
 	{
