@@ -336,15 +336,13 @@ button.contact:hover {
 
 /*footer*/
 footer {
-	background-image: url("./assets/blue-background.svg");
-	background-size: cover;
-	/*background-color: var(--cyan-dark);*/
+	background-color: var(--cyan-dark);
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
 	max-width: 100%;
-	padding: 2.6em 1em 0.8em 1em;
+	padding: 4em 1em 0.8em 1em;
 }
 
 footer p {
@@ -368,11 +366,17 @@ footer li {
 	margin: 0;
 	line-height: 1em;
 	display: inline;
+	white-space: nowrap; /*keeps "Bel Air" and "White Hall" on one line when the links wrap*/
 	color: var(--white);
 }
 
 footer ul {
 	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 footer a,
