@@ -2,7 +2,7 @@
 
 import {useEffect} from "react";
 import img1 from "@/src/assets/globe.svg";
-import img2 from "@/src/assets/graphic/a-fabric-place-logo.jpg";
+import img2 from "@/src/assets/graphic/a-fabric-place-logo.webp";
 import img3 from "@/src/assets/graphic/baltimoreclayworks_lg.webp";
 import img4 from "@/src/assets/graphic/book3.jpg";
 import img5 from "@/src/assets/graphic/book_sm.jpg";
