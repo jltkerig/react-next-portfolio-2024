@@ -1,6 +1,6 @@
 "use client";
 
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useForm} from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -8,7 +8,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 function Contactform() {
 	const form = useRef(); /* react */
 	const refCaptcha = useRef();
-	const [status, setStatus] = useState(""); /*"sent" or "error" after submit*/
+	const refSuccess = useRef();
+	const [status, setStatus] = useState(""); /*"sending", "sent" or "error"*/
 
 	const {
 		register /*register fields -react-hook-form*/,
@@ -17,20 +18,22 @@ function Contactform() {
 		reset /*reset form -react-hook-form*/,
 	} = useForm();
 
-	const onSubmit = (data) => {
-		// Handle form submission
+	/*move focus to the confirmation so screen readers announce it and it is on screen*/
+	useEffect(() => {
+		if (status === "sent") refSuccess.current?.focus();
+	}, [status]);
 
-		console.log(data);
-		console.log(errors);
+	const onSubmit = () => {
+		setStatus("sending");
 
 		emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY).then(
 			() => {
-				console.log("email sent");
 				reset();
 				setStatus("sent");
 			},
 			(error) => {
 				console.log("email did not send, error", error.text);
+				refCaptcha.current?.reset(); /*a captcha answer works once, so ask for a fresh one*/
 				setStatus("error");
 			},
 		);
@@ -41,28 +44,45 @@ function Contactform() {
 			<fieldset>
 				<legend>Contact me</legend>
 				<div className="inputDesign">
-					<form ref={form} onSubmit={handleSubmit(onSubmit)}>
-						<div>
-							<label htmlFor="name">Name</label>
-							<input type="text" id="name" placeholder="Name" {...register("from_name", {required: true, maxLength: 150})} />
+					{status === "sent" ? (
+						<div className="form-success" role="status" tabIndex={-1} ref={refSuccess}>
+							<svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+								<circle cx="12" cy="12" r="10" />
+								<path d="M7.5 12.5l3 3 6-6.5" />
+							</svg>
+							<h3>Message sent</h3>
+							<p>Thank you for contacting me! I will return your message when I receive it.</p>
+							<button type="button" className="form-again" onClick={() => setStatus("")}>
+								Send another message
+							</button>
 						</div>
-						<div>
-							<label htmlFor="email">Email</label>
-							<input id="email" placeholder="email@gmail.com" type="email" {...register("from_email", {required: true, pattern: /^\S+@\S+$/i})} aria-invalid={errors.mail ? "true" : "false"} />
-						</div>
-						<div>
-							<label htmlFor="message">Comments/Questions</label>
-							<textarea id="message" placeholder="Send me an email" type="text" {...register("message")} />
-						</div>
-						<button className="contact" type="submit" value="Submit">
-							Submit
-						</button>
-						{status === "sent" && <p className="form-status">Thank you for contacting me! I will return your message when I receive it.</p>}
-						{status === "error" && <p className="form-status">Something went wrong, please try again.</p>}
-						<div className="captcha-center">
-							<ReCAPTCHA ref={refCaptcha} sitekey={process.env.NEXT_PUBLIC_SITE_KEY}/>
-						</div>
-					</form>
+					) : (
+						<form ref={form} onSubmit={handleSubmit(onSubmit)}>
+							<div>
+								<label htmlFor="name">Name</label>
+								<input type="text" id="name" placeholder="Name" {...register("from_name", {required: true, maxLength: 150})} />
+							</div>
+							<div>
+								<label htmlFor="email">Email</label>
+								<input id="email" placeholder="email@gmail.com" type="email" {...register("from_email", {required: true, pattern: /^\S+@\S+$/i})} aria-invalid={errors.from_email ? "true" : "false"} />
+							</div>
+							<div>
+								<label htmlFor="message">Comments/Questions</label>
+								<textarea id="message" placeholder="Send me an email" type="text" {...register("message")} />
+							</div>
+							{status === "error" && (
+								<p className="form-error" role="alert">
+									Something went wrong and your message was not sent. Please try again.
+								</p>
+							)}
+							<button className="contact" type="submit" value="Submit" disabled={status === "sending"}>
+								{status === "sending" ? "Sending…" : "Submit"}
+							</button>
+							<div className="captcha-center">
+								<ReCAPTCHA ref={refCaptcha} sitekey={process.env.NEXT_PUBLIC_SITE_KEY} />
+							</div>
+						</form>
+					)}
 				</div>
 			</fieldset>
 		</div>
