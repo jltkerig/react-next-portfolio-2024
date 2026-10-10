@@ -1,0 +1,542 @@
+/*inbox mockups around an e-mail. each frame sets its own colors as variables so a dark theme can swap them later*/
+.viewer {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 24px 120px;
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+.tabs button,
+.toggle {
+	padding: 14px 32px;
+	border: 1px solid var(--black);
+	border-radius: 999px;
+	background: transparent;
+	color: var(--black);
+	font-family: var(--font-fira-sans), sans-serif;
+	font-size: 1.4rem;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+.tabs button:hover,
+.toggle:hover {
+	background: rgba(8, 95, 113, 0.1);
+}
+.tabOn,
+.tabs button.tabOn {
+	background: var(--black);
+	color: #fff;
+}
+.note {
+	margin: 0 0 20px;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--grey);
+}
+
+/*the e-mail area: white page that holds the iframe*/
+.paper {
+	background: var(--paper, #fff);
+	padding: 0;
+}
+.phone {
+	max-width: 375px;
+	margin: 0 auto;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+.frame {
+	display: block;
+	width: 100%;
+	height: 600px;
+	border: 0;
+	background: #fff;
+}
+
+/*shared frame shell*/
+.gmail,
+.apple,
+.outlook {
+	border: 1px solid #c8ccd0;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+	font-size: 0.9rem;
+}
+.gmail small,
+.apple small,
+.outlook small {
+	font-size: 0.8rem;
+}
+
+/* ---------- Gmail ---------- */
+.gmail {
+	--bg: #f6f8fc;
+	--panel: #fff;
+	--text: #1f1f1f;
+	--muted: #5f6368;
+	--accent: #c2e7ff;
+	font-family: Roboto, "Segoe UI", Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text);
+}
+.gmTop {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 8px 16px;
+}
+.gmMenu {
+	font-size: 1.3rem;
+	color: var(--muted);
+}
+.gmLogo {
+	font-size: 1.35rem;
+	color: var(--muted);
+	min-width: 70px;
+}
+.gmSearch {
+	flex: 1;
+	max-width: 640px;
+	padding: 10px 18px;
+	border-radius: 999px;
+	background: #eaf1fb;
+	color: var(--muted);
+}
+.gmAvatar {
+	margin-left: auto;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: #8ab4f8;
+}
+.gmBody {
+	display: flex;
+	gap: 8px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+}
+.gmNav {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	flex: none;
+	gap: 2px;
+	padding: 0 8px 0 12px;
+	color: var(--text);
+}
+.gmNav span {
+	padding: 6px 16px;
+	border-radius: 0 16px 16px 0;
+}
+.gmNav .gmCompose {
+	margin-bottom: 12px;
+	padding: 16px 20px;
+	border-radius: 16px;
+	background: var(--accent);
+	font-weight: 500;
+}
+.gmNav .gmActive {
+	background: var(--accent);
+	font-weight: 700;
+}
+.gmNav b {
+	float: right;
+	font-weight: 500;
+}
+.gmMain {
+	flex: 1;
+	min-width: 0;
+	border-radius: 16px;
+	background: var(--panel);
+	padding-bottom: 24px;
+}
+.gmTools {
+	padding: 12px 20px;
+	color: var(--muted);
+}
+.gmSubject {
+	margin: 4px 20px 16px 72px;
+	font-size: 1.35rem;
+	font-weight: 400;
+}
+.gmChip {
+	padding: 2px 8px;
+	border-radius: 4px;
+	background: #ddd;
+	font-size: 0.75rem;
+	vertical-align: middle;
+}
+.gmFrom {
+	display: flex;
+	gap: 14px;
+	align-items: flex-start;
+	margin: 0 20px 16px;
+}
+.gmInitial {
+	display: grid;
+	place-items: center;
+	flex: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #1a73e8;
+	color: #fff;
+	font-size: 1.1rem;
+}
+.gmTo {
+	color: var(--muted);
+	font-size: 0.8rem;
+}
+.gmDate {
+	margin-left: auto;
+	color: var(--muted);
+}
+.gmMain .paper {
+	margin: 0 20px 0 74px;
+}
+
+/* ---------- Apple Mail ---------- */
+.apple {
+	--bg: #f5f5f7;
+	--panel: #fff;
+	--text: #1d1d1f;
+	--muted: #86868b;
+	--select: #0a60ff;
+	font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+	background: var(--panel);
+	color: var(--text);
+}
+.apBar {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 10px 14px;
+	background: #ececec;
+	border-bottom: 1px solid #d0d0d0;
+}
+.apLights {
+	display: flex;
+	gap: 8px;
+}
+.apLights i {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ff5f57;
+}
+.apLights i:nth-child(2) {
+	background: #febc2e;
+}
+.apLights i:nth-child(3) {
+	background: #28c840;
+}
+.apTitle {
+	font-weight: 600;
+}
+.apTitle small {
+	margin-left: 8px;
+	font-weight: 400;
+	color: var(--muted);
+}
+.apBody {
+	display: grid;
+	grid-template-columns: 180px 280px 1fr;
+}
+.apSide {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 14px 10px;
+	background: #e8e8ea;
+}
+.apSide small {
+	margin: 0 8px 6px;
+	color: var(--muted);
+	font-weight: 600;
+}
+.apSide span {
+	padding: 5px 8px;
+	border-radius: 6px;
+}
+.apSide .apActive {
+	background: #d1d1d6;
+}
+.apList {
+	border-right: 1px solid #d8d8d8;
+	background: var(--panel);
+}
+.apRow {
+	margin: 8px;
+	padding: 10px 12px;
+	border-radius: 8px;
+	background: var(--select);
+	color: #fff;
+	line-height: 1.4;
+}
+.apRow small {
+	opacity: 0.85;
+}
+.apRow > b + small {
+	float: right;
+}
+.apRow > small {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.apRead {
+	min-width: 0;
+	padding-bottom: 24px;
+	background: var(--panel);
+}
+.apHead {
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+	padding: 16px 20px;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 1.4;
+}
+.apInitial {
+	display: grid;
+	place-items: center;
+	flex: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #a2a2a7;
+	color: #fff;
+	font-size: 1.1rem;
+}
+.apHead small {
+	color: var(--muted);
+}
+.apDate {
+	margin-left: auto;
+}
+.apRead .paper {
+	margin: 16px 20px 0;
+}
+
+/* ---------- Outlook 2016 ---------- */
+.outlook {
+	--text: #262626;
+	--muted: #666;
+	--blue: #2b579a;
+	--select: #cde6f7;
+	font-family: "Segoe UI", Calibri, Arial, sans-serif;
+	border-radius: 0;
+	background: #fff;
+	color: var(--text);
+}
+.olTitle {
+	padding: 6px 12px;
+	background: var(--blue);
+	color: #fff;
+	font-size: 0.8rem;
+	text-align: center;
+}
+.olTabs {
+	display: flex;
+	background: var(--blue);
+	color: #fff;
+}
+.olTabs span {
+	padding: 6px 14px;
+	font-size: 0.85rem;
+}
+.olTabs .olFile {
+	background: #1e3f73;
+}
+.olTabs .olTabOn {
+	background: #f3f3f3;
+	color: var(--blue);
+}
+.olRibbon {
+	display: flex;
+	background: #f3f3f3;
+	border-bottom: 1px solid #d4d4d4;
+	overflow-x: auto;
+}
+.olGroup {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 8px 14px 4px;
+	border-right: 1px solid #d4d4d4;
+	text-align: center;
+	white-space: nowrap;
+}
+.olItems {
+	display: flex;
+	gap: 14px;
+	font-size: 0.8rem;
+}
+.olGroup small {
+	margin-top: 10px;
+	color: var(--muted);
+}
+.olBody {
+	display: grid;
+	grid-template-columns: 170px 300px 1fr;
+}
+.olFolders {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0;
+	border-right: 1px solid #d4d4d4;
+	background: #f7f7f7;
+}
+.olFolders small {
+	padding: 4px 14px;
+	color: var(--blue);
+	font-weight: 700;
+}
+.olFolders span {
+	padding: 4px 14px 4px 24px;
+}
+.olFolders .olActive {
+	background: var(--select);
+	font-weight: 600;
+}
+.olFolders b {
+	float: right;
+	color: var(--blue);
+}
+.olList {
+	border-right: 1px solid #d4d4d4;
+}
+.olRow {
+	padding: 8px 12px;
+	border-left: 4px solid var(--blue);
+	background: var(--select);
+	line-height: 1.4;
+}
+.olRow b {
+	color: var(--blue);
+}
+.olRow small {
+	display: block;
+	overflow: hidden;
+	color: var(--muted);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.olRead {
+	min-width: 0;
+	padding-bottom: 20px;
+}
+.olHead {
+	display: flex;
+	gap: 12px;
+	padding: 12px 16px;
+	border-bottom: 1px solid #e1e1e1;
+	line-height: 1.4;
+}
+.olInitial {
+	display: grid;
+	place-items: center;
+	flex: none;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: #8764b8;
+	color: #fff;
+	font-size: 1.1rem;
+}
+.olHead h3 {
+	margin: 2px 0;
+	font-size: 1rem;
+}
+.olHead small {
+	color: var(--muted);
+}
+.olRead .paper {
+	margin: 12px 16px 0;
+}
+
+/*small screens: show just the reading pane*/
+@media (max-width: 900px) {
+	.gmNav,
+	.apSide,
+	.apList,
+	.olFolders,
+	.olList {
+		display: none;
+	}
+	.apBody,
+	.olBody {
+		grid-template-columns: 1fr;
+	}
+	.gmSubject {
+		margin-left: 20px;
+	}
+	.gmMain .paper {
+		margin-left: 20px;
+	}
+}
+
+/*site-wide h3 styles must not leak into the mock inbox headings*/
+.gmSubject,
+.olHead h3 {
+	font-family: inherit;
+	letter-spacing: normal;
+	text-transform: none;
+	color: inherit;
+}
+
+/*slim page heading above the controls*/
+.viewer {
+	padding-top: 32px;
+}
+.top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 24px;
+	align-items: baseline;
+	margin-bottom: 20px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--black);
+}
+.back {
+	font-family: var(--font-fira-sans), sans-serif;
+	font-size: 1.05rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cyan-med);
+}
+.name {
+	margin: 0;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1;
+	color: var(--black);
+}
+
+/*Outlook draws the e-mail at its full 600px, so a narrow pane scrolls sideways instead of cropping*/
+.paper {
+	overflow-x: auto;
+}
+.fixed {
+	min-width: 600px;
+}

@@ -108,6 +108,7 @@ const groups = [
 			},
 			{
 				id: "widget", size: "wide", drop: true,
+					link: "/web/widget-landing/widget-landing.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "Favorite Stocks",
 				type: "Lead gen landing page",
 				tags: ["Email capture", "Two-step"],
@@ -130,6 +131,7 @@ const groups = [
 		projects: [
 			{
 				id: "blackfriday", size: "wide",
+				link: "/email/black-friday/", /*opens the inbox preview instead of the lightbox*/
 				title: "Black Friday",
 				type: "Promotional e-mail",
 				tags: ["Cross-client"],

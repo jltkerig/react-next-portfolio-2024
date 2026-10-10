@@ -154,7 +154,7 @@
         color: #FFF;
         line-height: 1em;
         padding-left: 30px;
-        background-image: url(https://assets.1729research.com/common/icons/bullet-angle-white.png);
+        background-image: url(img/bullet-angle-white.png);
         background-repeat: no-repeat;
         background-size: 20px;
         background-position-y: 5px;
@@ -709,11 +709,17 @@
     <!--mockup: https://xd.adobe.com/view/9d2f44e6-e3b1-4388-b308-4b3753b1d44d-c87c/grid/ https://xd.adobe.com/view/1dbb6acf-662f-42e7-9b1e-c64150e9237a-48e8/specs/ FIRST PAGE: https://assets.1729research.com/common/css/bootstrap/bootstrap.min.4.3.1.css https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap / https://cdn.1729research.com/js/common.min.js // let buttonTime = ; // let hideExitPop = true; // both below are needed - show timer is the start timer time, countdowntime is the ending time // let showTimer = '2024/06/30 00:00:00'; // let countdownTime ='2024/06/28 00:00:00'; 
 -->
 
+  <style>
+      /*show the pointer on clickable buttons*/
+      .green-rectangle, .green-rectangle .btn, .green-btn-bottom, .sna-single-optin { cursor: pointer; }
+      .green-rectangle:hover { filter: brightness(1.1); }
+    </style>
+
   <body>
     <section class="top-header">
       <div class="wrapper">
         <div class="row">
-          <div class="col-md-12"><img src="https://assets.stansberryresearch.com/mkt/leadgen/stansberry-widget/SR-logo-grey.svg" alt="widget" class="logo" /></div>
+          <div class="col-md-12"><img src="img/logo-grey.svg" alt="widget" class="logo" /></div>
         </div>
       </div>
     </section>
@@ -731,12 +737,12 @@
             </div>
             <div class="row sna-page-form">
               <div class="col-md-8 col-sm-8 col-xs-12"><input style="width: 100%;" class="form-control input-lg sna-email" placeholder="Enter Your Email Here" type="email" /></div>
-              <div class="col-md-4 col-sm-4 col-xs-12"><button class="form-control btn btn-default sna-single-optin" type="button">Submit</button></div>
+              <div class="col-md-4 col-sm-4 col-xs-12"><button class="form-control btn btn-default sna-single-optin" type="button" onclick="location.href='widget-ty.html'">Submit</button></div>
               <div class="col-12">
-                <p class="disclaimer top-d">By submitting your email address, you are agreeing to receive <em>This Week on Wall Street </em>and the <em>Stansberry Digest</em>, as well as occasional marketing messages. You can unsubscribe from each at any time. <a href="https://stansberryresearch.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
+                <p class="disclaimer top-d">By submitting your email address, you are agreeing to receive <em>This Week on Wall Street </em>and the <em>Stansberry Digest</em>, as well as occasional marketing messages. You can unsubscribe from each at any time. <a href="#">Privacy Policy</a></p>
               </div>
             </div>
-          </form><img src="https://assets.stansberryresearch.com/mkt/leadgen/stansberry-widget/SRS-phone-mockup.png" class="phone-img" />
+          </form><img src="img/phone-mockup.png" class="phone-img" />
         </div>
       </div>
     </section>
@@ -770,9 +776,9 @@
           <div class="form-input-bottom sna-page-form">
             <div class="row">
               <div class="col-8"><input style="width: 100%;" class="form-control input-lg sna-email" placeholder="Enter Your Email Here" id="emailField" type="email" /></div>
-              <div class="col-4" style="padding: 0;"><button class="form-control btn btn-default sna-single-optin" type="button">Submit</button></div>
+              <div class="col-4" style="padding: 0;"><button class="form-control btn btn-default sna-single-optin" type="button" onclick="location.href='widget-ty.html'">Submit</button></div>
               <div class="col-12">
-                <p class="disclaimer" style="margin-bottom: 0;">By submitting your email address, you are agreeing to receive <em>This Week on Wall Street </em>and the <em>Stansberry Digest</em>, as well as occasional marketing messages. You can unsubscribe from each at any time. <a href="https://stansberryresearch.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
+                <p class="disclaimer" style="margin-bottom: 0;">By submitting your email address, you are agreeing to receive <em>This Week on Wall Street </em>and the <em>Stansberry Digest</em>, as well as occasional marketing messages. You can unsubscribe from each at any time. <a href="#">Privacy Policy</a></p>
               </div>
             </div>
           </div>
@@ -782,8 +788,8 @@
     <footer>
       <p>© 2024 Stansberry Research. All rights reserved.</p>
     </footer>
-    <div class="footerRow"><a class="footerItem" href="https://stansberryresearch.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> <a class="footerItem" href="https://stansberryresearch.com/legal-notices" target="_blank" rel="noopener">Legal Notices</a>
-      <a class="footerItem" href="https://stansberryresearch.com/terms-of-use" target="_blank" rel="noopener">Terms of Use</a> <a class="footerItem" href="https://stansberryresearch.com/dmca" target="_blank" rel="noopener">DMCA Policy</a> <a class="footerItem" href="https://stansberryresearch.com/do-not-sell" target="_blank" rel="noopener">Do Not Sell My Personal Information</a> <a class="footerItem" href="https://stansberryresearch.com/privacy-policy/#adchoice" target="_blank" rel="noopener">Ad Choice</a> <a class="footerItem" href="#a" onclick="window.Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')" data-ol-has-click-handler="">Cookie Preferences</a>
+    <div class="footerRow"><a class="footerItem" href="#">Privacy Policy</a> <a class="footerItem" href="#">Legal Notices</a>
+      <a class="footerItem" href="#">Terms of Use</a> <a class="footerItem" href="#">DMCA Policy</a> <a class="footerItem" href="#">Do Not Sell My Personal Information</a> <a class="footerItem" href="#">Ad Choice</a> <!-- <a class="footerItem" href="#a" onclick="window.Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')" data-ol-has-click-handler="">Cookie Preferences</a> -->
     </div>
   </body>
 
