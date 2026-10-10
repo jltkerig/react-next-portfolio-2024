@@ -1,0 +1,77 @@
+.article {
+	padding-bottom: 90px;
+}
+.date {
+	font-family: var(--font-roboto-condensed), sans-serif !important;
+	font-size: 1.1rem !important;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cyan-med) !important;
+}
+
+.body {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+.body p {
+	margin: 0 0 1.4em;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.8;
+	color: var(--grey);
+}
+.body > p:first-of-type::first-letter {
+	float: left;
+	padding: 0.06em 0.1em 0 0;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 4.6rem;
+	line-height: 0.8;
+	color: var(--cyan-dark);
+}
+.body h2 {
+	margin: 1.6em 0 0.5em;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-size: 2.4rem;
+	color: var(--black);
+}
+.body a {
+	color: var(--cyan-med);
+}
+
+.citations {
+	margin-top: 64px;
+	padding-top: 20px;
+	border-top: 1px solid var(--black);
+}
+.citations h2 {
+	margin: 0 0 12px;
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--light-grey);
+}
+.citations ol {
+	margin: 0;
+	padding-left: 1.4em;
+}
+.citations li {
+	margin-bottom: 6px;
+	font-family: var(--font-merriweather), serif;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--grey);
+}
+
+@media (max-width: 700px) {
+	.body p {
+		font-size: 1.1rem;
+	}
+}

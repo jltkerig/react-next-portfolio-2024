@@ -93,6 +93,13 @@
 	            }
 				
 				.googlemap{max-width:350px;max-height: 350px;}
+
+				/*the sections set their own inline padding with 0 on the sides, so the text touched the screen edges*/
+				.container[style*="padding"]{padding-left:24px !important;padding-right:24px !important;}
+				.container[style*="padding"] .img-fluid{margin-bottom:16px;}
+
+				/*the big white section titles (Accommodations is 5x its font size wide) ran off the screen*/
+				h1.display-1{font-size:min(96px, 16vw);}
 	        }
 	</style>
 </head>

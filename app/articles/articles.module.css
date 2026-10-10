@@ -1,0 +1,40 @@
+.list {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 24px 90px;
+	list-style: none;
+}
+.item {
+	display: block;
+	padding: 28px 0;
+	border-top: 1px solid var(--black);
+	text-decoration: none;
+}
+.item:last-child,
+.list li:last-child .item {
+	border-bottom: 1px solid var(--black);
+}
+.item time {
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-size: 1.1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--cyan-med);
+}
+.item h2 {
+	margin: 6px 0;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-size: clamp(2.4rem, 5vw, 3.6rem);
+	color: var(--black);
+}
+.item:hover h2,
+.item:focus-visible h2 {
+	color: var(--cyan-med);
+}
+.item p {
+	margin: 0;
+	font-family: var(--font-merriweather), serif;
+	font-size: 1.1rem;
+	color: var(--grey);
+}

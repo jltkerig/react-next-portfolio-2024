@@ -4,7 +4,9 @@ import styles from "./PageHeader.module.css";
 export default function PageHeader({title, label, sub, children}) {
 	return (
 		<header className={styles.header}>
-			<h1 className={styles.title}>{title}</h1>
+			<h1 className={styles.title} style={{"--chars": String(title).length + 1}}>
+				{title}
+			</h1>
 			<div className={styles.below}>
 				<div className={styles.lead}>
 					{label && <h2 className={styles.label}>{label}</h2>}

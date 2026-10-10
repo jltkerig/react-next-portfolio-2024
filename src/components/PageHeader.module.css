@@ -83,3 +83,28 @@
 		padding: 24px 16px 48px;
 	}
 }
+
+/*phones only (touch screen, phone-sized): the title always fits on one line, sized from its length, and the text under it is larger and darker*/
+@media (hover: none) and (pointer: coarse) and (max-width: 700px) {
+	.title {
+		white-space: nowrap;
+		font-size: min(4.5rem, calc((100vw - 32px) / (var(--chars) * 0.52)));
+		letter-spacing: -0.02em;
+	}
+	.label {
+		font-size: 1.5rem;
+	}
+	.sub {
+		font-size: 1.15rem;
+		color: var(--grey);
+	}
+	.intro p {
+		font-size: 1.2rem;
+		line-height: 1.6;
+		color: var(--black);
+	}
+	.intro a,
+	.intro a:visited {
+		text-decoration: underline;
+	}
+}

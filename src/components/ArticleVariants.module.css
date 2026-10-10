@@ -1,0 +1,483 @@
+/*shared pieces*/
+.article {
+	margin-top: 86px; /*clears the fixed nav*/
+	padding-bottom: 90px;
+}
+.label,
+.date {
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-size: 1.1rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+.title {
+	margin: 0;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	line-height: 0.95;
+	letter-spacing: -0.02em;
+	color: var(--black);
+}
+.subhead {
+	margin: 0;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--cyan-med);
+}
+.body p {
+	margin: 0 0 1.4em;
+	font-family: var(--font-merriweather), serif;
+	font-size: 1.2rem;
+	line-height: 1.8;
+	color: var(--grey);
+}
+.body h2 {
+	margin: 1.6em 0 0.5em;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-size: 2.4rem;
+	color: var(--black);
+}
+.body h3 {
+	margin: 1.8em 0 0.4em;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--cyan-med);
+}
+.body strong {
+	font-weight: 700;
+	color: var(--black);
+}
+.body a {
+	color: var(--cyan-med);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+.body a:hover,
+.body a:focus-visible {
+	color: var(--cyan-dark);
+}
+.body ul,
+.body ol {
+	margin: 0 0 1.6em;
+	padding-left: 1.4em;
+	font-family: var(--font-merriweather), serif;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	color: var(--grey);
+}
+.body li {
+	margin-bottom: 0.5em;
+	padding-left: 0.3em;
+}
+.body li::marker {
+	color: var(--cyan-med);
+	font-weight: 700;
+}
+.body blockquote {
+	margin: 2em 0;
+	padding: 4px 0 4px 28px;
+	border-left: 4px solid var(--yellow);
+}
+.body blockquote p {
+	margin: 0 0 0.6em;
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-size: 2rem;
+	line-height: 1.3;
+	color: var(--black);
+}
+.body blockquote cite {
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-style: normal;
+	font-size: 1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--light-grey);
+}
+.body :global(.pullquote) {
+	margin: 2em 0;
+	padding: 20px 0;
+	border-top: 1px solid var(--black);
+	border-bottom: 1px solid var(--black);
+	font-family: var(--font-unna), serif !important;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 2.6rem !important;
+	line-height: 1.15 !important;
+	text-align: center;
+	color: var(--cyan-dark) !important;
+}
+.body figure {
+	margin: 2em 0;
+}
+.body :global(.figure-placeholder) {
+	aspect-ratio: 16 / 9;
+	background: linear-gradient(135deg, var(--cyan-dark), var(--cadetgray));
+}
+.body figcaption {
+	margin-top: 8px;
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.04em;
+	color: var(--light-grey);
+}
+.body hr {
+	width: 80px;
+	height: 4px;
+	margin: 2.4em auto;
+	border: 0;
+	background: var(--yellow);
+}
+.body code {
+	padding: 2px 6px;
+	background: var(--lightyellow);
+	font-size: 0.9em;
+	color: var(--black);
+}
+.body abbr {
+	text-decoration: underline dotted;
+	cursor: help;
+}
+.citations h2 {
+	margin: 0 0 12px;
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-weight: 500;
+	font-size: 1.1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+.citations ol {
+	margin: 0;
+	padding-left: 1.4em;
+}
+.citations li {
+	margin-bottom: 6px;
+	font-family: var(--font-merriweather), serif;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--grey);
+}
+.citations a {
+	color: var(--cyan-med);
+}
+
+/*B: sidebar. sticky title and meta on the left, text on the right, citations under the text*/
+.sidebar {
+	display: grid;
+	grid-template-columns: 340px minmax(0, 700px);
+	column-gap: 72px;
+	justify-content: center;
+	max-width: 1240px;
+	margin-inline: auto;
+	padding: 56px 24px 90px;
+}
+.sidebar .head {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	position: sticky;
+	max-height: calc(100vh - 130px);
+	overflow-y: auto;
+	top: 110px;
+	align-self: start;
+	padding-right: 24px;
+	border-right: 0;
+}
+.sidebar .meta {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-bottom: 16px;
+}
+.sidebar .label {
+	color: var(--light-grey);
+}
+.sidebar .date {
+	color: var(--cyan-med);
+}
+.sidebar .title {
+	font-size: clamp(3.2rem, 5vw, 4.6rem);
+	margin-bottom: 16px;
+}
+.sidebar .subhead {
+	font-size: 1.3rem;
+	line-height: 1.3;
+}
+.sidebar .head {
+	transition: padding 0.3s ease;
+}
+.sidebar .title,
+.sidebar .subhead,
+.sidebar .meta {
+	transition: font-size 0.3s ease, opacity 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+}
+.sidebar .subhead,
+.sidebar .meta {
+	max-height: 200px;
+	overflow: hidden;
+}
+.sidebar .compact .title {
+	font-size: 2.6rem;
+	margin-bottom: 8px;
+}
+.sidebar .compact .subhead,
+.sidebar .compact .meta {
+	max-height: 0;
+	margin: 0;
+	opacity: 0;
+}
+.progress {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3px;
+	height: 100%;
+	background: var(--yellow);
+}
+.progress span {
+	display: block;
+	width: 100%;
+	background: var(--cyan-dark);
+}
+.toc {
+	margin-top: 28px;
+}
+.toc h2 {
+	margin: 0 0 10px;
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--light-grey);
+}
+.toc ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.toc a {
+	display: block;
+	padding: 6px 0 6px 12px;
+	border-left: 3px solid transparent;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.15rem;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+	color: var(--light-grey);
+}
+.toc a:hover,
+.toc a:focus-visible {
+	color: var(--cyan-dark);
+}
+.toc a.current {
+	border-left-color: var(--yellow);
+	color: var(--cyan-med);
+}
+.sidebar .body h2,
+.sidebar .citations h2 {
+	scroll-margin-top: 110px;
+}
+.sidebar .body {
+	grid-column: 2;
+}
+.sidebar .citations {
+	grid-column: 2;
+	margin-top: 40px;
+	padding-top: 16px;
+	border-top: 1px solid var(--black);
+}
+.sidebar .citations h2 {
+	color: var(--light-grey);
+}
+
+/*D: band. full-width dark blue hero with white title, text card pulled up over it*/
+.band {
+	margin-top: 0; /*hero starts at the very top, behind the fixed nav*/
+	padding: 0 0 90px;
+}
+.band .head {
+	padding: 158px 24px 120px; /*72px of space plus the 86px fixed nav*/
+	background: var(--cyan-dark);
+	color: var(--white);
+}
+.band .head > * {
+	max-width: 1000px;
+	margin-inline: auto;
+}
+.band .meta {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+.band .label {
+	color: var(--lightyellow);
+}
+.band .date {
+	color: var(--yellow);
+}
+.band .title {
+	font-size: clamp(3.6rem, 10vw, 8rem);
+	color: var(--white);
+}
+.band .title::after {
+	content: ".";
+	color: var(--yellow);
+}
+.band .subhead {
+	margin-top: 20px;
+	font-size: 1.4rem;
+	line-height: 1.3;
+	color: var(--white);
+}
+.band .card {
+	max-width: 780px;
+	margin: -64px auto 0;
+	padding: 48px 56px 40px;
+	position: relative;
+	background: var(--white);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+	border-top: 6px solid var(--yellow);
+}
+.band .citations {
+	margin-top: 40px;
+	padding-top: 20px;
+	border-top: 1px solid var(--black);
+}
+.band .citations h2 {
+	color: var(--cyan-med);
+}
+
+/*reading bar for D: sits under the fixed site nav, slides in after the big header scrolls away*/
+.bar {
+	position: fixed;
+	top: 81px;
+	left: 0;
+	width: 100%;
+	z-index: 90;
+	background: var(--cyan-dark);
+	color: var(--white);
+	transform: translateY(-120%);
+	visibility: hidden; /*also hides its shadow, which peeked out under the nav*/
+	transition: transform 0.3s ease, visibility 0.3s;
+}
+.barShown {
+	transform: translateY(0);
+	visibility: visible;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+.barInner {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 10px 24px;
+}
+.barTitle {
+	font-family: var(--font-unna), serif;
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1.9rem;
+	line-height: 1;
+}
+.barSection {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.1rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--yellow);
+}
+.barButton {
+	padding: 4px 12px;
+	border: 1px solid var(--white);
+	background: transparent;
+	font-family: var(--font-roboto-condensed), sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--white);
+	cursor: pointer;
+}
+.barButton:hover,
+.barButton:focus-visible {
+	background: var(--white);
+	color: var(--cyan-dark);
+}
+.barMenu {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 24px 12px;
+	list-style: none;
+}
+.barMenu a {
+	display: block;
+	padding: 6px 0;
+	font-family: var(--font-fira-sans), sans-serif;
+	font-weight: 500;
+	font-size: 1.15rem;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+	color: var(--white);
+}
+.barMenu a:hover,
+.barMenu a:focus-visible,
+.barMenu a.current {
+	color: var(--yellow);
+}
+.barProgress {
+	height: 4px;
+	background: rgba(255, 255, 255, 0.25);
+}
+.barProgress span {
+	display: block;
+	height: 100%;
+	background: var(--yellow);
+}
+.band .body h2,
+.band .citations h2 {
+	scroll-margin-top: 170px;
+}
+
+@media (max-width: 900px) {
+	.sidebar {
+		display: block;
+	}
+	.toc,
+	.progress {
+		display: none;
+	}
+	.sidebar .head {
+		position: static;
+		padding: 0 0 32px;
+		border-right: 0;
+		border-bottom: 3px solid var(--yellow);
+		margin-bottom: 32px;
+	}
+	.barTitle {
+		font-size: 1.5rem;
+	}
+	.barSection {
+		display: none;
+	}
+	.band .card {
+		padding-inline: 24px;
+	}
+	.band {
+		padding-bottom: 60px;
+	}
+}

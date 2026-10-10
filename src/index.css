@@ -116,6 +116,12 @@ body {
 	max-width: 30%;
 }
 
+/*hamburger menu: only used at 800px and narrower (see the media query below)*/
+.menu-button,
+.menu-panel {
+	display: none;
+}
+
 .navbar ul {
 	max-width: 69%;
 	margin-right: 10px;
@@ -410,7 +416,18 @@ button.contact:disabled {
 }
 
 /*footer*/
+/*keeps the footer at the bottom of the window on short pages*/
+.site-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.site-wrapper > * {
+	flex-shrink: 0;
+}
+
 footer {
+	margin-top: auto;
 	background-color: var(--cyan-dark);
 	display: flex;
 	justify-content: center;
@@ -1228,12 +1245,96 @@ button:focus-visible {
 		padding: 0 0 0.2em 0;
 	}
 
-	.navbar-logo {
-		max-width: 28%;
+	/*mobile nav: big centred logo, hamburger button on the right, links in a panel under the bar*/
+	.navbar {
+		justify-content: center;
+		min-height: 64px;
 	}
 
-	.navbar li {
-		font-size: 16px;
+	.navbar-logo {
+		max-width: 52%;
+		padding: 8px 0;
+	}
+
+	.navbar .nav-links {
+		display: none;
+	}
+
+	.menu-button {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 6px;
+		position: absolute;
+		right: 6px;
+		top: 50%;
+		width: 48px;
+		height: 48px;
+		transform: translateY(-50%);
+		padding: 0;
+		border: 0;
+		background: transparent;
+		cursor: pointer;
+	}
+
+	.menu-button span {
+		display: block;
+		width: 26px;
+		height: 3px;
+		background: var(--black);
+		transition:
+			transform 0.25s ease,
+			opacity 0.2s ease;
+	}
+
+	.menu-button:hover span,
+	.menu-button:focus-visible span {
+		background: var(--cyan-med);
+	}
+
+	.menu-open span:nth-child(1) {
+		transform: translateY(9px) rotate(45deg);
+	}
+
+	.menu-open span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.menu-open span:nth-child(3) {
+		transform: translateY(-9px) rotate(-45deg);
+	}
+
+	.menu-panel {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		border-bottom: 1px solid #eaeaea;
+	}
+
+	.menu-panel[hidden] {
+		display: none;
+	}
+
+	.navbar .menu-panel ul {
+		display: block;
+		max-width: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar .menu-panel li {
+		padding: 0;
+		border-top: 1px solid #eaeaea;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.navbar .menu-panel a {
+		padding: 14px 24px;
 	}
 
 	.tag-box {
@@ -1387,5 +1488,74 @@ button:focus-visible {
 	button.blue,
 	button.white {
 		font-size: 16px;
+	}
+}
+
+/*phones only (touch screen, phone-sized): bigger, darker text and 44px+ tap targets. desktop and tablets are untouched*/
+@media (hover: none) and (pointer: coarse) and (max-width: 700px) {
+	body {
+		color: var(--black);
+	}
+
+	.main-column p,
+	.main-column li {
+		font-size: 1.15rem;
+		line-height: 1.6;
+		color: var(--black);
+	}
+
+	/*form: 16px+ text (stops iOS zooming in on focus), tall fields, big submit*/
+	label {
+		font-size: 1.5rem;
+	}
+	input,
+	textarea {
+		font-size: 18px;
+		font-weight: 400;
+		min-height: 48px;
+		padding: 0.6em;
+	}
+	input::placeholder,
+	textarea::placeholder {
+		color: var(--grey);
+		opacity: 1;
+	}
+	textarea {
+		min-height: 150px;
+	}
+	button.contact,
+	.form-again {
+		min-height: 52px;
+	}
+
+	/*footer: one tidy column of links, each a full-width tap row*/
+	footer ul {
+		flex-direction: column;
+		align-items: stretch;
+		width: 100%;
+	}
+	footer li {
+		display: block;
+		padding: 0;
+		font-size: 18px;
+		text-align: center;
+		line-height: 1.2;
+	}
+	footer li > a {
+		display: block;
+		padding: 13px 8px;
+		font-size: 20px;
+	}
+	.footer-social {
+		justify-content: center;
+		padding: 12px;
+		min-width: 48px;
+		min-height: 48px;
+		align-items: center;
+	}
+	footer p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.4;
 	}
 }

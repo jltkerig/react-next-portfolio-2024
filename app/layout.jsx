@@ -4,7 +4,9 @@ import "../src/index.css";
 import {fontVariables} from "./fonts";
 
 import Logo from "../src/assets/name.png";
+import LogoMobile from "../src/assets/jamie-kerig-script-logo.webp";
 import ImagePreloader from "../src/components/ImagePreloader";
+import MobileMenu from "../src/components/MobileMenu";
 
 export const metadata = {
 	metadataBase: new URL("https://jamiekerig.com"),
@@ -64,12 +66,15 @@ export default function RootLayout({children}) {
 			</head>
 			<body>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify([personJsonLd, websiteJsonLd])}} />
-				<div>
+				<div className="site-wrapper">
 					<nav className="navbar">
 						<Link href="/" className="navbar-logo" aria-label="Jamie Kerig, home">
-							<img src={Logo.src} alt="Jamie Kerig" style={{display: "block", width: "100%"}} />
+							<picture>
+								<source media="(max-width: 800px)" srcSet={LogoMobile.src} />
+								<img src={Logo.src} alt="Jamie Kerig" style={{display: "block", width: "100%"}} />
+							</picture>
 						</Link>
-						<ul>
+						<ul className="nav-links">
 							<li>
 								<Link href="/about/" className="u-link">
 									About
@@ -91,6 +96,7 @@ export default function RootLayout({children}) {
 								</Link>
 							</li>
 						</ul>
+						<MobileMenu />
 					</nav>
 					{children}
 					<ImagePreloader />
@@ -113,6 +119,9 @@ function Footer() {
 					</li>
 					<li>
 						<Link href="/site-map/">Sitemap</Link>
+					</li>
+					<li>
+						<Link href="/articles/">Articles</Link>
 					</li>
 					{areaLinks.map((a) => (
 						<li key={a.href}>

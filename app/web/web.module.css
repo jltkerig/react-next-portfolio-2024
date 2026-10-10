@@ -44,3 +44,19 @@
 	font-size: 0.85rem;
 	font-weight: 500;
 }
+
+/*phones only: larger, darker text and bigger tags*/
+@media (hover: none) and (pointer: coarse) and (max-width: 700px) {
+	.text {
+		font-size: 1.1rem;
+		font-weight: 400;
+		color: var(--black);
+	}
+	.tags {
+		gap: 10px;
+	}
+	.tags li {
+		padding: 8px 14px;
+		font-size: 1rem;
+	}
+}
