@@ -140,6 +140,7 @@ const groups = [
 			},
 			{
 				id: "investinghour", size: "narrow", drop: true,
+				link: "/email/investinghour/", /*opens the inbox preview instead of the lightbox*/
 				title: "Investing Hour",
 				type: "Podcast newsletter",
 				tags: ["Long-form", "Modular"],

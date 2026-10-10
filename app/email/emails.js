@@ -14,6 +14,15 @@ export const emails = [
 		address: "jamiekerig@example.com",
 		preview: "Here at the research desk, we scan through the very best investment opportunities...",
 	},
+	{
+		slug: "investinghour", file: "investing-hour-email.html",
+		title: "Investing Hour",
+		type: "Podcast newsletter",
+		subject: "How to Get Past the Missing Piece of the Investing Puzzle",
+		sender: "Jamie Kerig",
+		address: "jamiekerig@example.com",
+		preview: "\"I was at this bar,\" my roommate Jeff told me back in college...",
+	},
 ];
 
 export function getEmail(slug) {
