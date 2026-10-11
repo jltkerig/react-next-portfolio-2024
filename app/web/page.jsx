@@ -45,6 +45,7 @@ const groups = [
 		projects: [
 			{
 				id: "pal", size: "wide",
+				link: "/web/pal-alliance/prospectus.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "Alliance Membership Website",
 				type: "Standalone website",
 				tags: ["HTML/CSS/JS", "Amazon S3"],
@@ -88,6 +89,7 @@ const groups = [
 			},
 			{
 				id: "fabriccontact", size: "half", drop: true,
+				link: "/web/fabric-place/contact.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "A Fabric Place: Contact Page",
 				type: "Page design",
 				tags: ["Accessibility", "Live map"],
