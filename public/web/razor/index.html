@@ -308,6 +308,12 @@ left: 160px;}
 .no-float-img{float:none; margin:0 auto;padding-left: 55px;}
 a.orderNow:link {}
 }
+
+/* fake video embed (the original Wistia video is gone) */
+.video-thumb { position:relative; max-width:530px; margin:0 auto; border:3px solid #000000; background-color:#000000; line-height:0; }
+.video-thumb img { display:block; width:100%; height:auto; }
+.video-thumb .play-button { position:absolute; top:50%; left:50%; width:84px; height:84px; margin:-42px 0 0 -42px; border-radius:50%; background-color:rgba(0,0,0,0.65); border:3px solid #ffffff; box-sizing:border-box; }
+.video-thumb .play-button::after { content:""; position:absolute; top:50%; left:50%; margin:-14px 0 0 -9px; border-style:solid; border-width:14px 0 14px 24px; border-color:transparent transparent transparent #ffffff; }
 </style>
 <link href="css/bootstrap-mod.css" rel="stylesheet">
 </head>
@@ -388,8 +394,7 @@ Get the details and read the full story below</div>
 <p>Shaving enthusiasts from around the world have been spending hundreds of dollars on a new razor. A razor unlike any that’s ever been built before. Not a cartridge razor. And not a standard safety razor (with a double sided blade).</p>
 <p>OneBlade was something no one saw coming. That no one had ever seen before. <strong>A razor made from the highest quality materials sourced from around the world.</strong> German stainless steel. The finest Japanese carbon steel blade. And highly advanced technology combined to do something no other razor has ever done before.</p>
 </div>
-<div class="col-lg-4"><div id="videoIframeContainer"><iframe src="//fast.wistia.net/embed/iframe/hrhbyeupcp?seo=false&videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="530" height="300"></iframe>
-<script src="js/E-v1.js" async></script></div></div>
+<div class="col-lg-4"><div id="videoIframeContainer"><div class="video-thumb"><img src="imgs/maxresdefaultvideo.jpg" alt="Video still: a man with shaving foam on his face holding a OneBlade razor to his cheek against a black background"><span class="play-button"></span></div></div></div>
 </div>
 
 </div>

@@ -119,6 +119,7 @@ const groups = [
 			},
 			{
 				id: "faux", size: "half",
+				link: "/web/report/index.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "Faux Report",
 				type: "Lead gen webpage",
 				tags: ["Long-form", "Funnel"],
