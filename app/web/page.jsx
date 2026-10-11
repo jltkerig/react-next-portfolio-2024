@@ -14,6 +14,7 @@ import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
 import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
 import allianceWelcome from "@/src/assets/web/alliance-welcome-email-screenshot.png";
+import investorpro from "@/src/assets/web/investor-pro-landing-page.png";
 
 export const metadata = {
 	title: "Web Projects",
@@ -123,6 +124,15 @@ const groups = [
 				tags: ["Long-form", "Funnel"],
 				text: "Designed to read like a PDF article. Calls to action throughout funneled readers into a sales page.",
 				image: fauxreport,
+			},
+			{
+				id: "investorpro", size: "half", drop: true,
+				link: "/web/stansberry-investor/index.html", /*live copy in public/, opens instead of the lightbox*/
+				title: "InvestorPro",
+				type: "Lead gen email capture",
+				tags: ["Email capture", "Free trial"],
+				text: "A landing page built to start free trials: a hero, a short benefits list and a sign-up form capturing name and work e-mail.",
+				image: investorpro,
 			},
 		],
 	},
