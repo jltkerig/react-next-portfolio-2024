@@ -45,7 +45,7 @@ const groups = [
 		projects: [
 			{
 				id: "pal", size: "wide",
-				title: "Stansberry Alliance",
+				title: "Alliance Membership Website",
 				type: "Standalone website",
 				tags: ["HTML/CSS/JS", "Amazon S3"],
 				text: "Built for the direct mail team. Customers received mail leading them to this site, which explained the product and offered signup.",
@@ -161,7 +161,7 @@ const groups = [
 			{
 				id: "alliancewelcome", size: "narrow",
 				link: "/email/alliance-welcome/", /*opens the inbox preview instead of the lightbox*/
-				title: "Stansberry Alliance Invitation",
+				title: "Alliance Membership Invitation",
 				type: "Invitation e-mail",
 				tags: ["Mobile-responsive", "Table layout"],
 				text: "An invitation e-mail with a fluid, mobile-responsive layout and an HTML button that holds up across e-mail clients.",

@@ -54,13 +54,13 @@ export default function Home() {
 					</div>
 					<div className={`column-split ${home.sideCol}`}>
 						{/*portfolio piece in a browser frame*/}
-						<a href="/web/" className={home.browser} aria-label="See web projects, including the Stansberry Alliance website">
+						<a href="/web/" className={home.browser} aria-label="See web projects, including the Alliance Membership Website">
 							<span className={home.browserBar} aria-hidden="true">
 								<span />
 								<span />
 								<span />
 							</span>
-							<img src={palwebsite.src} alt="Stansberry Alliance website designed and built by Jamie Kerig" />
+							<img src={palwebsite.src} alt="Alliance Membership Website designed and built by Jamie Kerig" />
 						</a>
 					</div>
 				</div>
