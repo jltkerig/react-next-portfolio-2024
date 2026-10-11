@@ -1,4 +1,5 @@
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
+import allianceWelcome from "@/src/assets/web/alliance-welcome-email-screenshot.png";
 
 /*e-mails shown in the inbox previews. html lives in public/email/<slug>/<file>; add new ones here*/
 export const emails = [
@@ -22,6 +23,18 @@ export const emails = [
 		sender: "Jamie Kerig",
 		address: "jamiekerig@example.com",
 		preview: "\"I was at this bar,\" my roommate Jeff told me back in college...",
+	},
+	{
+		slug: "alliance-welcome", file: "alliance-email.html",
+		title: "Alliance Welcome",
+		type: "Welcome e-mail",
+		tags: ["Table layout", "Bulletproof button"],
+		text: "A welcome e-mail for new members, with a bulletproof HTML button that renders reliably across e-mail clients.",
+		image: allianceWelcome,
+		subject: "Welcome to The Professional Speculator",
+		sender: "Jamie Kerig",
+		address: "jamiekerig@example.com",
+		preview: "Keep this email. It contains your account access to The Professional Speculator...",
 	},
 ];
 

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Jamie Lee Thomas - Stansberry Alliance</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="robots" content="noindex">
+   
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+	
+	
+	<style type="text/css">
+
+	body {
+	background-color:#ffffff;
+ 	background-image: url("imgs/paper_texture_bg_slice.jpg");
+  	}
+	.uppercase {text-transform:uppercase;}
+.header-container {background-color:#ffffff;border-bottom:3px solid #806419;padding-top:15px;width:100%!important;max-width:100%!important;}
+.footer {
+		font-family: 'Lato', sans-serif;
+	    width: 100%!important;
+		max-width:100%!important;
+		color:#fff;
+		padding-top: 30px;
+		padding-bottom:30px;
+		background-color:#666666;
+	}
+/* link styling */
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a58120 ;
+    text-decoration: none;
+
+} 
+a:active {color: #a58120 ;
+    text-decoration: none;
+border-bottom: 4px double #d5b767; }
+a:focus {color: #a58120 ;
+    text-decoration: none;
+border-bottom: 4px double #d5b767; }
+
+
+.topnavlinks {
+	width: auto;
+font-family: 'Lato', sans-serif;
+font-size:15px;
+line-height:45px;
+text-align:center;
+
+}
+
+
+.upsell-top-container {
+background-color:#a58120;
+border-bottom:1px solid #cccccc;
+width:100%!important;
+max-width:100%!important;
+height:6px;
+
+}
+.upsell-top-container h3 {margin-top:10px;}
+.header-row {max-width:900px;width:90%;margin:0 auto; }
+.footer-row {max-width:900px;width:90%;margin:0 auto;}
+.secure-order-heading {
+	color:#FFF;
+	
+	font-size:22px;
+	padding-top:0;
+	margin-top:0;
+	}
+	
+.pre-form-disclaimer {padding-top:15px;border-bottom:1px solid #eeeeee;margin-bottom:15px;}
+.main-container {
+	max-width:1000px;
+	width:90%;
+	/* height:87vh; add for small amounts of text on page */
+	height:100%;
+	margin:0 auto;
+	background-color:#f6f6f6;
+		}
+ 
+.order-summary {
+	border:1px solid #cccccc;
+	padding:20px;
+	}
+
+.order-summary-middle {
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	padding:20px;
+
+	
+}
+.main-text {
+
+	}
+.lighttext{ }
+
+.main-text h1{
+	font-family: 'Pinyon Script', cursive;
+color:#8d6e1b;
+font-size: 60px;
+padding-top:10px;
+padding-bottom:30px;
+margin:0 auto;
+	}
+.main-text h2{
+	font-family: 'Crimson Text', serif;
+	font-size:31px;
+	line-height:37px;
+	margin-bottom:25px;
+	color:#a5a091;
+	}
+.main-text h3{
+	font-family: 'Crimson Text', serif;
+	color:#333333;
+	font-weight:600; /*semi bold*/
+	font-size:31px;
+	line-height:37px;
+	margin-bottom:25px;
+	}
+	
+.main-text h4{
+	font-family: 'Lato', sans-serif;
+	font-size:19px;
+	font-weight:bold;
+	line-height:29px;
+	margin-bottom:25px;
+	margin-top:65px;
+	}
+	
+.main-text p{
+	color:#333333;
+	font-family: 'Crimson Text', serif;
+	font-size:21px;
+	line-height:29px;
+	margin-bottom:25px;
+	}
+	
+.main-text li{
+	color:#8d6e1b;
+	font-family: 'Crimson Text', serif;
+	font-size:21px;
+	line-height:29px;
+	margin-bottom:25px;
+}
+
+.main-text ul{
+	
+	
+}
+.list-normal{color:#333333;
+ }
+ 
+.list-para{color:#8a867a;
+ }
+ 
+.14reg {
+
+	font-size:14px !important;
+	}
+	
+.order-summary-bottom {
+
+	border-right:1px solid #cccccc;
+	border-left:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	padding:10px;
+	
+-webkit-border-bottom-left-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.order-summary-dark {
+
+	font-size:22px;
+	text-align:center;
+	color:#004a87;
+	background-color:#f2f2f2;
+	border-top:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-left:1px solid #cccccc;
+	padding:10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	}
+	
+.order-form-dark-bg {
+	
+	font-size:16px;
+	color:#444444;
+	background-color:#f2f2f2;
+	border-right:1px solid #cccccc;
+	border-left:1px solid #cccccc;
+}
+.order-form-dark-bg h4{
+	
+	font-size:16px;
+	color:#444444;
+
+}
+.heading-border {border-bottom:2px solid #184482;padding-bottom:15px;margin-bottom:15px;}
+
+.progress {max-width:900px;margin:0 auto;margin-bottom:10px;
+background-color:#888888!important;
+}
+.progress-bar {padding:2px;}
+.progress-bar-dark {background-color:#444444!important;}
+.progress-bar-gray {background-color:#888888!important;}
+.system-maintenance {padding: 0px 12px;}
+label {font-weight:normal;}
+.form-control {
+    background-color: #efefef !important;
+    }
+.enter-box{font-family: 'Crimson Text', serif;
+text-align:center;
+font-size:30px;
+margin:0 auto; 
+width:60%;
+height: 65px;}
+
+.btn-default {
+font-family: 'Lato', sans-serif;
+color:#fff;
+background-color:#a58120;
+text-align:center;
+font-size:30px;
+margin:0 auto; 
+width:60%;
+height:65px;
+border:none;}
+
+.btn-default:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	color:#ffffff;
+    background: #705715;
+}
+
+
+.confirm {
+	font-size: 24px;
+	font-weight:bold;
+	text-decoration:underline;}
+	
+.decline {font-size: 14px; text-decoration: underline;}
+
+.btn-primary {
+font-family: 'Lato', sans-serif;
+color:#fff;
+background-color:#a58120;
+text-align:center;
+font-size:15px;
+margin:0 auto; 
+padding-left:25px;
+padding-right:25px;
+line-height: 31px;
+height:45px;
+border:none;}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	color:#ffffff;
+    background: #705715;
+}
+
+.center{margin:0 auto;}
+
+.imglogo {display: block; padding-top: 5px; padding-bottom:20px;}
+
+.login-box{-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border:1px solid #E3E3E3;
+background-color:#FFFFFF; 
+padding: 5px; 
+margin:100px auto 0px;
+text-align: center;
+
+-webkit-box-shadow: 0px 1px 2px 0px rgba(112,112,112,0.6);
+-moz-box-shadow: 0px 1px 2px 0px rgba(112,112,112,0.6);
+box-shadow: 0px 1px 2px 0px rgba(112,112,112,0.6);}
+
+.headline-spot {text-align:center; padding-bottom:70px;}
+
+.headline-cursive {
+font-family: 'Pinyon Script', cursive;
+color:#8d6e1b;
+font-size: 60px;
+padding-top:10px;
+padding-bottom:30px;
+margin:0 auto;
+}
+
+.video-area{width:100%;text-align:center;padding-bottom:70px;}
+
+.headline-serif {
+padding-top:70px;
+font-family: 'Crimson Text', serif;
+color:#8d6e1b;
+font-size:25px;
+text-transform:uppercase;
+letter-spacing:5px;
+margin:0 auto;
+}
+.welcome-font {
+	padding-top:30px;
+font-family: 'Pinyon Script', cursive;
+color:#8d6e1b;
+font-size:76px;
+margin:0 auto;
+}
+.welcome-msg-box {color:#666666;
+	font-family: 'Crimson Text', serif;
+	font-size:24px;
+	padding-top:20px;
+	padding-bottom:40px;
+	padding-right:60px;
+	padding-left:60px;}
+	
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.welcome-msg-box img {margin:0 auto;padding-right:10px;padding-left:10px;padding-bottom:20px;}
+
+.no-code-text{
+font-family: 'Lato', sans-serif;
+font-size:16px;
+text-transform: uppercase;
+padding-top:30px;padding-bottom:50px;}
+
+.shrink-bar{max-width:281px;}
+
+.submit-gold a{color:#ffffff;}
+
+.gold-button {
+font-family: 'Lato', sans-serif;
+color:#fff;
+text-align:center;
+font-size:32px;
+margin:0 auto; 
+}
+
+.gold-button a{
+color:#ffffff;
+background-color:#a58120;
+height:65px;
+padding:20px 75px 20px 75px;
+border:none;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+text-transform: none;
+}
+
+.gold-button a:link{
+color:#ffffff;
+background-color:#a58120;
+height:65px;
+padding:20px 75px 20px 75px;
+border:none;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+text-transform: none;
+}
+
+.gold-button a:hover{
+background-color:#705715;
+height:65px;
+padding:20px 75px 20px 75px;
+}
+
+.ornament-center {padding-top:60px; padding-bottom:60px; text-align:center;}
+.indented {
+	padding-left:90px;
+}
+.navbar {background-color: #ffffff;
+border:none;}
+.navbar-brand a{
+    color: #666666;
+    text-decoration: none;
+}
+.navbar-brand a:link{
+    color: #666666;
+    text-decoration: none;
+}
+
+.navbar-brand  a:hover {
+    text-decoration: none;} 
+.navbar-brand a:active {
+    text-decoration: none;}
+.navbar-brand a:focus {
+    text-decoration: none; }
+
+.gold-mobile{ background-color:#8d6e1b; color:#fff; }
+.gold-mobile a{color:#fff !important;}
+
+button:active, .button:active, button:focus, .button:focus, button:hover, .button:hover{
+    border:none !important;
+    outline:none !important;
+}
+
+@media (max-width: 992px) {
+   .welcome-msg-box {padding-right:40px;padding-left:40px;}
+	 .imglogo {display:block;float:none!important;margin-left:25px;max-width:250px;margin-bottom:10px;}
+	.shrink-bar{max-width:230px;}
+
+}
+
+@media (max-width: 776px) {
+	.login-box {margin:20px auto 0px; }
+.shrink-bar{display:none;}
+ .welcome-msg-box {padding-right:40px;padding-left:40px;padding-bottom:20px; padding-top:0px;}
+ .imglogo {background-color:#fff;margin-bottom:5px;text-align:center; margin: 0 auto;}
+.main-container{width:100%; }
+.btn {display:block;}
+.submit-gold{margin-bottom:15px; width:40%;}
+.indented {padding-left:60px;}
+}
+
+
+@media (max-width: 500px) {
+.login-box {margin:0px auto 0px; }
+.shrink-bar{display:none;}
+.imglogo {background-color:#fff;margin-bottom:5px;text-align:center; margin: 0 auto;}
+.welcome-font{font-size:60px;padding-top:15px;}
+.welcome-msg-box{padding-right:40px;padding-left:40px;font-size:18px;padding-bottom:20px; padding-top:0px;}
+.main-container{width:100%;   }
+.no-code-text { padding-top: 15px; padding-bottom: 30px;}
+.btn {display:block;}
+.submit-gold{margin-bottom:15px; width:60%;}
+.indented {padding-left:40px;}
+.gold-button {font-size:22px;}
+.ornament-center {padding: 50px 30px 50px 30px}
+
+}
+
+	</style>
+	
+</head>
+<body>  
+
+
+   
+
+
+<div class="container header-container">
+
+    <nav class="navbar navbar-default hidden-lg hidden-md hidden-sm">
+        <div class="container-fluid">
+        
+         <!-- Brand and toggle get grouped for better mobile display -->
+             <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+             <!---<a class="navbar-brand" href="#">--->
+             <img class="navbar-brand" src="imgs/stansberry_logo_gray.png" alt="Stansberry Research" />
+            <!---</a>--->
+          </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <!--class="active" add to li--->
+        <li><a href="prospectus.html">Prospectus<span class="sr-only">(current)</span></a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li class="gold-mobile"><a href="re-pal-landing-page.html">Join the Alliance</a></li>
+      </ul>
+  
+     
+    </div><!-- /.navbar-collapse -->
+    
+    
+            </div>
+      </nav>
+
+
+<div class="row header-row">
+
+
+<div class="hidden-xs col-xs-12 col-sm-3 col-md-3">
+<img class="imglogo" src="imgs/stansberry_logo_gray.png" alt="Stansberry Research" /></div>
+
+
+<div class="hidden-xs hidden-sm col-md-2">
+</div>
+
+<div class="hidden-xs col-xs-12 col-sm-6 col-md-2 topnavlinks">
+<a href="prospectus.html">Prospectus</a></div>
+
+<div class="hidden-xs col-xs-12 col-sm-6 col-md-2 topnavlinks">
+<a href="testimonials.html">Testimonials</a></div>
+
+<div class="hidden-xs col-xs-12 col-sm-6 col-md-2 topnavlinks">
+<a href="faqs.html">FAQs</a></div>
+<div class="hidden-xs col-xs-12 col-sm-3 col-md-3"> <div class="submit-gold btn btn-primary"><a href="re-pal-landing-page.html">Join the Alliance</a></div>
+</div>
+
+<!--end row--></div>
+
+<!---end white header--></div>
+
+<!-- START gold bar-->
+
+<div class="container upsell-top-container">
+<div class="row header-row">
+&nbsp;
+</div>
+</div>
+<!-- END gold bar -->
+
+    
+<div class="container main-container">
+
+<div class="row">
+
+<!-- main text area--><div class="col-md-10 main-text col-centered">
+<div class="headline-spot">
+<div class="headline-serif">
+  Stansberry Alliance</div>
+<div class="headline-cursive">
+  Partnership Prospectus</div>
+<img src="imgs/ornament-1.png" class="center img-responsive" alt="">
+</div>
+<div class="video-area">
+<img src="imgs/imaginary-video.png" alt="Introduction video" class="img-responsive center">
+</div>
+<p>Welcome,</p>
+  <p>You received this prospectus because you have continued to be in the top 1% of our best customers. And we want you to know how much we appreciate your support &mdash; and what we have planned for you in the months ahead. </p>
+  <p>In short, we're inviting you to become a &quot;partner&quot;. To be clear, we're <em>not</em> asking you to buy a piece of our business... attend board meetings or anything like that.</p>
+  <p>Rather, we'd like to offer you lifetime access to our financial research... A way to get virtually everything we publish &mdash; now or in the future &mdash; without ever paying another subscription fee.  </p>
+  <p>You'll find a brief summary of the benefits below, as well as <u>notes from current Alliance partners</u>, and <u>answers to your most common questions</u>.</p>
+  
+  <div class="ornament-center"><img src="imgs/ornament-2.png" class="img-responsive center" alt=""></div>
+  
+  <h3><strong>Alliance Partnership Benefits Summary:</strong></h3>
+  <p>As an Alliance Partner, you'll get everything we publish, for life. The only exception is <em>Stansberry Venture</em>. You'll pay a membership fee to join now. Then, starting next fall, all you'll ever have to pay is a small annual maintenance fee, to cover the rising costs of printing, postage and customer service. You'll never have to pay any other subscription or renewal fees for our research. </p>
+  <h4><strong>You'll get all of our Trading research services</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Stansberry Short Report</em></span><span class="list-para"> (Value: $4,000 a year)</span> </li>
+    <li><span class="list-normal"><em>Retirement Trader</em></span><span class="list-para"> (Value: $4,000 a year) </span></li>
+    <li><span class="list-normal"><em>Stansberry Pro Trader</em></span><span class="list-para"> (Value: $3,000 a year) </span></li>
+    <li><span class="list-normal"><em>True Wealth Systems</em></span><span class="list-para"> (Value: $3,500 a year)</span> </li>
+    <li><span class="list-normal"><em>Stansberry Alpha</em></span><span class="list-para"> (Value: $4,500 a year) </span></li>
+    <li><span class="list-normal"><em>The Professional Speculator</em></span><span class="list-para"> (Value: $2,500 a year) </span></li>
+    <li><span class="list-normal"><em>DailyWealth Trader</em></span><span class="list-para"> (Value: $1,188 a year) </span></li>
+  </ul>
+  <h4><strong>Doc Eifrig's Income research service</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Income Intelligence</em></span><span class="list-para"> (Value: $1,500&nbsp;a year) </span></li>
+  </ul>
+  <h4><strong>All of our &quot;Big Picture&quot; investment research</strong><strong>...</strong><strong> covering everything from rare coins to retirement loopholes</strong><strong>...</strong><strong> to small-cap opportunities.</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Stansberry's Investment Advisory</em></span><span class="list-para"> (Value: $149 a year) </span></li>
+    <li><span class="list-normal"><em>Retirement Millionaire</em> </span><span class="list-para">(Value: $99 a year) </span></li>
+    <li><span class="list-normal"><em>True Wealth</em> </span><span class="list-para">(Value: $99 a year) </span></li>
+  </ul>
+  <h4><strong>Our in-house Geologist, Matt Badiali's, research on natural resources</strong><strong>...</strong><strong> everything from gold and silver</strong><strong>...</strong><strong> to uranium, natural gas and oil</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Stansberry Resource Report</em> </span><span class="list-para">(Value: $99 a year) </span></li>
+  </ul>
+  <h4><strong>Our overseas investment research</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Stansberry International</em> </span><span class="list-para">(Value: $200 a year) </span></li>
+  </ul>
+  <h4><strong>Our most popular value investing service</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Extreme Value</em> </span><span class="list-para">(Value: $1,000 a year) </span></li>
+  </ul>
+  <h4><strong>A free lifetime subscription to</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>Stansberry Radio Premium</em> </span><span class="list-para">(Value: $120 a year) </span></li>
+    <li><span class="list-normal"><em>DailyWealth Premium</em> </span><span class="list-para">(Value: $108 a year) </span></li>
+  </ul>
+  <h4><strong>A free year's subscription to 3 of our recent acquisitions</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal"><em>The Bill Bonner Letter</em> </span><span class="list-para">(Value: $79 a year) </span></li>
+    <li><span class="list-normal"><em>The Casey Report</em> </span><span class="list-para">(Value: $99 a year) </span></li>
+    <li><span class="list-normal"><em>The Palm Beach Letter </em></span><span class="list-para">(Value: $99 a year)</span></li>
+  </ul>
+  <h4><strong>Plus several key benefits available <em>exclusively </em>to our Alliance partners</strong><strong>...</strong></h4>
+  <ul type="disc" class="indented">
+    <li><span class="list-normal">Access to our newest research letters &mdash; Weeks or MONTHS before anyone else </span></li>
+    <li><span class="list-normal">Weekly Executive Summary highlighting our most valuable research from the previous week. </span></li>
+    <li><span class="list-normal">The Quarterly Stansberry 16 Model Portfolio </span></li>
+    <li><span class="list-normal">Annual Invitations to Exclusive <em>Alliance</em> Partner-Only Meetings </span></li>
+  </ul>
+  
+   <div class="ornament-center"><img src="imgs/ornament-2.png" class="img-responsive center" alt=""></div>
+<p style="font-size:25px;">And that's just the beginning of what your Alliance Partnership can offer you.
+  </p>
+
+ <div class="ornament-center"><img src="imgs/ornament-2.png" class="img-responsive center" alt=""></div>
+  <p>&nbsp;</p>
+  <div class="gold-button"><a href="re-pal-landing-page.html">Join the Alliance</a></div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div></div>
+</div>
+
+
+
+
+
+<div class="container footer">
+<div class="row footer-row">
+
+<div class="col-md-12" style=" text-align:center;margin-left:15px;">&copy; 2015 Stansberry Research</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>

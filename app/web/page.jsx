@@ -13,6 +13,7 @@ import fabriccontact from "@/src/assets/web/fabric-place-contact-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
 import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
+import allianceWelcome from "@/src/assets/web/alliance-welcome-email-screenshot.png";
 
 export const metadata = {
 	title: "Web Projects",
@@ -146,6 +147,15 @@ const groups = [
 				tags: ["Long-form", "Modular"],
 				text: "A long-format template for the Investing Hour podcast, with distinct sections for each part of the show.",
 				image: investinghour,
+			},
+			{
+				id: "alliancewelcome", size: "narrow",
+				link: "/email/alliance-welcome/", /*opens the inbox preview instead of the lightbox*/
+				title: "Alliance Welcome",
+				type: "Welcome e-mail",
+				tags: ["Table layout", "Bulletproof button"],
+				text: "A welcome e-mail for new members, with a bulletproof HTML button that renders reliably across e-mail clients.",
+				image: allianceWelcome,
 			},
 		],
 	},
