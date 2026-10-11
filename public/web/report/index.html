@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/index.html -->
 <html lang="en">
 
   <head>
@@ -9,69 +8,9 @@
     <title>The 2024 Stock Melt Up: A Blueprint</title>
     <link href="https://assets.1729research.com/common/css/bootstrap/bootstrap.min.4.3.1.css" rel="stylesheet" type="text/css" />
     <link href="https://assets.stansberryresearch.com/content/reports/number-one-stock/styles.css" rel="stylesheet" type="text/css" />
-    <!-- old: https://stansberryresearch.com/assets/img/logo.png -->
 <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/31d4ac2df8.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Roboto:400,400i,700,700i|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
-    <script type="text/javascript" src="https://players.brightcove.net/5298920694001/rkj9vsdUM_default/index.min.js">
-    </script>
-    <script type="text/javascript" src="https://secure-prod-assets.s3.amazonaws.com/common/js/videoManager.js"></script>
-    <script type="text/javascript" src="https://assets.stansberryresearch.com/mkt/templates/js/videoManager-lightbox.js"></script>
-    <script>
-      let buttonTime = 3480000; //3480000
-      //DO NOT DELETE ME OR YOU WILL BREAK THE BUTTON THANK YOU
-      setInterval(function ()
-      {
-        if ($('.btn-hidden').css("display") == "inline")
-        {
-          $('.btn-hidden').css("display", "block");
-        }
-      }, 1000);
-
-      $(function ()
-      {
-        WaitForFunction();
-      });
-      function WaitForFunction()
-      {
-        try
-        {
-          if (!videojs)
-          {
-            setTimeout(WaitForFunction, 100);
-            console.log("Waiting for videojs"); a
-            return;
-          }
-          ButtonReveal();
-        }
-        catch (error)
-        {
-          setTimeout(WaitForFunction, 100);
-          return;
-        }
-      }
-
-      function ButtonReveal()
-      {
-        //console.log("ButtonReveal active. Set for " + (buttonTime/1000)/60);
-        var myPlayer = videojs("myPlayerId");
-        myPlayer.ready(function ()
-        {
-          setInterval(function ()
-          {
-            if (myPlayer.currentTime() > (buttonTime / 1000))
-            {
-              $('.btn-hidden').css("display", "inherit");
-              $('.btn-hidden').css("display", "block !important");
-              $('.textPop').css("display", "block");
-              //console.log('button popped');
-              //jtag.send({ saw_button_pop: "true" });
-            }
-          }, 1000);
-        });
-      }
-    </script>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/fonts.css" rel="stylesheet">
     <style>
       h1 {
         font-size: 40px;
@@ -127,7 +66,7 @@
         }
 
         .left-section {
-          font-family: 'Robot', sans-serif;
+          font-family: 'Roboto', sans-serif;
           font-weight: 700;
           font-size: 11px;
           line-height: 16px;
@@ -211,7 +150,7 @@ NOTE: Additional classes can be added to the <ul> and <li> based on the bullets 
       
 
       .bullets {
-        background: transparent url("img/bullet-angle-black.png") /* old: https://assets.1729research.com/common/icons/bullet-angle-black.png */ no-repeat scroll 0 0 / 1em;
+        background: transparent url("img/bullet-angle-black.png") no-repeat scroll 0 0 / 1em;
         margin: 0 auto 1em;
         padding-left: 1.5em;
         padding-top: 0;
@@ -220,7 +159,7 @@ NOTE: Additional classes can be added to the <ul> and <li> based on the bullets 
       
 
       .bullets.check {
-        background-image: url("img/bullet-check-black.png") /* old: https://assets.1729research.com/common/icons/bullet-check-black.png */;
+        background-image: url("img/bullet-check-black.png");
       }
 
       
@@ -253,22 +192,6 @@ LIST STYLING ends here
 */
     </style>
     <!-- Paste this right before your closing </head> tag -->
-    <script type="text/javascript">
-      (function (f, b)
-      {
-        if (!b.__SV)
-        {
-          var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c)
-          {
-            function g(a, d) { var b = d.split("."); 2 == b.length && (a = a[b[0]], d = b[1]); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))) } } var a = b; "undefined" !== typeof c ? a = b[c] = [] : c = "mixpanel"; a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d }; a.people.toString = function () { return a.toString(1) + ".people (stub)" }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-            for (h = 0; h < i.length; h++)g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]) } } for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++)b(j[c]); return d }; b._i.push([e, f, c])
-          }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
-            MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g)
-        }
-      })(document, window.mixpanel || []);
-      mixpanel.init('285ec6de65689b5bf5160fc38d13e1ae', { debug: true });
-      mixpanel.track('Read Report', { 'CID': 'MKT809825', 'Report Title': 'Melt Up Branded Report', 'Version': 'PDF-Alike', 'Source': 'Lead Gen' });
-    </script>
   </head>
   <script>
     $(document).ready(function ()
@@ -304,7 +227,6 @@ LIST STYLING ends here
   <body>
     <section class="top-header">
       <div class="left-section"> Special Research Presentation:<span> The 2024 Stock Melt Up: A Blueprint</span></div>
-      <!-- <div class="right-section"><div class="logo"><img src="https://static.cloudsna.com/store/PROD/images/Naspers/report%20promo-stansberry%20logo%20header%402x.png" alt="StansberryResearch"></div></div>	 -->
     </section>
     <div class="container-fluid">
       <div class="row">
@@ -312,14 +234,13 @@ LIST STYLING ends here
         <div class="col-md-8 col-sm-8 col-xs-12 main-column">
           <article>
             <section>
-              <div class="main-report"> <!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/report-the-2024-stock-melt-up-a-blueprint-flat.png -->
-<img src="img/report-the-2024-stock-melt-up-a-blueprint-flat.png" alt="Report Cover"> </div>
+              <div class="main-report"><img src="img/cover.png" alt="Report Cover"> </div>
             </section>
             <section class="main-body" id="intro">
               <header>Special Research Presentation</header>
               <h1>The 2024 Stock Melt Up: <br>A Blueprint </h1>
               <!-- <div class="row author-wrap">
-     <div class="col-sm-4"><img src="img/headshot-dan-ferris.png" alt="Dan Ferris" class="author-img"></div>
+     <div class="col-sm-4"><img src="img/headshot.png" alt="Dan Ferris" class="author-img"></div>
      <div class="col-sm-8">
       <h2>Special Report<br>
        By Dan Ferris</h2>
@@ -357,10 +278,8 @@ LIST STYLING ends here
               <p>I've put together this report with my colleague Whitney Tilson to share some of our latest research on what's happening in the market right now. Whitney is a former hedge-fund manager and Wall Street veteran who has spent the past 25-plus years studying the markets.</p>
               <p>We hope you enjoy our work.</p>
               <p>Good investing,</p>
-              <!-- old: https://s3.amazonaws.com/assets.1729research.com/signatures/whitney-tilson-signature.png -->
-<img alt="Whitney Tilson\x27s signature" src="img/whitney-tilson-signature.png" class="signature" style="max-width:200px;">
-              <!-- old: https://assets.1729research.com/signatures/brett-eversole-signature.png -->
-<img alt="Brett Eversole\x27s signature" src="img/brett-eversole-signature.png" class="signature" style="max-width:200px;">
+<img alt="Whitney Tilson&#39;s signature" src="img/signature-1.png" class="signature" style="max-width:200px;">
+<img alt="Brett Eversole&#39;s signature" src="img/signature-2.png" class="signature" style="max-width:200px;">
               <p>Whitney Tilson and Brett Eversole</p>
               <p class="cta-page-footer" id="investor-suite"><a href="#">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 555-0123</p>
             </section>
@@ -370,8 +289,7 @@ LIST STYLING ends here
               <p>In March 2000, John Chambers was on top of the world...</p>
               <p>It was the height of the dot-com craze. And his company was leading the &quot;Internet Revolution.&quot;</p>
               <p>Chambers' results as CEO were remarkable... He even appeared on the cover of <em>BusinessWeek</em> in 1999:</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/cisco-magazine.jpg -->
-<img src="img/cisco-magazine.jpg" alt="chart" class=" imgCenter" style="max-width:300px;"></p>
+              <p><img src="img/magazine.jpg" alt="chart" class=" imgCenter" style="max-width:300px;"></p>
               <p>In just five short years, the firm's revenue grew from $2 billion to $12 billion. That's annual growth of more than 40%.</p>
               <p>Chambers had a real business at a time when most folks were chasing garbage business models wrapped in gimmicky Internet lingo.</p>
               <p>Investors loved its consistent and unbelievably strong growth trend. So the company's stock soared, like every other Internet stock at the time. But this one was different...</p>
@@ -389,8 +307,7 @@ LIST STYLING ends here
               <p>What they've found is that when a Melt Up forms, it provides some of the greatest, quickest gains of a bull market... if you time your investments correctly. </p>
               <p>Look at what happened with Cisco... </p>
               <p>As we showed you, shares exploded higher in the Melt Up of the dot-com bubble. Then the stock crashed by roughly 90% when the bubble burst. And even today, nearly 25 years later, it's <em>still</em> down from its 2000 peak:</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/cisco-chart.png -->
-<img src="img/cisco-chart.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-01.png" alt="chart" class=" imgCenter"></p>
               <p>Don't chalk that investment failure up to a <em>business</em> failure, though...</p>
               <p>Chambers kept growing the company through his retirement in 2015. In fact, Cisco brought in $49 billion in revenue that year. That's a 9% annual growth rate from 1999 to 2015.</p>
               <p>Not bad, for a massive business operating in an ever-changing and highly competitive technology landscape. But overall, the company hasn't been able to entice investors the same way it did in 2000. As a result, it fell from the No. 1 spot to No. 30 on the list of top U.S. companies.</p>
@@ -430,15 +347,13 @@ LIST STYLING ends here
               <p>The first was the dot-com peak in 2000...</p>
               <p>Back then, technology was king... And the five largest stocks were dominant tech leaders.</p>
               <p>But only one of those five companies has managed to maintain dominance over the past two decades. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/table-01.png -->
-<img src="img/table-01.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/table-01.png" alt="chart" class=" imgCenter"></p>
               <p>The table above shows the returns for each stock since the dot-com peak.</p>
               <p>We already know what happened to Cisco. But as you can see in the table, it's not alone. <strong>Intel (Nasdaq: INTC) </strong>has also managed to lose money since 2000.</p>
               <p>That may be hard to believe, but it's true. If you'd bought shares of either company at the dot-com peak, you'd still be underwater more than two decades later.</p>
               <p><strong>Oracle (NYSE: ORCL)</strong> and <strong>IBM (NYSE: IBM)</strong>, on the other hand, have fared better. But they've still underperformed the overall market. Only tech giant <strong>Microsoft (Nasdaq: MSFT)</strong> has been a big winner, holding on to a spot in today's top five U.S. companies.</p>
               <p>This wasn't an isolated incident, either. The 2007 market peak told a similar story. Take a look...</p>
-              <p><!-- old: https://s3.amazonaws.com/assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/table-02.png -->
-<img src="img/table-02.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/table-02.png" alt="chart" class=" imgCenter"></p>
               <p>Tech stocks didn't dominate the 2007 market peak. Instead, the leaders were &quot;old guard&quot; giants in oil, manufacturing, banking, and telecommunications. Microsoft was the only tech stock of the bunch... And it was also the only one that generated big gains.</p>
               <p><strong>ExxonMobil (NYSE: XOM)</strong>, <strong>AT&amp;T (NYSE: T)</strong>, and General Electric have done OK since their days at the top of the market. But you'd have performed dramatically better by just buying an index fund.</p>
               <p>Then there's <strong>Citigroup (NYSE: C)</strong>...</p>
@@ -491,8 +406,7 @@ LIST STYLING ends here
               <p>Most folks don't realize this, but biotech stocks more than doubled the return of the tech-heavy Nasdaq Composite Index.</p>
               <p>When biotech booms, it <em>really</em> booms. And that's exactly what happened during the last bull market peak...</p>
               <p>Again, biotech was the biggest winner at the end of the tech bubble. And the final score wasn't even close. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/biotech-vs-nasdaw-vs-sp-500-.png -->
-<img src="img/biotech-vs-nasdaw-vs-sp-500-.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-02.png" alt="chart" class=" imgCenter"></p>
               <p>The Nasdaq soared 215% in the final 18 months of the tech-stock boom, greatly outperforming the S&amp;P 500 Index. But it was nothing compared with the boom in biotech...</p>
               <p><em>The Nasdaq Biotechnology Index soared an astounding 500% in the same 18-month period</em>.</p>
               <p>We're not talking about one lucky microcap winner, either. We're talking about the entire biotech sector. That's 500% in an entire index of stocks.</p>
@@ -538,14 +452,12 @@ LIST STYLING ends here
               <p>The company's cloud business now makes up more than 40% of its revenue. And since 2015, that segment has grown more than 270%, while the overall business has grown just 78%.</p>
               <p>This shift into cloud computing generated nearly $88 billion in revenue over the past year. That massive, fast-growing revenue maintained the company's leading status.</p>
               <p>That growth also changed how investors value the company. We can see that reflected in the company's price-to-earnings (P/E) ratio – the most common valuation measure we look at – over the past 15 years...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/MSFT-ratio.png -->
-<img src="img/MSFT-ratio.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-03.png" alt="chart" class=" imgCenter"></p>
               <p>Microsoft was consistently dirt-cheap in the years following the global financial crisis. The stock traded between 10 times and 15 times earnings from 2008 through 2014.</p>
               <p>Then, the company's valuation took off...</p>
               <p>Its P/E ratio roughly doubled from 2014 through 2018. That's partially because the overall market became more expensive in that period. But that wasn't the driving force for Microsoft...</p>
               <p>You see, in that time, the stock made a clear shift. It went from begin cheaper than the overall market to begin more expensive. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/MSFT-pe-vs-spx-pe.png -->
-<img src="img/MSFT-pe-vs-spx-pe.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-04.png" alt="chart" class=" imgCenter"></p>
               <p>Microsoft was trading at around 10 times earnings at the start of 2013. The overall market was closer to a P/E of 15. But by the end of 2015, those numbers had flipped... Microsoft was trading at a P/E of around 22 compared with the overall market's P/E of 18. And that difference has only gotten more extreme.</p>
               <p>The interesting thing is that 2015 was the year Microsoft's cloud-computing business became a growth engine for its overall business... Cloud computing accounted for 25% of the company's revenue that year. By 2019, the segment's revenue grew to more than 30% of the business. And it's more than 40% today.</p>
               <p>The cloud-computing division injected this stodgy old company with new life. And that fast-growing segment came to dominate its activities.</p>
@@ -569,16 +481,14 @@ LIST STYLING ends here
               <p>Investors, as we all remember, went wild as a result. Just about every Internet-related asset surged higher. And the semiconductor companies were no exception.</p>
               <p>They were the ones creating the chips that made all of these advances possible... so, of course, they boomed as well.</p>
               <p>You might be surprised by just how much semiconductors soared, though. In just less than 18 months, <em>the entire sector skyrocketed more than 600%</em>. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/phlx-semiconductor-Index-vs-Nasdaq-vs-SP-500-1998-2000.png -->
-<img src="img/phlx-semiconductor-Index-vs-Nasdaq-vs-SP-500-1998-2000.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-05.png" alt="chart" class=" imgCenter"></p>
               <p>We think of the dot-com era as the &quot;tech boom.&quot; But even within tech, there were winners and losers...</p>
               <p>Overall, the tech-heavy Nasdaq Composite Index soared 257% over this period. That's an incredible return... more than 5 times better than the S&amp;P 500. But it was nothing compared with the massive boom in semiconductor stocks.</p>
               <p>A 600% rally is what you'd expect from a single risky stock. But it wasn't just one chip stock rising... <em>It was all of them</em>.</p>
               <p>Semiconductors have boomed other times as well. The most recent example happened as the market was rising off its pandemic bottom...</p>
               <p>That was a crazy time. Investors had just suffered an &quot;everything crash.&quot; The onset of COVID-19 threw the economy – and our daily lives – into chaos, all in a matter of weeks. But then, stocks bottomed in March 2020. And the next year and a half was one for the record books...</p>
               <p>That stretch was the most euphoric period in the markets since the dot-com boom. Everything soared. &quot;Stay at home&quot; tech stocks accelerated the mania... And under the hood, the semiconductor sector drove huge gains once again. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/uploads/sites/2/2024/01/011924-TRW-phlx-Semiconductor-Index-vs.-Nasdaq-vs.-SP-500-2020-2021.png -->
-<img src="img/011924-TRW-phlx-Semiconductor-Index-vs.-Nasdaq-vs.-SP-500-2020-2021.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-06.png" alt="chart" class=" imgCenter"></p>
               <p>Semiconductor stocks jumped 222% in less than two years. That was more than double the 105% rise in the S&amp;P 500. It even crushed the 130% gain in the growth-focused Nasdaq.</p>
               <p>Our takeaway, once again, is simple: When a boom gets underway – especially one fueled by new technology – semiconductor stocks soar.</p>
               <p>We saw this in 2023. The sector rallied 73% last year. The rise of AI has fueled those incredible gains. But based on what we've seen throughout history, these booms can last longer than anyone believes possible.</p>
@@ -607,8 +517,7 @@ LIST STYLING ends here
               <p>These folks tend to be less experienced. And that leads them to raise cash in tough times only to pump it back into stocks after a rebound is underway.</p>
               <p>It's important to note that this figure trends higher over time. However, every time it has spiked over the past three decades, a good chunk of that excess cash ended up leaving money market funds... likely heading back into stocks.</p>
               <p>You can see it in the chart below...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/retail-money-market-funds.png -->
-<img src="img/retail-money-market-funds.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-07.png" alt="chart" class=" imgCenter"></p>
               <p>It's no secret why retail investors have poured cash into money market funds. Yields have skyrocketed with rising interest rates. That has turned these funds into a no-risk way to earn a 5%-plus yield – something that wasn't possible at any other point in the past 15 years.</p>
               <p>Still, history shows all this cash won't stay on the sidelines forever. We've seen this story play out multiple times in the past three decades...</p>
               <p>The first time was in the 1990s. Retail money market assets soared from $500 billion to nearly $1 trillion from the end of 1996 to mid-2001. Not all of that money went back into stocks... But more than $300 billion ultimately flowed out of retail money markets over the next few years.</p>
@@ -621,12 +530,10 @@ LIST STYLING ends here
               <p>This data comes from the Investment Company Institute (&quot;ICI&quot;). The ICI is a trade group that collects data on mutual funds and exchange-traded funds (&quot;ETFs&quot;). As part of that goal, it tracks the net fund flows of mutual funds and ETFs for both stocks and bonds... So its data tells us what folks are really doing with their money.</p>
               <p>U.S. stock fund flows turned negative in mid-2022. They mostly stayed negative in 2023. In fact, one of the biggest outflows in recent years happened in May of last year.</p>
               <p>Flows have since turned positive. But it's not like folks are pouring money into stocks at a record pace. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/stock-fund-flows.png -->
-<img src="img/stock-fund-flows.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-08.png" alt="chart" class=" imgCenter"></p>
               <p>Stocks have been soaring, but optimism is still fleeting today. Investors are looking for any reason to sell stocks. They aren't buying hand over fist.</p>
               <p>Meanwhile, they're buying bonds like crazy. Here's what ICI's data says about bond flows over the same period...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/bond-fund-flows.png -->
-<img src="img/bond-fund-flows.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-09.png" alt="chart" class=" imgCenter"></p>
               <p>The story here is the same as money market assets. The bear market of 2022 spooked investors. Then, they realized how much they could earn in fixed-income investments... So they started piling into bonds.</p>
               <p>We've seen positive fund flows into bonds every month in 2024. Folks pushed more than $200 billion into these funds in the first five months of the year.</p>
               <p>These folks signed up for less risk and a guaranteed return. It sounded good. But that choice had one downside... <em>These folks missed out on the boom we've seen in stocks since the start of 2023</em>.</p>
@@ -650,14 +557,12 @@ LIST STYLING ends here
               <p>We can use the advance/decline line to answer that question. This cumulative measure of market breadth tracks the number of stocks that went up minus the number that went down on a daily basis.</p>
               <p>So if 300 stocks moved higher and 200 fell, then the advance/decline line would increase by 100 that day. Over the long term, we get a cumulative measure that shows us when most stocks are rising or falling.</p>
               <p>That's important... because throughout history, the advance/decline line has turned lower <em>before</em> the market started to fall. Here's how it looked during the last Melt Up...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/uploads/sites/2/2024/02/022224-DW-sp-500-index-vs-advance-decline-line.png -->
-<img src="img/022224-DW-sp-500-index-vs-advance-decline-line.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-10.png" alt="chart" class=" imgCenter"></p>
               <p>The advance/decline line peaked in early 1998. That was more than two years before the overall market topped out. And the advance/decline line collapsed during those two years... So despite the boom, the maj`ority of stocks were falling.</p>
               <p>It was a clear sign that the rally wouldn't last long.</p>
               <p>This is how we can tell whether the current bull market is healthy. We can only trust new highs if the advance/decline line is rising, too.</p>
               <p>And that's what's happening right now. Take a look...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/advance-decline.png -->
-<img src="img/advance-decline.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-11.png" alt="chart" class=" imgCenter"></p>
               <p>The advance/decline line broke out to new highs in early 2024. That means most stocks are rising right now.</p>
               <p>Our &quot;patient&quot; – the market – is doing just fine.</p>
               <p>That could change, of course. But for now, stocks are hitting highs in a healthy way. And that's more reason to be bullish.</p>
@@ -735,11 +640,6 @@ LIST STYLING ends here
               <p>But common sense dictates two fundamentals: Taking small losses is much better than taking big losses, and letting your profits run is much better than cutting them off prematurely.</p>
               <p>By following this simple plan, your investment results will start to improve immediately and dramatically.</p>
               <!--end section-->
-              <!-- <div style="text-align: center;">
-            <video-js id="myPlayerId" data-account="5298920694001" data-player="rkj9vsdUM" data-embed="default" controls="controls" data-video-id="6333147424112" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
-            <script type="text/javascript" src="https://players.brightcove.net/5298920694001/rkj9vsdUM_default/index.min.js"></script>
-            <p> </p>
-            <a id="sna_NextLink" class="submit-btn vsl next orderNow store-next-page btn btn-hidden" href="#" target="_top">Get Started</a></div>-->
               <p class="cta-page-footer" id="investor-suite"><a href="#">Click Here</a> to Join the Stansberry Investor Suite or Call (800) 555-0123</p>
             </section>
             <section class="main-body" id="spot-avoid">
@@ -771,8 +671,7 @@ LIST STYLING ends here
                 <p>But I do know the ultimate outcome: smoldering rubble, a lot of finger-pointing (where were the regulators?!), and a lot of tears and empty bank accounts, especially among those who can least afford it.</p>
               </div>
               <p>At the time, bitcoin had a market cap of more than $320 billion. That was just bitcoin, not the other cryptos, like Ethereum and EOS. As you can see in this chart, over the next year, it fell all the way to nearly $3,000.</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/bitcoin.png -->
-<img src="img/bitcoin.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-12.png" alt="chart" class=" imgCenter"></p>
               <p>Despite the strong rally in 2019, untold billions of investors' dollars were incinerated.</p>
               <p>Something similar happened in the case of popular pot stock <strong>Tilray (Nasdaq: TLRY)</strong>. The marijuana sector was red-hot, and Tilray was the hottest stock in it. It had gone absolutely parabolic.</p>
               <p>My cousin, a fireman out in eastern Washington near Yakima – who had almost no investing experience – confessed to me that he owned Tilray.</p>
@@ -788,8 +687,7 @@ LIST STYLING ends here
               <p>At that point, I knew with certainty that the stock had peaked. &quot;Emily, sell it immediately!&quot; I said. And she did, banking a solid profit (on paper).</p>
               <p>I went on television minutes later, right as the stock peaked at $300, and shared this story. I said, &quot;Folks, if the first stock that my daughter – truly the world's most clueless investor – bought was Tilray, based on one of her friend's stock tips, we're at a peak.&quot;</p>
               <p>I predicted that the stock would fall to less than $100 within a month and would be down 90% within a year. Sure enough, that's exactly what it did, as you can see in this chart...</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/tilray.png -->
-<img src="img/tilray.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-13.png" alt="chart" class=" imgCenter"></p>
               <p>Given my success identifying the tops of certain bubbles, you might think that my advice is to buy these stocks or sectors, ride them up, and then sell at the top... or to short them at the top.</p>
               <p>Not at all. I've gotten lucky a few times, but it's just too hard to do this consistently.</p>
               <p><strong>Rather, my advice is to simply to avoid hot sectors and stocks altogether</strong>.</p>
@@ -1115,8 +1013,7 @@ LIST STYLING ends here
               <p>Here's just a quick look of some of the topics our firm has covered in the past 25 years:</p>
               <ul class="custom-list">
                 <li class="bullets">In 1999, we predicted companies like Kodak, Sears, J.C. Penney, America Online, and AT&amp;T were outdated and would eventually become obsolete...</li>
-                <li class="bullets">In April 2000, we wrote, &quot;There is a serious problem with the Internet&quot; and predicted the market would crash. Here's what happened next... <!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/nasdaq-1-index.jpg -->
-<img alt="Chart of the Nasdaq 100 Index from 1994 to 2005, peaking near 4,500 in 2000, with the callout \x22There is a serious problem with the Internet.\x22" src="img/nasdaq-1-index.jpg" class="imgCenter" style="width:100%;  margin-left: -20px;">
+                <li class="bullets">In April 2000, we wrote, &quot;There is a serious problem with the Internet&quot; and predicted the market would crash. Here's what happened next...<img alt="Chart of the Nasdaq 100 Index from 1994 to 2005, peaking near 4,500 in 2000, with the callout &quot;There is a serious problem with the Internet.&quot;" src="img/chart-14.jpg" class="imgCenter" style="width:100%;  margin-left: -20px;">
                 </li>
                 <li class="bullets">In 2001, we predicted the rise of <em>&quot;</em><em>regenerative</em> <em>medicine</em><em>&quot;</em>... predicting scientists would eventually be able to use our own cells to cure us. This is now a thriving $35 billion market.</li>
                 <li class="bullets">In 2003, we said Disney (DIS) would have a &quot;<em>lasting place in America's living room.</em>&quot; You would have more than tripled your money since.</li>
@@ -1172,8 +1069,7 @@ LIST STYLING ends here
               <p>Since you are reading this page, I suspect this all sounds familiar to you.</p>
               <p>But until we opened our doors in 1999, very few options existed for people who looked at the world like this.</p>
               <p>Our founder, Porter Stansberry, discovered that if we simply did the hard work that all investors should do before they invest their capital, plenty of members would find their way to us.</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/porter-speaking.jpg -->
-<img src="img/porter-speaking.jpg" alt="chart" class=" imgCenter" style="max-width:60%;"></p>
+              <p><img src="img/speaking.jpg" alt="chart" class=" imgCenter" style="max-width:60%;"></p>
               <p>Stansberry Research started with a borrowed laptop and a big idea... to serve readers honestly and well.</p>
               <p><strong>We believed that if we worked hard to serve you honestly and well, our hard work would translate into excellent results for you and all our members.</strong></p>
               <p>That's why, within about five years of launching Stansberry Research, we built one of the biggest and most successful independent advisory businesses in the world. It continues to grow... and we recently went public with our parent company in 2021.</p>
@@ -1212,8 +1108,7 @@ LIST STYLING ends here
               <p>Now, that doesn't mean you'll always agree with what we're writing about and recommending, of course.</p>
               <p>Our work is generally contrarian. We often express opinions that are out of the mainstream... and that are liable to upset people. For folks who only like to watch the evening news or never read anything except the <em>New York Times</em> on Sundays, our approach to economics, politics, finance, and health probably isn't appealing.</p>
               <p><strong>Still, our brand promise is that whether you agree with us or not, we will present compelling, honest, and thorough reasons for our views.</strong></p>
-              <!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/alliance-conference.jpg -->
-<img alt="Speaker in a red dress on stage at the 2023 Stansberry Conference and Alliance Meeting, with the audience in the foreground" src="img/alliance-conference.jpg" class="imgCenter" style="max-width:60%;">
+<img alt="Speaker in a red dress on stage at the 2023 Stansberry Conference and Alliance Meeting, with the audience in the foreground" src="img/conference.jpg" class="imgCenter" style="max-width:60%;">
               <p>Some of the biggest names in finance speak at our annual conference for Alliance Members.</p>
               <p>And to me, there's no greater measure of our business than the fact that nearly 20,000 of our members have liked our services so much, they upgraded to receive everything we publish. They happily pay $30,000 for what we called <em>The Alliance Membership.</em></p>
               <p>But we recognize that you're just getting to know us and our work.</p>
@@ -1239,13 +1134,10 @@ LIST STYLING ends here
               <p>You'll likely find this the most fun of your four new products. That's because this breakthrough financial tool allows you to type in any ticker and see how we evaluate the company on a number of metrics.</p>
               <p>We've spent millions of dollars building a system that would analyze any stock &quot;the Stansberry Way&quot;... and the results have been astounding. Put simply, the highest-scoring stocks have pointed to multiple triple-digit winners...</p>
               <p>For example, when backtesting the system, we found it would've scored e.l.f. Beauty as a &quot;Buy&quot; before it rose 715%.</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/beauty-elf.jpg -->
-<img src="img/beauty-elf.jpg" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-15.jpg" alt="chart" class=" imgCenter"></p>
               <p>And the worst-scoring stocks tend to plummet. For example, the software company Inpixon would've received a lowly score of just 3 before it crashed nearly 100%. And dental-care company SmileDirectClub got a score of just 17 before the company went bankrupt.</p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/inpixion-inpx.jpg -->
-<img src="img/inpixion-inpx.jpg" alt="chart" class=" imgCenter"></p>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/smiledirectclub.jpg -->
-<img src="img/smiledirectclub.jpg" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-16.jpg" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/chart-17.jpg" alt="chart" class=" imgCenter"></p>
               <!--third-->
               <p><strong>On the third Friday of the month, you'll receive our market-beating technology research...</strong></p>
               <p>Of the four new services you'll receive, this is where you're likely to see the highest gains. That's because this service is going to tell you about the biggest breakthrough technologies in the world. Here, you're going to get more than just a simple stock recommendation each month. You'll get a full education about the most important innovative and disruptive technologies around the world, including AI, gene therapy, 5G, cryptocurrencies, cybersecurity, and so much more.</p>
@@ -1280,8 +1172,7 @@ LIST STYLING ends here
                 <li class="bullets check"><em>How the U.S. Congress Will Hand Us Our Next 5X Trade</em></li>
                 <li class="bullets check"><em>How to Make 500% in the Coming Years with America's New Money</em></li>
               </ul>
-              <p><!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/report-bundles.png -->
-<img src="img/report-bundles.png" alt="chart" class=" imgCenter"></p>
+              <p><img src="img/report-bundles.png" alt="chart" class=" imgCenter"></p>
               <p>You'll also receive all the new special reports we publish in the future for these products.</p>
               <p>To subscribe to each of these four products individually would cost more than $7,000.</p>
               <p>But as part of this introductory membership, you can get started today for just $995.</p>
@@ -1297,14 +1188,11 @@ LIST STYLING ends here
               </ul>
               <p>The investment results described in these testimonials are not typical. Investing in securities carries a high degree of risk. You may lose some or all of the investment.</p>
               <p>To get started with our risk-free introductory offer, please visit <a href="#">here</a> or call us at <a target="_blank" rel="noopener">(800) 555-0123</a>.</p>
-              <!-- old: https://assets.stansberryresearch.com/mkt/2024/leadgen/branding/DIT/example-bundle.webp -->
 <img src="img/example-bundle.webp" alt="Example Bundle" class="imgCenter">
               <p>I look forward to welcoming you to <em>The Stansberry Investor Suite</em>.</p>
               <p>Regards,</p>
-              <!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/brett-signature.jpg -->
-<img alt="Brett\x27s signature" src="img/brett-signature.jpg" class="signature" style="max-width:150px;">
-              <!-- old: https://assets.stansberryresearch.com/content/reports/2024/TRW/stock-melt-up-blueprint/img/brett-avatar.jpg -->
-<img alt="Portrait of Brett Eversole smiling in a suit and tie" src="img/brett-avatar.jpg" style="max-width:130px;">
+<img alt="Brett&#39;s signature" src="img/signature-3.jpg" class="signature" style="max-width:150px;">
+<img alt="Portrait of Brett Eversole smiling in a suit and tie" src="img/author-avatar.jpg" style="max-width:130px;">
               <p>Brett Aitken<br> Publisher, Stansberry Research</p>
               <p>P.S. <em>Stansberry Investor Suite </em>Members will also get access to the names and ticker symbols of stocks Whitney Tilson is recommending you buy right now to take advantage of the Melt Up. Visit <a href="#">here</a> or call <a target="_blank" rel="noopener">(800) 555-0123</a> to learn more.</p>
               <!--end paste-->
@@ -1350,7 +1238,7 @@ LIST STYLING ends here
             <hr class="static-side-bar-hr-light">
             <p><a href="#suite">Introducing The Stansberry Investor Suite</a></p>
             <hr class="static-side-bar-hr-light">
-            <div class="bottom-logo"><img src="img/stansberry-logo-white.svg" alt="Stansberry Research logo"></div>
+            <div class="bottom-logo"><img src="img/logo-white.svg" alt="Stansberry Research logo"></div>
           </section>
         </div>
       </div>
