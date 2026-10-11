@@ -45,3 +45,27 @@ public/web/razor/img/safety-razor-blades-high-carbon-single-edge.webp
 public/web/razor/img/shaving-balm-cream-grooming-essentials.jpg
 public/web/razor/img/shaving-with-silvertip-badger-brush.jpg
 public/web/razor/img/vintage-barbershop-chair-interior.jpg
+
+# web gallery: source screenshots and working files the gallery doesn't use
+src/assets/web/2024-Stock-Melt-Up-A-Blueprint-SS.png
+src/assets/web/investor-hour-email-ss.png
+src/assets/web/life-coach-design.png
+src/assets/web/oneblade-landing-screenshot-big.png
+src/assets/web/pal-prospectus-screenshot-long.png
+src/assets/web/wedding-head-ss.png
+src/assets/web/widget-langing-page.png
+src/assets/web/blackfriday-email/
+src/assets/web/cryptomeltup2024.com/
+src/assets/web/report/
+src/assets/web/sr-leadgen-aug-2022/
+src/assets/web/stansberryalliance/
+src/assets/web/unsubscribe-page/
+src/assets/web/widget-landing/
+public/web/2024-Stock-Melt-Up-A-Blueprint-SS.png
+public/web/oneblade-landing-screenshot-big.png
+public/web/pal-prospectus-screenshot-long.png
+public/web/wedding-head-ss.png
+public/web/widget-langing-page.png
+
+# older copies of sample sites kept for reference
+src/assets/web/_older-versions/
