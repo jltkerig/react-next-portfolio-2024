@@ -63,7 +63,7 @@ const groups = [
 				link: "/web/weddinginthewoods-2018/www/index.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "Jamie & Michael's Wedding",
 				type: "Personal microsite",
-				tags: ["Bootstrap"],
+				tags: ["Bootstrap", "Wedding"],
 				text: "A site for my own wedding, focused on making event details easy for guests to find and share.",
 				image: wedding2018,
 			},
@@ -135,7 +135,7 @@ const groups = [
 				link: "/email/black-friday/", /*opens the inbox preview instead of the lightbox*/
 				title: "Black Friday",
 				type: "Promotional e-mail",
-				tags: ["Cross-client"],
+				tags: ["Cross-client", "Product advertisement"],
 				text: "A Black Friday campaign template, designed for mobile and tested across several e-mail applications.",
 				image: blackfriday,
 			},
@@ -153,8 +153,8 @@ const groups = [
 				link: "/email/alliance-welcome/", /*opens the inbox preview instead of the lightbox*/
 				title: "Stansberry Alliance Invitation",
 				type: "Invitation e-mail",
-				tags: ["Table layout", "Bulletproof button"],
-				text: "An invitation e-mail with a bulletproof HTML button that renders reliably across e-mail clients.",
+				tags: ["Mobile-responsive", "Table layout"],
+				text: "An invitation e-mail with a fluid, mobile-responsive layout and an HTML button that holds up across e-mail clients.",
 				image: allianceWelcome,
 			},
 		],
