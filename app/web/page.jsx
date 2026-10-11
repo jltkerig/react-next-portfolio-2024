@@ -4,7 +4,7 @@ import gallery from "../graphic/graphic.module.css"; /*shared editorial gallery 
 import styles from "./web.module.css";
 import investingoutlook from "@/src/assets/web/investingoutlook.png";
 import oneblade from "@/src/assets/web/oneblade-landing-screenshot.png";
-import palwebsite from "@/src/assets/web/pal-image.png";
+import palwebsite from "@/src/assets/web/pal-image.jpg";
 import widgetlanding from "@/src/assets/web/widget-landing-page.png";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import lifecoach from "@/src/assets/web/life-coach-head-block-ss.png";

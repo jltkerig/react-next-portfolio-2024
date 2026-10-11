@@ -2,7 +2,7 @@ import Link from "next/link";
 import Contactform from "@/src/components/form.jsx";
 import home from "../home.module.css";
 import seo from "./seo.module.css";
-import palwebsite from "@/src/assets/web/pal-image.png";
+import palwebsite from "@/src/assets/web/pal-image.jpg";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import {jsonLd, townPages, areaLinks, mapEmbed, mapLink} from "./content";
 

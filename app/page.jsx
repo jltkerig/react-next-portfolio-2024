@@ -2,7 +2,7 @@ import Link from "next/link";
 import Contactform from "@/src/components/form.jsx";
 import hero from "./hero.module.css";
 import home from "./home.module.css";
-import palwebsite from "@/src/assets/web/pal-image.png";
+import palwebsite from "@/src/assets/web/pal-image.jpg";
 import icon1 from "@/src/assets/smartphone.svg";
 import icon2 from "@/src/assets/mouse-pointer-2.svg";
 import icon3 from "@/src/assets/globe.svg";

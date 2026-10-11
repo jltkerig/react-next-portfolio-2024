@@ -3,7 +3,7 @@ import PageHeader from "@/src/components/PageHeader";
 import QuoteMark from "@/src/components/QuoteMark";
 import {flowOptions} from "./ContactFlow";
 import greenery from "@/src/assets/greenery.png";
-import palwebsite from "@/src/assets/web/pal-image.png";
+import palwebsite from "@/src/assets/web/pal-image.jpg";
 import phoneIcon from "@/src/assets/smartphone.svg";
 import pointerIcon from "@/src/assets/mouse-pointer-2.svg";
 import globeIcon from "@/src/assets/globe.svg";

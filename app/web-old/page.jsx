@@ -2,7 +2,7 @@ import ImageLightbox from "@/src/components/ImageLightbox";
 import PageHeader from "@/src/components/PageHeader";
 import investingoutlook from "@/src/assets/web/investingoutlook.png";
 import oneblade from "@/src/assets/web/oneblade-landing-screenshot.png";
-import palwebsite from "@/src/assets/web/pal-image.png";
+import palwebsite from "@/src/assets/web/pal-image.jpg";
 import widgetlanding from "@/src/assets/web/widget-landing-page.png";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";

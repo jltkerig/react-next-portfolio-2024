@@ -69,3 +69,7 @@ public/web/widget-langing-page.png
 
 # older copies of sample sites kept for reference
 src/assets/web/_older-versions/
+
+# Alliance thumbnail: the site uses pal-image.jpg
+src/assets/web/pal-image.png
+public/web/pal-image.png
