@@ -151,10 +151,10 @@ const groups = [
 			{
 				id: "alliancewelcome", size: "narrow",
 				link: "/email/alliance-welcome/", /*opens the inbox preview instead of the lightbox*/
-				title: "Alliance Welcome",
-				type: "Welcome e-mail",
+				title: "Stansberry Alliance Invitation",
+				type: "Invitation e-mail",
 				tags: ["Table layout", "Bulletproof button"],
-				text: "A welcome e-mail for new members, with a bulletproof HTML button that renders reliably across e-mail clients.",
+				text: "An invitation e-mail with a bulletproof HTML button that renders reliably across e-mail clients.",
 				image: allianceWelcome,
 			},
 		],

@@ -26,15 +26,15 @@ export const emails = [
 	},
 	{
 		slug: "alliance-welcome", file: "alliance-email.html",
-		title: "Alliance Welcome",
-		type: "Welcome e-mail",
+		title: "Stansberry Alliance Invitation",
+		type: "Invitation e-mail",
 		tags: ["Table layout", "Bulletproof button"],
-		text: "A welcome e-mail for new members, with a bulletproof HTML button that renders reliably across e-mail clients.",
+		text: "An invitation e-mail with a bulletproof HTML button that renders reliably across e-mail clients.",
 		image: allianceWelcome,
-		subject: "Welcome to The Professional Speculator",
+		subject: "Stansberry Alliance Invitation",
 		sender: "Jamie Kerig",
 		address: "jamiekerig@example.com",
-		preview: "Keep this email. It contains your account access to The Professional Speculator...",
+		preview: "Keep this email. It contains your account access to the Stansberry Alliance...",
 	},
 ];
 
