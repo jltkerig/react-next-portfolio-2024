@@ -102,6 +102,7 @@ const groups = [
 		projects: [
 			{
 				id: "oneblade", size: "narrow",
+				link: "/web/razor/index.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "Oneblade",
 				type: "Microsite landing page",
 				tags: ["Lead gen", "Brand match"],

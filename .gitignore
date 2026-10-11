@@ -14,3 +14,34 @@ node_modules/
 
 cd-location.txt
 *.psd
+
+# razor page: images the page doesn't use
+public/web/razor/img/badger-shaving-brush-with-shaving-cream.jpg
+public/web/razor/img/bladesmith-forging-razor-blade.jpeg
+public/web/razor/img/founder-signature-white.png
+public/web/razor/img/holding-oneblade-razor-leather-holster.jpg
+public/web/razor/img/italian-barbershop-interior-wide.jpg
+public/web/razor/img/loading-blade-into-oneblade-razor.jpg
+public/web/razor/img/man-shaving-with-badger-brush-lather.jpg
+public/web/razor/img/man-shaving-with-oneblade-razor-mirror.jpg
+public/web/razor/img/oneblade-core-shaving-kit.jpg
+public/web/razor/img/oneblade-design-workshop-panorama.jpg
+public/web/razor/img/oneblade-logo-white.png
+public/web/razor/img/oneblade-razor-exploded-view.jpg
+public/web/razor/img/oneblade-razor-handle-closeup.jpg
+public/web/razor/img/oneblade-razor-head-front-view.jpg
+public/web/razor/img/oneblade-razor-head-hero-large.png
+public/web/razor/img/oneblade-razor-head-isolated.png
+public/web/razor/img/oneblade-razor-head-pivot-closeup.jpg
+public/web/razor/img/oneblade-razor-head-white-background.png
+public/web/razor/img/orange-checkmark-bullet-large.png
+public/web/razor/img/orange-checkmark-icon.png
+public/web/razor/img/razor-blade-edge-microscope-imperfections.jpg
+public/web/razor/img/razor-blade-edge-microscope-view.jpg
+public/web/razor/img/razor-close-up-shaving-ingrown-hair.jpg
+public/web/razor/img/razor-prototypes-3d-printed-parts-small.jpg
+public/web/razor/img/razor-prototypes-wall-sticky-notes.jpg
+public/web/razor/img/safety-razor-blades-high-carbon-single-edge.webp
+public/web/razor/img/shaving-balm-cream-grooming-essentials.jpg
+public/web/razor/img/shaving-with-silvertip-badger-brush.jpg
+public/web/razor/img/vintage-barbershop-chair-interior.jpg
