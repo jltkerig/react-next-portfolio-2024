@@ -1,0 +1,918 @@
+<!doctype html>
+<!-- Original asset links:
+https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic
+-->
+<!-- Original asset domains: https://ajax.googleapis.com, https://maxcdn.bootstrapcdn.com, https://fast.wistia.net -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<script src="js/jquery.min.js"></script>
+<link href="css/google-fonts-77cc68d0.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+});
+</script>
+
+<script src="js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<style type="text/css">
+
+@font-face {
+    font-family: 'brix';
+    font-style: normal;
+    src: url('https://www.onebladeshave.com/wp-content/themes/divi-child/fonts/2E7643_0_0.eot');
+    src: local('brix'),
+    url('https://www.onebladeshave.com/wp-content/themes/divi-child/fonts/2E7643_0_0.woff') format('woff'), 
+    url('https://www.onebladeshave.com/wp-content/themes/divi-child/fonts/2E7643_0_0.ttf') format('truetype');}
+
+.orange-bar{
+width:100%;
+background-color:#dd3300;
+text-align:center;
+padding:5px; 
+margin: 0px 0 40px 0; 
+font: normal 22px/30px 'Brix', sans-serif;
+color:#FFFFFF;
+-webkit-font-smoothing: antialiased; 
+position:relative;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;}
+
+.orange-bar:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 13px 20px 0;
+border-color: #dd3300 transparent;
+display: block;
+width: 0;
+z-index: 1;
+margin-left: -45px;
+bottom: -13px;
+left: 50%;
+}
+
+ 
+body{border:0;margin:0;  -webkit-font-smoothing: antialiased;}
+.logo{margin-left:-10px;margin: 10px 0;max-height:20px;    position: absolute;}
+.top-header{width:100%;height:40px;background-color:#000000;z-index:3;}
+.top-header p{font-family: 'Montserrat', sans-serif;color:#FFFFFF;font-size:16px;margin:0; padding-top:7px;}
+.main-middle{ width:100%; max-width:1175px; margin:0 auto; padding-top:20px; padding-bottom:20px;}
+.main-middle h1{text-align:left;margin:0; font: bold 54px/62px 'Brix', sans-serif;color:#000000;}
+.main-middle h2{text-align:center;margin:0px;padding:10px 0px 10px 0px; font: bold 36px/40px 'Montserrat', sans-serif;color:#222222;}
+.main-middle h3{text-align:center;margin:40px 0 40px 0;  font: normal 34px/40px 'Brix', sans-serif;color:#000000;}
+.main-middle h4{text-align:center;margin:0 0 10px 0; color:#A90202; text-transform:uppercase;}
+.main-middle h5{text-align:left;margin:0 0 0 0; font: normal 22px 'Brix', sans-serif;color:#000000;}
+.main-middle h6{text-align:left;margin:0 0 0px 0; font: bold 22px/30px 'Brix', sans-serif;color:#dd3300;}
+.main-middle p{text-align:left;font: normal 16px/26px 'Open Sans', sans-serif; color:#222222;}
+.main-middle li{text-align:center;font: normal 16px/26px 'Open Sans', sans-serif; color:#222222;}
+.list-indent{padding-left:18px;}
+.grey-quote-container {width:100%; background-color:#666666;padding: 50px 0 40px 0px;}
+.grey-quote{  font: normal 28px/36px 'Brix', sans-serif;color:#FFF;}
+.grey-quote-sig{  font: bold 28px/36px 'Brix', sans-serif;color:#FFF;padding-top:6px;}
+.signature{text-align:left;margin:0; color:#222222;}
+.quote-symbol {font: bold 70px/30px Georgia, serif;color:#FFF;}
+.img-quote{ font: normal 14px/18px 'Brix', sans-serif;margin: 10px auto;}
+.black-bar{width:100%; background-color:#000; padding-top:20px; padding-bottom:20px;
+    background-image: url('https://static.cloudsna.com/store/PROD/images/oneblade/imgs/RGB_OneBlade_Study_04_rotated_CROP.jpg');
+    background-repeat: no-repeat;
+    background-size: 380px;
+    background-position: left 150px bottom -70px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+	}
+.orange-text{text-align:left;font: normal 20px/28px 'Brix', sans-serif; color:#dd3300;}
+.orange-text-2{color:#dd3300;}
+.grey-quote-box { background:#e4e4e4;border: 1px solid #cccccc;padding:20px 20px;max-width:530px;margin:35px auto;
+font: normal 14px/24px 'Open Sans', sans-serif;} 
+.black-bar-middle {max-width:1175px;margin:0 auto 50px;}
+.black-bar p{ font: normal 16px/26px 'Open Sans', sans-serif;color:#FFF;}
+.black-bar h1{ text-align:center;color:#FFF;margin:0; font: normal 34px/40px 'Brix', sans-serif;margin-bottom:40px;}
+.black-bar li{ font: normal 16px/26px 'Open Sans', sans-serif;color:#FFF;color:#FFF;}
+.quote-wrapper{width:100%;}
+.grey-solid{width:100%;background-color:#eeeeee;-webkit-border-radius: 0px;position:relative;
+-moz-border-radius: 0px;
+border-radius: 0px;}
+
+.grey-solid:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 24px 25px 0;
+border-color: #eeeeee transparent;
+display: block;
+width: 0;
+z-index: 1;
+margin-left: -45px;
+bottom: -24px;
+left: 50%;
+}
+
+
+.bottom-footer{
+width:100%;height:55px;background-color:#262626;margin:0;padding-top:20px;z-index:2;color:#999999;font: normal 14px/22px 'Brix', sans-serif;
+}
+.bottom-footer a{color:#adadad;}
+
+.portrait-right{float:right;width:150px;margin-top:45px;max-width:135px;max-height:135px;}
+.portrait-left{float:left;width:150px;max-width:135px;max-height:135px;}
+.money-back-box {padding:20px;
+background-color:#e4e4e4; 
+border: 1px solid #cccccc; 
+max-width:530px; 
+margin:40px auto;
+font: normal 14px/24px 'Open Sans', sans-serif; } 
+.clearfix:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+line-height:0;
+visibility:hidden;
+}
+.img-side{float:right;width:36%;}
+.background-razor {
+	width:100%;
+	background-image: url('https://static.cloudsna.com/store/PROD/images/oneblade/imgs/RGB_OneBlade_Study_03_rev2_ISOLATED_Lighter.png');
+    background-repeat: no-repeat;
+    background-attachment: relative;
+	background-size: 340px;
+    background-position: right 150px bottom -22px;
+	padding-bottom:50px;
+	padding-top:40px;}
+.grey-tri-box{background-color:#eeeeee;margin:10px;width:342px;padding:20px;}
+.grey-tri-box h4{font: bold 18px/24px 'Brix', sans-serif;padding:0;margin-top:0;}
+.grey-tri-box p{font: normal 16px/24px 'Brix', sans-serif;padding:0;margin:0;}
+.try-it-sq {border: 1px solid #808080; padding:5px;}
+
+.grey-gradient{padding-bottom:50px;
+width:100%;
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(246,246,246,1) 73%, rgba(238,238,238,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(22%, rgba(255,255,255,1)), color-stop(73%, rgba(246,246,246,1)), color-stop(100%, rgba(238,238,238,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(246,246,246,1) 73%, rgba(238,238,238,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(246,246,246,1) 73%, rgba(238,238,238,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(246,246,246,1) 73%, rgba(238,238,238,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(246,246,246,1) 73%, rgba(238,238,238,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0 );}
+
+.header-links ul{list-style:none;margin:0; padding:0;}
+.header-links li{float:left;padding-left:25px;color:#797979;
+font: bold 14px 'Brix', sans-serif;list-style:none;    margin-top: -3px;}
+.header-links a{color:#797979;text-decoration:none;}
+.checkmark li{
+  font:normal 20px/36px 'Brix', sans-serif;
+  background: url(https://static.cloudsna.com/store/PROD/images/oneblade/imgs/bloodorange-checkmark-2.png) no-repeat left top;
+  padding: 0px 0px 3px 23px;
+  /* reset styles (optional): */
+  list-style: none;
+  margin: 0;}
+hr.style-lightgrey {
+border: 0;
+height: 0;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+text-align:left;
+}
+.disclosures{font: normal 12px/20px 'Open Sans', sans-serif; color:#00000;text-align:left;margin-bottom:50px;max-width:1175px;
+}
+
+.orderNowBox{padding:10px; }
+a {color:#dd3300;}
+a.orderNow {color:#FFF;} 
+a.orderNow:link {
+color:#FFF;
+font:bold 32px 'Brix', sans-serif; color:#FFFFFF;
+background-color:#dd3300;
+text-decoration: none;
+padding: 15px 80px 15px 80px;
+border-bottom: 4px solid #dd3300;} 
+a.orderNow:hover {color:#FFFFFF;
+text-decoration: underline;
+background-color:#a90202;
+border-bottom: 4px solid #a90202;}
+a.orderNow:active {color:#FFFFFF;
+text-decoration: underline;
+background-color:#880202;
+border-bottom: 4px solid #880202;}
+
+
+a.disclosures:link {
+font:normal 11px/18px 'Montserrat', sans-serif;color:#006bb5;
+text-decoration: none;}
+a.disclosures:hover {
+text-decoration: underline;}
+a.disclosures:active {
+text-decoration: underline;}
+.center-div{text-align:center;margin:0 auto;}
+
+#dropdownMenu1 {background-color: #000000; color: #797979; border:1px solid #808080; border-radius: 0px;     padding: 4px 8px;}
+.mobile-menu{padding-top:4px;}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #00000;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+@media (max-width:1199px){
+	.logo{padding-left:3px; margin: 10px 10px;}
+	.background-razor{background-image:none;}
+	.black-bar{background-image:none;}
+}
+@media (min-width: 769px){
+	
+.main-middle {padding: 0 10px;}
+.disclosures{padding: 0 10px;}
+}
+	
+@media (max-width: 768px) {
+	.bottom-footer{padding-top:7px;}
+.black-bar-middle{padding:0 10px;}
+.main-middle p {
+    padding: 0px 10px;
+	   }
+.main-middle {padding: 0 10px;}
+.disclosures{padding: 0 10px;}
+.orange-bar:after 
+{
+content: '';
+margin-left: -25px;
+bottom: -13px;
+left: 50%;
+}
+.grey-solid:after 
+{
+content: '';
+margin-left: -5px;
+bottom: -24px;
+left: 50%;
+}
+}
+@media (max-width: 500px){
+.blue-bold-header:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+border-color: #003766 transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -15px;
+left: 160px;}
+.main-middle-text{width:90%;padding-right: 10px;padding-left: 10px;}
+
+.grey-quote{float: none;
+    width: 100%;
+	margin-bottom:20px;}
+.img-side{float: none;
+    width: 100%;}
+
+.no-float-img{float:none; margin:0 auto;padding-left: 55px;}
+a.orderNow:link {}
+}
+</style>
+<link href="css/bootstrap-mod.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+<header>
+
+<div class="top-header navbar-fixed-top"> <div class="row">
+<div class="main-middle">
+<div class="col-lg-5 col-md-4 col-sm-9 col-xs-9">
+
+<img src="https://www.onebladeshave.com/wp-content/uploads/2015/09/logo_small_registered_3.png" alt="OneBlade" class="logo"></div>
+<div class="col-lg-7 col-md-7 col-sm-2 col-xs-2" style="padding:0;">
+
+<ul class="header-links hidden-xs hidden-sm">
+  <li><a class="" href="#therazor">The Razor</a></li>
+  <li><a class="" href="#thestory">The Story</a></li>
+  <li><a class="" href="#testimonials">Testimonials</a></li>
+  <li><a class="" href="#fathersday">Father's Day Special</a></li>
+  <li><a class="try-it-sq" href="#buynow">BUY NOW</a></li>
+</ul>
+
+<div class="hidden-lg hidden-md pull-right mobile-menu">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" aria-label="Right Align">
+    Navigation
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu nav nav-tabs" aria-labelledby="dropdownMenu1">
+    <li><a class="" href="#therazor">The Razor</a></li>
+    <li><a class="" href="#testimonials">Testimonials</a></li>
+    <li><a class="" href="#fathersday">Father's Day Special</a></li>
+    <li><a class="try-it-sq" href="#buynow">BUY NOW</a></li>
+  </ul>
+</div>
+
+<!--<nav class="hidden-lg hidden-md" id="nav" role="navigation">
+    <a href="#nav" title="Show navigation">Show navigation</a>
+    <a href="#" title="Hide navigation">Hide navigation</a>
+    <ul>
+        <li>
+            Menu
+            <ul>
+                <li><a href="/">Design</a></li>
+                <li><a href="/">HTML</a></li>
+                <li><a href="/">CSS</a></li>
+                <li><a href="/">JavaScript</a></li>
+            </ul>
+        </li></ul>-->
+
+</div>
+
+</div>
+</div>
+</div>
+</header>
+
+<div class="background-razor">
+<div class="main-middle">
+<h1 style="margin-bottom:20px;margin-top: 40px;">Introducing... &quot;The Revolution&quot;<br>
+  In Men's Shaving
+</h1>
+<h5>Special Father’s Day Kit Now Available!</h5>
+<h6 id="therazor" >Expires Monday, June 13th at midnight</h6>
+</div>
+</div>
+
+
+<div class="orange-bar">
+Get the details and read the full story below</div>
+
+
+<div class="main-middle" style="margin-bottom:50px;">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<p>You’ve probably heard the rumors...</p>
+<p>Shaving enthusiasts from around the world have been spending hundreds of dollars on a new razor. A razor unlike any that’s ever been built before. Not a cartridge razor. And not a standard safety razor (with a double sided blade).</p>
+<p>OneBlade was something no one saw coming. That no one had ever seen before. <strong>A razor made from the highest quality materials sourced from around the world.</strong> German stainless steel. The finest Japanese carbon steel blade. And highly advanced technology combined to do something no other razor has ever done before.</p>
+</div>
+<div class="col-lg-4"><div id="videoIframeContainer"><iframe src="//fast.wistia.net/embed/iframe/hrhbyeupcp?seo=false&videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="530" height="300"></iframe>
+<script src="js/E-v1.js" async></script></div></div>
+</div>
+
+</div>
+
+
+<div class="black-bar"><div class="black-bar-middle">
+<h1 style="margin-top:30px;">Straight Razor Quality with the Convenience of a Cartridge Razor</h1>
+<div class="row">
+<div class="col-lg-4">&nbsp;</div>
+<div class="col-lg-8"><p>OneBlade uses a Teflon coated spring and a revolutionary kind of floating head, that, like a cartridge razor, pivots for safety and ease of use. But, unlike any cartridge razor on the market, OneBlade delivers the kind of precise and utterly close shave that you can only get from using one, mind-blowingly sharp blade.
+</p>
+<ul class="checkmark" style="padding:0;">
+<li class="checkmark"><em>High grade German stainless steel</em></li>
+<li class="checkmark"><em>Hand-polished finish</em></li>
+<li class="checkmark"><em>Military-grade PVD coating for excellent corrosion resistance, cleanability, and feel</em></li>
+<li class="checkmark"><em>Optimal blade exposure and angle</em></li>
+<li class="checkmark"><em>Machined to +/– 0.05 mm tolerance</em></li>
+<li class="checkmark"><em>Quick-load blade system</em></li>
+<li class="checkmark"><em>Teflon coated stainless steel spring</em></li>
+</ul></div></div>
+</div></div>
+
+
+<div class="row" id="thestory">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6">
+<div class="main-middle" style="margin-bottom:20px;" >
+<h5 style="margin-top:40px;margin-bottom:30px;text-align:center;" ><strong>... An Open Letter from Our Founder:</strong></h5>
+<p>A few years back, I traveled with some friends to Italy. </p>
+<p>We were in San Marino... a tiny city-state near Rimini, along the Adriatic coast.</p>
+<p>A few days into our trip, one of my friends suggested we go to a traditional Italian barbershop, "To get a real straight razor shave."</p>
+<p>I'd never been to such a place before...</p>
+<p>And I wasn't crazy about the idea.</p>
+<p>I hated shaving. I hated everything about it—the plastic razors... the clogging... the cuts... the in-grown hairs.</p>
+<p>But I'm glad I went that day—because the experience changed my life.</p>
+<p>Before that day, I had no idea what a "real" shave felt like... no idea that my face could feel that smooth, that clean... or how a shave could last so long.</p>
+<p>I remember so much about that experience...</p>
+<p>The hot towels. The comfortable chair. The pleasant sound of the beautiful Italian language drifting around the barbershop. The stunning scenes of the Adriatic Coast nearby.</p>
+<p>But one thing stood out to me above all else.</p>
+<p>The thing I remember most about that day was the blade the barber used. Here's a photo that was taken of me that day in San Marino:</p>
+<p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/Porter_Shave_Italy.jpg" alt="Porter Italy Shave" style="max-width:500px;width:100%;padding:10px;"></center></p>
+<p>
+  All I could feel was the cool steel on my skin. Instead of feeling this shave, I could really only <em>hear</em> it. Cool pressure, followed by hundreds of tiny <em>clicks</em>. Dozens at a time. With every pass, dozens of hairs fell like dominoes being pushed over – effortless.</p>
+<p>I'd never felt anything like it.</p>
+<p>The blade was so sharp it felt like ice sliding down&nbsp;my skin. I couldn't feel my beard as it was cut. There was no pulling on my skin from the blade–no movement at all.</p>
+<p>Just the barber positioning my face. A slight movement here. A nudge there. All so the blade could pass true.</p>
+<p>Not only was there no hair of any kind, my skin seemed reinvigorated and clean–so clean that it felt like it had never actually been clean before in my whole life.</p>
+<p>This wasn't shaving–at least not the kind of shaving I'd known before.</p>
+<p>This was a supreme luxury experience, the kind of indulgence I didn't know men could experience.</p>
+<p>I don't want to sound too dramatic, but the experience really did change my life. It was the highlight of my trip.</p>
+<p>When I got back to the States, I found the best place to get a "real" shave in Manhattan, New Orleans, and other places around the country...</p>
+<p>And I couldn't stop thinking about the fact that there had to be a better way for me to shave each day.</p>
+<p>This is the story of how I discovered a way to get the world's greatest "perfect shave"... the kind you could only get in a real barbershop... at home... </p>
+<p>And exclusively until Monday, June 13th, how you can try this revolutionary new way of shaving in your own home, or give it as an impressive Father's Day gift, risk-free.</p>
+<h3 align="center">You've Been Conned<br>
+  for Many Years...</h3>
+<p>I mean... think about it...</p>
+<p>If you're anything like me, you've been shaving for your entire life with expensive, multi-bladed, plastic cartridge razors made by Gillette, Schick, or some of the newer knock-off companies around today.</p>
+<p>As a result, I thought it was impossible for me to get a good, close shave – one that would last – without significant amounts of skin irritation (including painful ingrown hairs).</p>
+<p>I hated shaving and did whatever I could to avoid it, including growing a short beard and using a beard trimmer to maintain it.</p>
+<p>I've discovered that most of my friends who don't shave regularly have the exact same problems I do. They get significant skin irritation from cartridge razors.</p>
+<p>And it's no mystery why...</p>
+<p>As I started doing some research, I found that one of the most important variables in shaving is the space between the leading edge of the razor and the guard protecting it-what we refer to as the blade gap.</p>
+<p>See the image below...</p>
+  <p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/razor_image_02.jpg" alt="Razor Draft" style="max-width:800px;width:100%;padding:10px;"></center></p>
+  <p>Too much space meant that cutting yourself was inevitable. Too little space meant that it was nearly impossible to cut anything.</p>
+<p>The next time you look at a cartridge razor, notice how much more space is in front of the first blade in the cartridge compared with the spacing between each additional blade. And when I spoke with design engineers about how these things really work, my findings were quite shocking.</p>
+<p>It turns out, in the cartridge systems we tested, the first blade is the one doing the actual cutting.</p>
+<p>So... what are the other blades really for?</p>
+<p>Well, in 1998, the designers of the world's leading multi-bladed cartridge razor told&nbsp;<em>The New Yorker...</em></p>
+<p>"We knew that if you had more blades, you'd be able to cut more hair. But we found that what you gained in efficiency you lost in comfort, irritating the skin too much in exchange for the closeness."</p>
+<p>So they knew skin irritation was going to be a problem. But did they stop trying to add blades or other forms of complexity?</p>
+<p>Nope.</p>
+<p>They kept on going. And they didn't stop by adding two or three blades. The marketing departments of the major cartridge makers realized people would pay up for more blades.</p>
+<p>So they kept adding more. The consumer didn't seem to care about the&nbsp;<em>quality</em>&nbsp;of the blades, only the&nbsp;<em>number </em>of blades. And so "razor wars" began – three blades, four blades, five blades, vibrating blades, blades on spinning balls, etc.</p>
+<p>But all of these razors are plastic. And they all use some variety of cartridge razors with cheap steel blades.</p>
+<p>And the reality is, multiple dull blades little thicker than tin foil don't lead to a high-quality shave.</p>
+<p>These cartridge devices aren't popular because they work so well...</p>
+<p>They're popular because billions of dollars are spent advertising this junk... and because most people don't know there are any other options.</p>
+<p>And believe me... the guys hawking this stuff hope you NEVER, ever get a real shave with a world-class blade.</p>
+<p>A great blade makes all the difference in the world.</p>
+<p>There's no other way to understand what you're missing when you use a mass-produced, plastic encased, multi-bladed "toy."</p>
+<p>The irony is, in most areas of our lives, men normally enjoy acquiring the right tools and developing skills.</p>
+<p>Walk into any guy's garage and you're sure to find dozens of high-quality steel tools.</p>
+<p>Why, I wondered, has the skill of shaving – and the pleasure of doing it right – been abandoned?</p>
+<p>And with that question... I began a quest to find the perfect shave and the perfect razor.</p>
+<p>I know this might sound like a crazy idea to you... but I can't help it... this is simply how I do things. It's how I see the world.</p>
+<p>Just ask my friends and family...</p>
+<p>* They'll tell you about how I got fired from my job in the financial publishing business... and how I vowed to build the best and biggest research firm in the industry. I've done just that over the past decade, because I thought: Why shouldn't individual investors have access to Wall Street- quality research, without any conflicts of interest?</p>
+<p>* Or they'll tell you about how I got into deep- sea fishing, and within a few years, I was employing a full-time crew of three... and was entered into the world's largest billfish tournament.</p>
+<p>I can't explain my motivations exactly, but I can't help myself. When I look around, I don't see the same world that most people do.</p>
+<p><em>I see the world as what could be</em>. I believe there <em>should</em>&nbsp;be a truly world-class tool for men to use every morning for a great shave. I know I'd love a product like that.</p>
+<p>And when I latch onto an idea like this, there's simply no "going halfway." I go all in... and spare no expense.</p>
+<p>So here's what I did... </p>
+<h3 align="center"><strong>My $1 Million Dollar Proposition</strong></h3>
+
+<p>For many years, no matter what brand of razor I bought, they were always made from cheap plastic.</p>
+<p>They all used ultra-cheap, mass-produced cartridge razors.</p>
+<p>To me, these blades seemed like little more than sharpened tinfoil. And what I later learned is that when you have a cartridge with 5 blades, most of them do absolutely nothing!</p>
+<p>Even worse, the blades that do the actual work became dull almost immediately.</p>
+<p>And worst of all... they are VERY expensive.</p>
+<p>I'm almost certain you know what I mean. But you may not know <em>why</em> cartridge-shaving systems are problematic. </p>
+<p>Mike Sandoval is a shaving expert who runs the website Shaving101. He describes the core failure of all cartridge razor systems this way...</p>
+<p class="indented"><strong>"The cartridge razor system is appealing to many men because it is advertised to be modern and high performing... The problem is that the blades of a cartridge are close together with extremely small spacing between each cutting edge. The razor is unable to cleanly cut hair without requiring multiple passes along your skin, catching and pulling long stubble, as well as constantly clogging during the shave."</strong></p>
+<p>Thus began my quest...</p>
+<p>You might think this all is a bit foolish... but I wanted something better. I wanted the quality of a straight-razor shave, with the safety and convenience of a cartridge razor.</p>
+<p>So I cobbled together some money from friends and colleagues, and decided to spend $1 million in this pursuit.</p>
+<p>I decided to build a better razor – vastly better than what you can buy anywhere else right now.</p>
+<p>(And in just a moment, I'll show you how you can try it or gift it, risk-free.)</p>
+<p>But first, here's what I learned...</p>
+<h3 align="center">The World's Most<br>
+  Expensive Razor?</h3>
+
+<p>First, my business partner and I consulted with two of the top barbers in America—one Italian and one Irish.</p>
+<p>One of these guys runs what many consider the best barbershop in Manhattan... the other runs what is probably the best shop in New Orleans.</p>
+<p>Then, we interviewed 30 renowned design firms from around the world, looking for the right mix of artists and engineers. We were determined to fundamentally redesign the razor handle – a tool that has remained essentially unchanged for more than 100 years.</p>
+<p>Ultimately we settled on a Brooklyn-based team run by an artist and several design engineers, to essentially spend an entire year and hundreds of thousands of dollars testing everything imaginable in the shaving world.</p>
+<p>As our lead designer, Mark Prommel, says: "It was an interesting, no-holds-barred approach. We went about it this way. We said: "We don't know what it will cost to deliver the world's best shave... the cost could be $100, $300, $500, or much more to build the world's best razor... but whatever it costs, it'll cost that for a reason.'"</p>
+<p>And that's exactly what I asked for.</p>
+<p>I told these guys look... forget about the cost... just figure out a way to deliver the world's best shave.</p>
+<p>But... and this was just as important...</p>
+<p>I insisted that it had to be something I could execute in my own home, and learn how to do very quickly, in just a few tries.</p>
+<p>So Prommel and his team went to work.</p>
+<p>They bought dozens of existing razors, and took them all apart. They shaved every other day in their Brooklyn offices, and spilled real blood in pursuit of my eccentric request.</p>
+<p align="center">They used 3D printers to create dozens of prototypes. You should see these things... they literally "printed" dozens and dozens of plastic models, and outfitted them with all kinds of blade configurations. Here's a small sampling of the prototypes we tried.</p>
+ <p> <center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/OneBlade_Prototypes.jpg" alt="OneBlade Prototypes" style="max-width:700px;width:100%;padding:10px;"></center></p>
+ <p>
+  In all we tested more than 1,000 variations of blade angle, blade gap, head size, symmetry, flexibility, blade exposure, pivot, grip, and more.</p>
+<p>This painstaking process took nearly a year.</p>
+<p>What did we find?</p>
+<p>Well, after a year of research, we learned that there are essentially 3 "secret ingredients," critical in delivering a great shave.</p>
+<p>I'm going to share our secrets right here. Do you think the biggest players in the shaving world would ever share their trade secrets?</p>
+<p>But as you'll see, my approach to everything about shaving is the polar opposite of these big corporate brands... so here goes:</p>
+<p>SECRET #1. The angle of attack.</p>
+<p>The angle of the blade when it hits your skin is critical. Too steep, and it'll cut your face. Too shallow, and it won't cut hair effectively. We ran more than 100 tests simply to get the blade angle exactly right. See the image below. WE discovered an optimal angle of 31.3 degrees.</p>
+ <p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/razor_image_02.jpg" alt="Razor Draft 2" style="max-width:700px;width:100%;padding:10px;"></center></p>
+ <h5> SECRET #2: Exposure</h5>
+<p>The second critical component of any razor is the exposure of the blade. In other words, how much of the blade actually presses against your face.</p>
+<p>Again, too much can be VERY dangerous... but you need just the right amount to cut effectively. And again, we ran hundreds of tests to get the optimal exposure, which we found to be 0.15 millimeters.</p>
+<h5>SECRET #3. Gap</h5>
+<p>The third critical feature on any razor is the blade gap.</p>
+<p>In other words, the chasm between the blade and the body of the razor. It's a matter of painstaking trial and error to get exactly the right gap, so skin and hair fill the gap, in just the right amount, before passing the blade.</p>
+<p>We found the exact right gap to be 0.65 millimeters. </p>
+<p>With all of these metrics... angle, exposure, and blade gap, our designers made tiny tweaks... down to 4/1000th of an inch... until we settled on the perfect formula.</p>
+<p>These numbers are the secrets for delivering an incredible shave. And what we found is that all it takes is one single, fantastic blade... rather than three... or four... or even five cheap ones.</p>
+<p>Along the way we learned some other important secrets too.</p>
+<p>For example...</p>
+<p>We learned that some innovations in cartridge razors are actually quite good–and make a big difference.</p>
+<p>One of these innovations is the "pivoting head." This does, in fact, help give you a better, closer, and safer shave.</p>
+<p>Although some shaving enthusiasts scoff at this idea, we found in test after test after test that a pivoting head helps deliver a world-class shave—because it helps you maintain the ideal angle, with hardly any experience or practice.</p>
+<p>The thing you have to keep in mind is: We had no biases going into this search for the world's perfect shave.</p>
+<p>We just wanted to figure out what works and what doesn't.</p>
+<p>For example, even though it adds a lot to the cost, sophistication, and intricacy of the design... we designed a razor with a pivoting head.</p>
+<p>Inside the handle, there's a tiny joint between the razor head (which holds the blade) and the handle, which enables just the right amount of pivot.</p>
+<p>There's also a tiny Teflon coated, stainless steel spring that regulates this joint and thus allows the head to "float" on your skin. This controls the amount of pressure you can apply against your face when you're shaving.</p>
+<p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/razor_image_04.jpg" alt="Image-4" style="max-width:700px;width:100%;padding:10px;"></center></p>
+<p>Again, we approached this project with no preconceived notions... and no biases. We were simply in pursuit of the world's best shave... something the average guy like you or me could do in our own homes, without a lot of practice.</p>
+<p>So while our design engineers were testing thousands of prototypes, making tweaks down to 1/4,000th of an inch... I sent my business partner, Tod Barrett, around the globe in search for the world's best shaving blade.</p>
+<p>And "search" is really an understatement here... as you'll see in just a second...</p>
+<h3 align="center"><strong>The Leading Edge Problem</strong></h3>
+
+<p>Tod literally traveled to the ends of the earth in search of the absolute world's best shaving blade to fit our razor.</p>
+<p>He met with manufacturers of meat processing blades, medical scalpels, food processing blades, and more. He traveled all around the globe: The U.S.... Germany... China... Japan.</p>
+<p>We investigated and tested blades of various materials... from steel (stainless and high carbon alloys), to ceramic, tungsten carbide, and amorphous metals. One of our early ideas was to perfect a ceramic blade, which in theory would last for 30 days.</p>
+<p>We tested various forms of blade coatings, from Teflon, Ceramic, and Boron carbides.</p>
+<p>We knew that to deliver the world's finest shave, we would need the highest-quality blade available anywhere.</p>
+<p>We knew manufacturing our own blades would be expensive. But I didn't care about the expense. The real issue we ran into is what we now call the "leading edge" problem.</p>
+<p>It turns out that sharpness is not the key to a world-class shave. Of course, the edge needs to be sharp... really sharp.</p>
+<p>But more importantly,&nbsp;<em>to deliver a great shave, a blade needs to be flawless</em>. The leading edge has to be so smooth that you can only see it with a microscope.</p>
+<p>Look at these two pictures from one of our manufacturing partners.</p>
+<p>These are actual images of the leading edges from two of the blades we used in our research and development program...</p>
+<p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/blade_of_competitor.jpg" alt="Blade of competitor" style="max-width:700px;width:100%;padding:10px;">
+<img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/blade_feather_SS_SE.jpg" alt="Feather SS SE Blade" style="max-width:700px;width:100%;padding:10px;"></center></p>
+<p>
+  You'll notice that one of these blades has an edge with a perfectly uniform appearance... while the other has hundreds of "striations," or minor imperfections.</p>
+<p>These tiny imperfections–far too small to see with the naked eye–cause the blade to "burn" against the skin.</p>
+<p>It turns out that one of the key secrets to a really comfortable shave is a PERFECT leading edge.</p>
+<p>And few people around the world can deliver perfect leading edges in volume.</p>
+<p>Sure, you can "strop" a blade–that's the official term for polishing and sharpening a blade... as you'll see many barbers and chefs do. But it's not feasible to hand strop thousands of blades each week.</p>
+<p>We quickly realized we didn't need to build our own blades, because one small company already makes perfect blades.</p>
+<p>Ask any barber or shaving expert anywhere...</p>
+<p>Everyone who knows shaving will tell you the world's best shaving blades come from a little-known company in Japan, called Feather.</p>
+<p>My first straight-razor shave in Italy?</p>
+<p>The barber was using a Feather blade. These razors are made with super-high-quality Japanese steel. They have a proprietary finishing process that leaves their blades with a perfect leading edge – the best we found in our research.</p>
+<p>Feather has been around for 80 years. They basically do one thing: Make the world's best blades for shaving and surgical equipment.</p>
+<p>And best of all, Feather makes a single-edge blade just like the one we wanted for our new razor.</p>
+<p>So we contracted with Feather to deliver a single-edge blade that fits perfectly in our new razor.</p>
+<p>Remember–Our goal is not to build blades. We just want to deliver the world's best shave, period.</p>
+<p>Made of high-carbon stainless steel and coated in platinum, our Japanese Feather blades are scary sharp yet super comfortable.</p>
+<p>And after pairing these world-class blades with our radical new razor design, built to our exacting specifications...</p>
+<p>I'm happy to say I couldn't be more pleased with the results.</p>
+<p>Introducing...</p>
+<h5><strong>ONEBLADE</strong>.</h5>
+<p>Our state-of-the-art razor that safely delivers a barbershop-quality shave... in the comfort of your own home.</p>
+
+<p>After a painstaking, yearlong, $1 million process of trial and error, we developed a razor that will give you the cleanest, closest shave of your life, while also making it nearly impossible to cut yourself.</p>
+<p><em>Our razor was designed with precisely the amount of pressure needed to cut your beard and not your face</em>.</p>
+<p>Never too much, never too little... Just like the world's best barbers.</p>
+<p>It's the most precise, most carefully designed shaving instrument on Earth.</p>
+<p>Because we have such exacting specifications, to get the blade angle, exposure, and gap precisely right, every OneBlade is built with 316L-grade, German stainless steel – the best in the world. </p>
+<p>The manufacturing process includes cutting-edge metal injection molding ("MIM") technology, which allows for extremely precise designs, while still maintaining the unbelievable strength of forged steel.</p>
+<p>These razors are then treated with a military-grade physical vapor deposition ("PVD") coating, which makes them virtually indestructible and permanently resistant to corrosion. (That's why they're guaranteed forever.)</p>
+<p>It attaches to a precisely machined (to +/- 0.02mm tolerance) pivoting head. Teflon-coated steel springs allow it to conform to your face.</p>
+<p>To our knowledge, there's no other razor on Earth manufactured this way, with this process, and with such care and precision.</p>
+<p>You'll see and feel the difference the moment you pick up a OneBlade razor. And that's why each razor we produce is hand-polished, individually numbered, and as I said, guaranteed for life.</p>
+<p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/OneBlade_social_image.jpg" style="max-width:700px;width:100%;padding:10px;"></center></p>
+
+<p>A OneBlade razor will never rust, break, or see a drop-off in efficiency.</p>
+<p>We guarantee it... for life.</p>
+<p>You'll notice some other unique innovations the first time you try a OneBlade shave. For example...</p>
+<p><strong>* It's super-easy to clean while shaving.</strong>&nbsp;Hair-clogged razors are dangerous and ineffective, and it's always driven me crazy, how quickly cartridge razors get clogged. You'll find it nearly impossible to clog a OneBlade razor.</p>
+<p><strong>* It's incredibly simple to load new razor blades.</strong>&nbsp;No screws. No extra tools required. No danger of cutting yourself when changing blades. New blades simply snap into place with an audible click.</p>
+<p><strong>* It feels fantastic in your hand (and looks amazing on your bathroom counter).</strong></p>
+<p>  When we settled on the specification for the perfect shave, we also insisted on beautiful design. If you're a man who appreciates competency... and tools that not only look great, but also do a fantastic job, you'll absolutely love OneBlade.</p>
+<p>Of course, the big test for OneBlade razors started a few months ago, when we first introduced them to the market...</p>
+</div>
+</div></div>
+<div class="grey-quote-container" style="margin-top:40px;margin-bottom:40px;">
+<div class="row"><div class="col-lg-12">
+<center>
+<div class="quote-symbol"  >"</div>
+<div class="grey-quote"><em>"I've tried 'em all, and this is the one, The Messiah of razors.&quot; </em></div>
+<div class="grey-quote-sig"  ><strong>— Bob W.</strong></div></center>
+</div></div></div>
+
+<div class="grey-gradient" id="testimonials">
+<div class="row">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6">
+<div class="main-middle" style="margin-bottom:20px;">
+<h3>Test Results... Revealed:</h3>
+<p>The first responses we heard were from regular folks, early adopters, who took a chance on a radically new way to shave.</p>
+<p>The feedback poured in very quickly...</p>
+<p><strong>Neil D. said:</strong> &quot;This baby does not just cut whiskers–it spirits them away like magic. No pull, no bite, no drag, no nuthin'. It was like re-shaving an already shaved face–not plowing through 3 days of heavy beard.&quot;</p>
+<p><strong>Randy W. added:</strong> &quot;I haven't had an ingrown hair in two weeks, first time in at least 25 years I can say that. Well done. My only complaint, it is too nice to throw into my bag for travel. It belongs on its stand prominently displayed on the vanity.&quot;</p>
+<p><strong>Shaving enthusiast Bob W.</strong>&nbsp;was also among the first to try it and said:</p>
+<p>&quot;It is the best shave that I have ever received! I've tried 'em all, and this is the one, the Messiah of razors. Thanks for producing such a fine piece of shaving equipment. To do so takes lots of time, money and effort. It shows.&quot;</p>
+<p><strong>Baltimore attorney Matt T. said simply:</strong>&nbsp;&quot;Best damn shave, ever. New world.&quot;</p>
+<p>Of course, it's one thing to get rave reviews from everyday folks... but we knew the real test would come when we put OneBlade in the hands of the world's most passionate and outspoken critics on all things shaving...</p>
+
+<p><strong>The reviewer at Gear Hungry</strong>&nbsp;said: &quot;Setting out to design the best razor ever and at any cost, one look at OneBlade reveals that the team behind it may just have accomplished this lofty goal.&quot;</p>
+<p><strong>Vouch Magazine</strong>&nbsp;said: &quot;Finally, at long last, you can enjoy insanely smooth, irritation-free skin—think barbershop straight razor shave, but in the comfort of your own home. What is now a dreaded chore will become your coveted routine.&quot;</p>
+<p><strong>A reviewer at FastCompany Design</strong>&nbsp;did a full story on the exhausting development process we undertook, and concluded: &quot;When the fog clears and I rinse off, I realize: I just got the closest shave of my life.&quot;</p>
+<p><strong>Michael Ham, author of The Leisureguy's Guide to Gourmet Shaving</strong>&nbsp;reviewed our razor and said: &quot;An interesting and well-performing razor: extremely comfortable and very efficient... it's well-made, performs well, is interesting, and to my eye looks quite good.&quot;</p>
+<p><strong>Phil Huntsinger, owner of Bullgoose shaving,</strong>&nbsp;said: I used the razor for the first time today and am very impressed. This is a definite keeper!!&quot;</p>
+<p><strong>Loadoutroom editor and former Marine</strong> <strong>Scott Witmer</strong> reviewed OneBlade for the outdoor gear and gun website. He said: &quot;Once the blade is installed and you follow the directions for the shaving cream you'll get an extremely close and smooth shave. I had no issues with finding the correct shaving angle on the first pass and never cut myself (this is a testament to their research and development).&quot; </p>
+<p><strong>Cool Material</strong>&nbsp;says it's: &quot;The last razor you'll ever buy.&quot;</p>
+<p>The <strong>Sharpologist</strong>, one of the world's leading experts on shaving tools,  did a full review and concluded:</p>
+<span class="orange-text"><em>"OneBlade gives me the closest, cleanest, most consistent shaves I have ever had.&quot;</em></span>
+<p><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/One_Blade_061115_4_CROP.png" style="max-width:800px;width:100%;padding:0 10px;" class="img-responsive"></p>
+
+
+</div></div></div></div>
+
+
+
+<div class="grey-quote-container">
+<div class="row"><div class="col-lg-12">
+<center>
+<div class="grey-quote"><em>A daily OneBlade shave will actually save you $134 after one year...<br>
+and $434 after two years.</em></div>
+<div class="grey-quote-sig"><strong>In other words: OneBlade not only gives you the world’s best shave...<br>
+but saves you serious money over the long run.</strong></div></center>
+</div></div></div>
+
+
+
+<div class="grey-gradient">
+<div class="row">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6">
+<div class="main-middle" style="margin-bottom:20px;">
+
+
+<p>Now, don't get me wrong—we've had our critics too.</p>
+<p>Why?</p>
+<p>Well, the main reason is because OneBlade is not cheap. But I'd like you to try it for free. I'll explain how the free trial works in just a second.</p>
+<p>You see, OneBlade is downright expensive–and we make absolutely no apologies for that.</p>
+<p>Like I said, we did not set out to deliver the world's cheapest razor. Our goal is not to save you a few pennies per day on your current shave...</p>
+<p>But to instead deliver a completely new way of shaving...</p>
+<p>And with OneBlade, you can get the world's best shave—by your own hands, in your own home each day.</p>
+<p>And here's the incredible thing...</p>
+<p>OneBlade is expensive–maybe the most expensive razor available in America today. But it's also the most affordable shave in the world.</p>
+<p>How can that be? Let me explain...</p>
+<p>Yes, the price of our razor costs significantly more than what you'll initially pay for today's cheap plastic varieties, but guess what?</p>
+
+<p>Over the long run, OneBlade delivers not only a superior shave—but also considerable savings!</p>
+
+<p>How can this be possible?</p>
+
+<p>Well, our world-class, single-edge, high carbon, stainless steel blades (made by Feather–the finest blade manufacturer in the world), cost less than $1 apiece... while the leading plastic cartridges retail for 300% more!</p>
+
+<p>You can do the math... just like the independent website RitualShave did recently.</p>
+
+<p>Their analysis compared the price of a daily OneBlade shave to one of the leading plastic cartridge razor brands.</p>
+
+<p>Their conclusion?</p>
+
+<p>A daily luxurious OneBlade shave will actually save you $134 after one year... and $434 after two years.</p>
+
+<p><strong>In other words: OneBlade not only gives you the world's best shave... but saves you serious money over the long run.</strong></p>
+
+<p>I suggest you simply try it... and see for yourself. A new OneBlade owner was worried about the price—until he tried it for himself. As he told us recently:</p>
+
+<p><strong>"I cringed a bit when providing my credit card for a $299 razor... But I can truthfully report – this will be the last razor I ever own, and frankly, I now believe I underpaid."</strong></p>
+
+<p>Marcus Shavers, the guy behind the site News Ledge, did a full review and came to a similar conclusion.</p>
+
+<p>He wrote:</p>
+<p><strong>"There's not a closer shave to be had. Yeah, it's not cheap. $300 for the razor and stand. Sounds steep until you consider how many Gillette handles you've bought. And buying those ridiculously overpriced blade cartridges."</strong></p>
+
+<p>The point is, we designed OneBlade for the kind of guy who values quality... and understands that over time, investing a bit more upfront in a high-quality tool delivers not only a better experience... but actually saves money over the long run... when compared to buying a new piece of plastic junk every year.</p>
+
+<p>As you can probably tell, I'm incredibly proud of what we've built. It's thrilling to watch other people around the world enjoy our new product... </p>
+
+<p id="fathersday" >I'd love for you to try it... and see for yourself, basically risk-free.</p>
+
+
+<h3>Our Exclusive Father's Day Special Offer</h3>
+<p>Today, you can try OneBlade in your home, or give it as a gift for Father's Day–for just $299.</p>
+
+<p>When you try OneBlade, you will receive a beautifully wrapped package in a leather box, which includes:</p>
+
+<p><strong>#1. An individually numbered OneBlade Razor.</strong>&nbsp;This stainless steel, injection molded, revolutionary new shaving tool comes with a LIFETIME guarantee. It will never rust. It will never break. Your name and your unique number will be permanently entered into our logs.</p>
+
+<p><strong>#2. A solid stainless steel razor stand</strong> – built from a single piece of solid steel–with a no-slip base, for displaying and holding your razor.</p>
+
+<p><strong>#3. Ten single-edge, high carbon stainless steel blades,</strong> manufactured in Japan, by Feather, the world's foremost producer of high quality blades. Believe me, there's no better shaving blade available anywhere in the world.</p>
+
+<p><strong>And there's more, too.</strong></p>
+
+<p><strong>You see, we put together a special kit exclusively for Father's Day:</strong></p>
+
+<p><strong>If you place your order by Monday, June 13th at midnight</strong>, along with your individually-numbered OneBlade razor, razor stand, and 10 Feather blades...</p>
+
+<p>You'll receive our premium OneBlade shaving kit, completely free of charge.</p>
+
+<p>You see, to have the full OneBlade experience, we recommend following a routine that many men have forgotten... or maybe never learned.</p>
+
+<p>You may remember your father or your grandfather using a badger hair-brush and some high quality, thick shaving soap. Badger hair brushes lift your beard off your skin – they're a critical part of a good shave. </p>
+
+<p>Likewise, you should also use a high-quality shaving cream with essential oils. This lubrication is what allows OneBlade's super sharp, single edge to deliver a completely irritation-free, perfect shave.</p>
+
+<p>So included in your premium shaving kit is:</p>
+<p> <strong>#4. A top quality super badger hair shaving brush - &quot;The Old Original&quot; - by Vulfix.</strong></p>
+
+<p><strong>#5. You're also going to get: Shaving cream and after shave balm from St. James of London</strong>...</p>
+<p>Pictured below is everything you'll receive in your Father's Day Gift Bundle:</p>
+<p><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/OneBlade_Bundle.jpg"  style="max-width:800px;width:100%;padding:10px;"></p>
+
+<p>Our premium shaving kit is valued at $170...</p>
+
+<p>But again, it's yours free when you try OneBlade today, or you choose to give it as a Father's Day gift.</p>
+<p><strong>Remember Our Guarantee:</strong>&nbsp;The OneBlade razor comes with a 30-day, 100% money-back guarantee... plus a LIFETIME guarantee against defects. </p>
+<p>Try this revolutionary shaving experience today in your own home. If, from the very first shave, it's not the best personal shaving experience you've ever had, or if you are disappointed for any reason, simply send back the razor and you'll receive a FULL refund.</p>
+<p>(Please note: Because the premium shaving kit included with this offer contains consumables, it cannot be returned. If the razor is returned and the shaving kit has been opened, a $99 charge may apply. You can contact our Customer Service team any time for any return questions you have.)</p>
+<p>No other razor we know of offers such a guarantee. And for good reason...</p>
+<p>From the moment you first give OneBlade a try, you'll see why we are confident that you'll never shave with a plastic cartridge razor, ever again.</p>
+<p>To get started, simply complete the payment and delivery information on our&nbsp;<strong><u>Secure Order Form.</u></strong></p>
+<p>(If you are ordering as a Father's Day gift, you'll also find gift wrapping and shipping options on the following secure form.)</p>
+<p>Your order will be processed immediately, and will be shipped directly from our warehouse and headquarters in Austin, Texas. Your complete OneBlade package will arrive on your doorstep in approximately 5 business days.</p>
+<p><strong><u>Get your OneBlade right here, right now.</u></strong></p>
+<p>Sincerely,</p>
+<p><img width="113" height="36" src="one-blade-HTML_clip_image004_0000.png" alt="portersSig"></p>
+<p>Porter Stansberry<br>
+  Founder, OneBlade</p>
+<p>P.S. Remember, too – This exclusive offer is ONLY available until Monday, June 30th at  midnight, as our thank you for trying the OneBlade experience.</p>
+<p>As former Marine Scott Witmer said of OneBlade after trying it:</p>
+<p><strong>"Is it worth the price tag? I will tell you this...You get what you pay for. Me personally; I'd rather spend a little more up front knowing I'm getting a solid product that will last me years to come, versus getting nickel and dimed over and over. For that reason I truly believe the OneBlade is worth the price tag."</strong></p>
+<p>To get your trial started, click the button below and complete the payment and delivery information on our Secure form.</p>
+</div></div>
+  <div class="col-lg-3">&nbsp;</div>
+</div>
+</div>
+
+<div class="row"><div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6">
+<div class="main-middle"  id="buynow" >
+  <h3>Order Summary</h3>
+
+  <p>OneBlade will send you our highest quality razor, to try for free. Use it for 30 days. If you're not convinced it's the best razor in the world, send it back to us at our expense*. No obligation, whatsoever.</p>
+  <p>But, we can't let you try the OneBlade without the proper kit. So, to participate in this free trial you've got to put a decent kit together. As you'll consume these products when you shave, we can't let you try them for free.</p>
+  <p>So, instead, we're offering you a genuine best badger hair brush and some of the world's highest quality shaving soaps and balms – at a huge discount from the retail price...</p>
+  </div></div></div>
+
+<div class="container">
+<div class="row">
+
+<div class="box1 col-lg-4" style="max-width:1075px;"> 
+
+<img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/Bundle_Product_1_Razor.jpg" class="img-responsive" style="max-width:275px;    margin-left: 50px;" alt="">
+<div class="grey-tri-box">
+<h4><strong>OneBlade Razor and Solid, Stainless Steel Stand</strong></h4>
+<p>This stainless steel, injection molded, revolutionary new shaving tool comes with a LIFETIME guarantee. It will never rust. It will never break. Your name and your unique number will be permanently entered into our logs. Plus we&rsquo;ll include a<strong> solid stainless steel razor stand</strong>&nbsp;– built from a single piece of solid steel–with a no-slip base, for displaying and holding your razor.</p>
+</div>
+</div>
+
+<div class="box2 col-lg-4"> 
+
+<img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/Bundle_Product_2_Accessories.jpg" class="img-responsive" style="max-width:275px;    margin-left: 50px;" alt="">
+<div class="grey-tri-box">
+<h4><strong>High Quality Shaving Accessories from St. James of London</strong></h4>
+<p>Included in our $99 kit is a <strong>high quality shaving brush, and shaving cream and after shave balm from St. James of London</strong>. This kit is valued at $160, but we'll send it to you for just $99. It's yours to keep, whether you decide to keep your OneBlade razor or not.</p>
+</div>
+</div>
+
+<div class="box3 col-lg-4"> 
+<img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/Bundle_Product_3_Blades.jpg" class="img-responsive" style="max-width:275px;    margin-left: 50px;" alt="">
+<div class="grey-tri-box">
+<h4><strong>Ten Single-Edge, High Carbon Stainless Steel Blades</strong></h4>
+<p>In addition to the 30-day, risk-free trial, the $160 kit, and the $49.50 leather holster, you will also get<strong> 10 of our top quality Japanese blades for free</strong>. These blades will give you ten perfect shaves.</p>
+</div>
+</div></div></div>
+
+<div class="row">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6">
+<div class="main-middle"  style="margin-bottom:50px;">
+  <p>Again, if you don't agree that OneBlade gives you the best shave of your life, you owe us nothing. Just return the razor (at our expense*) and you'll owe us nothing more. Keep all of the accessories you've purchased – valued at $225.</p>
+  <p>Or... if you agree that OneBlade is the best razor you've ever tried... simply keep everything mentioned above. We will apply the entire cost of the starter's kit ($99) towards your purchase of the OneBlade razor. <strong>Your free trial turns into nearly $225 savings!</strong></p>
+  <p>Pictured below is the full kit, described above, that you'll get to experience with this limited-time offer:</p>
+  <p><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/OneBlade_Bundle.jpg" alt="" style="max-width:800px;width:100%;padding:0 10px;"></center></p>
+</div>
+</div></div>
+
+<div class="grey-solid"><div class="row">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6"><div class="main-middle">
+  <h3>Here's how it works.</h3>
+  <p>Just order your trial kit today. We will charge you $99 for your brush, the St. James soap and balm. Plus we'll send you a leather holster and 10 blades for free. You'll also receive your OneBlade razor. It comes in a handsome, handcut, leather box and includes a solid, stainless steel stand to hold the razor at the perfect angle for drying (you've never seen anything like this before....)</p>
+  <p><strong>You'll have 30 full days from your date of purchase to try OneBlade for yourself.</strong> If you choose to keep the OneBlade razor (like 95% of men do), then we will apply the cost of your $99 kit towards the price of the $299 razor and bill you for the remaining $200. </p>
+  <div class="money-back-box"><div class="row"><div class="col-lg-4"><center><img src="https://static.cloudsna.com/store/PROD/images/oneblade/imgs/Money_Back_Seal.png" style="max-width:120px;margin-top:20px;" class="img-responsive"></center></div>
+  <div class="col-lg-8">
+  If you don't agree that OneBlade is the best performing tool you have ever owned (and the most beautiful razor in the world) then simply return the razor, the stand, and the leather box to us (at our expense*). There's no further obligation whatsoever.</div></div></div>
+  <p>Join the thousands of men, from around the world, who have turned their daily chore into a ritual that they cherish.</p>
+  <p>Join the thousands of men who have decided to throw away their plastic razors... and put something truly beautiful next to their sink.</p>
+  </div>
+  </div><div class="col-lg-3">&nbsp;</div>
+</div></div>
+<div class="row">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6"><div class="main-middle">
+  <h3>Summing it up</h3>
+
+
+  <p>When you take advantage of this OneBlade offer today, you will receive:</p>
+  <p><span class="orange-text-2"><strong>#1. An individually numbered OneBlade razor.</strong></span> This stainless steel, injection molded, revolutionary new shaving tool comes with a LIFETIME guarantee. It will never rust. It will never break. Your name and your unique serial number will be permanently entered into our logs. (Retails at $299)</p>
+  <p><span class="orange-text-2"><strong>#2. A solid stainless steel razor stand</strong></span> – built from a single piece of solid steel–with a no-slip base, for displaying and holding your razor.</p>
+  <p><span class="orange-text-2"><strong>#3. Ten single-edge, high carbon stainless steel blades,</strong></span> manufactured in Japan, by Feather, the world's foremost producer of high quality blades. Believe us, there's no better shaving blade available anywhere in the world. (Retails at $14.95)</p>
+  <p><span class="orange-text-2"><strong>#4. A Full Grain Horween Leather Holster</strong></span> to transport your OneBlade razor from it's solid stainless steel stand to anywhere in the world that you plan to experience the world's best shave. (Retails at $49.95)</p>
+  <p><span class="orange-text-2"><strong>#5. A set of St. James of London Shaving Cream and After Shave</strong></span> – made in London... and a quality choice of lather for a single edge blade. (Retails at $59.90)</p>
+  <p><span class="orange-text-2"><strong>#6. A Fine Badger Hair Shaving brush</strong></span> to lather the luxurious St. James of London shaving cream. (Retails at $99.95)</p>
+
+  <div class="grey-quote-box"><strong>AND REMEMBER: OneBlade comes with a 30-day, 100% money-back guarantee... plus a LIFETIME guarantee against defects</strong>. Try this revolutionary shaving experience today in your own home. If it's not the best personal shaving experience you've ever had, or if you are disappointed for any reason, simply send back your product at our expense and you'll receive a FULL refund.</div>
+  <p>No other razor we know of offers such a guarantee. And for good reason. From the moment you first give OneBlade a try, you'll see why we are confident that you'll never shave with a plastic cartridge razor, ever again.</p>
+  <p>To get started, click <strong>"TRY NOW"</strong> below and complete the payment and delivery information on the following secure checkout page. Your order will be processed immediately... and will ship out in approximately 24-48 hours.</p>
+<p>&nbsp;</p>
+
+
+
+<div class="center-div">
+<div class="orderNowBox"><a class="next orderNow" href="#" id="sna_NextLink" ng-click="loadNextAsset('Next');" style="display: inline;position: relative;" target="_top"><b>TRY NOW</b></a></div></div>
+<p>&nbsp;</p>
+
+</div></div></div>
+
+<!--<hr class="style-lightgrey" style="width:80%;">
+<div class="row">
+<div class="col-lg-3">&nbsp;</div>
+<div class="col-lg-6"><div class="main-middle" style="margin-top:40px;">
+
+  <h5>Unsure about ordering? Check out answers to some of our common questions below...</h5>
+
+  <p><strong>1. This sounds great... but what's the catch?</strong></p>
+  <p class="list-indent">There's no catch. We're so confident that you'll love the OneBlade razor that we're giving you 30 full days after purchase to try it out. If you don't agree that OneBlade is the best performing tool you have ever owned (and the most beautiful razor in the world) then simply return the razor, the stand, and the leather box to us (at our expense*). The other accessories included with this kit – the St. James of London shaving cream, after shave, and fine badger hair shaving brush... along with our premium leather travel holster – are yours to keep.</p>
+  <p><strong>2. I've never shaved with a straight razor before – is this safe?</strong></p>
+  <p class="list-indent">Yes! OneBlade uses a Teflon coated spring and a revolutionary kind of floating head, that, like a cartridge razor, pivots for safety and ease of use. Additionally, we've partnered with world-class blade maker Feather to utilize the absolute best single edge blades that we were able to find in all of our research. These blades are made with high-carbon stainless steel and coated in platinum The end result is a state-of-the-art razor that safely delivers a barbershop-quality shave... in the comfort of your own home.</p>
+  <p><strong>3. If I change my mind, can I get my money back?</strong></p>
+  <p class="list-indent">Yes. If you decide during the first 30 days that OneBlade is not for you, we will refund your $99 – no questions asked – provided that you return the items mentioned previously at our expense*. You can e-mail us at any time at <a href="mailto:info@onebladeshave.com">info@onebladeshave.com</a> to arrange a return.</p>
+  <p><strong>4. If I decide to keep everything, when will I be billed the remaining $200?</strong></p>
+  <p class="list-indent">Your remaining $200 balance will be billed 31 days after purchase.</p>
+  <p><strong>5. How soon will it take my OneBlade kit to arrive at my door?</strong></p>
+  <p class="list-indent">We process the majority of orders same day and use FedEx for shipping. That said, for orders placed within the United States, you can expect your kit to arrive within 3-5 business days. For international orders, expect 5-8 business days for delivery turnaround. We'll send you a separate e-mail with tracking information once your kit leaves our Austin, TX distribution center.</p>
+  <p><strong>6. Is your online checkout secure?</strong></p>
+  <p class="list-indent">Yes. To help ensure that your shopping experience is safe, simple and secure, OneBlade's online checkout is PCI compliant and uses Secure Socket Layer (SSL) technology. This encrypts and protects the data you send to us over the internet.</p>
+  <p><strong>7. Where is OneBlade, Inc. located?</strong></p>
+  <p class="list-indent">OneBlade, Inc.'s flagship office and distribution center are headquartered in Austin, TX.</p>
+  <p><strong>8. How do I get in touch with someone if I have questions?</strong></p>
+  <p class="list-indent">If you have any questions whatsoever, please don't hesitate to contact us by e-mail at <a href="mailto:info@onebladeshave.com">info@onebladeshave.com</a>, and we will get back to you promptly, within 1-2 business days.</p>
+
+
+  
+  
+
+
+<p>&nbsp;</p>
+<div class="center-div">
+<div class="orderNowBox"><a class="next orderNow" href="#" id="sna_NextLink" ng-click="loadNextAsset('Next');" style="display: inline;position: relative;" target="_top"><b>TRY NOW</b></a></div></div>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>-->
+<div class="row">
+<div class="col-lg-2">&nbsp;</div>
+<div class="col-lg-8">
+<hr class="style-lightgrey">
+<div class="disclosures"><p>*Excludes all orders for delivery outside of the United States. International customers will be responsible for all freight, return freight, duty, and taxes.</p>
+<p>OneBlade Inc. is based out of Austin, TX. If you have any questions about this trial offer, our products, or anything related, please contact us by e-mail at info@onebladeshave.com and we will respond promptly, within 1-2 business days.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<footer>
+<div class="bottom-footer"><div class="main-middle"><div class="row">
+<div class="col-lg-8 col-md-7 col-sm-6 col-xs-6">&copy; 2016 OneBlade. All rights reserved.</div>
+<div class="col-lg-4 col-md-5 col-sm-6 col-xs-6 pull-right">Questions? Contact us at <a href="mailto:info@onebladeshave.com">info@onebladeshave.com</a> </div></div>
+</div></div>
+</footer>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ import widgetlanding from "@/src/assets/web/widget-landing-page.png";
 import wedding2018 from "@/src/assets/web/wedding-head-block-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
-import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
+import investinghour from "@/src/assets/web/investor-hour-email-ss-half.jpg";
 
 export const metadata = {
 	title: "Web Projects",

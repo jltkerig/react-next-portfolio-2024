@@ -28,7 +28,7 @@ import img24 from "@/src/assets/web/life-coach-head-block-ss.png";
 import img25 from "@/src/assets/web/oneblade-landing-screenshot.png";
 import img26 from "@/src/assets/web/pal-image.png";
 import img27 from "@/src/assets/web/report-stock-meltup-blueprint.png";
-import img28 from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
+import img28 from "@/src/assets/web/investor-hour-email-ss-half.jpg";
 import img29 from "@/src/assets/web/wedding-head-block-ss.png";
 import img30 from "@/src/assets/web/widget-landing-page.png";
 import img31 from "@/src/assets/web/alliance-welcome-email-screenshot.png";

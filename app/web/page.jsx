@@ -12,7 +12,7 @@ import fabricplace from "@/src/assets/web/fabric-place-head-block-ss.png";
 import fabriccontact from "@/src/assets/web/fabric-place-contact-ss.png";
 import fauxreport from "@/src/assets/web/report-stock-meltup-blueprint.png";
 import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
-import investinghour from "@/src/assets/web/stansberry-investor-hour-email-ss-half.jpg";
+import investinghour from "@/src/assets/web/investor-hour-email-ss-half.jpg";
 import allianceWelcome from "@/src/assets/web/alliance-welcome-email-screenshot.png";
 import investorpro from "@/src/assets/web/investor-pro-landing-page.png";
 
@@ -127,7 +127,7 @@ const groups = [
 			},
 			{
 				id: "investorpro", size: "half", drop: true,
-				link: "/web/stansberry-investor/index.html", /*live copy in public/, opens instead of the lightbox*/
+				link: "/web/investor/index.html", /*live copy in public/, opens instead of the lightbox*/
 				title: "InvestorPro",
 				type: "Lead gen email capture",
 				tags: ["Email capture", "Free trial"],
