@@ -15,6 +15,7 @@ import blackfriday from "@/src/assets/web/blackfriday-email-screenshot.png";
 import investinghour from "@/src/assets/web/investor-hour-email-ss-half.jpg";
 import allianceWelcome from "@/src/assets/web/alliance-welcome-email-screenshot.png";
 import investorpro from "@/src/assets/web/investor-pro-landing-page.png";
+import cryptomeltup from "@/src/assets/web/crypto-melt-up-event-about-page-screenshot.png";
 
 export const metadata = {
 	title: "Web Projects",
@@ -95,6 +96,15 @@ const groups = [
 				tags: ["Accessibility", "Live map"],
 				text: "A showpiece contact page: a photo hero, tiles for address, phone and open-now status, a split message form and a live street map.",
 				image: fabriccontact,
+			},
+			{
+				id: "cryptomeltup", size: "wide",
+				link: "/web/cryptomeltup2024/about.html", /*live copy in public/, opens instead of the lightbox*/
+				title: "Crypto Melt-up Event",
+				type: "Event microsite",
+				tags: ["Bootstrap 4", "VIP sign-up"],
+				text: "A multi-page microsite for a live online event. An about page with a video, a sticky VIP text-reminder sign-up, a sidebar of credentials and a free report offer.",
+				image: cryptomeltup,
 			},
 		],
 	},
