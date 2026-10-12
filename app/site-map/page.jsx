@@ -2,6 +2,7 @@ import Link from "next/link";
 import PageHeader from "@/src/components/PageHeader";
 import styles from "./site-map.module.css";
 import {areaLinks} from "../_seo/content";
+import {articles, formatDate} from "../articles/articles";
 
 /*human-readable sitemap. /site-map rather than /sitemap so it can't clash with app/sitemap.js (sitemap.xml)*/
 export const metadata = {
@@ -24,6 +25,13 @@ const sections = [
 		links: [
 			{href: "/web/", label: "Web Projects", note: "Websites, landing pages and e-mail templates"},
 			{href: "/graphic/", label: "Graphic Projects", note: "Logos, book design and print"},
+		],
+	},
+	{
+		title: "Articles",
+		links: [
+			{href: "/articles/", label: "All articles", note: "Writing on design and the web"},
+			...articles.map((a) => ({href: `/articles/${a.slug}/`, label: a.title, note: `Published ${formatDate(a.published)}`})),
 		],
 	},
 	{
