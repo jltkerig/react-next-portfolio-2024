@@ -1,4 +1,5 @@
 import {towns} from "./_seo/content";
+import {articles} from "./articles/articles";
 
 export const dynamic = "force-static";
 
@@ -14,6 +15,8 @@ export default function sitemap() {
 		{url: `${site}/web/`, lastModified, changeFrequency: "monthly", priority: 0.9},
 		{url: `${site}/graphic/`, lastModified, changeFrequency: "monthly", priority: 0.9},
 		{url: `${site}/contact/`, lastModified, changeFrequency: "yearly", priority: 0.7},
+		{url: `${site}/articles/`, lastModified, changeFrequency: "monthly", priority: 0.6},
+		...articles.map((a) => ({url: `${site}/articles/${a.slug}/`, lastModified: new Date(a.published), changeFrequency: "yearly", priority: 0.6})),
 		{url: `${site}/privacypolicy.html`, lastModified, changeFrequency: "yearly", priority: 0.3},
 		{url: `${site}/site-map/`, lastModified, changeFrequency: "yearly", priority: 0.3},
 		...Object.values(towns).map((t) => ({url: `${site}/${t.slug}/`, lastModified, changeFrequency: "yearly", priority: 0.6})),

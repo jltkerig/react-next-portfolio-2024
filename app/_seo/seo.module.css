@@ -44,6 +44,11 @@
 	line-height: 1.7;
 	color: var(--grey);
 }
+.copy.copy a {
+	color: var(--cyan-dark);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
 
 /* service cards (same look as the homepage cards: gold bar, white card) */
 .cards {

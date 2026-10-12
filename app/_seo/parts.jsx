@@ -98,6 +98,21 @@ export function Featured({t}) {
 }
 
 /*local context: why this town's businesses need what they need, and who the work is for*/
+/*plain text, except the town's venue name (if it has one) becomes a link to the venue's site*/
+export function LinkedText({text, venue}) {
+	if (!venue) return text;
+	return text.split(venue.name).flatMap((part, i) =>
+		i === 0
+			? [part]
+			: [
+					<a key={i} href={venue.href} target="_blank" rel="noopener noreferrer">
+						{venue.name}
+					</a>,
+					part,
+				]
+	);
+}
+
 export function LocalContext({t}) {
 	return (
 		<div className={seo.twoCol}>
@@ -105,7 +120,7 @@ export function LocalContext({t}) {
 				<h2 className={seo.h2}>{t.localTitle}</h2>
 				{t.local.map((para) => (
 					<p key={para.slice(0, 20)} className={seo.copy}>
-						{para}
+						<LinkedText text={para} venue={t.venue} />
 					</p>
 				))}
 			</div>

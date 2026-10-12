@@ -138,6 +138,7 @@ export const towns = {
 		contactTitle: "Planning a wedding near White Hall?",
 		contactCopy: "Tell me a little about your day, your venue and what you need, whether that’s a website, invitations or signs, and I’ll get back to you soon.",
 		mapQuery: "Camp Hidden Valley, 4722 Mellow Rd, White Hall, MD 21161",
+		venue: {name: "Camp Hidden Valley", href: "https://deercreekpreserve.com/"}, /*linked wherever the name appears in the intro and local paragraphs*/
 		intro: "White Hall is farm country: rolling hills, winding roads and wide open fields, and a beautiful place to get married. I designed the website for my own wedding at Camp Hidden Valley here, and I can do the same for you, from the website and invitations to the small details that help guests find you and feel at home.",
 		localTitle: "Why a White Hall wedding needs clear design",
 		local: [

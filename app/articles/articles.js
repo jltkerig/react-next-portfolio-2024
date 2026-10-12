@@ -3,7 +3,7 @@ export const articles = [
 	{
 		slug: "design",
 		title: "Design",
-		subhead: "Placeholder subhead: a one-sentence summary of the article goes here.",
+		subhead: "Good design is a series of small decisions about clarity: what to show first, what to leave out, and how to make the rest easy to read.",
 		published: "2026-10-09",
 	},
 ];

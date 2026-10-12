@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {JsonLd, ContactBand, ServiceCards, Faq, Featured, LocalContext, Examples, ServiceArea} from "./parts";
+import {JsonLd, ContactBand, ServiceCards, Faq, Featured, LocalContext, LinkedText, Examples, ServiceArea} from "./parts";
 import seo from "./seo.module.css";
 
 /*the chosen local seo template ("split hero"): headline + intro beside featured work, local context, services, example projects, service-area map, faq, contact.
@@ -16,7 +16,9 @@ export default function LocalPage({t}) {
 						<em>{t.h1[1]}</em>
 						{t.h1[2]}
 					</h1>
-					<p className={seo.copy}>{t.intro}</p>
+					<p className={seo.copy}>
+						<LinkedText text={t.intro} venue={t.venue} />
+					</p>
 					<div className="two-column-button">
 						<Link href="/contact/">
 							<button className="blue" type="button">
