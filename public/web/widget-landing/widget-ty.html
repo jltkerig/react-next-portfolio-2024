@@ -30,6 +30,32 @@
       .green-rectangle, .green-rectangle .btn, .green-btn-bottom, .sna-single-optin { cursor: pointer; }
       .green-rectangle:hover { filter: brightness(1.1); }
     </style>
+  <style type="text/css">
+      /* mobile fixes */
+      @media screen and (max-width: 992px) {
+        /* the score widget was cut off at 300px; its content needs about 360px at phone width */
+        .col-widget .widget { height: 400px; background: #ffffff; }
+      }
+
+      @media screen and (max-width: 767px) {
+        /* centre the charts */
+        .navy-middle .chart { margin: -100px auto 20px auto; }
+
+        /* no extra space under the last bullet before the motto box */
+        .wrapper-white { padding-bottom: 0; }
+        .wrapper-white > p:last-child { margin-bottom: 0; }
+
+        /* the LEARN MORE button grows when its text wraps on narrow phones */
+        .wrapper-grey-bottom .green-rectangle-bottom { height: auto; min-height: 40px; padding: 8px 12px; margin-left: auto; margin-right: auto; }
+        .wrapper-grey-bottom .green-rectangle-bottom-text { line-height: 1.25; padding-top: 0; margin: 0; }
+      }
+
+      /* footer links: centred and spaced */
+      .footerRow { text-align: center; padding: 4px 15px 24px; }
+      .footerItem { display: inline-block; margin: 4px 10px; font-family: 'ProximaNova', sans-serif; font-size: 14px; color: #131D36; text-decoration: none; }
+      .footerItem:hover { color: #131D36; text-decoration: underline; }
+    </style>
+
     
 
   <body>
@@ -133,10 +159,13 @@
         </div>
     </section>
     <footer>
-      <p>© 2024 Stansberry Research. All rights reserved.</p>
+      <p>© <span class="current-year">2026</span> Stansberry Research. All rights reserved.</p>
       <div class="footerRow"><a class="footerItem" href="#">Privacy Policy</a><a class="footerItem" href="#">Legal Notices</a><a class="footerItem" href="#">Terms of Use</a><a class="footerItem" href="#">DMCA Policy</a><a class="footerItem" href="#">Do Not Sell My Personal Information</a><a class="footerItem" href="#">Ad Choice</a><!-- <a class="footerItem" href="#">Cookie Preferences</a> --></div>
     </footer>
     <script>
+  document.querySelectorAll('.current-year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+</script>
+<script>
       /*swaps the score widget to another ticker; scores are saved in widget/data/*/
       function SwapFrame(ticker) {
         document.getElementById("widgetFrame").src = "widget/index.html?symbol=" + ticker + "&search=false";

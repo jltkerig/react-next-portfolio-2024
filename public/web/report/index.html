@@ -203,7 +203,12 @@ LIST STYLING ends here
 */
     </style>
     <!-- Paste this right before your closing </head> tag -->
-  </head>
+    <style type="text/css">
+    .report-links-footer { clear: both; width: 100%; box-sizing: border-box; background: #ffffff; padding: 18px 15px; text-align: center; }
+    .report-links-footer .footerItem { display: inline-block; margin: 4px 10px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #333333; text-decoration: none; }
+    .report-links-footer .footerItem:hover { text-decoration: underline; }
+  </style>
+</head>
   <script>
     $(document).ready(function ()
     {
@@ -1253,9 +1258,11 @@ LIST STYLING ends here
           </section>
         </div>
       </div>
-      <div class="footerRow"> <a class="footerItem" href="#">Privacy Policy</a> <a class="footerItem" href="#">Legal Notices</a> <a class="footerItem" href="#">Terms of Use</a> <a class="footerItem" href="#">DMCA Policy</a> <a class="footerItem" href="#">Do Not Sell My Personal Information</a> <a class="footerItem" href="#">Ad Choice</a> <a class="footerItem" href="#">Cookie Preferences</a></div>
     </div>
-  <div class="design-disclaimer" style="clear:both;width:100%;box-sizing:border-box;margin:0;padding:12px 16px;background:#f3f3f3;border-top:1px solid #ddd;color:#555555;font:italic 11px/15px Arial,Helvetica,sans-serif;text-align:center;">Design sample only: this page was created for a design portfolio. It is not the actual product or website, and it is not a reflection of the views, claims or business of any company mentioned.</div>
+    <footer class="report-links-footer">
+    <div class="footerRow"> <a class="footerItem" href="#">Privacy Policy</a> <a class="footerItem" href="#">Legal Notices</a> <a class="footerItem" href="#">Terms of Use</a> <a class="footerItem" href="#">DMCA Policy</a> <a class="footerItem" href="#">Do Not Sell My Personal Information</a> <a class="footerItem" href="#">Ad Choice</a> <a class="footerItem" href="#">Cookie Preferences</a></div>
+  </footer>
+<div class="design-disclaimer" style="clear:both;width:100%;box-sizing:border-box;margin:0;padding:12px 16px;background:#f3f3f3;border-top:1px solid #ddd;color:#555555;font:italic 11px/15px Arial,Helvetica,sans-serif;text-align:center;">Design sample only: this page was created for a design portfolio. It is not the actual product or website, and it is not a reflection of the views, claims or business of any company mentioned.</div>
 </body>
 
 </html>

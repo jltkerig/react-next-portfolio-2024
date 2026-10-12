@@ -675,6 +675,7 @@ Added .avatar for circle headshots
 }
 
 .logo > img {
+  width: 150px;
   max-width: 150px;
   padding: 5px 0 5px 0;
   float: right;

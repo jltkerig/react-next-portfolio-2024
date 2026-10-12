@@ -16,6 +16,13 @@ bg-offwhite {
 
 .lead-list {
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lead-list i {
+    flex: 0 0 auto;
 }
 
 input[required] + label:after {
@@ -34,4 +41,18 @@ h4,
     font-weight: lighter !important;
     text-transform: uppercase;
     letter-spacing: .02em;
+}
+/* hero text: padding on small screens (the large-screen layout indents it with a spacer column instead) */
+@media (max-width: 991.98px) {
+    .background-cover > .row > .col-lg-6 {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .background-cover > .row > .col-lg-6 {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
 }
