@@ -203,6 +203,7 @@ export default function EmailViewer({email, html}) {
 			<Chrome email={email}>
 				<EmailFrame html={html} client={client} base={`/email/${email.slug}/`} phone={phone && client !== "outlook"} />
 			</Chrome>
+			<p className={styles.disclaimer}>Design sample only: this e-mail was created for a design portfolio. It is not the actual product or e-mail, and it is not a reflection of the views, claims or business of any company mentioned.</p>
 		</section>
 	);
 }

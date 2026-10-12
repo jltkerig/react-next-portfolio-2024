@@ -50,6 +50,17 @@
 	color: var(--grey);
 }
 
+.disclaimer {
+	margin: 18px 0 0;
+	font-family: var(--font-merriweather), serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 0.7rem;
+	line-height: 1.5;
+	color: var(--grey);
+	text-align: center;
+}
+
 /*the e-mail area: white page that holds the iframe*/
 .paper {
 	background: var(--paper, #fff);
