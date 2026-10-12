@@ -156,6 +156,7 @@ export const towns = {
 			{q: "Can you include directions and a map for a remote venue?", a: "Yes. I can add clear step-by-step directions, a map and notes about the roads, so guests arrive without stress."},
 			{q: "Can you design invitations and RSVP cards to match the website?", a: "Yes. Save-the-dates, invitations, reply cards and signs can all be designed to match, so everything looks like one set."},
 			{q: "Can the website include places to stay?", a: "Yes. A wedding site can cover camping or cabins, a hotel block with its booking deadline, and anything else guests need to plan their trip."},
+			{q: "Do I need to provide the photographs for my wedding website?", a: "Yes. Couples supply their own photographs, such as engagement photos, a favorite snapshot of the two of you or pictures of your venue. Send them as large as you have them, and I’ll crop and size them so the site stays quick to load on a phone."},
 		],
 		nearby: ["Monkton", "Parkton", "Hereford", "Jarrettsville"],
 	},
