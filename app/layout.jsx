@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import {areaLinks} from "./_seo/content";
 import "../src/index.css";
 import {fontVariables} from "./fonts";
@@ -65,6 +66,13 @@ export default function RootLayout({children}) {
 				<link rel="preload" href="/header2.webp" as="image" fetchPriority="high" />
 			</head>
 			<body>
+					<Script src="https://www.googletagmanager.com/gtag/js?id=G-FVEB9F8HH2" strategy="afterInteractive" />
+					<Script id="gtag-init" strategy="afterInteractive">
+						{`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FVEB9F8HH2');`}
+					</Script>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify([personJsonLd, websiteJsonLd])}} />
 				<div className="site-wrapper">
 					<nav className="navbar">
