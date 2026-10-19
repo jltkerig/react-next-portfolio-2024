@@ -125,3 +125,16 @@ body.custom-background { background-color: #ffffff; }
         padding-bottom: 0;
     }
 }
+
+/* keep the footer at the bottom of the window on short pages */
+#page.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#page.site > .site-content {
+    flex: 1 0 auto;
+}
+#page.site > .footer-wrapper {
+    flex-shrink: 0;
+}
