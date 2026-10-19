@@ -55,6 +55,7 @@ const groups = [
 			},
 			{
 				id: "investing", size: "narrow", drop: true,
+				link: "/web/investingoutlook/index.html", /*the static copy in public/, opens in a new tab instead of the lightbox*/
 				title: "Investing Outlook",
 				type: "WordPress microsite",
 				tags: ["WordPress", "Salesforce"],

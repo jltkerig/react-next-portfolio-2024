@@ -35,11 +35,7 @@ function Web2() {
 							<div className="project-briefing">
 								Deployed and built a standalone wordpress site that consisted of 4 or 5 pages. Customers were directed to it via ads and the microsite worked as a lead generator to active campaigns housed in Salesforce.
 							</div>
-							<div>
-								<a href="/web/investingoutlook/index.html" target="_blank" rel="noopener noreferrer">
-									<img src={investingoutlook.src} alt="Investing Outlook website (opens the site in a new window)" className="galleryThumbnail" />
-								</a>
-							</div>
+							<ImageLightbox id="investing" className="galleryThumbnail" imageUrl={investingoutlook} />
 						</div>
 						<div className="project-tab project-tab-blue" /*project 3*/>
 							<div className="project-title">Oneblade</div>
@@ -102,11 +98,7 @@ function Web2() {
 							<div className="project-briefing">
 								Deployed and built a standalone wordpress site that consisted of 4 or 5 pages. Customers were directed to it via ads and the microsite worked as a lead generator to active campaigns housed in Salesforce.
 							</div>
-							<div>
-								<a href="/web/investingoutlook/index.html" target="_blank" rel="noopener noreferrer">
-									<img src={investingoutlook.src} alt="Investing Outlook website (opens the site in a new window)" className="galleryThumbnail" />
-								</a>
-							</div>
+							<ImageLightbox id="investing" className="galleryThumbnail" imageUrl={investingoutlook} />
 						</div>
 						<div className="project-tab project-tab-blue" /*project 3*/>
 							<div className="project-title">Oneblade</div>
