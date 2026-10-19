@@ -75,7 +75,7 @@ body.custom-background { background-color: #ffffff; }
 /* post titles */
 .entry-title a .title-sm,
 .entry-title a .title-md,
-.entry-title a .title-lg { display: block; margin: 20px 0 10px; font-family: inherit; line-height: 1.1; text-align: center; color: #000; }
+.entry-title a .title-lg { display: block; margin: 20px 0 10px; font-family: inherit; line-height: 1.1; text-align: left; color: #000; }
 .title-sm { font-size: 25px; }
 .title-md { font-size: 28px; }
 .title-lg { font-size: 40px; }
@@ -83,10 +83,10 @@ body.custom-background { background-color: #ffffff; }
 
 /* article pages */
 .article { max-width: 780px; margin: 0 auto; padding: 120px 15px 60px; }
-.article .entry-header { text-align: center; }
+.article .entry-header { text-align: left; }
 .advertorial-label { text-transform: uppercase; letter-spacing: 1px; font-size: 14px; color: #888; margin-bottom: 10px; }
 .article .entry-title .title-lg { display: block; font-size: 40px; color: #000; }
-.article-subtitle { font-size: 25px; text-align: center; }
+.article-subtitle { font-size: 25px; text-align: left; }
 .article .entry-content p.lead { font-weight: 600; letter-spacing: -0.25px; }
 .article .entry-content .notice { font-size: 18px; }
 .article-figure { text-align: center; margin: 30px 0; }
@@ -102,3 +102,26 @@ body.custom-background { background-color: #ffffff; }
 
 /* home banner */
 .header-image { background-image: url("../images/cropped-general-chart-4-1.jpg"); }
+
+/* featured card + label start below the fixed header (header is fixed above 1024px) */
+@media only screen and (max-width: 1199px) and (min-width: 1025px) {
+    .feature > .container > article { margin-top: 136px; }
+    #feat .feat-label { top: 126px; }
+}
+@media only screen and (max-width: 1024px) {
+    #feat .feat-label { top: 90px; }
+}
+
+/* custom.css hides every .fa icon; the mobile menu button needs its icon back */
+.btn-menu .fa { display: inline-block !important; }
+@media only screen and (max-width: 991px) {
+    #feat .feat-label { top: 50px; }
+}
+
+/* desktop header: centre the menu on the same line as the logo */
+@media only screen and (min-width: 1025px) {
+    #mainnav #primary-menu > li {
+        padding-top: 21px;
+        padding-bottom: 0;
+    }
+}
