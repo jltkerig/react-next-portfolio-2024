@@ -1,0 +1,24 @@
+# Jamie Kerig
+
+> Jamie Kerig is a front-end web developer and graphic designer based in Maryland (Towson University design graduate, 9+ years building web pages and e-mails at Marketwise). This is the portfolio site, with web and graphic design work, writing, and local web design pages for Harford County, Maryland.
+
+## Main pages
+- [Home](https://jamiekerig.com/): overview of Jamie Kerig's web and graphic design work.
+- [About](https://jamiekerig.com/about/): background, education and experience.
+- [Web design work](https://jamiekerig.com/web/): websites, landing pages and e-mail designs, with samples.
+- [Graphic design work](https://jamiekerig.com/graphic/): logos, branding and print pieces.
+- [Contact](https://jamiekerig.com/contact/): contact form for web or design projects.
+- [Articles](https://jamiekerig.com/articles/): writing on design and the web.
+
+## Local web and graphic design
+- [Web design in Bel Air, MD](https://jamiekerig.com/web-design-bel-air-md/)
+- [Web design in Abingdon, MD](https://jamiekerig.com/web-design-abingdon-md/)
+- [Web design in Fallston, MD](https://jamiekerig.com/web-design-fallston-md/)
+- [Wedding websites in White Hall, MD](https://jamiekerig.com/wedding-websites-white-hall-md/)
+
+## Optional
+- [Site map](https://jamiekerig.com/site-map/)
+- [XML sitemap](https://jamiekerig.com/sitemap.xml)
+- [Privacy policy](https://jamiekerig.com/privacypolicy.html)
+- [LinkedIn](https://www.linkedin.com/in/jamieleedesign/)
+- [Figma](https://www.figma.com/@jamieleedesign)

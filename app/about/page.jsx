@@ -2,7 +2,7 @@ import headshot from "@/src/assets/jamie-headshot-sq.png";
 import PageHeader from "@/src/components/PageHeader";
 
 export const metadata = {
-	title: "About",
+	title: {absolute: "About Jamie Kerig | Maryland Web & Graphic Designer"},
 	description: "Graphic designer and front-end developer from Maryland. Towson University graduate, 9+ years at Marketwise.",
 	alternates: {canonical: "/about/"},
 	openGraph: {

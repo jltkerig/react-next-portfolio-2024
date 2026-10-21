@@ -121,11 +121,11 @@ export const towns = {
 		town: "White Hall",
 		slug: "wedding-websites-white-hall-md",
 		featured: "wedding",
-		title: "Wedding Websites & Invitations in White Hall, MD",
+		title: "Wedding Websites & Invitations, White Hall, MD",
 		crumb: "Wedding Websites in White Hall, MD",
 		note: "Wedding websites, invitations and signs",
 		serviceType: ["Wedding website design", "Invitation design", "Print design", "Signage design"],
-		description: "Wedding websites, invitations and signs for couples marrying in White Hall, MD, from designer Jamie Kerig, who designed the website for a wedding at Camp Hidden Valley.",
+		description: "Wedding websites, invitations and signs for couples marrying in White Hall, MD, by designer Jamie Kerig, who built a site for a Camp Hidden Valley wedding.",
 		h1: ["Wedding websites and invitations in ", "White Hall", ", Maryland"],
 		servicesTitle: "What I design for White Hall weddings",
 		services: [

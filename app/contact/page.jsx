@@ -3,7 +3,7 @@ import PageHeader from "@/src/components/PageHeader";
 import {JsonLdScript, contactJsonLd} from "@/app/_seo/schema";
 
 export const metadata = {
-	title: "Contact",
+	title: {absolute: "Contact Jamie Kerig | Web & Graphic Design in Maryland"},
 	description: "Get in touch with Jamie Kerig about web design, graphic design or a project idea.",
 	alternates: {canonical: "/contact/"},
 	openGraph: {

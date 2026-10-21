@@ -4,8 +4,8 @@ import {articles, formatDate} from "./articles";
 import styles from "./articles.module.css";
 
 export const metadata = {
-	title: "Articles",
-	description: "Articles by Jamie Kerig on design and the web.",
+	title: {absolute: "Articles on Design and the Web | Jamie Kerig"},
+	description: "Articles by Jamie Kerig, a Maryland web and graphic designer, on clear design, readable layouts and building for the web.",
 	alternates: {canonical: "/articles/"},
 };
 
