@@ -8,6 +8,7 @@ import Logo from "../src/assets/name.png";
 import LogoMobile from "../src/assets/jamie-kerig-script-logo.webp";
 import ImagePreloader from "../src/components/ImagePreloader";
 import MobileMenu from "../src/components/MobileMenu";
+import {PERSON_ID, WEBSITE_ID, personRef} from "./_seo/schema";
 
 export const metadata = {
 	metadataBase: new URL("https://jamiekerig.com"),
@@ -43,6 +44,7 @@ export const viewport = {themeColor: "#0a1428"};
 const personJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "Person",
+	"@id": PERSON_ID,
 	name: "Jamie Kerig",
 	jobTitle: "Front-End Web Developer & Graphic Designer",
 	url: "https://jamiekerig.com/",
@@ -55,8 +57,11 @@ const personJsonLd = {
 const websiteJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",
+	"@id": WEBSITE_ID,
 	name: "Jamie Kerig",
 	url: "https://jamiekerig.com/",
+	inLanguage: "en-US",
+	publisher: personRef,
 };
 
 export default function RootLayout({children}) {

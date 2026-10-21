@@ -1,3 +1,5 @@
+import {personRef} from "./schema";
+
 /*per-town content for the local seo pages.
 each town gets its own copy (not just the name swapped): local context, who the work is for, example projects, services, faq and contact wording, so no two pages read alike*/
 export const towns = {
@@ -197,14 +199,14 @@ export function jsonLd(t) {
 			"@context": "https://schema.org",
 			"@type": "ProfessionalService",
 			name: "Jamie Kerig, Web & Graphic Design",
-			"@id": "https://jamiekerig.com/#business",
+			"@id": `https://jamiekerig.com/${t.slug}/#service`,
 			url: `https://jamiekerig.com/${t.slug}/`,
 			image: "https://jamiekerig.com/og-image.png",
 			description: t.intro,
 			areaServed: [{"@type": "City", name: `${t.town}, MD`}, ...t.nearby.map((n) => ({"@type": "City", name: `${n}, MD`}))],
 			address: {"@type": "PostalAddress", addressRegion: "MD", addressCountry: "US"},
 			hasMap: mapLink(t),
-			founder: {"@type": "Person", name: "Jamie Kerig"},
+			founder: personRef,
 			serviceType: t.serviceType || ["Website design", "Logo design", "Branding", "Print design"],
 			sameAs: ["https://www.linkedin.com/in/jamieleedesign/", "https://www.figma.com/@jamieleedesign"],
 		},

@@ -11,6 +11,7 @@ export const metadata = {
 export default function DesignArticle() {
 	return (
 		<ArticleLayout
+			slug="design"
 			title="Design"
 			subhead={subhead}
 			published="2026-10-09">

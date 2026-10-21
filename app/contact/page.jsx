@@ -1,5 +1,6 @@
 import Contactform from "@/src/components/form.jsx";
 import PageHeader from "@/src/components/PageHeader";
+import {JsonLdScript, contactJsonLd} from "@/app/_seo/schema";
 
 export const metadata = {
 	title: "Contact",
@@ -25,6 +26,7 @@ export const metadata = {
 export default function Contact() {
 	return (
 		<div>
+			<JsonLdScript data={contactJsonLd()} />
 			<PageHeader title="Contact" label="Have a question?" sub="Feel free to reach out.">
 				<p>
 					Got questions about web or design? I’m here to help! Whether you need advice, have a project idea, or just want to chat about creative solutions, feel free to reach out. Simply drop me a message, and I’ll get back to you as soon as I can!

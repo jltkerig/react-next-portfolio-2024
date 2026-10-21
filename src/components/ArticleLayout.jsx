@@ -1,11 +1,13 @@
 import PageHeader from "@/src/components/PageHeader";
 import {formatDate} from "@/app/articles/articles";
 import styles from "./ArticleLayout.module.css";
+import {JsonLdScript, articleJsonLd} from "@/app/_seo/schema";
 
 /*shared article page: title, subhead, published date, body, then a small citations list. citations is an array of strings or {text, url}*/
-export default function ArticleLayout({title, subhead, published, citations = [], children}) {
+export default function ArticleLayout({slug, title, subhead, published, citations = [], children}) {
 	return (
 		<article className={styles.article}>
+			<JsonLdScript data={articleJsonLd({slug, title, description: subhead, published})} />
 			<PageHeader title={title} label="Article" sub={subhead}>
 				<p className={styles.date}>
 					Published <time dateTime={published}>{formatDate(published)}</time>
